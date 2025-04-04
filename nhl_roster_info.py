@@ -60,7 +60,6 @@ def get_nhl_roster(TEAM_ABBR, SEASON_ID):
 def get_files_in_directory(dir_path):
 	try:
 		files = [f for f in os.listdir(dir_path) if os.path.isfile(os.path.join(dir_path, f))]
-		print(files)
 		return files
 	except FileNotFoundError:
 		print(f"Error: Directory not found: {dir_path}")
@@ -74,6 +73,7 @@ data = get_files_in_directory(filepath)
 seconds = random.randint(5,10)
 
 # Uncomment when ready to create full files.
+# Comprehensive list estimates that it will take ~4 hours to put together the full list
 # for files in data:
 # 	with open(f"{filepath}/{files}", 'r') as f:
 # 		contents = json.load(f)

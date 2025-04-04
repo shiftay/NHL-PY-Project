@@ -1,5 +1,8 @@
 import requests
 import json
+import os
+import random
+import time
 
 def parseinfo(info):
     # Seasons Played and Team
@@ -22,18 +25,20 @@ def parseinfo(info):
 
     # Awards and Seasons Awarded
     awards = []
-    for award in info['awards']:
-        seasons = []
-        # print(award['trophy']['default'])
-        for s in award['seasons']:
-            season = { "seasonId": s['seasonId'] }
-            seasons.append(season)
-        trophy = { "trophyName": award['trophy']['default'],
-                    "seasons": seasons }
-        awards.append(trophy)
+    if "awards" in info: # Checks if player has won any awards
+        for award in info['awards']:
+            seasons = []
+            # print(award['trophy']['default'])
+            for s in award['seasons']:
+                season = { "seasonId": s['seasonId'] }
+                seasons.append(season)
+            trophy = { "trophyName": award['trophy']['default'],
+                        "seasons": seasons }
+            awards.append(trophy)
 
     #Compile Player Information
     player_data = {
+        "playerId": info['playerId'],
         "name": info['firstName']['default'] + " " + info['lastName']['default'],
         "sweaterNumber": info['sweaterNumber'],
         "position": info['position'],
@@ -65,10 +70,51 @@ def get_nhl_player_details(player_id):
     data = response.json()
     return parseinfo(data)
 
+def get_files_in_directory(dir_path):
+    try:
+        files = [f for f in os.listdir(dir_path) if os.path.isfile(os.path.join(dir_path, f))]
+        return files
+    except FileNotFoundError:
+        print(f"Error: Directory not found: {dir_path}")
+        return None
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        return None
 
+
+def contains_info(content, playerId):
+    for contents in content:
+        if contents['playerId'] == playerId:
+            return False
+
+    return True
+
+
+# Comprehensive list estimates that it will take ~93 hours to put together the full list
+# Under the assumption that there would be 0 duplicates, as such the number is significantly lower
+# TODO  We will need to check ids of players against ids of players already stored, as such,
+#       we will need to store the player id in our mockup of players
 # Example usage
-player_id = 8471214  
-player_data = get_nhl_player_details(player_id)
+completed_info = []
+seconds = random.randint(5,10)
 
-with open(f"{player_id}.json", "w") as f:
-    json.dump(player_data, f, indent=4)
+file_path = 'rosterLists'
+
+data = get_files_in_directory(file_path)
+for files in data:
+    with open(f"{file_path}/{files}", 'r') as f:
+        contents = json.load(f)
+        for players in contents['players']:
+            if contains_info(completed_info, players['id']):
+                completed_info.append(get_nhl_player_details(players['id']))
+                time.sleep(seconds)
+                seconds = random.randint(5,10)
+
+final_info = {
+    "players": completed_info
+}
+# player_id = 8478233
+# player_data = get_nhl_player_details(player_id)
+
+with open(f"completed.json", "w") as f:
+    json.dump(final_info, f, indent=4)
