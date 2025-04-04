@@ -1,0 +1,94 @@
+{
+    "name": "Brad Marchand",
+    "sweaterNumber": 63,
+    "position": "C",
+    "headshot": "https://assets.nhle.com/mugs/nhl/20242025/FLA/8473419.png",
+    "heightInInches": 69,
+    "birthCountry": "CAN",
+    "draftDetails": {
+        "year": 2006,
+        "round": 3,
+        "pick": 8,
+        "team": "BOS"
+    },
+    "seasonTotals": [
+        {
+            "season": 20092010,
+            "teamName": "Boston Bruins"
+        },
+        {
+            "season": 20102011,
+            "teamName": "Boston Bruins"
+        },
+        {
+            "season": 20112012,
+            "teamName": "Boston Bruins"
+        },
+        {
+            "season": 20122013,
+            "teamName": "Boston Bruins"
+        },
+        {
+            "season": 20132014,
+            "teamName": "Boston Bruins"
+        },
+        {
+            "season": 20142015,
+            "teamName": "Boston Bruins"
+        },
+        {
+            "season": 20152016,
+            "teamName": "Boston Bruins"
+        },
+        {
+            "season": 20162017,
+            "teamName": "Boston Bruins"
+        },
+        {
+            "season": 20172018,
+            "teamName": "Boston Bruins"
+        },
+        {
+            "season": 20182019,
+            "teamName": "Boston Bruins"
+        },
+        {
+            "season": 20192020,
+            "teamName": "Boston Bruins"
+        },
+        {
+            "season": 20202021,
+            "teamName": "Boston Bruins"
+        },
+        {
+            "season": 20212022,
+            "teamName": "Boston Bruins"
+        },
+        {
+            "season": 20222023,
+            "teamName": "Boston Bruins"
+        },
+        {
+            "season": 20232024,
+            "teamName": "Boston Bruins"
+        },
+        {
+            "season": 20242025,
+            "teamName": "Boston Bruins"
+        },
+        {
+            "season": 20242025,
+            "teamName": "Florida Panthers"
+        }
+    ],
+    "awards": [
+        {
+            "trophyName": "Stanley Cup",
+            "seasons": [
+                {
+                    "seasonId": 20102011
+                }
+            ]
+        }
+    ]
+}
