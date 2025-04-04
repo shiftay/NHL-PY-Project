@@ -90,7 +90,7 @@ def contains_info(content, playerId):
     return True
 
 
-# Comprehensive list estimates that it will take ~93 hours to put together the full list
+# Comprehensive list estimates that it will take ~78 hours to put together the full list
 # Under the assumption that there would be 0 duplicates, as such the number is significantly lower
 # TODO  We will need to check ids of players against ids of players already stored, as such,
 #       we will need to store the player id in our mockup of players

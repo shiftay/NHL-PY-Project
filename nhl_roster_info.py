@@ -74,14 +74,14 @@ seconds = random.randint(5,10)
 
 # Uncomment when ready to create full files.
 # Comprehensive list estimates that it will take ~4 hours to put together the full list
-# for files in data:
-# 	with open(f"{filepath}/{files}", 'r') as f:
-# 		contents = json.load(f)
-# 		for teamAbbrev in contents['teams']:
-# 			get_nhl_roster(teamAbbrev, contents['seasonId'])
-# 			time.sleep(seconds)
-# 			seconds = random.randint(5,10)
+for files in data:
+	with open(f"{filepath}/{files}", 'r') as f:
+		contents = json.load(f)
+		for teamAbbrev in contents['teams']:
+			get_nhl_roster(teamAbbrev, contents['seasonId'])
+			time.sleep(seconds)
+			seconds = random.randint(5,10)
 
 		# print(len(contents['teams']))
 # filepath = "players.json"
-get_nhl_roster("WSH", 20232024)
+# get_nhl_roster("WSH", 20232024)

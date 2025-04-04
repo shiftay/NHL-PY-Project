@@ -45,8 +45,8 @@ years = ['19751976', '19761977', '19771978', '19781979', '19791980', '19801981',
 '20242025']
 
 seconds = random.randint(5,10)
-#Comprehensive list estimates that it will take ~4 hours to put together the full list
+#Comprehensive list estimates that it will take ~8 minutes to put together the full list
 for season in years:
-	get_nhl_season_info(season_id)
+	get_nhl_season_info(season)
 	time.sleep(seconds)
 	seconds = random.randint(5,10)
