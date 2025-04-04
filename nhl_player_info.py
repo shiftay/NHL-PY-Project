@@ -4,11 +4,17 @@ import json
 def parseinfo(info):
     # Seasons Played and Team
     # TODO: Include Junior / System teams (OHL, QMJHL, WHL, etc..)
+    # Exlcuding Factors: 
+    #   Need to find other players to test what type of output they release
+    #   Potentially from each continents
+    exclusion = {   "WC", 'WJ18-A', 'WJC-A', 'WCup', '4 Nations', 'WC-A', 
+                    'M-Cup', 'Olympics', 'EYOF', 'W-Cup', 'EHT' }
     season_totals = []
     for seasons in info['seasonTotals']:
-        if seasons['leagueAbbrev'] == 'NHL':
+        if seasons['leagueAbbrev'] not in exclusion:
             season = {
                 "season": seasons['season'],
+                "league": seasons['leagueAbbrev'],
                 "teamName": seasons['teamName']['default']
             }
             if season not in season_totals:
@@ -38,7 +44,7 @@ def parseinfo(info):
                          "round": info['draftDetails']['round'],
                          "pick": info['draftDetails']['pickInRound'],
                          "team": info['draftDetails']['teamAbbrev']},
-        "seasonTotals": season_totals,
+        "seasonsPlayed": season_totals,
         "awards": awards,
     }
     
@@ -61,7 +67,7 @@ def get_nhl_player_details(player_id):
 
 
 # Example usage
-player_id = 8473419  # Connor McDavid
+player_id = 8471214  
 player_data = get_nhl_player_details(player_id)
 
 with open(f"{player_id}.json", "w") as f:

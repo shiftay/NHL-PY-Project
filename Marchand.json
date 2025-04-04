@@ -11,73 +11,140 @@
         "pick": 8,
         "team": "BOS"
     },
-    "seasonTotals": [
+    "seasonsPlayed": [
+        {
+            "season": 20032004,
+            "league": "NSMHL",
+            "teamName": "Dartmouth"
+        },
+        {
+            "season": 20042005,
+            "league": "QMJHL",
+            "teamName": "Moncton"
+        },
+        {
+            "season": 20052006,
+            "league": "QMJHL",
+            "teamName": "Moncton"
+        },
+        {
+            "season": 20052006,
+            "league": "M-Cup",
+            "teamName": "Moncton"
+        },
+        {
+            "season": 20062007,
+            "league": "QMJHL",
+            "teamName": "Val-d'Or"
+        },
+        {
+            "season": 20072008,
+            "league": "QMJHL",
+            "teamName": "Val-d'Or"
+        },
+        {
+            "season": 20072008,
+            "league": "QMJHL",
+            "teamName": "Halifax"
+        },
+        {
+            "season": 20082009,
+            "league": "AHL",
+            "teamName": "Providence"
+        },
         {
             "season": 20092010,
+            "league": "NHL",
             "teamName": "Boston Bruins"
         },
         {
+            "season": 20092010,
+            "league": "AHL",
+            "teamName": "Providence"
+        },
+        {
             "season": 20102011,
+            "league": "NHL",
             "teamName": "Boston Bruins"
         },
         {
             "season": 20112012,
+            "league": "NHL",
             "teamName": "Boston Bruins"
         },
         {
             "season": 20122013,
+            "league": "NHL",
             "teamName": "Boston Bruins"
         },
         {
             "season": 20132014,
+            "league": "NHL",
             "teamName": "Boston Bruins"
         },
         {
             "season": 20142015,
+            "league": "NHL",
             "teamName": "Boston Bruins"
         },
         {
             "season": 20152016,
+            "league": "NHL",
             "teamName": "Boston Bruins"
         },
         {
+            "season": 20152016,
+            "league": "WC-A",
+            "teamName": "Canada"
+        },
+        {
             "season": 20162017,
+            "league": "NHL",
             "teamName": "Boston Bruins"
         },
         {
             "season": 20172018,
+            "league": "NHL",
             "teamName": "Boston Bruins"
         },
         {
             "season": 20182019,
+            "league": "NHL",
             "teamName": "Boston Bruins"
         },
         {
             "season": 20192020,
+            "league": "NHL",
             "teamName": "Boston Bruins"
         },
         {
             "season": 20202021,
+            "league": "NHL",
             "teamName": "Boston Bruins"
         },
         {
             "season": 20212022,
+            "league": "NHL",
             "teamName": "Boston Bruins"
         },
         {
             "season": 20222023,
+            "league": "NHL",
             "teamName": "Boston Bruins"
         },
         {
             "season": 20232024,
+            "league": "NHL",
             "teamName": "Boston Bruins"
         },
         {
             "season": 20242025,
+            "league": "NHL",
             "teamName": "Boston Bruins"
         },
         {
             "season": 20242025,
+            "league": "NHL",
             "teamName": "Florida Panthers"
         }
     ],

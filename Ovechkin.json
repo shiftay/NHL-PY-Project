@@ -1,0 +1,240 @@
+{
+    "name": "Alex Ovechkin",
+    "sweaterNumber": 8,
+    "position": "L",
+    "headshot": "https://assets.nhle.com/mugs/nhl/20242025/WSH/8471214.png",
+    "heightInInches": 75,
+    "birthCountry": "RUS",
+    "draftDetails": {
+        "year": 2004,
+        "round": 1,
+        "pick": 1,
+        "team": "WSH"
+    },
+    "seasonsPlayed": [
+        {
+            "season": 20012002,
+            "league": "Russia-3",
+            "teamName": "Dyn'o Moscow 2"
+        },
+        {
+            "season": 20012002,
+            "league": "Russia",
+            "teamName": "Dynamo Moscow"
+        },
+        {
+            "season": 20022003,
+            "league": "Russia",
+            "teamName": "Dynamo Moscow"
+        },
+        {
+            "season": 20032004,
+            "league": "Russia",
+            "teamName": "Dynamo Moscow"
+        },
+        {
+            "season": 20042005,
+            "league": "Russia",
+            "teamName": "Dynamo Moscow"
+        },
+        {
+            "season": 20052006,
+            "league": "NHL",
+            "teamName": "Washington Capitals"
+        },
+        {
+            "season": 20062007,
+            "league": "NHL",
+            "teamName": "Washington Capitals"
+        },
+        {
+            "season": 20072008,
+            "league": "NHL",
+            "teamName": "Washington Capitals"
+        },
+        {
+            "season": 20082009,
+            "league": "NHL",
+            "teamName": "Washington Capitals"
+        },
+        {
+            "season": 20092010,
+            "league": "NHL",
+            "teamName": "Washington Capitals"
+        },
+        {
+            "season": 20102011,
+            "league": "NHL",
+            "teamName": "Washington Capitals"
+        },
+        {
+            "season": 20112012,
+            "league": "NHL",
+            "teamName": "Washington Capitals"
+        },
+        {
+            "season": 20122013,
+            "league": "NHL",
+            "teamName": "Washington Capitals"
+        },
+        {
+            "season": 20122013,
+            "league": "KHL",
+            "teamName": "Dynamo Moscow"
+        },
+        {
+            "season": 20132014,
+            "league": "NHL",
+            "teamName": "Washington Capitals"
+        },
+        {
+            "season": 20142015,
+            "league": "NHL",
+            "teamName": "Washington Capitals"
+        },
+        {
+            "season": 20152016,
+            "league": "NHL",
+            "teamName": "Washington Capitals"
+        },
+        {
+            "season": 20162017,
+            "league": "NHL",
+            "teamName": "Washington Capitals"
+        },
+        {
+            "season": 20172018,
+            "league": "NHL",
+            "teamName": "Washington Capitals"
+        },
+        {
+            "season": 20182019,
+            "league": "NHL",
+            "teamName": "Washington Capitals"
+        },
+        {
+            "season": 20192020,
+            "league": "NHL",
+            "teamName": "Washington Capitals"
+        },
+        {
+            "season": 20202021,
+            "league": "NHL",
+            "teamName": "Washington Capitals"
+        },
+        {
+            "season": 20212022,
+            "league": "NHL",
+            "teamName": "Washington Capitals"
+        },
+        {
+            "season": 20222023,
+            "league": "NHL",
+            "teamName": "Washington Capitals"
+        },
+        {
+            "season": 20232024,
+            "league": "NHL",
+            "teamName": "Washington Capitals"
+        },
+        {
+            "season": 20242025,
+            "league": "NHL",
+            "teamName": "Washington Capitals"
+        }
+    ],
+    "awards": [
+        {
+            "trophyName": "Stanley Cup",
+            "seasons": [
+                {
+                    "seasonId": 20172018
+                }
+            ]
+        },
+        {
+            "trophyName": "Art Ross Trophy",
+            "seasons": [
+                {
+                    "seasonId": 20072008
+                }
+            ]
+        },
+        {
+            "trophyName": "Calder Memorial Trophy",
+            "seasons": [
+                {
+                    "seasonId": 20052006
+                }
+            ]
+        },
+        {
+            "trophyName": "Conn Smythe Trophy",
+            "seasons": [
+                {
+                    "seasonId": 20172018
+                }
+            ]
+        },
+        {
+            "trophyName": "Hart Memorial Trophy",
+            "seasons": [
+                {
+                    "seasonId": 20122013
+                },
+                {
+                    "seasonId": 20082009
+                },
+                {
+                    "seasonId": 20072008
+                }
+            ]
+        },
+        {
+            "trophyName": "Maurice \u201cRocket\u201d Richard Trophy",
+            "seasons": [
+                {
+                    "seasonId": 20192020
+                },
+                {
+                    "seasonId": 20182019
+                },
+                {
+                    "seasonId": 20172018
+                },
+                {
+                    "seasonId": 20152016
+                },
+                {
+                    "seasonId": 20142015
+                },
+                {
+                    "seasonId": 20132014
+                },
+                {
+                    "seasonId": 20122013
+                },
+                {
+                    "seasonId": 20082009
+                },
+                {
+                    "seasonId": 20072008
+                }
+            ]
+        },
+        {
+            "trophyName": "Ted Lindsay Award",
+            "seasons": [
+                {
+                    "seasonId": 20092010
+                },
+                {
+                    "seasonId": 20082009
+                },
+                {
+                    "seasonId": 20072008
+                }
+            ]
+        }
+    ]
+}
