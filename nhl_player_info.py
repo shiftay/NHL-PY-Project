@@ -3,6 +3,7 @@ import json
 
 def parseinfo(info):
     # Seasons Played and Team
+    # TODO: Include Junior / System teams (OHL, QMJHL, WHL, etc..)
     season_totals = []
     for seasons in info['seasonTotals']:
         if seasons['leagueAbbrev'] == 'NHL':
