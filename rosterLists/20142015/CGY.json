@@ -1,0 +1,160 @@
+{
+    "players": [
+        {
+            "id": 8474150,
+            "name": "Mikael Backlund"
+        },
+        {
+            "id": 8476466,
+            "name": "Sven Baertschi"
+        },
+        {
+            "id": 8477935,
+            "name": "Sam Bennett"
+        },
+        {
+            "id": 8475650,
+            "name": "Brandon Bollig"
+        },
+        {
+            "id": 8474642,
+            "name": "Lance Bouma"
+        },
+        {
+            "id": 8474038,
+            "name": "Paul Byron"
+        },
+        {
+            "id": 8474577,
+            "name": "Joe Colborne"
+        },
+        {
+            "id": 8475907,
+            "name": "Micheal Ferland"
+        },
+        {
+            "id": 8476346,
+            "name": "Johnny Gaudreau"
+        },
+        {
+            "id": 8471185,
+            "name": "Curtis Glencross"
+        },
+        {
+            "id": 8476440,
+            "name": "Markus Granlund"
+        },
+        {
+            "id": 8470201,
+            "name": "Jiri Hudler"
+        },
+        {
+            "id": 8470877,
+            "name": "David Jones"
+        },
+        {
+            "id": 8477591,
+            "name": "Josh Jooris"
+        },
+        {
+            "id": 8475260,
+            "name": "Corban Knight"
+        },
+        {
+            "id": 8467977,
+            "name": "Brian McGrattan"
+        },
+        {
+            "id": 8477497,
+            "name": "Sean Monahan"
+        },
+        {
+            "id": 8477486,
+            "name": "Emile Poirier"
+        },
+        {
+            "id": 8471664,
+            "name": "Mason Raymond"
+        },
+        {
+            "id": 8475733,
+            "name": "Max Reinhart"
+        },
+        {
+            "id": 8471682,
+            "name": "Devin Setoguchi"
+        },
+        {
+            "id": 8475213,
+            "name": "Drew Shore"
+        },
+        {
+            "id": 8470162,
+            "name": "Matt Stajan"
+        },
+        {
+            "id": 8477913,
+            "name": "David Wolf"
+        },
+        {
+            "id": 8474673,
+            "name": "TJ Brodie"
+        },
+        {
+            "id": 8476244,
+            "name": "Raphael Diaz"
+        },
+        {
+            "id": 8468674,
+            "name": "Deryk Engelland"
+        },
+        {
+            "id": 8470966,
+            "name": "Mark Giordano"
+        },
+        {
+            "id": 8476967,
+            "name": "Brett Kulak"
+        },
+        {
+            "id": 8470714,
+            "name": "Corey Potter"
+        },
+        {
+            "id": 8475829,
+            "name": "John Ramage"
+        },
+        {
+            "id": 8471729,
+            "name": "Kris Russell"
+        },
+        {
+            "id": 8473673,
+            "name": "David Schlemko"
+        },
+        {
+            "id": 8471222,
+            "name": "Ladislav Smid"
+        },
+        {
+            "id": 8469770,
+            "name": "Dennis Wideman"
+        },
+        {
+            "id": 8476452,
+            "name": "Tyler Wotherspoon"
+        },
+        {
+            "id": 8473972,
+            "name": "Jonas Hiller"
+        },
+        {
+            "id": 8475299,
+            "name": "Joni Ortio"
+        },
+        {
+            "id": 8471403,
+            "name": "Karri Ramo"
+        }
+    ]
+}

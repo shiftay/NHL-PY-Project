@@ -1,0 +1,136 @@
+{
+    "players": [
+        {
+            "id": 8473573,
+            "name": "Artem Anisimov"
+        },
+        {
+            "id": 8468224,
+            "name": "Sean Avery"
+        },
+        {
+            "id": 8470619,
+            "name": "Brian Boyle"
+        },
+        {
+            "id": 8471339,
+            "name": "Ryan Callahan"
+        },
+        {
+            "id": 8470299,
+            "name": "Erik Christensen"
+        },
+        {
+            "id": 8470301,
+            "name": "Andre Deveaux"
+        },
+        {
+            "id": 8471273,
+            "name": "Brandon Dubinsky"
+        },
+        {
+            "id": 8468172,
+            "name": "Ruslan Fedotenko"
+        },
+        {
+            "id": 8468483,
+            "name": "Marian Gaborik"
+        },
+        {
+            "id": 8474176,
+            "name": "Carl Hagelin"
+        },
+        {
+            "id": 8475184,
+            "name": "Chris Kreider"
+        },
+        {
+            "id": 8470750,
+            "name": "John Mitchell"
+        },
+        {
+            "id": 8470232,
+            "name": "Kris Newbury"
+        },
+        {
+            "id": 8471283,
+            "name": "Brandon Prust"
+        },
+        {
+            "id": 8467389,
+            "name": "Brad Richards"
+        },
+        {
+            "id": 8467336,
+            "name": "Mike Rupp"
+        },
+        {
+            "id": 8473722,
+            "name": "John Scott"
+        },
+        {
+            "id": 8474613,
+            "name": "Derek Stepan"
+        },
+        {
+            "id": 8471234,
+            "name": "Wojtek Wolski"
+        },
+        {
+            "id": 8475692,
+            "name": "Mats Zuccarello"
+        },
+        {
+            "id": 8469516,
+            "name": "Brendan Bell"
+        },
+        {
+            "id": 8474772,
+            "name": "Stu Bickel"
+        },
+        {
+            "id": 8474584,
+            "name": "Michael Del Zotto"
+        },
+        {
+            "id": 8470192,
+            "name": "Steve Eminger"
+        },
+        {
+            "id": 8475148,
+            "name": "Tim Erixon"
+        },
+        {
+            "id": 8471958,
+            "name": "Dan Girardi"
+        },
+        {
+            "id": 8474151,
+            "name": "Ryan McDonagh"
+        },
+        {
+            "id": 8471714,
+            "name": "Michael Sauer"
+        },
+        {
+            "id": 8471686,
+            "name": "Marc Staal"
+        },
+        {
+            "id": 8471873,
+            "name": "Anton Stralman"
+        },
+        {
+            "id": 8469480,
+            "name": "Jeff Woywitka"
+        },
+        {
+            "id": 8462047,
+            "name": "Martin Biron"
+        },
+        {
+            "id": 8468685,
+            "name": "Henrik Lundqvist"
+        }
+    ]
+}

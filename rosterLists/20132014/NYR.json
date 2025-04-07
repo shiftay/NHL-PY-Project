@@ -1,0 +1,140 @@
+{
+    "players": [
+        {
+            "id": 8465025,
+            "name": "Arron Asham"
+        },
+        {
+            "id": 8470619,
+            "name": "Brian Boyle"
+        },
+        {
+            "id": 8473544,
+            "name": "Derick Brassard"
+        },
+        {
+            "id": 8471339,
+            "name": "Ryan Callahan"
+        },
+        {
+            "id": 8470666,
+            "name": "Daniel Carcillo"
+        },
+        {
+            "id": 8473432,
+            "name": "Derek Dorsett"
+        },
+        {
+            "id": 8475855,
+            "name": "Jesper Fast"
+        },
+        {
+            "id": 8474176,
+            "name": "Carl Hagelin"
+        },
+        {
+            "id": 8475184,
+            "name": "Chris Kreider"
+        },
+        {
+            "id": 8474850,
+            "name": "Brandon Mashinter"
+        },
+        {
+            "id": 8476468,
+            "name": "J.T. Miller"
+        },
+        {
+            "id": 8468575,
+            "name": "Dominic Moore"
+        },
+        {
+            "id": 8470041,
+            "name": "Rick Nash"
+        },
+        {
+            "id": 8471678,
+            "name": "Benoit Pouliot"
+        },
+        {
+            "id": 8473932,
+            "name": "Darroll Powe"
+        },
+        {
+            "id": 8467881,
+            "name": "Taylor Pyatt"
+        },
+        {
+            "id": 8467389,
+            "name": "Brad Richards"
+        },
+        {
+            "id": 8466378,
+            "name": "Martin St. Louis"
+        },
+        {
+            "id": 8474613,
+            "name": "Derek Stepan"
+        },
+        {
+            "id": 8475692,
+            "name": "Mats Zuccarello"
+        },
+        {
+            "id": 8477214,
+            "name": "Conor Allen"
+        },
+        {
+            "id": 8474584,
+            "name": "Michael Del Zotto"
+        },
+        {
+            "id": 8476244,
+            "name": "Raphael Diaz"
+        },
+        {
+            "id": 8473992,
+            "name": "Justin Falk"
+        },
+        {
+            "id": 8471958,
+            "name": "Dan Girardi"
+        },
+        {
+            "id": 8470630,
+            "name": "Kevin Klein"
+        },
+        {
+            "id": 8474151,
+            "name": "Ryan McDonagh"
+        },
+        {
+            "id": 8475795,
+            "name": "Dylan McIlrath"
+        },
+        {
+            "id": 8475186,
+            "name": "John Moore"
+        },
+        {
+            "id": 8471686,
+            "name": "Marc Staal"
+        },
+        {
+            "id": 8471873,
+            "name": "Anton Stralman"
+        },
+        {
+            "id": 8462047,
+            "name": "Martin Biron"
+        },
+        {
+            "id": 8468685,
+            "name": "Henrik Lundqvist"
+        },
+        {
+            "id": 8475660,
+            "name": "Cam Talbot"
+        }
+    ]
+}

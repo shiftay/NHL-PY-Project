@@ -1,0 +1,108 @@
+{
+    "players": [
+        {
+            "id": 8478445,
+            "name": "Mathew Barzal"
+        },
+        {
+            "id": 8475231,
+            "name": "Casey Cizikas"
+        },
+        {
+            "id": 8477407,
+            "name": "Anthony Duclair"
+        },
+        {
+            "id": 8478115,
+            "name": "Pierre Engvall"
+        },
+        {
+            "id": 8477392,
+            "name": "Hudson Fasching"
+        },
+        {
+            "id": 8483553,
+            "name": "Marc Gatcomb"
+        },
+        {
+            "id": 8481601,
+            "name": "Simon Holmstrom"
+        },
+        {
+            "id": 8477500,
+            "name": "Bo Horvat"
+        },
+        {
+            "id": 8475314,
+            "name": "Anders Lee"
+        },
+        {
+            "id": 8481237,
+            "name": "Kyle MacLean"
+        },
+        {
+            "id": 8474709,
+            "name": "Matt Martin"
+        },
+        {
+            "id": 8476419,
+            "name": "Jean-Gabriel Pageau"
+        },
+        {
+            "id": 8475151,
+            "name": "Kyle Palmieri"
+        },
+        {
+            "id": 8484958,
+            "name": "Maxim Tsyplakov"
+        },
+        {
+            "id": 8480871,
+            "name": "Adam Boqvist"
+        },
+        {
+            "id": 8477950,
+            "name": "Tony DeAngelo"
+        },
+        {
+            "id": 8480865,
+            "name": "Noah Dobson"
+        },
+        {
+            "id": 8476429,
+            "name": "Scott Mayfield"
+        },
+        {
+            "id": 8476917,
+            "name": "Adam Pelech"
+        },
+        {
+            "id": 8481059,
+            "name": "Scott Perunovich"
+        },
+        {
+            "id": 8477506,
+            "name": "Ryan Pulock"
+        },
+        {
+            "id": 8476422,
+            "name": "Mike Reilly"
+        },
+        {
+            "id": 8481014,
+            "name": "Alexander Romanov"
+        },
+        {
+            "id": 8477405,
+            "name": "Marcus Hogberg"
+        },
+        {
+            "id": 8478009,
+            "name": "Ilya Sorokin"
+        },
+        {
+            "id": 8473575,
+            "name": "Semyon Varlamov"
+        }
+    ]
+}

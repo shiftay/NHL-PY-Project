@@ -1,0 +1,144 @@
+{
+    "players": [
+        {
+            "id": 8460621,
+            "name": "Daniel Alfredsson"
+        },
+        {
+            "id": 8476195,
+            "name": "Cory Conacher"
+        },
+        {
+            "id": 8473588,
+            "name": "Erik Condra"
+        },
+        {
+            "id": 8476205,
+            "name": "Stephane Da Costa"
+        },
+        {
+            "id": 8473484,
+            "name": "Kaspars Daugavins"
+        },
+        {
+            "id": 8475661,
+            "name": "Dave Dziurzynski"
+        },
+        {
+            "id": 8474683,
+            "name": "Derek Grant"
+        },
+        {
+            "id": 8471862,
+            "name": "Colin Greening"
+        },
+        {
+            "id": 8474884,
+            "name": "Mike Hoffman"
+        },
+        {
+            "id": 8471719,
+            "name": "Matt Kassian"
+        },
+        {
+            "id": 8471670,
+            "name": "Guillaume Latendresse"
+        },
+        {
+            "id": 8470599,
+            "name": "Milan Michalek"
+        },
+        {
+            "id": 8467493,
+            "name": "Chris Neil"
+        },
+        {
+            "id": 8474024,
+            "name": "Jim O'Brien"
+        },
+        {
+            "id": 8476419,
+            "name": "Jean-Gabriel Pageau"
+        },
+        {
+            "id": 8471299,
+            "name": "Peter Regin"
+        },
+        {
+            "id": 8475164,
+            "name": "Jakob Silfverberg"
+        },
+        {
+            "id": 8474250,
+            "name": "Zack Smith"
+        },
+        {
+            "id": 8469455,
+            "name": "Jason Spezza"
+        },
+        {
+            "id": 8475913,
+            "name": "Mark Stone"
+        },
+        {
+            "id": 8474068,
+            "name": "Kyle Turris"
+        },
+        {
+            "id": 8476459,
+            "name": "Mika Zibanejad"
+        },
+        {
+            "id": 8470378,
+            "name": "Andre Benoit"
+        },
+        {
+            "id": 8474697,
+            "name": "Mark Borowiecki"
+        },
+        {
+            "id": 8475174,
+            "name": "Jared Cowen"
+        },
+        {
+            "id": 8458951,
+            "name": "Sergei Gonchar"
+        },
+        {
+            "id": 8473468,
+            "name": "Eric Gryba"
+        },
+        {
+            "id": 8474578,
+            "name": "Erik Karlsson"
+        },
+        {
+            "id": 8471314,
+            "name": "Mike Lundin"
+        },
+        {
+            "id": 8470760,
+            "name": "Marc Methot"
+        },
+        {
+            "id": 8464956,
+            "name": "Chris Phillips"
+        },
+        {
+            "id": 8474605,
+            "name": "Patrick Wiercioch"
+        },
+        {
+            "id": 8467950,
+            "name": "Craig Anderson"
+        },
+        {
+            "id": 8471750,
+            "name": "Ben Bishop"
+        },
+        {
+            "id": 8475215,
+            "name": "Robin Lehner"
+        }
+    ]
+}

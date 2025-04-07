@@ -1,0 +1,144 @@
+{
+    "players": [
+        {
+            "id": 8477930,
+            "name": "Pierre-Edouard Bellemare"
+        },
+        {
+            "id": 8477846,
+            "name": "Ryan Carpenter"
+        },
+        {
+            "id": 8477478,
+            "name": "William Carrier"
+        },
+        {
+            "id": 8475236,
+            "name": "Cody Eakin"
+        },
+        {
+            "id": 8475287,
+            "name": "Erik Haula"
+        },
+        {
+            "id": 8476617,
+            "name": "Tomas Hyka"
+        },
+        {
+            "id": 8476448,
+            "name": "William Karlsson"
+        },
+        {
+            "id": 8476894,
+            "name": "Brendan Leipsic"
+        },
+        {
+            "id": 8475715,
+            "name": "Oscar Lindberg"
+        },
+        {
+            "id": 8476539,
+            "name": "Jonathan Marchessault"
+        },
+        {
+            "id": 8476870,
+            "name": "Stefan Matteau"
+        },
+        {
+            "id": 8471707,
+            "name": "James Neal"
+        },
+        {
+            "id": 8477931,
+            "name": "Tomas Nosek"
+        },
+        {
+            "id": 8474102,
+            "name": "David Perron"
+        },
+        {
+            "id": 8475204,
+            "name": "Brandon Pirri"
+        },
+        {
+            "id": 8471817,
+            "name": "Ryan Reaves"
+        },
+        {
+            "id": 8479650,
+            "name": "Vadim Shipachyov"
+        },
+        {
+            "id": 8475191,
+            "name": "Reilly Smith"
+        },
+        {
+            "id": 8475193,
+            "name": "Tomas Tatar"
+        },
+        {
+            "id": 8477949,
+            "name": "Alex Tuch"
+        },
+        {
+            "id": 8468674,
+            "name": "Deryk Engelland"
+        },
+        {
+            "id": 8474520,
+            "name": "Jason Garrison"
+        },
+        {
+            "id": 8476779,
+            "name": "Brad Hunt"
+        },
+        {
+            "id": 8475188,
+            "name": "Brayden McNabb"
+        },
+        {
+            "id": 8475750,
+            "name": "Jon Merrill"
+        },
+        {
+            "id": 8476525,
+            "name": "Colin Miller"
+        },
+        {
+            "id": 8474579,
+            "name": "Luca Sbisa"
+        },
+        {
+            "id": 8477220,
+            "name": "Nate Schmidt"
+        },
+        {
+            "id": 8477447,
+            "name": "Shea Theodore"
+        },
+        {
+            "id": 8480727,
+            "name": "Zach Whitecloud"
+        },
+        {
+            "id": 8476861,
+            "name": "Oscar Dansk"
+        },
+        {
+            "id": 8480263,
+            "name": "Dylan Ferguson"
+        },
+        {
+            "id": 8470594,
+            "name": "Marc-Andre Fleury"
+        },
+        {
+            "id": 8476509,
+            "name": "Maxime Lagace"
+        },
+        {
+            "id": 8476876,
+            "name": "Malcolm Subban"
+        }
+    ]
+}

@@ -1,0 +1,124 @@
+{
+    "players": [
+        {
+            "id": 8473563,
+            "name": "Nicklas Backstrom"
+        },
+        {
+            "id": 8476329,
+            "name": "Travis Boyd"
+        },
+        {
+            "id": 8475343,
+            "name": "Nic Dowd"
+        },
+        {
+            "id": 8474189,
+            "name": "Lars Eller"
+        },
+        {
+            "id": 8474176,
+            "name": "Carl Hagelin"
+        },
+        {
+            "id": 8477903,
+            "name": "Garnet Hathaway"
+        },
+        {
+            "id": 8469454,
+            "name": "Ilya Kovalchuk"
+        },
+        {
+            "id": 8475744,
+            "name": "Evgeny Kuznetsov"
+        },
+        {
+            "id": 8476894,
+            "name": "Brendan Leipsic"
+        },
+        {
+            "id": 8479359,
+            "name": "Beck Malenstyn"
+        },
+        {
+            "id": 8471698,
+            "name": "T.J. Oshie"
+        },
+        {
+            "id": 8471214,
+            "name": "Alex Ovechkin"
+        },
+        {
+            "id": 8475209,
+            "name": "Richard Panik"
+        },
+        {
+            "id": 8477314,
+            "name": "Brian Pinho"
+        },
+        {
+            "id": 8475958,
+            "name": "Michael Sgarbossa"
+        },
+        {
+            "id": 8476905,
+            "name": "Chandler Stephenson"
+        },
+        {
+            "id": 8477944,
+            "name": "Jakub Vrana"
+        },
+        {
+            "id": 8476880,
+            "name": "Tom Wilson"
+        },
+        {
+            "id": 8474590,
+            "name": "John Carlson"
+        },
+        {
+            "id": 8475455,
+            "name": "Brenden Dillon"
+        },
+        {
+            "id": 8477043,
+            "name": "Christian Djoos"
+        },
+        {
+            "id": 8480796,
+            "name": "Martin Feh\u00e9rv\u00e1ry"
+        },
+        {
+            "id": 8475462,
+            "name": "Radko Gudas"
+        },
+        {
+            "id": 8475324,
+            "name": "Nick Jensen"
+        },
+        {
+            "id": 8479482,
+            "name": "Michal Kempny"
+        },
+        {
+            "id": 8477343,
+            "name": "Tyler Lewington"
+        },
+        {
+            "id": 8475200,
+            "name": "Dmitry Orlov"
+        },
+        {
+            "id": 8478399,
+            "name": "Jonas Siegenthaler"
+        },
+        {
+            "id": 8474651,
+            "name": "Braden Holtby"
+        },
+        {
+            "id": 8478492,
+            "name": "Ilya Samsonov"
+        }
+    ]
+}

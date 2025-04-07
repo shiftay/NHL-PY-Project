@@ -1,0 +1,80 @@
+{
+    "players": [
+        {
+            "id": 8481543,
+            "name": "Nikita Alexandrov"
+        },
+        {
+            "id": 8477402,
+            "name": "Pavel Buchnevich"
+        },
+        {
+            "id": 8479385,
+            "name": "Jordan Kyrou"
+        },
+        {
+            "id": 8482089,
+            "name": "Jake Neighbours"
+        },
+        {
+            "id": 8476438,
+            "name": "Brandon Saad"
+        },
+        {
+            "id": 8475170,
+            "name": "Brayden Schenn"
+        },
+        {
+            "id": 8476897,
+            "name": "Oskar Sundqvist"
+        },
+        {
+            "id": 8480074,
+            "name": "Alexandre Texier"
+        },
+        {
+            "id": 8480023,
+            "name": "Robert Thomas"
+        },
+        {
+            "id": 8480281,
+            "name": "Alexey Toropchenko"
+        },
+        {
+            "id": 8477573,
+            "name": "Nathan Walker"
+        },
+        {
+            "id": 8475753,
+            "name": "Justin Faulk"
+        },
+        {
+            "id": 8476792,
+            "name": "Torey Krug"
+        },
+        {
+            "id": 8475181,
+            "name": "Nick Leddy"
+        },
+        {
+            "id": 8476892,
+            "name": "Colton Parayko"
+        },
+        {
+            "id": 8481059,
+            "name": "Scott Perunovich"
+        },
+        {
+            "id": 8481006,
+            "name": "Tyler Tucker"
+        },
+        {
+            "id": 8476412,
+            "name": "Jordan Binnington"
+        },
+        {
+            "id": 8480981,
+            "name": "Joel Hofer"
+        }
+    ]
+}

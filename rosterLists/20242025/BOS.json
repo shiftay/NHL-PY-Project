@@ -1,0 +1,104 @@
+{
+    "players": [
+        {
+            "id": 8481556,
+            "name": "John Beecher"
+        },
+        {
+            "id": 8477887,
+            "name": "Patrick Brown"
+        },
+        {
+            "id": 8479987,
+            "name": "Morgan Geekie"
+        },
+        {
+            "id": 8480355,
+            "name": "Mark Kastelic"
+        },
+        {
+            "id": 8482177,
+            "name": "Marat Khusnutdinov"
+        },
+        {
+            "id": 8481043,
+            "name": "Cole Koepke"
+        },
+        {
+            "id": 8480880,
+            "name": "Jakub Lauko"
+        },
+        {
+            "id": 8479968,
+            "name": "Vinni Lettieri"
+        },
+        {
+            "id": 8477496,
+            "name": "Elias Lindholm"
+        },
+        {
+            "id": 8482763,
+            "name": "Fabian Lysell"
+        },
+        {
+            "id": 8483489,
+            "name": "Fraser Minten"
+        },
+        {
+            "id": 8479999,
+            "name": "Casey Mittelstadt"
+        },
+        {
+            "id": 8477956,
+            "name": "David Pastrnak"
+        },
+        {
+            "id": 8478401,
+            "name": "Pavel Zacha"
+        },
+        {
+            "id": 8480828,
+            "name": "Michael Callahan"
+        },
+        {
+            "id": 8480035,
+            "name": "Henri Jokiharju"
+        },
+        {
+            "id": 8476854,
+            "name": "Hampus Lindholm"
+        },
+        {
+            "id": 8482511,
+            "name": "Mason Lohrei"
+        },
+        {
+            "id": 8479325,
+            "name": "Charlie McAvoy"
+        },
+        {
+            "id": 8480070,
+            "name": "Ian Mitchell"
+        },
+        {
+            "id": 8479369,
+            "name": "Andrew Peeke"
+        },
+        {
+            "id": 8478450,
+            "name": "Parker Wotherspoon"
+        },
+        {
+            "id": 8477507,
+            "name": "Nikita Zadorov"
+        },
+        {
+            "id": 8476914,
+            "name": "Joonas Korpisalo"
+        },
+        {
+            "id": 8480280,
+            "name": "Jeremy Swayman"
+        }
+    ]
+}

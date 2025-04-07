@@ -1,0 +1,144 @@
+{
+    "players": [
+        {
+            "id": 8470609,
+            "name": "Steve Bernier"
+        },
+        {
+            "id": 8476423,
+            "name": "Reid Boucher"
+        },
+        {
+            "id": 8477059,
+            "name": "Damien Brunner"
+        },
+        {
+            "id": 8469500,
+            "name": "Michael Cammalleri"
+        },
+        {
+            "id": 8469622,
+            "name": "Ryane Clowe"
+        },
+        {
+            "id": 8460542,
+            "name": "Patrik Elias"
+        },
+        {
+            "id": 8472410,
+            "name": "Stephen Gionta"
+        },
+        {
+            "id": 8467351,
+            "name": "Scott Gomez"
+        },
+        {
+            "id": 8467899,
+            "name": "Martin Havlat"
+        },
+        {
+            "id": 8474641,
+            "name": "Adam Henrique"
+        },
+        {
+            "id": 8448208,
+            "name": "Jaromir Jagr"
+        },
+        {
+            "id": 8475185,
+            "name": "Jacob Josefson"
+        },
+        {
+            "id": 8476870,
+            "name": "Stefan Matteau"
+        },
+        {
+            "id": 8469462,
+            "name": "Tuomo Ruutu"
+        },
+        {
+            "id": 8467545,
+            "name": "Michael Ryder"
+        },
+        {
+            "id": 8471636,
+            "name": "Tim Sestito"
+        },
+        {
+            "id": 8476209,
+            "name": "Mike Sislo"
+        },
+        {
+            "id": 8469547,
+            "name": "Jordin Tootoo"
+        },
+        {
+            "id": 8476227,
+            "name": "Joe Whitney"
+        },
+        {
+            "id": 8471233,
+            "name": "Travis Zajac"
+        },
+        {
+            "id": 8464977,
+            "name": "Dainius Zubrus"
+        },
+        {
+            "id": 8471748,
+            "name": "Mark Fraser"
+        },
+        {
+            "id": 8475199,
+            "name": "Eric Gelinas"
+        },
+        {
+            "id": 8472382,
+            "name": "Andy Greene"
+        },
+        {
+            "id": 8472394,
+            "name": "Peter Harrold"
+        },
+        {
+            "id": 8475274,
+            "name": "Seth Helgeson"
+        },
+        {
+            "id": 8477127,
+            "name": "Raman Hrabarenka"
+        },
+        {
+            "id": 8476457,
+            "name": "Adam Larsson"
+        },
+        {
+            "id": 8475750,
+            "name": "Jon Merrill"
+        },
+        {
+            "id": 8460626,
+            "name": "Bryce Salvador"
+        },
+        {
+            "id": 8476923,
+            "name": "Damon Severson"
+        },
+        {
+            "id": 8469623,
+            "name": "Marek Zidlicky"
+        },
+        {
+            "id": 8466339,
+            "name": "Scott Clemmensen"
+        },
+        {
+            "id": 8476234,
+            "name": "Keith Kinkaid"
+        },
+        {
+            "id": 8471239,
+            "name": "Cory Schneider"
+        }
+    ]
+}

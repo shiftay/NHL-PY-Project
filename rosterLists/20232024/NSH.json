@@ -1,0 +1,64 @@
+{
+    "players": [
+        {
+            "id": 8482146,
+            "name": "Luke Evangelista"
+        },
+        {
+            "id": 8476887,
+            "name": "Filip Forsberg"
+        },
+        {
+            "id": 8479996,
+            "name": "Cody Glass"
+        },
+        {
+            "id": 8476873,
+            "name": "Mark Jankowski"
+        },
+        {
+            "id": 8477446,
+            "name": "Michael McCarron"
+        },
+        {
+            "id": 8478438,
+            "name": "Tommy Novak"
+        },
+        {
+            "id": 8474679,
+            "name": "Gustav Nyquist"
+        },
+        {
+            "id": 8475158,
+            "name": "Ryan O'Reilly"
+        },
+        {
+            "id": 8476925,
+            "name": "Colton Sissons"
+        },
+        {
+            "id": 8482062,
+            "name": "Cole Smith"
+        },
+        {
+            "id": 8479371,
+            "name": "Dante Fabbro"
+        },
+        {
+            "id": 8474600,
+            "name": "Roman Josi"
+        },
+        {
+            "id": 8478468,
+            "name": "Jeremy Lauzon"
+        },
+        {
+            "id": 8474568,
+            "name": "Luke Schenn"
+        },
+        {
+            "id": 8477424,
+            "name": "Juuse Saros"
+        }
+    ]
+}

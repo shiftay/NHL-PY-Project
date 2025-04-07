@@ -1,0 +1,140 @@
+{
+    "players": [
+        {
+            "id": 8476404,
+            "name": "Andy Andreoff"
+        },
+        {
+            "id": 8474573,
+            "name": "Josh Bailey"
+        },
+        {
+            "id": 8478445,
+            "name": "Mathew Barzal"
+        },
+        {
+            "id": 8478463,
+            "name": "Anthony Beauvillier"
+        },
+        {
+            "id": 8479356,
+            "name": "Kieffer Bellows"
+        },
+        {
+            "id": 8475231,
+            "name": "Casey Cizikas"
+        },
+        {
+            "id": 8473504,
+            "name": "Cal Clutterbuck"
+        },
+        {
+            "id": 8478512,
+            "name": "Austin Czarnik"
+        },
+        {
+            "id": 8477936,
+            "name": "Michael Dal Colle"
+        },
+        {
+            "id": 8477527,
+            "name": "Ross Johnston"
+        },
+        {
+            "id": 8479526,
+            "name": "Otto Koivula"
+        },
+        {
+            "id": 8473463,
+            "name": "Leo Komarov"
+        },
+        {
+            "id": 8475314,
+            "name": "Anders Lee"
+        },
+        {
+            "id": 8474709,
+            "name": "Matt Martin"
+        },
+        {
+            "id": 8475754,
+            "name": "Brock Nelson"
+        },
+        {
+            "id": 8476419,
+            "name": "Jean-Gabriel Pageau"
+        },
+        {
+            "id": 8475151,
+            "name": "Kyle Palmieri"
+        },
+        {
+            "id": 8475209,
+            "name": "Richard Panik"
+        },
+        {
+            "id": 8470610,
+            "name": "Zach Parise"
+        },
+        {
+            "id": 8480789,
+            "name": "Oliver Wahlstrom"
+        },
+        {
+            "id": 8480222,
+            "name": "Sebastian Aho"
+        },
+        {
+            "id": 8465009,
+            "name": "Zdeno Chara"
+        },
+        {
+            "id": 8480865,
+            "name": "Noah Dobson"
+        },
+        {
+            "id": 8472382,
+            "name": "Andy Greene"
+        },
+        {
+            "id": 8474066,
+            "name": "Thomas Hickey"
+        },
+        {
+            "id": 8480306,
+            "name": "Grant Hutton"
+        },
+        {
+            "id": 8476983,
+            "name": "Paul LaDue"
+        },
+        {
+            "id": 8476429,
+            "name": "Scott Mayfield"
+        },
+        {
+            "id": 8476917,
+            "name": "Adam Pelech"
+        },
+        {
+            "id": 8477506,
+            "name": "Ryan Pulock"
+        },
+        {
+            "id": 8480071,
+            "name": "Robin Salo"
+        },
+        {
+            "id": 8471239,
+            "name": "Cory Schneider"
+        },
+        {
+            "id": 8478009,
+            "name": "Ilya Sorokin"
+        },
+        {
+            "id": 8473575,
+            "name": "Semyon Varlamov"
+        }
+    ]
+}

@@ -1,0 +1,136 @@
+{
+    "players": [
+        {
+            "id": 8465166,
+            "name": "Craig Adams"
+        },
+        {
+            "id": 8475761,
+            "name": "Beau Bennett"
+        },
+        {
+            "id": 8474576,
+            "name": "Zach Boychuk"
+        },
+        {
+            "id": 8465951,
+            "name": "Matt Cooke"
+        },
+        {
+            "id": 8471675,
+            "name": "Sidney Crosby"
+        },
+        {
+            "id": 8466393,
+            "name": "Pascal Dupuis"
+        },
+        {
+            "id": 8470854,
+            "name": "Tanner Glass"
+        },
+        {
+            "id": 8462042,
+            "name": "Jarome Iginla"
+        },
+        {
+            "id": 8474138,
+            "name": "Dustin Jeffrey"
+        },
+        {
+            "id": 8469638,
+            "name": "Jussi Jokinen"
+        },
+        {
+            "id": 8471311,
+            "name": "Tyler Kennedy"
+        },
+        {
+            "id": 8470543,
+            "name": "Chris Kunitz"
+        },
+        {
+            "id": 8470896,
+            "name": "Steve MacIntyre"
+        },
+        {
+            "id": 8471215,
+            "name": "Evgeni Malkin"
+        },
+        {
+            "id": 8466160,
+            "name": "Brenden Morrow"
+        },
+        {
+            "id": 8471707,
+            "name": "James Neal"
+        },
+        {
+            "id": 8473942,
+            "name": "Trevor Smith"
+        },
+        {
+            "id": 8474091,
+            "name": "Brandon Sutter"
+        },
+        {
+            "id": 8474025,
+            "name": "Eric Tangradi"
+        },
+        {
+            "id": 8471856,
+            "name": "Joe Vitale"
+        },
+        {
+            "id": 8474145,
+            "name": "Robert Bortuzzo"
+        },
+        {
+            "id": 8475155,
+            "name": "Simon Despres"
+        },
+        {
+            "id": 8467580,
+            "name": "Mark Eaton"
+        },
+        {
+            "id": 8468674,
+            "name": "Deryk Engelland"
+        },
+        {
+            "id": 8471724,
+            "name": "Kris Letang"
+        },
+        {
+            "id": 8473933,
+            "name": "Ben Lovejoy"
+        },
+        {
+            "id": 8468542,
+            "name": "Paul Martin"
+        },
+        {
+            "id": 8468114,
+            "name": "Douglas Murray"
+        },
+        {
+            "id": 8471702,
+            "name": "Matt Niskanen"
+        },
+        {
+            "id": 8468498,
+            "name": "Brooks Orpik"
+        },
+        {
+            "id": 8470798,
+            "name": "Dylan Reese"
+        },
+        {
+            "id": 8470594,
+            "name": "Marc-Andre Fleury"
+        },
+        {
+            "id": 8460712,
+            "name": "Tomas Vokoun"
+        }
+    ]
+}

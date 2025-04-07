@@ -1,0 +1,144 @@
+{
+    "players": [
+        {
+            "id": 8470176,
+            "name": "Sean Bergenheim"
+        },
+        {
+            "id": 8470803,
+            "name": "Kyle Brodziak"
+        },
+        {
+            "id": 8473646,
+            "name": "Ryan Carter"
+        },
+        {
+            "id": 8465951,
+            "name": "Matt Cooke"
+        },
+        {
+            "id": 8475745,
+            "name": "Charlie Coyle"
+        },
+        {
+            "id": 8476235,
+            "name": "Justin Fontaine"
+        },
+        {
+            "id": 8475798,
+            "name": "Mikael Granlund"
+        },
+        {
+            "id": 8476344,
+            "name": "Tyler Graovac"
+        },
+        {
+            "id": 8475287,
+            "name": "Erik Haula"
+        },
+        {
+            "id": 8469459,
+            "name": "Mikko Koivu"
+        },
+        {
+            "id": 8475799,
+            "name": "Nino Niederreiter"
+        },
+        {
+            "id": 8470610,
+            "name": "Zach Parise"
+        },
+        {
+            "id": 8469506,
+            "name": "Jason Pominville"
+        },
+        {
+            "id": 8475147,
+            "name": "Jordan Schroeder"
+        },
+        {
+            "id": 8473485,
+            "name": "Chris Stewart"
+        },
+        {
+            "id": 8471840,
+            "name": "Brett Sutter"
+        },
+        {
+            "id": 8470598,
+            "name": "Thomas Vanek"
+        },
+        {
+            "id": 8469542,
+            "name": "Stephane Veilleux"
+        },
+        {
+            "id": 8475722,
+            "name": "Jason Zucker"
+        },
+        {
+            "id": 8470054,
+            "name": "Keith Ballard"
+        },
+        {
+            "id": 8474772,
+            "name": "Stu Bickel"
+        },
+        {
+            "id": 8474164,
+            "name": "Jonathon Blum"
+        },
+        {
+            "id": 8476463,
+            "name": "Jonas Brodin"
+        },
+        {
+            "id": 8476856,
+            "name": "Mathew Dumba"
+        },
+        {
+            "id": 8473992,
+            "name": "Justin Falk"
+        },
+        {
+            "id": 8477850,
+            "name": "Christian Folin"
+        },
+        {
+            "id": 8467917,
+            "name": "Jordan Leopold"
+        },
+        {
+            "id": 8475613,
+            "name": "Nate Prosser"
+        },
+        {
+            "id": 8474618,
+            "name": "Marco Scandella"
+        },
+        {
+            "id": 8474716,
+            "name": "Jared Spurgeon"
+        },
+        {
+            "id": 8470600,
+            "name": "Ryan Suter"
+        },
+        {
+            "id": 8473404,
+            "name": "Niklas Backstrom"
+        },
+        {
+            "id": 8474202,
+            "name": "John Curry"
+        },
+        {
+            "id": 8471227,
+            "name": "Devan Dubnyk"
+        },
+        {
+            "id": 8475311,
+            "name": "Darcy Kuemper"
+        }
+    ]
+}

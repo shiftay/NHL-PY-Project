@@ -1,0 +1,144 @@
+{
+    "players": [
+        {
+            "id": 8478020,
+            "name": "Michael Amadio"
+        },
+        {
+            "id": 8479994,
+            "name": "Jaret Anderson-Dolan"
+        },
+        {
+            "id": 8480072,
+            "name": "Lias Andersson"
+        },
+        {
+            "id": 8476960,
+            "name": "Andreas Athanasiou"
+        },
+        {
+            "id": 8470606,
+            "name": "Dustin Brown"
+        },
+        {
+            "id": 8482124,
+            "name": "Quinton Byfield"
+        },
+        {
+            "id": 8470604,
+            "name": "Jeff Carter"
+        },
+        {
+            "id": 8476924,
+            "name": "Martin Frk"
+        },
+        {
+            "id": 8479336,
+            "name": "Carl Grundstrom"
+        },
+        {
+            "id": 8480113,
+            "name": "Alex Iafallo"
+        },
+        {
+            "id": 8481560,
+            "name": "Arthur Kaliyev"
+        },
+        {
+            "id": 8477960,
+            "name": "Adrian Kempe"
+        },
+        {
+            "id": 8471685,
+            "name": "Anze Kopitar"
+        },
+        {
+            "id": 8480845,
+            "name": "Rasmus Kupari"
+        },
+        {
+            "id": 8477962,
+            "name": "Brendan Lemieux"
+        },
+        {
+            "id": 8481481,
+            "name": "Blake Lizotte"
+        },
+        {
+            "id": 8479644,
+            "name": "Matt Luff"
+        },
+        {
+            "id": 8479675,
+            "name": "Trevor Moore"
+        },
+        {
+            "id": 8480221,
+            "name": "Drake Rymsha"
+        },
+        {
+            "id": 8480014,
+            "name": "Gabriel Vilardi"
+        },
+        {
+            "id": 8478455,
+            "name": "Austin Wagner"
+        },
+        {
+            "id": 8475729,
+            "name": "Mark Alt"
+        },
+        {
+            "id": 8479998,
+            "name": "Mikey Anderson"
+        },
+        {
+            "id": 8481600,
+            "name": "Tobias Bjornfot"
+        },
+        {
+            "id": 8479348,
+            "name": "Kale Clague"
+        },
+        {
+            "id": 8474563,
+            "name": "Drew Doughty"
+        },
+        {
+            "id": 8476874,
+            "name": "Olli M\u00e4\u00e4tt\u00e4"
+        },
+        {
+            "id": 8477073,
+            "name": "Kurtis MacDermid"
+        },
+        {
+            "id": 8478911,
+            "name": "Matt Roy"
+        },
+        {
+            "id": 8480467,
+            "name": "Austin Strand"
+        },
+        {
+            "id": 8480336,
+            "name": "Sean Walker"
+        },
+        {
+            "id": 8478846,
+            "name": "Christian Wolanin"
+        },
+        {
+            "id": 8477234,
+            "name": "Troy Grosenick"
+        },
+        {
+            "id": 8477361,
+            "name": "Cal Petersen"
+        },
+        {
+            "id": 8471734,
+            "name": "Jonathan Quick"
+        }
+    ]
+}

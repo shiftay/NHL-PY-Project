@@ -1,0 +1,112 @@
+{
+    "players": [
+        {
+            "id": 8474150,
+            "name": "Mikael Backlund"
+        },
+        {
+            "id": 8476399,
+            "name": "Blake Coleman"
+        },
+        {
+            "id": 8482679,
+            "name": "Matt Coronato"
+        },
+        {
+            "id": 8480797,
+            "name": "Joel Farabee"
+        },
+        {
+            "id": 8480028,
+            "name": "Morgan Frost"
+        },
+        {
+            "id": 8476456,
+            "name": "Jonathan Huberdeau"
+        },
+        {
+            "id": 8478211,
+            "name": "Dryden Hunt"
+        },
+        {
+            "id": 8475172,
+            "name": "Nazem Kadri"
+        },
+        {
+            "id": 8477993,
+            "name": "Justin Kirkland"
+        },
+        {
+            "id": 8483609,
+            "name": "Adam Klapka"
+        },
+        {
+            "id": 8479066,
+            "name": "Ryan Lomberg"
+        },
+        {
+            "id": 8477511,
+            "name": "Anthony Mantha"
+        },
+        {
+            "id": 8481028,
+            "name": "Martin Pospisil"
+        },
+        {
+            "id": 8479291,
+            "name": "Kevin Rooney"
+        },
+        {
+            "id": 8481068,
+            "name": "Yegor Sharangovich"
+        },
+        {
+            "id": 8484234,
+            "name": "Aydar Suniev"
+        },
+        {
+            "id": 8482074,
+            "name": "Connor Zary"
+        },
+        {
+            "id": 8478397,
+            "name": "Rasmus Andersson"
+        },
+        {
+            "id": 8480860,
+            "name": "Kevin Bahl"
+        },
+        {
+            "id": 8479402,
+            "name": "Jake Bean"
+        },
+        {
+            "id": 8477810,
+            "name": "Joel Hanley"
+        },
+        {
+            "id": 8482624,
+            "name": "Daniil Miromanov"
+        },
+        {
+            "id": 8481167,
+            "name": "Brayden Pachal"
+        },
+        {
+            "id": 8482470,
+            "name": "Ilya Solovyov"
+        },
+        {
+            "id": 8477346,
+            "name": "MacKenzie Weegar"
+        },
+        {
+            "id": 8478435,
+            "name": "Dan Vladar"
+        },
+        {
+            "id": 8481692,
+            "name": "Dustin Wolf"
+        }
+    ]
+}

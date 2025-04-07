@@ -1,0 +1,160 @@
+{
+    "players": [
+        {
+            "id": 8471697,
+            "name": "Niclas Bergfors"
+        },
+        {
+            "id": 8470609,
+            "name": "Steve Bernier"
+        },
+        {
+            "id": 8471266,
+            "name": "David Booth"
+        },
+        {
+            "id": 8473646,
+            "name": "Ryan Carter"
+        },
+        {
+            "id": 8474149,
+            "name": "Evgenii Dadonov"
+        },
+        {
+            "id": 8471941,
+            "name": "Mike Duco"
+        },
+        {
+            "id": 8462041,
+            "name": "Radek Dvorak"
+        },
+        {
+            "id": 8473564,
+            "name": "Michael Frolik"
+        },
+        {
+            "id": 8470274,
+            "name": "Chris Higgins"
+        },
+        {
+            "id": 8468660,
+            "name": "Darcy Hordichuk"
+        },
+        {
+            "id": 8470605,
+            "name": "Hugh Jessiman"
+        },
+        {
+            "id": 8471842,
+            "name": "Tim Kennedy"
+        },
+        {
+            "id": 8473574,
+            "name": "Shawn Matthias"
+        },
+        {
+            "id": 8471694,
+            "name": "Kenndal McArdle"
+        },
+        {
+            "id": 8471220,
+            "name": "Rostislav Olesz"
+        },
+        {
+            "id": 8464967,
+            "name": "Marty Reasoner"
+        },
+        {
+            "id": 8468432,
+            "name": "Steve Reinprecht"
+        },
+        {
+            "id": 8474153,
+            "name": "Michal Repik"
+        },
+        {
+            "id": 8470321,
+            "name": "Patrick Rissmiller"
+        },
+        {
+            "id": 8466035,
+            "name": "Sergei Samsonov"
+        },
+        {
+            "id": 8471390,
+            "name": "Mike Santorelli"
+        },
+        {
+            "id": 8471681,
+            "name": "Jack Skille"
+        },
+        {
+            "id": 8458943,
+            "name": "Cory Stillman"
+        },
+        {
+            "id": 8472361,
+            "name": "Bill Thomas"
+        },
+        {
+            "id": 8475304,
+            "name": "Scott Timmins"
+        },
+        {
+            "id": 8469457,
+            "name": "Stephen Weiss"
+        },
+        {
+            "id": 8467332,
+            "name": "Bryan Allen"
+        },
+        {
+            "id": 8470086,
+            "name": "Joe Callahan"
+        },
+        {
+            "id": 8474184,
+            "name": "Keaton Ellerby"
+        },
+        {
+            "id": 8474520,
+            "name": "Jason Garrison"
+        },
+        {
+            "id": 8475179,
+            "name": "Dmitry Kulikov"
+        },
+        {
+            "id": 8459462,
+            "name": "Bryan McCabe"
+        },
+        {
+            "id": 8470685,
+            "name": "Alexander Sulzer"
+        },
+        {
+            "id": 8468478,
+            "name": "Mike Weaver"
+        },
+        {
+            "id": 8469770,
+            "name": "Dennis Wideman"
+        },
+        {
+            "id": 8472262,
+            "name": "Clay Wilson"
+        },
+        {
+            "id": 8466339,
+            "name": "Scott Clemmensen"
+        },
+        {
+            "id": 8474593,
+            "name": "Jacob Markstrom"
+        },
+        {
+            "id": 8460712,
+            "name": "Tomas Vokoun"
+        }
+    ]
+}

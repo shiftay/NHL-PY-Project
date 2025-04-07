@@ -1,0 +1,128 @@
+{
+    "players": [
+        {
+            "id": 8478427,
+            "name": "Sebastian Aho"
+        },
+        {
+            "id": 8476858,
+            "name": "Phillip Di Giuseppe"
+        },
+        {
+            "id": 8477998,
+            "name": "Warren Foegele"
+        },
+        {
+            "id": 8477591,
+            "name": "Josh Jooris"
+        },
+        {
+            "id": 8475323,
+            "name": "Marcus Kruger"
+        },
+        {
+            "id": 8479511,
+            "name": "Janne Kuokkanen"
+        },
+        {
+            "id": 8477496,
+            "name": "Elias Lindholm"
+        },
+        {
+            "id": 8476934,
+            "name": "Brock McGinn"
+        },
+        {
+            "id": 8480039,
+            "name": "Martin Necas"
+        },
+        {
+            "id": 8475807,
+            "name": "Joakim Nordstrom"
+        },
+        {
+            "id": 8476437,
+            "name": "Victor Rask"
+        },
+        {
+            "id": 8478462,
+            "name": "Nicolas Roy"
+        },
+        {
+            "id": 8478585,
+            "name": "Derek Ryan"
+        },
+        {
+            "id": 8475784,
+            "name": "Jeff Skinner"
+        },
+        {
+            "id": 8473533,
+            "name": "Jordan Staal"
+        },
+        {
+            "id": 8470740,
+            "name": "Lee Stempniak"
+        },
+        {
+            "id": 8476882,
+            "name": "Teuvo Teravainen"
+        },
+        {
+            "id": 8478027,
+            "name": "Lucas Wallmark"
+        },
+        {
+            "id": 8468508,
+            "name": "Justin Williams"
+        },
+        {
+            "id": 8477458,
+            "name": "Valentin Zykov"
+        },
+        {
+            "id": 8476953,
+            "name": "Trevor Carrick"
+        },
+        {
+            "id": 8476403,
+            "name": "Klas Dahlbeck"
+        },
+        {
+            "id": 8475753,
+            "name": "Justin Faulk"
+        },
+        {
+            "id": 8477938,
+            "name": "Haydn Fleury"
+        },
+        {
+            "id": 8478396,
+            "name": "Noah Hanifin"
+        },
+        {
+            "id": 8477981,
+            "name": "Roland McKeown"
+        },
+        {
+            "id": 8477488,
+            "name": "Brett Pesce"
+        },
+        {
+            "id": 8476958,
+            "name": "Jaccob Slavin"
+        },
+        {
+            "id": 8477845,
+            "name": "Trevor van Riemsdyk"
+        },
+        {
+            "id": 8474152,
+            "name": "Scott Darling"
+        },
+        {
+            "id": 8470320,
+            "name": "Cam Ward"
+        }
+    ]
+}

@@ -1,0 +1,144 @@
+{
+    "players": [
+        {
+            "id": 8478020,
+            "name": "Michael Amadio"
+        },
+        {
+            "id": 8477964,
+            "name": "Ivan Barbashev"
+        },
+        {
+            "id": 8476927,
+            "name": "Teddy Blueger"
+        },
+        {
+            "id": 8477478,
+            "name": "William Carrier"
+        },
+        {
+            "id": 8481032,
+            "name": "Paul Cotter"
+        },
+        {
+            "id": 8481604,
+            "name": "Pavel Dorofeyev"
+        },
+        {
+            "id": 8478403,
+            "name": "Jack Eichel"
+        },
+        {
+            "id": 8475278,
+            "name": "Byron Froese"
+        },
+        {
+            "id": 8479353,
+            "name": "Brett Howden"
+        },
+        {
+            "id": 8476448,
+            "name": "William Karlsson"
+        },
+        {
+            "id": 8473548,
+            "name": "Phil Kessel"
+        },
+        {
+            "id": 8478434,
+            "name": "Keegan Kolesar"
+        },
+        {
+            "id": 8479991,
+            "name": "Jake Leschyshyn"
+        },
+        {
+            "id": 8476539,
+            "name": "Jonathan Marchessault"
+        },
+        {
+            "id": 8480776,
+            "name": "Sheldon Rempal"
+        },
+        {
+            "id": 8480007,
+            "name": "Jonas Rondbjerg"
+        },
+        {
+            "id": 8478462,
+            "name": "Nicolas Roy"
+        },
+        {
+            "id": 8475191,
+            "name": "Reilly Smith"
+        },
+        {
+            "id": 8476905,
+            "name": "Chandler Stephenson"
+        },
+        {
+            "id": 8475913,
+            "name": "Mark Stone"
+        },
+        {
+            "id": 8479980,
+            "name": "Nicolas Hague"
+        },
+        {
+            "id": 8477018,
+            "name": "Ben Hutton"
+        },
+        {
+            "id": 8481527,
+            "name": "Kaedan Korczak"
+        },
+        {
+            "id": 8474166,
+            "name": "Alec Martinez"
+        },
+        {
+            "id": 8475188,
+            "name": "Brayden McNabb"
+        },
+        {
+            "id": 8482624,
+            "name": "Daniil Miromanov"
+        },
+        {
+            "id": 8481167,
+            "name": "Brayden Pachal"
+        },
+        {
+            "id": 8474565,
+            "name": "Alex Pietrangelo"
+        },
+        {
+            "id": 8477447,
+            "name": "Shea Theodore"
+        },
+        {
+            "id": 8480727,
+            "name": "Zach Whitecloud"
+        },
+        {
+            "id": 8476316,
+            "name": "Laurent Brossoit"
+        },
+        {
+            "id": 8478499,
+            "name": "Adin Hill"
+        },
+        {
+            "id": 8480238,
+            "name": "Jiri Patera"
+        },
+        {
+            "id": 8471734,
+            "name": "Jonathan Quick"
+        },
+        {
+            "id": 8480313,
+            "name": "Logan Thompson"
+        }
+    ]
+}

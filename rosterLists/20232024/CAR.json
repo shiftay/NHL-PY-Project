@@ -1,0 +1,96 @@
+{
+    "players": [
+        {
+            "id": 8478427,
+            "name": "Sebastian Aho"
+        },
+        {
+            "id": 8482809,
+            "name": "Jackson Blake"
+        },
+        {
+            "id": 8480835,
+            "name": "Jack Drury"
+        },
+        {
+            "id": 8475855,
+            "name": "Jesper Fast"
+        },
+        {
+            "id": 8482093,
+            "name": "Seth Jarvis"
+        },
+        {
+            "id": 8480829,
+            "name": "Jesperi Kotkaniemi"
+        },
+        {
+            "id": 8475744,
+            "name": "Evgeny Kuznetsov"
+        },
+        {
+            "id": 8477962,
+            "name": "Brendan Lemieux"
+        },
+        {
+            "id": 8484203,
+            "name": "Bradly Nadeau"
+        },
+        {
+            "id": 8480039,
+            "name": "Martin Necas"
+        },
+        {
+            "id": 8473533,
+            "name": "Jordan Staal"
+        },
+        {
+            "id": 8481576,
+            "name": "Ryan Suzuki"
+        },
+        {
+            "id": 8480830,
+            "name": "Andrei Svechnikov"
+        },
+        {
+            "id": 8470613,
+            "name": "Brent Burns"
+        },
+        {
+            "id": 8478970,
+            "name": "Jalen Chatfield"
+        },
+        {
+            "id": 8479639,
+            "name": "Dylan Coghlan"
+        },
+        {
+            "id": 8482666,
+            "name": "Scott Morrow"
+        },
+        {
+            "id": 8475200,
+            "name": "Dmitry Orlov"
+        },
+        {
+            "id": 8482187,
+            "name": "Ronan Seeley"
+        },
+        {
+            "id": 8476958,
+            "name": "Jaccob Slavin"
+        },
+        {
+            "id": 8475883,
+            "name": "Frederik Andersen"
+        },
+        {
+            "id": 8481611,
+            "name": "Pyotr Kochetkov"
+        },
+        {
+            "id": 8477484,
+            "name": "Spencer Martin"
+        }
+    ]
+}

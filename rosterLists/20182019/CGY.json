@@ -1,0 +1,128 @@
+{
+    "players": [
+        {
+            "id": 8474150,
+            "name": "Mikael Backlund"
+        },
+        {
+            "id": 8477935,
+            "name": "Sam Bennett"
+        },
+        {
+            "id": 8478512,
+            "name": "Austin Czarnik"
+        },
+        {
+            "id": 8479346,
+            "name": "Dillon Dube"
+        },
+        {
+            "id": 8473564,
+            "name": "Michael Frolik"
+        },
+        {
+            "id": 8476346,
+            "name": "Johnny Gaudreau"
+        },
+        {
+            "id": 8477903,
+            "name": "Garnet Hathaway"
+        },
+        {
+            "id": 8476873,
+            "name": "Mark Jankowski"
+        },
+        {
+            "id": 8477508,
+            "name": "Curtis Lazar"
+        },
+        {
+            "id": 8477496,
+            "name": "Elias Lindholm"
+        },
+        {
+            "id": 8479066,
+            "name": "Ryan Lomberg"
+        },
+        {
+            "id": 8478233,
+            "name": "Andrew Mangiapane"
+        },
+        {
+            "id": 8477497,
+            "name": "Sean Monahan"
+        },
+        {
+            "id": 8471707,
+            "name": "James Neal"
+        },
+        {
+            "id": 8474061,
+            "name": "Anthony Peluso"
+        },
+        {
+            "id": 8476409,
+            "name": "Alan Quine"
+        },
+        {
+            "id": 8478585,
+            "name": "Derek Ryan"
+        },
+        {
+            "id": 8477510,
+            "name": "Kerby Rychel"
+        },
+        {
+            "id": 8479314,
+            "name": "Matthew Tkachuk"
+        },
+        {
+            "id": 8478397,
+            "name": "Rasmus Andersson"
+        },
+        {
+            "id": 8474673,
+            "name": "TJ Brodie"
+        },
+        {
+            "id": 8480147,
+            "name": "Oscar Fantenberg"
+        },
+        {
+            "id": 8470966,
+            "name": "Mark Giordano"
+        },
+        {
+            "id": 8474612,
+            "name": "Travis Hamonic"
+        },
+        {
+            "id": 8478396,
+            "name": "Noah Hanifin"
+        },
+        {
+            "id": 8478430,
+            "name": "Oliver Kylington"
+        },
+        {
+            "id": 8474774,
+            "name": "Dalton Prout"
+        },
+        {
+            "id": 8474628,
+            "name": "Michael Stone"
+        },
+        {
+            "id": 8479976,
+            "name": "Juuso V\u00e4lim\u00e4ki"
+        },
+        {
+            "id": 8479496,
+            "name": "David Rittich"
+        },
+        {
+            "id": 8469608,
+            "name": "Mike Smith"
+        }
+    ]
+}

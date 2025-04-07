@@ -1,0 +1,100 @@
+{
+    "players": [
+        {
+            "id": 8484145,
+            "name": "Zach Benson"
+        },
+        {
+            "id": 8478413,
+            "name": "Jordan Greenway"
+        },
+        {
+            "id": 8482896,
+            "name": "Tyson Kozak"
+        },
+        {
+            "id": 8481522,
+            "name": "Peyton Krebs"
+        },
+        {
+            "id": 8483468,
+            "name": "Jiri Kulich"
+        },
+        {
+            "id": 8478043,
+            "name": "Sam Lafferty"
+        },
+        {
+            "id": 8479359,
+            "name": "Beck Malenstyn"
+        },
+        {
+            "id": 8480802,
+            "name": "Ryan McLeod"
+        },
+        {
+            "id": 8480064,
+            "name": "Josh Norris"
+        },
+        {
+            "id": 8483500,
+            "name": "Noah Ostlund"
+        },
+        {
+            "id": 8482175,
+            "name": "JJ Peterka"
+        },
+        {
+            "id": 8482097,
+            "name": "Jack Quinn"
+        },
+        {
+            "id": 8479420,
+            "name": "Tage Thompson"
+        },
+        {
+            "id": 8477949,
+            "name": "Alex Tuch"
+        },
+        {
+            "id": 8475722,
+            "name": "Jason Zucker"
+        },
+        {
+            "id": 8480879,
+            "name": "Jacob Bernard-Docker"
+        },
+        {
+            "id": 8480196,
+            "name": "Jacob Bryson"
+        },
+        {
+            "id": 8481524,
+            "name": "Bowen Byram"
+        },
+        {
+            "id": 8477365,
+            "name": "Connor Clifton"
+        },
+        {
+            "id": 8480839,
+            "name": "Rasmus Dahlin"
+        },
+        {
+            "id": 8482671,
+            "name": "Owen Power"
+        },
+        {
+            "id": 8480807,
+            "name": "Mattias Samuelsson"
+        },
+        {
+            "id": 8480045,
+            "name": "Ukko-Pekka Luukkonen"
+        },
+        {
+            "id": 8473503,
+            "name": "James Reimer"
+        }
+    ]
+}

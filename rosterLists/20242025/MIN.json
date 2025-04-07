@@ -1,0 +1,104 @@
+{
+    "players": [
+        {
+            "id": 8481557,
+            "name": "Matt Boldy"
+        },
+        {
+            "id": 8479638,
+            "name": "Justin Brazeau"
+        },
+        {
+            "id": 8478493,
+            "name": "Joel Eriksson Ek"
+        },
+        {
+            "id": 8475220,
+            "name": "Marcus Foligno"
+        },
+        {
+            "id": 8477919,
+            "name": "Frederick Gaudreau"
+        },
+        {
+            "id": 8476867,
+            "name": "Brendan Gaunce"
+        },
+        {
+            "id": 8477451,
+            "name": "Ryan Hartman"
+        },
+        {
+            "id": 8476994,
+            "name": "Vinnie Hinostroza"
+        },
+        {
+            "id": 8475149,
+            "name": "Marcus Johansson"
+        },
+        {
+            "id": 8478864,
+            "name": "Kirill Kaprizov"
+        },
+        {
+            "id": 8474679,
+            "name": "Gustav Nyquist"
+        },
+        {
+            "id": 8482079,
+            "name": "Marco Rossi"
+        },
+        {
+            "id": 8476913,
+            "name": "Devin Shore"
+        },
+        {
+            "id": 8478508,
+            "name": "Yakov Trenin"
+        },
+        {
+            "id": 8475692,
+            "name": "Mats Zuccarello"
+        },
+        {
+            "id": 8474567,
+            "name": "Zach Bogosian"
+        },
+        {
+            "id": 8476463,
+            "name": "Jonas Brodin"
+        },
+        {
+            "id": 8480990,
+            "name": "Declan Chisholm"
+        },
+        {
+            "id": 8480075,
+            "name": "Cameron Crotty"
+        },
+        {
+            "id": 8482122,
+            "name": "Brock Faber"
+        },
+        {
+            "id": 8475750,
+            "name": "Jon Merrill"
+        },
+        {
+            "id": 8478136,
+            "name": "Jake Middleton"
+        },
+        {
+            "id": 8474716,
+            "name": "Jared Spurgeon"
+        },
+        {
+            "id": 8470594,
+            "name": "Marc-Andre Fleury"
+        },
+        {
+            "id": 8479406,
+            "name": "Filip Gustavsson"
+        }
+    ]
+}

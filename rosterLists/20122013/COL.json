@@ -1,0 +1,128 @@
+{
+    "players": [
+        {
+            "id": 8471326,
+            "name": "Patrick Bordeleau"
+        },
+        {
+            "id": 8471703,
+            "name": "Steve Downie"
+        },
+        {
+            "id": 8475168,
+            "name": "Matt Duchene"
+        },
+        {
+            "id": 8460577,
+            "name": "Milan Hejduk"
+        },
+        {
+            "id": 8470877,
+            "name": "David Jones"
+        },
+        {
+            "id": 8469467,
+            "name": "Chuck Kobasew"
+        },
+        {
+            "id": 8476455,
+            "name": "Gabriel Landeskog"
+        },
+        {
+            "id": 8474089,
+            "name": "Brad Malone"
+        },
+        {
+            "id": 8473465,
+            "name": "Jamie McGinn"
+        },
+        {
+            "id": 8471657,
+            "name": "Cody McLeod"
+        },
+        {
+            "id": 8470750,
+            "name": "John Mitchell"
+        },
+        {
+            "id": 8475158,
+            "name": "Ryan O'Reilly"
+        },
+        {
+            "id": 8474705,
+            "name": "Mark Olver"
+        },
+        {
+            "id": 8474030,
+            "name": "Aaron Palushaj"
+        },
+        {
+            "id": 8469707,
+            "name": "PA Parenteau"
+        },
+        {
+            "id": 8475958,
+            "name": "Michael Sgarbossa"
+        },
+        {
+            "id": 8471669,
+            "name": "Paul Stastny"
+        },
+        {
+            "id": 8470189,
+            "name": "David Van Der Gulik"
+        },
+        {
+            "id": 8475266,
+            "name": "Tomas Vincour"
+        },
+        {
+            "id": 8475197,
+            "name": "Tyson Barrie"
+        },
+        {
+            "id": 8475206,
+            "name": "Stefan Elliott"
+        },
+        {
+            "id": 8470699,
+            "name": "Jan Hejda"
+        },
+        {
+            "id": 8471436,
+            "name": "Matt Hunwick"
+        },
+        {
+            "id": 8473446,
+            "name": "Erik Johnson"
+        },
+        {
+            "id": 8470839,
+            "name": "Shane O'Brien"
+        },
+        {
+            "id": 8470672,
+            "name": "Ryan O'Byrne"
+        },
+        {
+            "id": 8473700,
+            "name": "Ryan Wilson"
+        },
+        {
+            "id": 8468636,
+            "name": "Greg Zanon"
+        },
+        {
+            "id": 8475824,
+            "name": "Sami Aittokallio"
+        },
+        {
+            "id": 8462044,
+            "name": "Jean-Sebastien Giguere"
+        },
+        {
+            "id": 8473575,
+            "name": "Semyon Varlamov"
+        }
+    ]
+}

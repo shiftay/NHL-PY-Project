@@ -1,0 +1,132 @@
+{
+    "players": [
+        {
+            "id": 8445730,
+            "name": "Doug Brown"
+        },
+        {
+            "id": 8445789,
+            "name": "Shawn Burr"
+        },
+        {
+            "id": 8446063,
+            "name": "Dino Ciccarelli"
+        },
+        {
+            "id": 8446485,
+            "name": "Kris Draper"
+        },
+        {
+            "id": 8446715,
+            "name": "Bob Errey"
+        },
+        {
+            "id": 8446788,
+            "name": "Sergei Fedorov"
+        },
+        {
+            "id": 8447386,
+            "name": "Stu Grimson"
+        },
+        {
+            "id": 8456734,
+            "name": "Greg Johnson"
+        },
+        {
+            "id": 8456887,
+            "name": "Vyacheslav Kozlov"
+        },
+        {
+            "id": 8448566,
+            "name": "Mike Krushelnyski"
+        },
+        {
+            "id": 8458524,
+            "name": "Martin Lapointe"
+        },
+        {
+            "id": 8458982,
+            "name": "Darren McCarty"
+        },
+        {
+            "id": 8457318,
+            "name": "Andrew Mckim"
+        },
+        {
+            "id": 8450550,
+            "name": "Keith Primeau"
+        },
+        {
+            "id": 8451343,
+            "name": "Ray Sheppard"
+        },
+        {
+            "id": 8451359,
+            "name": "Mike Sillinger"
+        },
+        {
+            "id": 8458192,
+            "name": "Tim Taylor"
+        },
+        {
+            "id": 8452578,
+            "name": "Steve Yzerman"
+        },
+        {
+            "id": 8445920,
+            "name": "Terry Carkner"
+        },
+        {
+            "id": 8446117,
+            "name": "Paul Coffey"
+        },
+        {
+            "id": 8446792,
+            "name": "Mark Ferner"
+        },
+        {
+            "id": 8446789,
+            "name": "Viacheslav Fetisov"
+        },
+        {
+            "id": 8447458,
+            "name": "Bob Halkidis"
+        },
+        {
+            "id": 8448002,
+            "name": "Mark Howe"
+        },
+        {
+            "id": 8456870,
+            "name": "Vladimir Konstantinov"
+        },
+        {
+            "id": 8457063,
+            "name": "Nicklas Lidstrom"
+        },
+        {
+            "id": 8450645,
+            "name": "Mike Ramsey"
+        },
+        {
+            "id": 8451022,
+            "name": "Bob Rouse"
+        },
+        {
+            "id": 8458519,
+            "name": "Aaron Ward"
+        },
+        {
+            "id": 8458468,
+            "name": "Jason York"
+        },
+        {
+            "id": 8458568,
+            "name": "Chris Osgood"
+        },
+        {
+            "id": 8452217,
+            "name": "Mike Vernon"
+        }
+    ]
+}

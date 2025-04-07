@@ -1,0 +1,128 @@
+{
+    "players": [
+        {
+            "id": 8477493,
+            "name": "Aleksander Barkov"
+        },
+        {
+            "id": 8470176,
+            "name": "Sean Bergenheim"
+        },
+        {
+            "id": 8475760,
+            "name": "Nick Bjugstad"
+        },
+        {
+            "id": 8471245,
+            "name": "Dave Bolland"
+        },
+        {
+            "id": 8468504,
+            "name": "Brad Boyes"
+        },
+        {
+            "id": 8470039,
+            "name": "Tomas Fleischmann"
+        },
+        {
+            "id": 8476428,
+            "name": "Rocco Grimaldi"
+        },
+        {
+            "id": 8474625,
+            "name": "Jimmy Hayes"
+        },
+        {
+            "id": 8476456,
+            "name": "Jonathan Huberdeau"
+        },
+        {
+            "id": 8448208,
+            "name": "Jaromir Jagr"
+        },
+        {
+            "id": 8469638,
+            "name": "Jussi Jokinen"
+        },
+        {
+            "id": 8468518,
+            "name": "Tomas Kopecky"
+        },
+        {
+            "id": 8468001,
+            "name": "Derek MacKenzie"
+        },
+        {
+            "id": 8475204,
+            "name": "Brandon Pirri"
+        },
+        {
+            "id": 8465978,
+            "name": "Shawn Thornton"
+        },
+        {
+            "id": 8476389,
+            "name": "Vincent Trocheck"
+        },
+        {
+            "id": 8470105,
+            "name": "Scottie Upshall"
+        },
+        {
+            "id": 8475253,
+            "name": "Garrett Wilson"
+        },
+        {
+            "id": 8466285,
+            "name": "Brian Campbell"
+        },
+        {
+            "id": 8477932,
+            "name": "Aaron Ekblad"
+        },
+        {
+            "id": 8475790,
+            "name": "Erik Gudbranson"
+        },
+        {
+            "id": 8474000,
+            "name": "Steven Kampfer"
+        },
+        {
+            "id": 8475179,
+            "name": "Dmitry Kulikov"
+        },
+        {
+            "id": 8465185,
+            "name": "Willie Mitchell"
+        },
+        {
+            "id": 8470839,
+            "name": "Shane O'Brien"
+        },
+        {
+            "id": 8475153,
+            "name": "Dylan Olsen"
+        },
+        {
+            "id": 8475755,
+            "name": "Alexander Petrovic"
+        },
+        {
+            "id": 8474606,
+            "name": "Colby Robak"
+        },
+        {
+            "id": 8468540,
+            "name": "Dan Ellis"
+        },
+        {
+            "id": 8466141,
+            "name": "Roberto Luongo"
+        },
+        {
+            "id": 8471219,
+            "name": "Al Montoya"
+        }
+    ]
+}

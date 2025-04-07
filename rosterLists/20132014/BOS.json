@@ -1,0 +1,144 @@
+{
+    "players": [
+        {
+            "id": 8470638,
+            "name": "Patrice Bergeron"
+        },
+        {
+            "id": 8470169,
+            "name": "Gregory Campbell"
+        },
+        {
+            "id": 8475150,
+            "name": "Jordan Caron"
+        },
+        {
+            "id": 8475414,
+            "name": "Craig Cunningham"
+        },
+        {
+            "id": 8470626,
+            "name": "Loui Eriksson"
+        },
+        {
+            "id": 8475845,
+            "name": "Justin Florek"
+        },
+        {
+            "id": 8475671,
+            "name": "Matt Fraser"
+        },
+        {
+            "id": 8462042,
+            "name": "Jarome Iginla"
+        },
+        {
+            "id": 8471280,
+            "name": "Nick Johnson"
+        },
+        {
+            "id": 8467967,
+            "name": "Chris Kelly"
+        },
+        {
+            "id": 8476435,
+            "name": "Alex Khokhlachev"
+        },
+        {
+            "id": 8471276,
+            "name": "David Krejci"
+        },
+        {
+            "id": 8477228,
+            "name": "Matt Lindblad"
+        },
+        {
+            "id": 8473473,
+            "name": "Milan Lucic"
+        },
+        {
+            "id": 8473419,
+            "name": "Brad Marchand"
+        },
+        {
+            "id": 8470230,
+            "name": "Daniel Paille"
+        },
+        {
+            "id": 8475191,
+            "name": "Reilly Smith"
+        },
+        {
+            "id": 8471262,
+            "name": "Carl Soderberg"
+        },
+        {
+            "id": 8475727,
+            "name": "Ryan Spooner"
+        },
+        {
+            "id": 8465978,
+            "name": "Shawn Thornton"
+        },
+        {
+            "id": 8474749,
+            "name": "Matt Bartkowski"
+        },
+        {
+            "id": 8470187,
+            "name": "Johnny Boychuk"
+        },
+        {
+            "id": 8465009,
+            "name": "Zdeno Chara"
+        },
+        {
+            "id": 8476462,
+            "name": "Dougie Hamilton"
+        },
+        {
+            "id": 8476792,
+            "name": "Torey Krug"
+        },
+        {
+            "id": 8471717,
+            "name": "Adam McQuaid"
+        },
+        {
+            "id": 8471236,
+            "name": "Andrej Meszaros"
+        },
+        {
+            "id": 8476191,
+            "name": "Kevan Miller"
+        },
+        {
+            "id": 8470714,
+            "name": "Corey Potter"
+        },
+        {
+            "id": 8469619,
+            "name": "Dennis Seidenberg"
+        },
+        {
+            "id": 8475902,
+            "name": "Zach Trotman"
+        },
+        {
+            "id": 8474660,
+            "name": "David Warsofsky"
+        },
+        {
+            "id": 8473434,
+            "name": "Chad Johnson"
+        },
+        {
+            "id": 8471695,
+            "name": "Tuukka Rask"
+        },
+        {
+            "id": 8476844,
+            "name": "Niklas Svedberg"
+        }
+    ]
+}

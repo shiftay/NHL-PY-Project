@@ -1,0 +1,144 @@
+{
+    "players": [
+        {
+            "id": 8445000,
+            "name": "Dave Andreychuk"
+        },
+        {
+            "id": 8445323,
+            "name": "Ken Baumgartner"
+        },
+        {
+            "id": 8459089,
+            "name": "Ken Belanger"
+        },
+        {
+            "id": 8445424,
+            "name": "Bill Berg"
+        },
+        {
+            "id": 8459013,
+            "name": "Nikolai Borschevsky"
+        },
+        {
+            "id": 8446213,
+            "name": "Mike Craig"
+        },
+        {
+            "id": 8456080,
+            "name": "Paul Di Pietro"
+        },
+        {
+            "id": 8446454,
+            "name": "Tie Domi"
+        },
+        {
+            "id": 8456156,
+            "name": "Mike Eastwood"
+        },
+        {
+            "id": 8447067,
+            "name": "Mike Gartner"
+        },
+        {
+            "id": 8447206,
+            "name": "Doug Gilmour"
+        },
+        {
+            "id": 8456567,
+            "name": "Darby Hendrickson"
+        },
+        {
+            "id": 8445423,
+            "name": "Benoit Hogue"
+        },
+        {
+            "id": 8457203,
+            "name": "Kent Manderville"
+        },
+        {
+            "id": 8459546,
+            "name": "Zdenek Nedved"
+        },
+        {
+            "id": 8450832,
+            "name": "Mike Ridley"
+        },
+        {
+            "id": 8451089,
+            "name": "Warren Rychel"
+        },
+        {
+            "id": 8451774,
+            "name": "Mats Sundin"
+        },
+        {
+            "id": 8451791,
+            "name": "Rich Sutter"
+        },
+        {
+            "id": 8458347,
+            "name": "Dixon Ward"
+        },
+        {
+            "id": 8458941,
+            "name": "Todd Warriner"
+        },
+        {
+            "id": 8452501,
+            "name": "Randy Wood"
+        },
+        {
+            "id": 8452557,
+            "name": "Terry Yake"
+        },
+        {
+            "id": 8445413,
+            "name": "Drake Berehowsky"
+        },
+        {
+            "id": 8445803,
+            "name": "Garth Butcher"
+        },
+        {
+            "id": 8446626,
+            "name": "Dave Ellett"
+        },
+        {
+            "id": 8447187,
+            "name": "Todd Gill"
+        },
+        {
+            "id": 8456514,
+            "name": "David Harlock"
+        },
+        {
+            "id": 8448271,
+            "name": "Grant Jennings"
+        },
+        {
+            "id": 8459434,
+            "name": "Kenny Jonsson"
+        },
+        {
+            "id": 8449009,
+            "name": "Jamie Macoun"
+        },
+        {
+            "id": 8457232,
+            "name": "Matt Martin"
+        },
+        {
+            "id": 8458672,
+            "name": "Dmitri Mironov"
+        },
+        {
+            "id": 8457714,
+            "name": "Felix Potvin"
+        },
+        {
+            "id": 8457791,
+            "name": "Damian Rhodes"
+        }
+    ]
+}

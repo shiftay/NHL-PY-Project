@@ -1,0 +1,80 @@
+{
+    "players": [
+        {
+            "id": 8478569,
+            "name": "Noel Acciari"
+        },
+        {
+            "id": 8478047,
+            "name": "Michael Bunting"
+        },
+        {
+            "id": 8471675,
+            "name": "Sidney Crosby"
+        },
+        {
+            "id": 8474189,
+            "name": "Lars Eller"
+        },
+        {
+            "id": 8475763,
+            "name": "Kevin Hayes"
+        },
+        {
+            "id": 8471215,
+            "name": "Evgeni Malkin"
+        },
+        {
+            "id": 8476442,
+            "name": "Matt Nieto"
+        },
+        {
+            "id": 8482055,
+            "name": "Drew O'Connor"
+        },
+        {
+            "id": 8479344,
+            "name": "Jesse Puljujarvi"
+        },
+        {
+            "id": 8476483,
+            "name": "Rickard Rakell"
+        },
+        {
+            "id": 8475810,
+            "name": "Bryan Rust"
+        },
+        {
+            "id": 8475191,
+            "name": "Reilly Smith"
+        },
+        {
+            "id": 8477435,
+            "name": "Ryan Graves"
+        },
+        {
+            "id": 8474578,
+            "name": "Erik Karlsson"
+        },
+        {
+            "id": 8471724,
+            "name": "Kris Letang"
+        },
+        {
+            "id": 8481206,
+            "name": "John Ludvig"
+        },
+        {
+            "id": 8477969,
+            "name": "Marcus Pettersson"
+        },
+        {
+            "id": 8477465,
+            "name": "Tristan Jarry"
+        },
+        {
+            "id": 8477968,
+            "name": "Alex Nedeljkovic"
+        }
+    ]
+}

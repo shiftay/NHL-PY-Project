@@ -1,0 +1,144 @@
+{
+    "players": [
+        {
+            "id": 8470638,
+            "name": "Patrice Bergeron"
+        },
+        {
+            "id": 8470169,
+            "name": "Gregory Campbell"
+        },
+        {
+            "id": 8476211,
+            "name": "Carter Camper"
+        },
+        {
+            "id": 8475150,
+            "name": "Jordan Caron"
+        },
+        {
+            "id": 8474045,
+            "name": "Zach Hamill"
+        },
+        {
+            "id": 8470636,
+            "name": "Josh Hennessy"
+        },
+        {
+            "id": 8470596,
+            "name": "Nathan Horton"
+        },
+        {
+            "id": 8467967,
+            "name": "Chris Kelly"
+        },
+        {
+            "id": 8471276,
+            "name": "David Krejci"
+        },
+        {
+            "id": 8473473,
+            "name": "Milan Lucic"
+        },
+        {
+            "id": 8475283,
+            "name": "Lane MacDermid"
+        },
+        {
+            "id": 8473419,
+            "name": "Brad Marchand"
+        },
+        {
+            "id": 8470230,
+            "name": "Daniel Paille"
+        },
+        {
+            "id": 8471514,
+            "name": "Rich Peverley"
+        },
+        {
+            "id": 8471678,
+            "name": "Benoit Pouliot"
+        },
+        {
+            "id": 8458525,
+            "name": "Brian Rolston"
+        },
+        {
+            "id": 8474607,
+            "name": "Max Sauve"
+        },
+        {
+            "id": 8475794,
+            "name": "Tyler Seguin"
+        },
+        {
+            "id": 8465978,
+            "name": "Shawn Thornton"
+        },
+        {
+            "id": 8465056,
+            "name": "Trent Whitfield"
+        },
+        {
+            "id": 8474749,
+            "name": "Matt Bartkowski"
+        },
+        {
+            "id": 8470187,
+            "name": "Johnny Boychuk"
+        },
+        {
+            "id": 8465009,
+            "name": "Zdeno Chara"
+        },
+        {
+            "id": 8466215,
+            "name": "Joe Corvo"
+        },
+        {
+            "id": 8466333,
+            "name": "Andrew Ference"
+        },
+        {
+            "id": 8474000,
+            "name": "Steven Kampfer"
+        },
+        {
+            "id": 8476792,
+            "name": "Torey Krug"
+        },
+        {
+            "id": 8471717,
+            "name": "Adam McQuaid"
+        },
+        {
+            "id": 8466309,
+            "name": "Mike Mottau"
+        },
+        {
+            "id": 8469619,
+            "name": "Dennis Seidenberg"
+        },
+        {
+            "id": 8468636,
+            "name": "Greg Zanon"
+        },
+        {
+            "id": 8471418,
+            "name": "Anton Khudobin"
+        },
+        {
+            "id": 8471695,
+            "name": "Tuukka Rask"
+        },
+        {
+            "id": 8460703,
+            "name": "Tim Thomas"
+        },
+        {
+            "id": 8460612,
+            "name": "Marty Turco"
+        }
+    ]
+}

@@ -1,0 +1,136 @@
+{
+    "players": [
+        {
+            "id": 8475192,
+            "name": "Taylor Beck"
+        },
+        {
+            "id": 8477402,
+            "name": "Pavel Buchnevich"
+        },
+        {
+            "id": 8475855,
+            "name": "Jesper Fast"
+        },
+        {
+            "id": 8470854,
+            "name": "Tanner Glass"
+        },
+        {
+            "id": 8473546,
+            "name": "Michael Grabner"
+        },
+        {
+            "id": 8475763,
+            "name": "Kevin Hayes"
+        },
+        {
+            "id": 8475949,
+            "name": "Marek Hrivik"
+        },
+        {
+            "id": 8476482,
+            "name": "Nicklas Jensen"
+        },
+        {
+            "id": 8477591,
+            "name": "Josh Jooris"
+        },
+        {
+            "id": 8475184,
+            "name": "Chris Kreider"
+        },
+        {
+            "id": 8475715,
+            "name": "Oscar Lindberg"
+        },
+        {
+            "id": 8476468,
+            "name": "J.T. Miller"
+        },
+        {
+            "id": 8470041,
+            "name": "Rick Nash"
+        },
+        {
+            "id": 8476922,
+            "name": "Boo Nieves"
+        },
+        {
+            "id": 8475204,
+            "name": "Brandon Pirri"
+        },
+        {
+            "id": 8476477,
+            "name": "Matt Puempel"
+        },
+        {
+            "id": 8474613,
+            "name": "Derek Stepan"
+        },
+        {
+            "id": 8476918,
+            "name": "Jimmy Vesey"
+        },
+        {
+            "id": 8476459,
+            "name": "Mika Zibanejad"
+        },
+        {
+            "id": 8475692,
+            "name": "Mats Zuccarello"
+        },
+        {
+            "id": 8476431,
+            "name": "Adam Clendening"
+        },
+        {
+            "id": 8471958,
+            "name": "Dan Girardi"
+        },
+        {
+            "id": 8474207,
+            "name": "Nick Holden"
+        },
+        {
+            "id": 8474000,
+            "name": "Steven Kampfer"
+        },
+        {
+            "id": 8470630,
+            "name": "Kevin Klein"
+        },
+        {
+            "id": 8474151,
+            "name": "Ryan McDonagh"
+        },
+        {
+            "id": 8475795,
+            "name": "Dylan McIlrath"
+        },
+        {
+            "id": 8476869,
+            "name": "Brady Skjei"
+        },
+        {
+            "id": 8474090,
+            "name": "Brendan Smith"
+        },
+        {
+            "id": 8471686,
+            "name": "Marc Staal"
+        },
+        {
+            "id": 8476433,
+            "name": "Magnus Hellberg"
+        },
+        {
+            "id": 8468685,
+            "name": "Henrik Lundqvist"
+        },
+        {
+            "id": 8477293,
+            "name": "Antti Raanta"
+        }
+    ]
+}

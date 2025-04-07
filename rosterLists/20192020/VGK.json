@@ -1,0 +1,144 @@
+{
+    "players": [
+        {
+            "id": 8477887,
+            "name": "Patrick Brown"
+        },
+        {
+            "id": 8477478,
+            "name": "William Carrier"
+        },
+        {
+            "id": 8476393,
+            "name": "Nick Cousins"
+        },
+        {
+            "id": 8475236,
+            "name": "Cody Eakin"
+        },
+        {
+            "id": 8479996,
+            "name": "Cody Glass"
+        },
+        {
+            "id": 8476448,
+            "name": "William Karlsson"
+        },
+        {
+            "id": 8478434,
+            "name": "Keegan Kolesar"
+        },
+        {
+            "id": 8476539,
+            "name": "Jonathan Marchessault"
+        },
+        {
+            "id": 8477931,
+            "name": "Tomas Nosek"
+        },
+        {
+            "id": 8474157,
+            "name": "Max Pacioretty"
+        },
+        {
+            "id": 8475204,
+            "name": "Brandon Pirri"
+        },
+        {
+            "id": 8479748,
+            "name": "Gage Quinney"
+        },
+        {
+            "id": 8471817,
+            "name": "Ryan Reaves"
+        },
+        {
+            "id": 8478462,
+            "name": "Nicolas Roy"
+        },
+        {
+            "id": 8475191,
+            "name": "Reilly Smith"
+        },
+        {
+            "id": 8471669,
+            "name": "Paul Stastny"
+        },
+        {
+            "id": 8476905,
+            "name": "Chandler Stephenson"
+        },
+        {
+            "id": 8475913,
+            "name": "Mark Stone"
+        },
+        {
+            "id": 8477949,
+            "name": "Alex Tuch"
+        },
+        {
+            "id": 8477458,
+            "name": "Valentin Zykov"
+        },
+        {
+            "id": 8476987,
+            "name": "Jake Bischoff"
+        },
+        {
+            "id": 8468674,
+            "name": "Deryk Engelland"
+        },
+        {
+            "id": 8479980,
+            "name": "Nicolas Hague"
+        },
+        {
+            "id": 8474207,
+            "name": "Nick Holden"
+        },
+        {
+            "id": 8474166,
+            "name": "Alec Martinez"
+        },
+        {
+            "id": 8475188,
+            "name": "Brayden McNabb"
+        },
+        {
+            "id": 8475750,
+            "name": "Jon Merrill"
+        },
+        {
+            "id": 8477220,
+            "name": "Nate Schmidt"
+        },
+        {
+            "id": 8477447,
+            "name": "Shea Theodore"
+        },
+        {
+            "id": 8480727,
+            "name": "Zach Whitecloud"
+        },
+        {
+            "id": 8476861,
+            "name": "Oscar Dansk"
+        },
+        {
+            "id": 8470594,
+            "name": "Marc-Andre Fleury"
+        },
+        {
+            "id": 8475215,
+            "name": "Robin Lehner"
+        },
+        {
+            "id": 8476343,
+            "name": "Garret Sparks"
+        },
+        {
+            "id": 8476876,
+            "name": "Malcolm Subban"
+        }
+    ]
+}

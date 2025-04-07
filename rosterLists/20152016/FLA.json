@@ -1,0 +1,144 @@
+{
+    "players": [
+        {
+            "id": 8477493,
+            "name": "Aleksander Barkov"
+        },
+        {
+            "id": 8475760,
+            "name": "Nick Bjugstad"
+        },
+        {
+            "id": 8471245,
+            "name": "Dave Bolland"
+        },
+        {
+            "id": 8475736,
+            "name": "Connor Brickley"
+        },
+        {
+            "id": 8476428,
+            "name": "Rocco Grimaldi"
+        },
+        {
+            "id": 8475769,
+            "name": "Quinton Howden"
+        },
+        {
+            "id": 8476456,
+            "name": "Jonathan Huberdeau"
+        },
+        {
+            "id": 8470201,
+            "name": "Jiri Hudler"
+        },
+        {
+            "id": 8448208,
+            "name": "Jaromir Jagr"
+        },
+        {
+            "id": 8469638,
+            "name": "Jussi Jokinen"
+        },
+        {
+            "id": 8475260,
+            "name": "Corban Knight"
+        },
+        {
+            "id": 8468001,
+            "name": "Derek MacKenzie"
+        },
+        {
+            "id": 8475756,
+            "name": "John McFarland"
+        },
+        {
+            "id": 8475735,
+            "name": "Greg McKegg"
+        },
+        {
+            "id": 8475204,
+            "name": "Brandon Pirri"
+        },
+        {
+            "id": 8473962,
+            "name": "Teddy Purcell"
+        },
+        {
+            "id": 8476415,
+            "name": "Kyle Rau"
+        },
+        {
+            "id": 8476400,
+            "name": "Logan Shaw"
+        },
+        {
+            "id": 8475191,
+            "name": "Reilly Smith"
+        },
+        {
+            "id": 8465978,
+            "name": "Shawn Thornton"
+        },
+        {
+            "id": 8476389,
+            "name": "Vincent Trocheck"
+        },
+        {
+            "id": 8475253,
+            "name": "Garrett Wilson"
+        },
+        {
+            "id": 8466285,
+            "name": "Brian Campbell"
+        },
+        {
+            "id": 8477932,
+            "name": "Aaron Ekblad"
+        },
+        {
+            "id": 8475790,
+            "name": "Erik Gudbranson"
+        },
+        {
+            "id": 8474000,
+            "name": "Steven Kampfer"
+        },
+        {
+            "id": 8471693,
+            "name": "Jakub Kindl"
+        },
+        {
+            "id": 8475179,
+            "name": "Dmitry Kulikov"
+        },
+        {
+            "id": 8476875,
+            "name": "Mike Matheson"
+        },
+        {
+            "id": 8465185,
+            "name": "Willie Mitchell"
+        },
+        {
+            "id": 8475153,
+            "name": "Dylan Olsen"
+        },
+        {
+            "id": 8475755,
+            "name": "Alexander Petrovic"
+        },
+        {
+            "id": 8474698,
+            "name": "Brent Regner"
+        },
+        {
+            "id": 8466141,
+            "name": "Roberto Luongo"
+        },
+        {
+            "id": 8471219,
+            "name": "Al Montoya"
+        }
+    ]
+}

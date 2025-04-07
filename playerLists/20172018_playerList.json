@@ -1,0 +1,556 @@
+{
+    "players": [
+        {
+            "id": 8479613,
+            "name": "Giovanni Fiore"
+        },
+        {
+            "id": 8476971,
+            "name": "Kevin Roy"
+        },
+        {
+            "id": 8478873,
+            "name": "Troy Terry"
+        },
+        {
+            "id": 8477969,
+            "name": "Marcus Pettersson"
+        },
+        {
+            "id": 8476407,
+            "name": "Andy Welinski"
+        },
+        {
+            "id": 8474131,
+            "name": "Mario Kempe"
+        },
+        {
+            "id": 8478447,
+            "name": "Nick Merkley"
+        },
+        {
+            "id": 8478476,
+            "name": "Kyle Capobianco"
+        },
+        {
+            "id": 8477541,
+            "name": "Dakota Mermis"
+        },
+        {
+            "id": 8477634,
+            "name": "Trevor Murphy"
+        },
+        {
+            "id": 8478499,
+            "name": "Adin Hill"
+        },
+        {
+            "id": 8478075,
+            "name": "Anders Bjork"
+        },
+        {
+            "id": 8477529,
+            "name": "Colby Cave"
+        },
+        {
+            "id": 8478498,
+            "name": "Jake DeBrusk"
+        },
+        {
+            "id": 8477987,
+            "name": "Ryan Donato"
+        },
+        {
+            "id": 8479304,
+            "name": "Kyle Criscuolo"
+        },
+        {
+            "id": 8479999,
+            "name": "Casey Mittelstadt"
+        },
+        {
+            "id": 8479755,
+            "name": "Victor Antipin"
+        },
+        {
+            "id": 8476330,
+            "name": "Adam Wilcox"
+        },
+        {
+            "id": 8477998,
+            "name": "Warren Foegele"
+        },
+        {
+            "id": 8479511,
+            "name": "Janne Kuokkanen"
+        },
+        {
+            "id": 8480039,
+            "name": "Martin Necas"
+        },
+        {
+            "id": 8478462,
+            "name": "Nicolas Roy"
+        },
+        {
+            "id": 8477938,
+            "name": "Haydn Fleury"
+        },
+        {
+            "id": 8477981,
+            "name": "Roland McKeown"
+        },
+        {
+            "id": 8476283,
+            "name": "Alex Broadhurst"
+        },
+        {
+            "id": 8479400,
+            "name": "Pierre-Luc Dubois"
+        },
+        {
+            "id": 8480762,
+            "name": "Eric Robinson"
+        },
+        {
+            "id": 8480330,
+            "name": "Spencer Foo"
+        },
+        {
+            "id": 8477449,
+            "name": "Morgan Klimchuk"
+        },
+        {
+            "id": 8479066,
+            "name": "Ryan Lomberg"
+        },
+        {
+            "id": 8478233,
+            "name": "Andrew Mangiapane"
+        },
+        {
+            "id": 8479337,
+            "name": "Alex DeBrincat"
+        },
+        {
+            "id": 8480153,
+            "name": "Victor Ejdsell"
+        },
+        {
+            "id": 8478146,
+            "name": "Matthew Highmore"
+        },
+        {
+            "id": 8480144,
+            "name": "David Kampf"
+        },
+        {
+            "id": 8478106,
+            "name": "Dylan Sikura"
+        },
+        {
+            "id": 8477472,
+            "name": "Carl Dahlstrom"
+        },
+        {
+            "id": 8479595,
+            "name": "Blake Hillman"
+        },
+        {
+            "id": 8480172,
+            "name": "Jan Rutta"
+        },
+        {
+            "id": 8480420,
+            "name": "Collin Delia"
+        },
+        {
+            "id": 8479138,
+            "name": "Scott Foster"
+        },
+        {
+            "id": 8471301,
+            "name": "Jeff Glass"
+        },
+        {
+            "id": 8477021,
+            "name": "Alexander Kerfoot"
+        },
+        {
+            "id": 8476952,
+            "name": "Dominic Toninato"
+        },
+        {
+            "id": 8479398,
+            "name": "Samuel Girard"
+        },
+        {
+            "id": 8478842,
+            "name": "Andrei Mironov"
+        },
+        {
+            "id": 8477471,
+            "name": "Dillon Heatherington"
+        },
+        {
+            "id": 8477994,
+            "name": "Dominic Turgeon"
+        },
+        {
+            "id": 8478176,
+            "name": "Joe Hicketts"
+        },
+        {
+            "id": 8477573,
+            "name": "Nathan Walker"
+        },
+        {
+            "id": 8479977,
+            "name": "Kailer Yamamoto"
+        },
+        {
+            "id": 8478451,
+            "name": "Ethan Bear"
+        },
+        {
+            "id": 8476322,
+            "name": "Chase Balisy"
+        },
+        {
+            "id": 8479404,
+            "name": "Henrik Borgstrom"
+        },
+        {
+            "id": 8480164,
+            "name": "Henrik Haapala"
+        },
+        {
+            "id": 8478211,
+            "name": "Dryden Hunt"
+        },
+        {
+            "id": 8479553,
+            "name": "Maxim Mamin"
+        },
+        {
+            "id": 8480015,
+            "name": "Owen Tippett"
+        },
+        {
+            "id": 8477583,
+            "name": "Curtis Valk"
+        },
+        {
+            "id": 8474667,
+            "name": "Harri Sateri"
+        },
+        {
+            "id": 8478020,
+            "name": "Michael Amadio"
+        },
+        {
+            "id": 8477428,
+            "name": "Justin Auger"
+        },
+        {
+            "id": 8476020,
+            "name": "Andrew Crescenzi"
+        },
+        {
+            "id": 8480113,
+            "name": "Alex Iafallo"
+        },
+        {
+            "id": 8480771,
+            "name": "Daniel Brickley"
+        },
+        {
+            "id": 8480147,
+            "name": "Oscar Fantenberg"
+        },
+        {
+            "id": 8477073,
+            "name": "Kurtis MacDermid"
+        },
+        {
+            "id": 8478413,
+            "name": "Jordan Greenway"
+        },
+        {
+            "id": 8480082,
+            "name": "Justin Kloos"
+        },
+        {
+            "id": 8479316,
+            "name": "Luke Kunin"
+        },
+        {
+            "id": 8478011,
+            "name": "Louie Belpedio"
+        },
+        {
+            "id": 8476372,
+            "name": "Nick Seeler"
+        },
+        {
+            "id": 8477369,
+            "name": "Carson Soucy"
+        },
+        {
+            "id": 8480143,
+            "name": "Jakub Jerabek"
+        },
+        {
+            "id": 8478454,
+            "name": "Noah Juulsen"
+        },
+        {
+            "id": 8479376,
+            "name": "Victor Mete"
+        },
+        {
+            "id": 8479407,
+            "name": "Jesper Bratt"
+        },
+        {
+            "id": 8480002,
+            "name": "Nico Hischier"
+        },
+        {
+            "id": 8477355,
+            "name": "Will Butcher"
+        },
+        {
+            "id": 8478965,
+            "name": "Kenneth Appleby"
+        },
+        {
+            "id": 8480009,
+            "name": "Eeli Tolvanen"
+        },
+        {
+            "id": 8477936,
+            "name": "Michael Dal Colle"
+        },
+        {
+            "id": 8479206,
+            "name": "Tanner Fritz"
+        },
+        {
+            "id": 8480222,
+            "name": "Sebastian Aho"
+        },
+        {
+            "id": 8480072,
+            "name": "Lias Andersson"
+        },
+        {
+            "id": 8480078,
+            "name": "Filip Chytil"
+        },
+        {
+            "id": 8476396,
+            "name": "Steven Fogarty"
+        },
+        {
+            "id": 8479968,
+            "name": "Vinni Lettieri"
+        },
+        {
+            "id": 8477337,
+            "name": "John Gilmour"
+        },
+        {
+            "id": 8480145,
+            "name": "Neal Pionk"
+        },
+        {
+            "id": 8480382,
+            "name": "Alexandar Georgiev"
+        },
+        {
+            "id": 8477990,
+            "name": "Brandon Halverson"
+        },
+        {
+            "id": 8479366,
+            "name": "Logan Brown"
+        },
+        {
+            "id": 8478488,
+            "name": "Filip Chlapik"
+        },
+        {
+            "id": 8480029,
+            "name": "Alex Formenton"
+        },
+        {
+            "id": 8478268,
+            "name": "Jack Rodewald"
+        },
+        {
+            "id": 8475328,
+            "name": "Ben Sexton"
+        },
+        {
+            "id": 8478868,
+            "name": "Christian Jaros"
+        },
+        {
+            "id": 8478846,
+            "name": "Christian Wolanin"
+        },
+        {
+            "id": 8477399,
+            "name": "Tyrell Goulbourne"
+        },
+        {
+            "id": 8478067,
+            "name": "Oskar Lindblom"
+        },
+        {
+            "id": 8478365,
+            "name": "Danick Martel"
+        },
+        {
+            "id": 8479974,
+            "name": "Nolan Patrick"
+        },
+        {
+            "id": 8473440,
+            "name": "Will O'Neill"
+        },
+        {
+            "id": 8477948,
+            "name": "Travis Sanheim"
+        },
+        {
+            "id": 8479312,
+            "name": "Alex Lyon"
+        },
+        {
+            "id": 8479944,
+            "name": "Zachary Aston-Reese"
+        },
+        {
+            "id": 8479193,
+            "name": "Casey DeSmith"
+        },
+        {
+            "id": 8479580,
+            "name": "Dylan Gambrell"
+        },
+        {
+            "id": 8477046,
+            "name": "Joakim Ryan"
+        },
+        {
+            "id": 8478104,
+            "name": "Sammy Blais"
+        },
+        {
+            "id": 8479420,
+            "name": "Tage Thompson"
+        },
+        {
+            "id": 8478407,
+            "name": "Vince Dunn"
+        },
+        {
+            "id": 8480761,
+            "name": "Mitch Reinke"
+        },
+        {
+            "id": 8478519,
+            "name": "Anthony Cirelli"
+        },
+        {
+            "id": 8477341,
+            "name": "Andreas Johnsson"
+        },
+        {
+            "id": 8480158,
+            "name": "Andreas Borgman"
+        },
+        {
+            "id": 8478408,
+            "name": "Travis Dermott"
+        },
+        {
+            "id": 8475718,
+            "name": "Justin Holl"
+        },
+        {
+            "id": 8480157,
+            "name": "Calle Rosen"
+        },
+        {
+            "id": 8478874,
+            "name": "Adam Gaudette"
+        },
+        {
+            "id": 8480163,
+            "name": "Philip Holm"
+        },
+        {
+            "id": 8477085,
+            "name": "Ashton Sautner"
+        },
+        {
+            "id": 8477967,
+            "name": "Thatcher Demko"
+        },
+        {
+            "id": 8476617,
+            "name": "Tomas Hyka"
+        },
+        {
+            "id": 8479650,
+            "name": "Vadim Shipachyov"
+        },
+        {
+            "id": 8480727,
+            "name": "Zach Whitecloud"
+        },
+        {
+            "id": 8476861,
+            "name": "Oscar Dansk"
+        },
+        {
+            "id": 8480263,
+            "name": "Dylan Ferguson"
+        },
+        {
+            "id": 8476509,
+            "name": "Maxime Lagace"
+        },
+        {
+            "id": 8477962,
+            "name": "Brendan Lemieux"
+        },
+        {
+            "id": 8478915,
+            "name": "Sami Niku"
+        },
+        {
+            "id": 8477359,
+            "name": "Tucker Poolman"
+        },
+        {
+            "id": 8476329,
+            "name": "Travis Boyd"
+        },
+        {
+            "id": 8478063,
+            "name": "Shane Gersich"
+        },
+        {
+            "id": 8477474,
+            "name": "Madison Bowey"
+        },
+        {
+            "id": 8477043,
+            "name": "Christian Djoos"
+        }
+    ]
+}

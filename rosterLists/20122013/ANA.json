@@ -1,0 +1,128 @@
+{
+    "players": [
+        {
+            "id": 8473492,
+            "name": "Matt Beleskey"
+        },
+        {
+            "id": 8474009,
+            "name": "Nick Bonino"
+        },
+        {
+            "id": 8471699,
+            "name": "Andrew Cogliano"
+        },
+        {
+            "id": 8462041,
+            "name": "Radek Dvorak"
+        },
+        {
+            "id": 8475770,
+            "name": "Emerson Etem"
+        },
+        {
+            "id": 8470612,
+            "name": "Ryan Getzlaf"
+        },
+        {
+            "id": 8475180,
+            "name": "Peter Holland"
+        },
+        {
+            "id": 8459442,
+            "name": "Saku Koivu"
+        },
+        {
+            "id": 8468695,
+            "name": "Matthew Lombardi"
+        },
+        {
+            "id": 8474034,
+            "name": "Patrick Maroon"
+        },
+        {
+            "id": 8474646,
+            "name": "Brandon McMillan"
+        },
+        {
+            "id": 8475151,
+            "name": "Kyle Palmieri"
+        },
+        {
+            "id": 8470621,
+            "name": "Corey Perry"
+        },
+        {
+            "id": 8476483,
+            "name": "Rickard Rakell"
+        },
+        {
+            "id": 8471676,
+            "name": "Bobby Ryan"
+        },
+        {
+            "id": 8457981,
+            "name": "Teemu Selanne"
+        },
+        {
+            "id": 8475758,
+            "name": "Devante Smith-Pelly"
+        },
+        {
+            "id": 8471521,
+            "name": "Brad Staubitz"
+        },
+        {
+            "id": 8469483,
+            "name": "David Steckel"
+        },
+        {
+            "id": 8471476,
+            "name": "Daniel Winnik"
+        },
+        {
+            "id": 8467332,
+            "name": "Bryan Allen"
+        },
+        {
+            "id": 8467400,
+            "name": "Francois Beauchemin"
+        },
+        {
+            "id": 8475764,
+            "name": "Cam Fowler"
+        },
+        {
+            "id": 8472370,
+            "name": "Jordan Hendry"
+        },
+        {
+            "id": 8473933,
+            "name": "Ben Lovejoy"
+        },
+        {
+            "id": 8465042,
+            "name": "Toni Lydman"
+        },
+        {
+            "id": 8474579,
+            "name": "Luca Sbisa"
+        },
+        {
+            "id": 8460561,
+            "name": "Sheldon Souray"
+        },
+        {
+            "id": 8475222,
+            "name": "Sami Vatanen"
+        },
+        {
+            "id": 8476839,
+            "name": "Viktor Fasth"
+        },
+        {
+            "id": 8473972,
+            "name": "Jonas Hiller"
+        }
+    ]
+}

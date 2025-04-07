@@ -1,4 +1,35 @@
 {
     "seasonId": "20122013",
-    "teams": []
+    "teams": [
+        "CHI",
+        "OTT",
+        "SJS",
+        "ANA",
+        "PIT",
+        "BUF",
+        "NJD",
+        "BOS",
+        "TBL",
+        "DAL",
+        "MIN",
+        "STL",
+        "NSH",
+        "CBJ",
+        "WPG",
+        "MTL",
+        "COL",
+        "NYI",
+        "TOR",
+        "EDM",
+        "FLA",
+        "DET",
+        "VAN",
+        "PHX",
+        "CGY",
+        "LAK",
+        "NYR",
+        "WSH",
+        "CAR",
+        "PHI"
+    ]
 }

@@ -1,0 +1,128 @@
+{
+    "players": [
+        {
+            "id": 8473544,
+            "name": "Derick Brassard"
+        },
+        {
+            "id": 8475770,
+            "name": "Emerson Etem"
+        },
+        {
+            "id": 8475855,
+            "name": "Jesper Fast"
+        },
+        {
+            "id": 8470854,
+            "name": "Tanner Glass"
+        },
+        {
+            "id": 8475763,
+            "name": "Kevin Hayes"
+        },
+        {
+            "id": 8475949,
+            "name": "Marek Hrivik"
+        },
+        {
+            "id": 8475184,
+            "name": "Chris Kreider"
+        },
+        {
+            "id": 8475715,
+            "name": "Oscar Lindberg"
+        },
+        {
+            "id": 8477126,
+            "name": "Jayson Megna"
+        },
+        {
+            "id": 8476468,
+            "name": "J.T. Miller"
+        },
+        {
+            "id": 8468575,
+            "name": "Dominic Moore"
+        },
+        {
+            "id": 8470041,
+            "name": "Rick Nash"
+        },
+        {
+            "id": 8470230,
+            "name": "Daniel Paille"
+        },
+        {
+            "id": 8470595,
+            "name": "Eric Staal"
+        },
+        {
+            "id": 8473537,
+            "name": "Viktor Stalberg"
+        },
+        {
+            "id": 8474613,
+            "name": "Derek Stepan"
+        },
+        {
+            "id": 8468526,
+            "name": "Jarret Stoll"
+        },
+        {
+            "id": 8475692,
+            "name": "Mats Zuccarello"
+        },
+        {
+            "id": 8467096,
+            "name": "Dan Boyle"
+        },
+        {
+            "id": 8476244,
+            "name": "Raphael Diaz"
+        },
+        {
+            "id": 8471958,
+            "name": "Dan Girardi"
+        },
+        {
+            "id": 8470630,
+            "name": "Kevin Klein"
+        },
+        {
+            "id": 8474151,
+            "name": "Ryan McDonagh"
+        },
+        {
+            "id": 8475795,
+            "name": "Dylan McIlrath"
+        },
+        {
+            "id": 8476869,
+            "name": "Brady Skjei"
+        },
+        {
+            "id": 8471686,
+            "name": "Marc Staal"
+        },
+        {
+            "id": 8473589,
+            "name": "Chris Summers"
+        },
+        {
+            "id": 8471735,
+            "name": "Keith Yandle"
+        },
+        {
+            "id": 8476433,
+            "name": "Magnus Hellberg"
+        },
+        {
+            "id": 8468685,
+            "name": "Henrik Lundqvist"
+        },
+        {
+            "id": 8477293,
+            "name": "Antti Raanta"
+        }
+    ]
+}

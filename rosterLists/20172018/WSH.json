@@ -1,0 +1,128 @@
+{
+    "players": [
+        {
+            "id": 8473563,
+            "name": "Nicklas Backstrom"
+        },
+        {
+            "id": 8474291,
+            "name": "Jay Beagle"
+        },
+        {
+            "id": 8476329,
+            "name": "Travis Boyd"
+        },
+        {
+            "id": 8477444,
+            "name": "Andre Burakovsky"
+        },
+        {
+            "id": 8475163,
+            "name": "Alex Chiasson"
+        },
+        {
+            "id": 8475792,
+            "name": "Brett Connolly"
+        },
+        {
+            "id": 8474189,
+            "name": "Lars Eller"
+        },
+        {
+            "id": 8478063,
+            "name": "Shane Gersich"
+        },
+        {
+            "id": 8476344,
+            "name": "Tyler Graovac"
+        },
+        {
+            "id": 8475744,
+            "name": "Evgeny Kuznetsov"
+        },
+        {
+            "id": 8477070,
+            "name": "Liam O'Brien"
+        },
+        {
+            "id": 8471698,
+            "name": "T.J. Oshie"
+        },
+        {
+            "id": 8471214,
+            "name": "Alex Ovechkin"
+        },
+        {
+            "id": 8474061,
+            "name": "Anthony Peluso"
+        },
+        {
+            "id": 8475758,
+            "name": "Devante Smith-Pelly"
+        },
+        {
+            "id": 8476905,
+            "name": "Chandler Stephenson"
+        },
+        {
+            "id": 8477944,
+            "name": "Jakub Vrana"
+        },
+        {
+            "id": 8477573,
+            "name": "Nathan Walker"
+        },
+        {
+            "id": 8476880,
+            "name": "Tom Wilson"
+        },
+        {
+            "id": 8477474,
+            "name": "Madison Bowey"
+        },
+        {
+            "id": 8474590,
+            "name": "John Carlson"
+        },
+        {
+            "id": 8471710,
+            "name": "Taylor Chorney"
+        },
+        {
+            "id": 8477043,
+            "name": "Christian Djoos"
+        },
+        {
+            "id": 8480143,
+            "name": "Jakub Jerabek"
+        },
+        {
+            "id": 8479482,
+            "name": "Michal Kempny"
+        },
+        {
+            "id": 8474604,
+            "name": "Aaron Ness"
+        },
+        {
+            "id": 8471702,
+            "name": "Matt Niskanen"
+        },
+        {
+            "id": 8475200,
+            "name": "Dmitry Orlov"
+        },
+        {
+            "id": 8468498,
+            "name": "Brooks Orpik"
+        },
+        {
+            "id": 8475831,
+            "name": "Philipp Grubauer"
+        },
+        {
+            "id": 8474651,
+            "name": "Braden Holtby"
+        }
+    ]
+}

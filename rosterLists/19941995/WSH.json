@@ -1,0 +1,128 @@
+{
+    "players": [
+        {
+            "id": 8459439,
+            "name": "Jason Allison"
+        },
+        {
+            "id": 8445440,
+            "name": "Craig Berube"
+        },
+        {
+            "id": 8445575,
+            "name": "Peter Bondra"
+        },
+        {
+            "id": 8445790,
+            "name": "Randy Burridge"
+        },
+        {
+            "id": 8446551,
+            "name": "Mike Eagles"
+        },
+        {
+            "id": 8459007,
+            "name": "Martin Gendron"
+        },
+        {
+            "id": 8448117,
+            "name": "Dale Hunter"
+        },
+        {
+            "id": 8456745,
+            "name": "Keith Jones"
+        },
+        {
+            "id": 8456760,
+            "name": "Joe Juneau"
+        },
+        {
+            "id": 8448394,
+            "name": "Kevin Kaminski"
+        },
+        {
+            "id": 8448484,
+            "name": "Dmitri Khristich"
+        },
+        {
+            "id": 8458572,
+            "name": "Steve Konowalchuk"
+        },
+        {
+            "id": 8449621,
+            "name": "Kelly Miller"
+        },
+        {
+            "id": 8458550,
+            "name": "Jeff Nelson"
+        },
+        {
+            "id": 8458528,
+            "name": "Pat Peake"
+        },
+        {
+            "id": 8457640,
+            "name": "Rob Pearson"
+        },
+        {
+            "id": 8450408,
+            "name": "Michal Pivonka"
+        },
+        {
+            "id": 8450512,
+            "name": "Dave Poulin"
+        },
+        {
+            "id": 8446181,
+            "name": "Sylvain Cote"
+        },
+        {
+            "id": 8458951,
+            "name": "Sergei Gonchar"
+        },
+        {
+            "id": 8448287,
+            "name": "Calle Johansson"
+        },
+        {
+            "id": 8448303,
+            "name": "Jim Johnson"
+        },
+        {
+            "id": 8456850,
+            "name": "Ken Klee"
+        },
+        {
+            "id": 8450742,
+            "name": "Joe Reekie"
+        },
+        {
+            "id": 8458048,
+            "name": "John Slaney"
+        },
+        {
+            "id": 8451869,
+            "name": "Mark Tinordi"
+        },
+        {
+            "id": 8458715,
+            "name": "Igor Ulanov"
+        },
+        {
+            "id": 8458968,
+            "name": "Jim Carey"
+        },
+        {
+            "id": 8455994,
+            "name": "Byron Dafoe"
+        },
+        {
+            "id": 8448535,
+            "name": "Olie Kolzig"
+        },
+        {
+            "id": 8451834,
+            "name": "Rick Tabaracci"
+        }
+    ]
+}

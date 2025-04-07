@@ -1,0 +1,144 @@
+{
+    "players": [
+        {
+            "id": 8476981,
+            "name": "Josh Anderson"
+        },
+        {
+            "id": 8474715,
+            "name": "Cam Atkinson"
+        },
+        {
+            "id": 8477416,
+            "name": "Oliver Bjorkstrand"
+        },
+        {
+            "id": 8476283,
+            "name": "Alex Broadhurst"
+        },
+        {
+            "id": 8474685,
+            "name": "Matt Calvert"
+        },
+        {
+            "id": 8474610,
+            "name": "Zac Dalpe"
+        },
+        {
+            "id": 8471273,
+            "name": "Brandon Dubinsky"
+        },
+        {
+            "id": 8479400,
+            "name": "Pierre-Luc Dubois"
+        },
+        {
+            "id": 8473422,
+            "name": "Nick Foligno"
+        },
+        {
+            "id": 8471804,
+            "name": "Nathan Gerbe"
+        },
+        {
+            "id": 8478541,
+            "name": "Markus Hannikainen"
+        },
+        {
+            "id": 8476432,
+            "name": "Boone Jenner"
+        },
+        {
+            "id": 8469638,
+            "name": "Jussi Jokinen"
+        },
+        {
+            "id": 8473914,
+            "name": "Mark Letestu"
+        },
+        {
+            "id": 8477947,
+            "name": "Sonny Milano"
+        },
+        {
+            "id": 8477353,
+            "name": "Tyler Motte"
+        },
+        {
+            "id": 8478550,
+            "name": "Artemi Panarin"
+        },
+        {
+            "id": 8480762,
+            "name": "Eric Robinson"
+        },
+        {
+            "id": 8475147,
+            "name": "Jordan Schroeder"
+        },
+        {
+            "id": 8476310,
+            "name": "Lukas Sedlak"
+        },
+        {
+            "id": 8470598,
+            "name": "Thomas Vanek"
+        },
+        {
+            "id": 8477505,
+            "name": "Alexander Wennberg"
+        },
+        {
+            "id": 8478506,
+            "name": "Gabriel Carlsson"
+        },
+        {
+            "id": 8471710,
+            "name": "Taylor Chorney"
+        },
+        {
+            "id": 8474013,
+            "name": "Ian Cole"
+        },
+        {
+            "id": 8476449,
+            "name": "Scott Harrington"
+        },
+        {
+            "id": 8471677,
+            "name": "Jack Johnson"
+        },
+        {
+            "id": 8477495,
+            "name": "Seth Jones"
+        },
+        {
+            "id": 8478567,
+            "name": "Dean Kukan"
+        },
+        {
+            "id": 8476850,
+            "name": "Ryan Murray"
+        },
+        {
+            "id": 8478906,
+            "name": "Markus Nutivaara"
+        },
+        {
+            "id": 8475233,
+            "name": "David Savard"
+        },
+        {
+            "id": 8478460,
+            "name": "Zach Werenski"
+        },
+        {
+            "id": 8475683,
+            "name": "Sergei Bobrovsky"
+        },
+        {
+            "id": 8476914,
+            "name": "Joonas Korpisalo"
+        }
+    ]
+}

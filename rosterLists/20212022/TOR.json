@@ -1,0 +1,160 @@
+{
+    "players": [
+        {
+            "id": 8481720,
+            "name": "Nick Abruzzese"
+        },
+        {
+            "id": 8478020,
+            "name": "Michael Amadio"
+        },
+        {
+            "id": 8479315,
+            "name": "Joey Anderson"
+        },
+        {
+            "id": 8476278,
+            "name": "Colin Blackwell"
+        },
+        {
+            "id": 8478047,
+            "name": "Michael Bunting"
+        },
+        {
+            "id": 8475160,
+            "name": "Kyle Clifford"
+        },
+        {
+            "id": 8478115,
+            "name": "Pierre Engvall"
+        },
+        {
+            "id": 8480144,
+            "name": "David Kampf"
+        },
+        {
+            "id": 8478131,
+            "name": "Ondrej Kase"
+        },
+        {
+            "id": 8477021,
+            "name": "Alexander Kerfoot"
+        },
+        {
+            "id": 8478483,
+            "name": "Mitch Marner"
+        },
+        {
+            "id": 8479318,
+            "name": "Auston Matthews"
+        },
+        {
+            "id": 8481624,
+            "name": "Ilya Mikheyev"
+        },
+        {
+            "id": 8477939,
+            "name": "William Nylander"
+        },
+        {
+            "id": 8477941,
+            "name": "Nick Ritchie"
+        },
+        {
+            "id": 8481582,
+            "name": "Nicholas Robertson"
+        },
+        {
+            "id": 8482815,
+            "name": "Kirill Semyonov"
+        },
+        {
+            "id": 8478881,
+            "name": "Brett Seney"
+        },
+        {
+            "id": 8474190,
+            "name": "Wayne Simmonds"
+        },
+        {
+            "id": 8469455,
+            "name": "Jason Spezza"
+        },
+        {
+            "id": 8482634,
+            "name": "Alex Steeves"
+        },
+        {
+            "id": 8475166,
+            "name": "John Tavares"
+        },
+        {
+            "id": 8473415,
+            "name": "Alex Biega"
+        },
+        {
+            "id": 8474673,
+            "name": "TJ Brodie"
+        },
+        {
+            "id": 8477472,
+            "name": "Carl Dahlstrom"
+        },
+        {
+            "id": 8478408,
+            "name": "Travis Dermott"
+        },
+        {
+            "id": 8470966,
+            "name": "Mark Giordano"
+        },
+        {
+            "id": 8475718,
+            "name": "Justin Holl"
+        },
+        {
+            "id": 8480043,
+            "name": "Timothy Liljegren"
+        },
+        {
+            "id": 8480950,
+            "name": "Ilya Lyubushkin"
+        },
+        {
+            "id": 8474162,
+            "name": "Jake Muzzin"
+        },
+        {
+            "id": 8476853,
+            "name": "Morgan Rielly"
+        },
+        {
+            "id": 8479729,
+            "name": "Kristians Rubins"
+        },
+        {
+            "id": 8480873,
+            "name": "Rasmus Sandin"
+        },
+        {
+            "id": 8475789,
+            "name": "Jack Campbell"
+        },
+        {
+            "id": 8474636,
+            "name": "Michael Hutchinson"
+        },
+        {
+            "id": 8478902,
+            "name": "Erik Kallgren"
+        },
+        {
+            "id": 8475852,
+            "name": "Petr Mrazek"
+        },
+        {
+            "id": 8479361,
+            "name": "Joseph Woll"
+        }
+    ]
+}

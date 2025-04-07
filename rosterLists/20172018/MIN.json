@@ -1,0 +1,144 @@
+{
+    "players": [
+        {
+            "id": 8477006,
+            "name": "Christoph Bertschy"
+        },
+        {
+            "id": 8475745,
+            "name": "Charlie Coyle"
+        },
+        {
+            "id": 8464989,
+            "name": "Matt Cullen"
+        },
+        {
+            "id": 8474589,
+            "name": "Tyler Ennis"
+        },
+        {
+            "id": 8478493,
+            "name": "Joel Eriksson Ek"
+        },
+        {
+            "id": 8475157,
+            "name": "Landon Ferraro"
+        },
+        {
+            "id": 8475220,
+            "name": "Marcus Foligno"
+        },
+        {
+            "id": 8475798,
+            "name": "Mikael Granlund"
+        },
+        {
+            "id": 8478413,
+            "name": "Jordan Greenway"
+        },
+        {
+            "id": 8480082,
+            "name": "Justin Kloos"
+        },
+        {
+            "id": 8469459,
+            "name": "Mikko Koivu"
+        },
+        {
+            "id": 8479316,
+            "name": "Luke Kunin"
+        },
+        {
+            "id": 8476619,
+            "name": "Zack Mitchell"
+        },
+        {
+            "id": 8475799,
+            "name": "Nino Niederreiter"
+        },
+        {
+            "id": 8471811,
+            "name": "Cal O'Reilly"
+        },
+        {
+            "id": 8470610,
+            "name": "Zach Parise"
+        },
+        {
+            "id": 8476415,
+            "name": "Kyle Rau"
+        },
+        {
+            "id": 8470595,
+            "name": "Eric Staal"
+        },
+        {
+            "id": 8473485,
+            "name": "Chris Stewart"
+        },
+        {
+            "id": 8471476,
+            "name": "Daniel Winnik"
+        },
+        {
+            "id": 8475722,
+            "name": "Jason Zucker"
+        },
+        {
+            "id": 8478011,
+            "name": "Louie Belpedio"
+        },
+        {
+            "id": 8476463,
+            "name": "Jonas Brodin"
+        },
+        {
+            "id": 8476856,
+            "name": "Mathew Dumba"
+        },
+        {
+            "id": 8476465,
+            "name": "Ryan Murphy"
+        },
+        {
+            "id": 8477467,
+            "name": "Gustav Olofsson"
+        },
+        {
+            "id": 8475613,
+            "name": "Nate Prosser"
+        },
+        {
+            "id": 8470724,
+            "name": "Kyle Quincey"
+        },
+        {
+            "id": 8476422,
+            "name": "Mike Reilly"
+        },
+        {
+            "id": 8476372,
+            "name": "Nick Seeler"
+        },
+        {
+            "id": 8477369,
+            "name": "Carson Soucy"
+        },
+        {
+            "id": 8474716,
+            "name": "Jared Spurgeon"
+        },
+        {
+            "id": 8470600,
+            "name": "Ryan Suter"
+        },
+        {
+            "id": 8471227,
+            "name": "Devan Dubnyk"
+        },
+        {
+            "id": 8471774,
+            "name": "Alex Stalock"
+        }
+    ]
+}

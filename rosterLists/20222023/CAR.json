@@ -1,0 +1,120 @@
+{
+    "players": [
+        {
+            "id": 8478427,
+            "name": "Sebastian Aho"
+        },
+        {
+            "id": 8480835,
+            "name": "Jack Drury"
+        },
+        {
+            "id": 8475855,
+            "name": "Jesper Fast"
+        },
+        {
+            "id": 8482093,
+            "name": "Seth Jarvis"
+        },
+        {
+            "id": 8478131,
+            "name": "Ondrej Kase"
+        },
+        {
+            "id": 8480829,
+            "name": "Jesperi Kotkaniemi"
+        },
+        {
+            "id": 8476907,
+            "name": "Mackenzie MacEachern"
+        },
+        {
+            "id": 8476921,
+            "name": "Jordan Martinook"
+        },
+        {
+            "id": 8480039,
+            "name": "Martin Necas"
+        },
+        {
+            "id": 8476474,
+            "name": "Stefan Noesen"
+        },
+        {
+            "id": 8474157,
+            "name": "Max Pacioretty"
+        },
+        {
+            "id": 8479344,
+            "name": "Jesse Puljujarvi"
+        },
+        {
+            "id": 8473533,
+            "name": "Jordan Staal"
+        },
+        {
+            "id": 8471669,
+            "name": "Paul Stastny"
+        },
+        {
+            "id": 8474613,
+            "name": "Derek Stepan"
+        },
+        {
+            "id": 8480830,
+            "name": "Andrei Svechnikov"
+        },
+        {
+            "id": 8476882,
+            "name": "Teuvo Teravainen"
+        },
+        {
+            "id": 8470613,
+            "name": "Brent Burns"
+        },
+        {
+            "id": 8478970,
+            "name": "Jalen Chatfield"
+        },
+        {
+            "id": 8479639,
+            "name": "Dylan Coghlan"
+        },
+        {
+            "id": 8475177,
+            "name": "Calvin de Haan"
+        },
+        {
+            "id": 8476906,
+            "name": "Shayne Gostisbehere"
+        },
+        {
+            "id": 8479320,
+            "name": "Maxime Lajoie"
+        },
+        {
+            "id": 8477488,
+            "name": "Brett Pesce"
+        },
+        {
+            "id": 8476869,
+            "name": "Brady Skjei"
+        },
+        {
+            "id": 8476958,
+            "name": "Jaccob Slavin"
+        },
+        {
+            "id": 8475883,
+            "name": "Frederik Andersen"
+        },
+        {
+            "id": 8481611,
+            "name": "Pyotr Kochetkov"
+        },
+        {
+            "id": 8477293,
+            "name": "Antti Raanta"
+        }
+    ]
+}

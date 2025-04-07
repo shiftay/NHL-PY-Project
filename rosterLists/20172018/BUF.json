@@ -1,0 +1,160 @@
+{
+    "players": [
+        {
+            "id": 8477473,
+            "name": "Justin Bailey"
+        },
+        {
+            "id": 8477491,
+            "name": "Nick Baptiste"
+        },
+        {
+            "id": 8479304,
+            "name": "Kyle Criscuolo"
+        },
+        {
+            "id": 8478403,
+            "name": "Jack Eichel"
+        },
+        {
+            "id": 8477392,
+            "name": "Hudson Fasching"
+        },
+        {
+            "id": 8476878,
+            "name": "Zemgus Girgensons"
+        },
+        {
+            "id": 8476495,
+            "name": "Seth Griffith"
+        },
+        {
+            "id": 8475185,
+            "name": "Jacob Josefson"
+        },
+        {
+            "id": 8475169,
+            "name": "Evander Kane"
+        },
+        {
+            "id": 8475728,
+            "name": "Johan Larsson"
+        },
+        {
+            "id": 8479999,
+            "name": "Casey Mittelstadt"
+        },
+        {
+            "id": 8470852,
+            "name": "Matt Moulson"
+        },
+        {
+            "id": 8475325,
+            "name": "Jordan Nolan"
+        },
+        {
+            "id": 8479423,
+            "name": "Alex Nylander"
+        },
+        {
+            "id": 8476982,
+            "name": "Danny O'Regan"
+        },
+        {
+            "id": 8475158,
+            "name": "Ryan O'Reilly"
+        },
+        {
+            "id": 8473449,
+            "name": "Kyle Okposo"
+        },
+        {
+            "id": 8469506,
+            "name": "Jason Pominville"
+        },
+        {
+            "id": 8471678,
+            "name": "Benoit Pouliot"
+        },
+        {
+            "id": 8477933,
+            "name": "Sam Reinhart"
+        },
+        {
+            "id": 8478542,
+            "name": "Evan Rodrigues"
+        },
+        {
+            "id": 8476293,
+            "name": "Scott Wilson"
+        },
+        {
+            "id": 8479755,
+            "name": "Victor Antipin"
+        },
+        {
+            "id": 8476470,
+            "name": "Nathan Beaulieu"
+        },
+        {
+            "id": 8474567,
+            "name": "Zach Bogosian"
+        },
+        {
+            "id": 8473992,
+            "name": "Justin Falk"
+        },
+        {
+            "id": 8476166,
+            "name": "Taylor Fedun"
+        },
+        {
+            "id": 8470324,
+            "name": "Josh Gorges"
+        },
+        {
+            "id": 8478425,
+            "name": "Brendan Guhle"
+        },
+        {
+            "id": 8476931,
+            "name": "Jake McCabe"
+        },
+        {
+            "id": 8479268,
+            "name": "Casey Nelson"
+        },
+        {
+            "id": 8474743,
+            "name": "Zach Redmond"
+        },
+        {
+            "id": 8477499,
+            "name": "Rasmus Ristolainen"
+        },
+        {
+            "id": 8474618,
+            "name": "Marco Scandella"
+        },
+        {
+            "id": 8476807,
+            "name": "Matt Tennyson"
+        },
+        {
+            "id": 8473434,
+            "name": "Chad Johnson"
+        },
+        {
+            "id": 8475215,
+            "name": "Robin Lehner"
+        },
+        {
+            "id": 8476999,
+            "name": "Linus Ullmark"
+        },
+        {
+            "id": 8476330,
+            "name": "Adam Wilcox"
+        }
+    ]
+}

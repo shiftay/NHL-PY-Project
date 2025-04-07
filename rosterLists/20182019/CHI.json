@@ -1,0 +1,140 @@
+{
+    "players": [
+        {
+            "id": 8473573,
+            "name": "Artem Anisimov"
+        },
+        {
+            "id": 8479465,
+            "name": "Drake Caggiula"
+        },
+        {
+            "id": 8479337,
+            "name": "Alex DeBrincat"
+        },
+        {
+            "id": 8479657,
+            "name": "Alexandre Fortin"
+        },
+        {
+            "id": 8477401,
+            "name": "John Hayden"
+        },
+        {
+            "id": 8477366,
+            "name": "Luke Johnson"
+        },
+        {
+            "id": 8480946,
+            "name": "Dominik Kahun"
+        },
+        {
+            "id": 8480144,
+            "name": "David Kampf"
+        },
+        {
+            "id": 8474141,
+            "name": "Patrick Kane"
+        },
+        {
+            "id": 8475323,
+            "name": "Marcus Kruger"
+        },
+        {
+            "id": 8470543,
+            "name": "Chris Kunitz"
+        },
+        {
+            "id": 8478561,
+            "name": "Andreas Martinsen"
+        },
+        {
+            "id": 8480954,
+            "name": "Jacob Nilsson"
+        },
+        {
+            "id": 8477943,
+            "name": "Brendan Perlini"
+        },
+        {
+            "id": 8476438,
+            "name": "Brandon Saad"
+        },
+        {
+            "id": 8477951,
+            "name": "Nick Schmaltz"
+        },
+        {
+            "id": 8478106,
+            "name": "Dylan Sikura"
+        },
+        {
+            "id": 8478440,
+            "name": "Dylan Strome"
+        },
+        {
+            "id": 8473604,
+            "name": "Jonathan Toews"
+        },
+        {
+            "id": 8477472,
+            "name": "Carl Dahlstrom"
+        },
+        {
+            "id": 8475869,
+            "name": "Brandon Davidson"
+        },
+        {
+            "id": 8478055,
+            "name": "Gustav Forsling"
+        },
+        {
+            "id": 8478502,
+            "name": "Dennis Gilbert"
+        },
+        {
+            "id": 8476979,
+            "name": "Erik Gustafsson"
+        },
+        {
+            "id": 8480035,
+            "name": "Henri Jokiharju"
+        },
+        {
+            "id": 8470281,
+            "name": "Duncan Keith"
+        },
+        {
+            "id": 8476886,
+            "name": "Slater Koekkoek"
+        },
+        {
+            "id": 8475430,
+            "name": "Brandon Manning"
+        },
+        {
+            "id": 8476473,
+            "name": "Connor Murphy"
+        },
+        {
+            "id": 8480172,
+            "name": "Jan Rutta"
+        },
+        {
+            "id": 8470607,
+            "name": "Brent Seabrook"
+        },
+        {
+            "id": 8470645,
+            "name": "Corey Crawford"
+        },
+        {
+            "id": 8480420,
+            "name": "Collin Delia"
+        },
+        {
+            "id": 8470320,
+            "name": "Cam Ward"
+        }
+    ]
+}

@@ -1,0 +1,124 @@
+{
+    "players": [
+        {
+            "id": 8473563,
+            "name": "Nicklas Backstrom"
+        },
+        {
+            "id": 8477003,
+            "name": "Riley Barber"
+        },
+        {
+            "id": 8474291,
+            "name": "Jay Beagle"
+        },
+        {
+            "id": 8477444,
+            "name": "Andre Burakovsky"
+        },
+        {
+            "id": 8474008,
+            "name": "Paul Carey"
+        },
+        {
+            "id": 8475792,
+            "name": "Brett Connolly"
+        },
+        {
+            "id": 8474189,
+            "name": "Lars Eller"
+        },
+        {
+            "id": 8475149,
+            "name": "Marcus Johansson"
+        },
+        {
+            "id": 8475744,
+            "name": "Evgeny Kuznetsov"
+        },
+        {
+            "id": 8475291,
+            "name": "Garrett Mitchell"
+        },
+        {
+            "id": 8477070,
+            "name": "Liam O'Brien"
+        },
+        {
+            "id": 8471698,
+            "name": "T.J. Oshie"
+        },
+        {
+            "id": 8471214,
+            "name": "Alex Ovechkin"
+        },
+        {
+            "id": 8477482,
+            "name": "Zachary Sanford"
+        },
+        {
+            "id": 8476905,
+            "name": "Chandler Stephenson"
+        },
+        {
+            "id": 8477944,
+            "name": "Jakub Vrana"
+        },
+        {
+            "id": 8468508,
+            "name": "Justin Williams"
+        },
+        {
+            "id": 8476880,
+            "name": "Tom Wilson"
+        },
+        {
+            "id": 8471476,
+            "name": "Daniel Winnik"
+        },
+        {
+            "id": 8473991,
+            "name": "Karl Alzner"
+        },
+        {
+            "id": 8474590,
+            "name": "John Carlson"
+        },
+        {
+            "id": 8471710,
+            "name": "Taylor Chorney"
+        },
+        {
+            "id": 8474604,
+            "name": "Aaron Ness"
+        },
+        {
+            "id": 8471702,
+            "name": "Matt Niskanen"
+        },
+        {
+            "id": 8475200,
+            "name": "Dmitry Orlov"
+        },
+        {
+            "id": 8468498,
+            "name": "Brooks Orpik"
+        },
+        {
+            "id": 8477220,
+            "name": "Nate Schmidt"
+        },
+        {
+            "id": 8474031,
+            "name": "Kevin Shattenkirk"
+        },
+        {
+            "id": 8475831,
+            "name": "Philipp Grubauer"
+        },
+        {
+            "id": 8474651,
+            "name": "Braden Holtby"
+        }
+    ]
+}

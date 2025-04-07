@@ -1,0 +1,160 @@
+{
+    "players": [
+        {
+            "id": 8445417,
+            "name": "Brian Bellows"
+        },
+        {
+            "id": 8459246,
+            "name": "Donald Brashear"
+        },
+        {
+            "id": 8445734,
+            "name": "Benoit Brunet"
+        },
+        {
+            "id": 8458969,
+            "name": "Valeri Bure"
+        },
+        {
+            "id": 8455919,
+            "name": "Craig Conroy"
+        },
+        {
+            "id": 8446303,
+            "name": "Vincent Damphousse"
+        },
+        {
+            "id": 8458557,
+            "name": "Craig Darby"
+        },
+        {
+            "id": 8456080,
+            "name": "Paul Di Pietro"
+        },
+        {
+            "id": 8446415,
+            "name": "Gilbert Dionne"
+        },
+        {
+            "id": 8456235,
+            "name": "Craig Ferguson"
+        },
+        {
+            "id": 8456274,
+            "name": "Gerry Fleming"
+        },
+        {
+            "id": 8448415,
+            "name": "Mike Keane"
+        },
+        {
+            "id": 8448641,
+            "name": "Mark Lamb"
+        },
+        {
+            "id": 8448622,
+            "name": "John Leclair"
+        },
+        {
+            "id": 8459412,
+            "name": "Jim Montgomery"
+        },
+        {
+            "id": 8449740,
+            "name": "Kirk Muller"
+        },
+        {
+            "id": 8460545,
+            "name": "Chris Murray"
+        },
+        {
+            "id": 8458641,
+            "name": "Oleg Petrov"
+        },
+        {
+            "id": 8450725,
+            "name": "Mark Recchi"
+        },
+        {
+            "id": 8450890,
+            "name": "Mario Roberge"
+        },
+        {
+            "id": 8457849,
+            "name": "Ed Ronan"
+        },
+        {
+            "id": 8458575,
+            "name": "Yves Sarault"
+        },
+        {
+            "id": 8458682,
+            "name": "Brian Savage"
+        },
+        {
+            "id": 8457991,
+            "name": "Pierre Sevigny"
+        },
+        {
+            "id": 8458125,
+            "name": "Turner Stevenson"
+        },
+        {
+            "id": 8451991,
+            "name": "Pierre Turgeon"
+        },
+        {
+            "id": 8445739,
+            "name": "Patrice Brisebois"
+        },
+        {
+            "id": 8446286,
+            "name": "J.J. Daigneault"
+        },
+        {
+            "id": 8446407,
+            "name": "Eric Desjardins"
+        },
+        {
+            "id": 8446873,
+            "name": "Bryan Fogarty"
+        },
+        {
+            "id": 8457191,
+            "name": "Vladimir Malakhov"
+        },
+        {
+            "id": 8449957,
+            "name": "Lyle Odelein"
+        },
+        {
+            "id": 8457706,
+            "name": "Peter Popovic"
+        },
+        {
+            "id": 8450658,
+            "name": "Yves Racine"
+        },
+        {
+            "id": 8459004,
+            "name": "Craig Rivet"
+        },
+        {
+            "id": 8451224,
+            "name": "Mathieu Schneider"
+        },
+        {
+            "id": 8458956,
+            "name": "David Wilkie"
+        },
+        {
+            "id": 8451033,
+            "name": "Patrick Roy"
+        },
+        {
+            "id": 8451837,
+            "name": "Ron Tugnutt"
+        }
+    ]
+}

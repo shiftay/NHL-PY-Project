@@ -1,0 +1,104 @@
+{
+    "players": [
+        {
+            "id": 8477964,
+            "name": "Ivan Barbashev"
+        },
+        {
+            "id": 8481604,
+            "name": "Pavel Dorofeyev"
+        },
+        {
+            "id": 8478403,
+            "name": "Jack Eichel"
+        },
+        {
+            "id": 8476881,
+            "name": "Tomas Hertl"
+        },
+        {
+            "id": 8479353,
+            "name": "Brett Howden"
+        },
+        {
+            "id": 8476448,
+            "name": "William Karlsson"
+        },
+        {
+            "id": 8478434,
+            "name": "Keegan Kolesar"
+        },
+        {
+            "id": 8478109,
+            "name": "Victor Olofsson"
+        },
+        {
+            "id": 8476871,
+            "name": "Tanner Pearson"
+        },
+        {
+            "id": 8478462,
+            "name": "Nicolas Roy"
+        },
+        {
+            "id": 8476438,
+            "name": "Brandon Saad"
+        },
+        {
+            "id": 8481655,
+            "name": "Cole Schwindt"
+        },
+        {
+            "id": 8475191,
+            "name": "Reilly Smith"
+        },
+        {
+            "id": 8475913,
+            "name": "Mark Stone"
+        },
+        {
+            "id": 8479980,
+            "name": "Nicolas Hague"
+        },
+        {
+            "id": 8478396,
+            "name": "Noah Hanifin"
+        },
+        {
+            "id": 8477018,
+            "name": "Ben Hutton"
+        },
+        {
+            "id": 8481527,
+            "name": "Kaedan Korczak"
+        },
+        {
+            "id": 8475188,
+            "name": "Brayden McNabb"
+        },
+        {
+            "id": 8474565,
+            "name": "Alex Pietrangelo"
+        },
+        {
+            "id": 8477447,
+            "name": "Shea Theodore"
+        },
+        {
+            "id": 8480727,
+            "name": "Zach Whitecloud"
+        },
+        {
+            "id": 8478499,
+            "name": "Adin Hill"
+        },
+        {
+            "id": 8478492,
+            "name": "Ilya Samsonov"
+        },
+        {
+            "id": 8481033,
+            "name": "Akira Schmid"
+        }
+    ]
+}

@@ -1,0 +1,144 @@
+{
+    "players": [
+        {
+            "id": 8476326,
+            "name": "Josh Archibald"
+        },
+        {
+            "id": 8476927,
+            "name": "Teddy Blueger"
+        },
+        {
+            "id": 8474009,
+            "name": "Nick Bonino"
+        },
+        {
+            "id": 8479465,
+            "name": "Drake Caggiula"
+        },
+        {
+            "id": 8470604,
+            "name": "Jeff Carter"
+        },
+        {
+            "id": 8471675,
+            "name": "Sidney Crosby"
+        },
+        {
+            "id": 8475798,
+            "name": "Mikael Granlund"
+        },
+        {
+            "id": 8480836,
+            "name": "Jonathan Gruden"
+        },
+        {
+            "id": 8477404,
+            "name": "Jake Guentzel"
+        },
+        {
+            "id": 8480842,
+            "name": "Filip Hallander"
+        },
+        {
+            "id": 8478046,
+            "name": "Danton Heinen"
+        },
+        {
+            "id": 8477953,
+            "name": "Kasperi Kapanen"
+        },
+        {
+            "id": 8471215,
+            "name": "Evgeni Malkin"
+        },
+        {
+            "id": 8476934,
+            "name": "Brock McGinn"
+        },
+        {
+            "id": 8479423,
+            "name": "Alex Nylander"
+        },
+        {
+            "id": 8482055,
+            "name": "Drew O'Connor"
+        },
+        {
+            "id": 8480068,
+            "name": "Ryan Poehling"
+        },
+        {
+            "id": 8481591,
+            "name": "Sam Poulin"
+        },
+        {
+            "id": 8476483,
+            "name": "Rickard Rakell"
+        },
+        {
+            "id": 8475810,
+            "name": "Bryan Rust"
+        },
+        {
+            "id": 8475722,
+            "name": "Jason Zucker"
+        },
+        {
+            "id": 8475208,
+            "name": "Brian Dumoulin"
+        },
+        {
+            "id": 8476166,
+            "name": "Taylor Fedun"
+        },
+        {
+            "id": 8478017,
+            "name": "Mark Friedman"
+        },
+        {
+            "id": 8480058,
+            "name": "P.O Joseph"
+        },
+        {
+            "id": 8475179,
+            "name": "Dmitry Kulikov"
+        },
+        {
+            "id": 8471724,
+            "name": "Kris Letang"
+        },
+        {
+            "id": 8473507,
+            "name": "Jeff Petry"
+        },
+        {
+            "id": 8477969,
+            "name": "Marcus Pettersson"
+        },
+        {
+            "id": 8477244,
+            "name": "Chad Ruhwedel"
+        },
+        {
+            "id": 8480172,
+            "name": "Jan Rutta"
+        },
+        {
+            "id": 8480883,
+            "name": "Ty Smith"
+        },
+        {
+            "id": 8479193,
+            "name": "Casey DeSmith"
+        },
+        {
+            "id": 8477465,
+            "name": "Tristan Jarry"
+        },
+        {
+            "id": 8474682,
+            "name": "Dustin Tokarski"
+        }
+    ]
+}

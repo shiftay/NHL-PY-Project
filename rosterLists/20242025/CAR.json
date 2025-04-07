@@ -1,0 +1,100 @@
+{
+    "players": [
+        {
+            "id": 8478427,
+            "name": "Sebastian Aho"
+        },
+        {
+            "id": 8482809,
+            "name": "Jackson Blake"
+        },
+        {
+            "id": 8477478,
+            "name": "William Carrier"
+        },
+        {
+            "id": 8475791,
+            "name": "Taylor Hall"
+        },
+        {
+            "id": 8476873,
+            "name": "Mark Jankowski"
+        },
+        {
+            "id": 8482093,
+            "name": "Seth Jarvis"
+        },
+        {
+            "id": 8479370,
+            "name": "Tyson Jost"
+        },
+        {
+            "id": 8480829,
+            "name": "Jesperi Kotkaniemi"
+        },
+        {
+            "id": 8476921,
+            "name": "Jordan Martinook"
+        },
+        {
+            "id": 8480762,
+            "name": "Eric Robinson"
+        },
+        {
+            "id": 8478458,
+            "name": "Jack Roslovic"
+        },
+        {
+            "id": 8473533,
+            "name": "Jordan Staal"
+        },
+        {
+            "id": 8482702,
+            "name": "Logan Stankoven"
+        },
+        {
+            "id": 8480830,
+            "name": "Andrei Svechnikov"
+        },
+        {
+            "id": 8470613,
+            "name": "Brent Burns"
+        },
+        {
+            "id": 8478970,
+            "name": "Jalen Chatfield"
+        },
+        {
+            "id": 8476906,
+            "name": "Shayne Gostisbehere"
+        },
+        {
+            "id": 8482666,
+            "name": "Scott Morrow"
+        },
+        {
+            "id": 8475200,
+            "name": "Dmitry Orlov"
+        },
+        {
+            "id": 8476958,
+            "name": "Jaccob Slavin"
+        },
+        {
+            "id": 8479388,
+            "name": "Riley Stillman"
+        },
+        {
+            "id": 8480336,
+            "name": "Sean Walker"
+        },
+        {
+            "id": 8475883,
+            "name": "Frederik Andersen"
+        },
+        {
+            "id": 8481611,
+            "name": "Pyotr Kochetkov"
+        }
+    ]
+}

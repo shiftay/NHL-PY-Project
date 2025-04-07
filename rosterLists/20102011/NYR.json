@@ -1,0 +1,144 @@
+{
+    "players": [
+        {
+            "id": 8473573,
+            "name": "Artem Anisimov"
+        },
+        {
+            "id": 8468224,
+            "name": "Sean Avery"
+        },
+        {
+            "id": 8469647,
+            "name": "Derek Boogaard"
+        },
+        {
+            "id": 8470619,
+            "name": "Brian Boyle"
+        },
+        {
+            "id": 8471339,
+            "name": "Ryan Callahan"
+        },
+        {
+            "id": 8470299,
+            "name": "Erik Christensen"
+        },
+        {
+            "id": 8460562,
+            "name": "Chris Drury"
+        },
+        {
+            "id": 8471273,
+            "name": "Brandon Dubinsky"
+        },
+        {
+            "id": 8471728,
+            "name": "Brodie Dupont"
+        },
+        {
+            "id": 8468172,
+            "name": "Ruslan Fedotenko"
+        },
+        {
+            "id": 8468500,
+            "name": "Alex Frolov"
+        },
+        {
+            "id": 8468483,
+            "name": "Marian Gaborik"
+        },
+        {
+            "id": 8474634,
+            "name": "Evgeny Grachev"
+        },
+        {
+            "id": 8471411,
+            "name": "Chad Kolarik"
+        },
+        {
+            "id": 8470232,
+            "name": "Kris Newbury"
+        },
+        {
+            "id": 8459492,
+            "name": "Vinny Prospal"
+        },
+        {
+            "id": 8471283,
+            "name": "Brandon Prust"
+        },
+        {
+            "id": 8474613,
+            "name": "Derek Stepan"
+        },
+        {
+            "id": 8474668,
+            "name": "Dale Weise"
+        },
+        {
+            "id": 8466392,
+            "name": "Todd White"
+        },
+        {
+            "id": 8470809,
+            "name": "Jeremy Williams"
+        },
+        {
+            "id": 8471234,
+            "name": "Wojtek Wolski"
+        },
+        {
+            "id": 8475692,
+            "name": "Mats Zuccarello"
+        },
+        {
+            "id": 8474584,
+            "name": "Michael Del Zotto"
+        },
+        {
+            "id": 8470192,
+            "name": "Steve Eminger"
+        },
+        {
+            "id": 8475118,
+            "name": "Matt Gilroy"
+        },
+        {
+            "id": 8471958,
+            "name": "Dan Girardi"
+        },
+        {
+            "id": 8459462,
+            "name": "Bryan McCabe"
+        },
+        {
+            "id": 8474151,
+            "name": "Ryan McDonagh"
+        },
+        {
+            "id": 8465058,
+            "name": "Michal Rozsival"
+        },
+        {
+            "id": 8471714,
+            "name": "Michael Sauer"
+        },
+        {
+            "id": 8471686,
+            "name": "Marc Staal"
+        },
+        {
+            "id": 8462047,
+            "name": "Martin Biron"
+        },
+        {
+            "id": 8473434,
+            "name": "Chad Johnson"
+        },
+        {
+            "id": 8468685,
+            "name": "Henrik Lundqvist"
+        }
+    ]
+}

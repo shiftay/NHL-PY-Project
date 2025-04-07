@@ -1,0 +1,144 @@
+{
+    "players": [
+        {
+            "id": 8477473,
+            "name": "Justin Bailey"
+        },
+        {
+            "id": 8476401,
+            "name": "Daniel Catenacci"
+        },
+        {
+            "id": 8475235,
+            "name": "Nicolas Deslauriers"
+        },
+        {
+            "id": 8478403,
+            "name": "Jack Eichel"
+        },
+        {
+            "id": 8474589,
+            "name": "Tyler Ennis"
+        },
+        {
+            "id": 8477392,
+            "name": "Hudson Fasching"
+        },
+        {
+            "id": 8475220,
+            "name": "Marcus Foligno"
+        },
+        {
+            "id": 8467407,
+            "name": "Brian Gionta"
+        },
+        {
+            "id": 8476878,
+            "name": "Zemgus Girgensons"
+        },
+        {
+            "id": 8475169,
+            "name": "Evander Kane"
+        },
+        {
+            "id": 8475728,
+            "name": "Johan Larsson"
+        },
+        {
+            "id": 8467330,
+            "name": "David Legwand"
+        },
+        {
+            "id": 8473465,
+            "name": "Jamie McGinn"
+        },
+        {
+            "id": 8470852,
+            "name": "Matt Moulson"
+        },
+        {
+            "id": 8471811,
+            "name": "Cal O'Reilly"
+        },
+        {
+            "id": 8475158,
+            "name": "Ryan O'Reilly"
+        },
+        {
+            "id": 8477933,
+            "name": "Sam Reinhart"
+        },
+        {
+            "id": 8478542,
+            "name": "Evan Rodrigues"
+        },
+        {
+            "id": 8477213,
+            "name": "Tim Schaller"
+        },
+        {
+            "id": 8476766,
+            "name": "Cole Schneider"
+        },
+        {
+            "id": 8475321,
+            "name": "Phil Varone"
+        },
+        {
+            "id": 8474567,
+            "name": "Zach Bogosian"
+        },
+        {
+            "id": 8469470,
+            "name": "Carlo Colaiacovo"
+        },
+        {
+            "id": 8471742,
+            "name": "Cody Franson"
+        },
+        {
+            "id": 8470324,
+            "name": "Josh Gorges"
+        },
+        {
+            "id": 8476931,
+            "name": "Jake McCabe"
+        },
+        {
+            "id": 8479268,
+            "name": "Casey Nelson"
+        },
+        {
+            "id": 8475796,
+            "name": "Mark Pysyk"
+        },
+        {
+            "id": 8477499,
+            "name": "Rasmus Ristolainen"
+        },
+        {
+            "id": 8477244,
+            "name": "Chad Ruhwedel"
+        },
+        {
+            "id": 8473426,
+            "name": "Mike Weber"
+        },
+        {
+            "id": 8473434,
+            "name": "Chad Johnson"
+        },
+        {
+            "id": 8476309,
+            "name": "Jason Kasdorf"
+        },
+        {
+            "id": 8475215,
+            "name": "Robin Lehner"
+        },
+        {
+            "id": 8476999,
+            "name": "Linus Ullmark"
+        }
+    ]
+}

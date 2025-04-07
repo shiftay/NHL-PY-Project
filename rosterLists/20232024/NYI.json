@@ -1,0 +1,100 @@
+{
+    "players": [
+        {
+            "id": 8478445,
+            "name": "Mathew Barzal"
+        },
+        {
+            "id": 8475231,
+            "name": "Casey Cizikas"
+        },
+        {
+            "id": 8478115,
+            "name": "Pierre Engvall"
+        },
+        {
+            "id": 8477392,
+            "name": "Hudson Fasching"
+        },
+        {
+            "id": 8479328,
+            "name": "Julien Gauthier"
+        },
+        {
+            "id": 8481601,
+            "name": "Simon Holmstrom"
+        },
+        {
+            "id": 8477500,
+            "name": "Bo Horvat"
+        },
+        {
+            "id": 8481016,
+            "name": "Ruslan Iskhakov"
+        },
+        {
+            "id": 8475314,
+            "name": "Anders Lee"
+        },
+        {
+            "id": 8481237,
+            "name": "Kyle MacLean"
+        },
+        {
+            "id": 8475754,
+            "name": "Brock Nelson"
+        },
+        {
+            "id": 8476419,
+            "name": "Jean-Gabriel Pageau"
+        },
+        {
+            "id": 8475151,
+            "name": "Kyle Palmieri"
+        },
+        {
+            "id": 8480789,
+            "name": "Oliver Wahlstrom"
+        },
+        {
+            "id": 8481541,
+            "name": "Samuel Bolduc"
+        },
+        {
+            "id": 8479395,
+            "name": "Dennis Cholowski"
+        },
+        {
+            "id": 8480865,
+            "name": "Noah Dobson"
+        },
+        {
+            "id": 8476429,
+            "name": "Scott Mayfield"
+        },
+        {
+            "id": 8476917,
+            "name": "Adam Pelech"
+        },
+        {
+            "id": 8477506,
+            "name": "Ryan Pulock"
+        },
+        {
+            "id": 8481014,
+            "name": "Alexander Romanov"
+        },
+        {
+            "id": 8480819,
+            "name": "Jakub Skarek"
+        },
+        {
+            "id": 8478009,
+            "name": "Ilya Sorokin"
+        },
+        {
+            "id": 8473575,
+            "name": "Semyon Varlamov"
+        }
+    ]
+}

@@ -1,0 +1,180 @@
+{
+    "players": [
+        {
+            "id": 8471663,
+            "name": "Mike Blunden"
+        },
+        {
+            "id": 8473544,
+            "name": "Derick Brassard"
+        },
+        {
+            "id": 8479366,
+            "name": "Logan Brown"
+        },
+        {
+            "id": 8470358,
+            "name": "Alexandre Burrows"
+        },
+        {
+            "id": 8478488,
+            "name": "Filip Chlapik"
+        },
+        {
+            "id": 8474018,
+            "name": "Christopher DiDomenico"
+        },
+        {
+            "id": 8475168,
+            "name": "Matt Duchene"
+        },
+        {
+            "id": 8475254,
+            "name": "Gabriel Dumont"
+        },
+        {
+            "id": 8476288,
+            "name": "Ryan Dzingel"
+        },
+        {
+            "id": 8480029,
+            "name": "Alex Formenton"
+        },
+        {
+            "id": 8468483,
+            "name": "Marian Gaborik"
+        },
+        {
+            "id": 8474884,
+            "name": "Mike Hoffman"
+        },
+        {
+            "id": 8476323,
+            "name": "Max McCormick"
+        },
+        {
+            "id": 8474024,
+            "name": "Jim O'Brien"
+        },
+        {
+            "id": 8475175,
+            "name": "Magnus Paajarvi"
+        },
+        {
+            "id": 8476419,
+            "name": "Jean-Gabriel Pageau"
+        },
+        {
+            "id": 8477426,
+            "name": "Nick Paul"
+        },
+        {
+            "id": 8471768,
+            "name": "Tom Pyatt"
+        },
+        {
+            "id": 8478268,
+            "name": "Jack Rodewald"
+        },
+        {
+            "id": 8471676,
+            "name": "Bobby Ryan"
+        },
+        {
+            "id": 8475328,
+            "name": "Ben Sexton"
+        },
+        {
+            "id": 8476406,
+            "name": "Nicholas Shore"
+        },
+        {
+            "id": 8474250,
+            "name": "Zack Smith"
+        },
+        {
+            "id": 8475913,
+            "name": "Mark Stone"
+        },
+        {
+            "id": 8470775,
+            "name": "Nate Thompson"
+        },
+        {
+            "id": 8474068,
+            "name": "Kyle Turris"
+        },
+        {
+            "id": 8478400,
+            "name": "Colin White"
+        },
+        {
+            "id": 8474697,
+            "name": "Mark Borowiecki"
+        },
+        {
+            "id": 8475982,
+            "name": "Erik Burgdoerfer"
+        },
+        {
+            "id": 8476879,
+            "name": "Cody Ceci"
+        },
+        {
+            "id": 8478469,
+            "name": "Thomas Chabot"
+        },
+        {
+            "id": 8476368,
+            "name": "Fredrik Claesson"
+        },
+        {
+            "id": 8477971,
+            "name": "Andreas Englund"
+        },
+        {
+            "id": 8477433,
+            "name": "Ben Harpur"
+        },
+        {
+            "id": 8478868,
+            "name": "Christian Jaros"
+        },
+        {
+            "id": 8474578,
+            "name": "Erik Karlsson"
+        },
+        {
+            "id": 8469665,
+            "name": "Johnny Oduya"
+        },
+        {
+            "id": 8470602,
+            "name": "Dion Phaneuf"
+        },
+        {
+            "id": 8476890,
+            "name": "Patrick Sieloff"
+        },
+        {
+            "id": 8475227,
+            "name": "Chris Wideman"
+        },
+        {
+            "id": 8478846,
+            "name": "Christian Wolanin"
+        },
+        {
+            "id": 8467950,
+            "name": "Craig Anderson"
+        },
+        {
+            "id": 8477237,
+            "name": "Mike Condon"
+        },
+        {
+            "id": 8471433,
+            "name": "Daniel Taylor"
+        }
+    ]
+}

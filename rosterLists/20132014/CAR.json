@@ -1,0 +1,128 @@
+{
+    "players": [
+        {
+            "id": 8474137,
+            "name": "Drayson Bowman"
+        },
+        {
+            "id": 8474576,
+            "name": "Zach Boychuk"
+        },
+        {
+            "id": 8462041,
+            "name": "Radek Dvorak"
+        },
+        {
+            "id": 8470302,
+            "name": "Patrick Dwyer"
+        },
+        {
+            "id": 8471804,
+            "name": "Nathan Gerbe"
+        },
+        {
+            "id": 8477496,
+            "name": "Elias Lindholm"
+        },
+        {
+            "id": 8474681,
+            "name": "Andrei Loktionov"
+        },
+        {
+            "id": 8467334,
+            "name": "Manny Malhotra"
+        },
+        {
+            "id": 8474062,
+            "name": "Riley Nash"
+        },
+        {
+            "id": 8474030,
+            "name": "Aaron Palushaj"
+        },
+        {
+            "id": 8469462,
+            "name": "Tuomo Ruutu"
+        },
+        {
+            "id": 8470120,
+            "name": "Alexander Semin"
+        },
+        {
+            "id": 8475784,
+            "name": "Jeff Skinner"
+        },
+        {
+            "id": 8470595,
+            "name": "Eric Staal"
+        },
+        {
+            "id": 8473533,
+            "name": "Jordan Staal"
+        },
+        {
+            "id": 8471840,
+            "name": "Brett Sutter"
+        },
+        {
+            "id": 8474052,
+            "name": "Chris Terry"
+        },
+        {
+            "id": 8473482,
+            "name": "Jiri Tlusty"
+        },
+        {
+            "id": 8473908,
+            "name": "Kevin Westgarth"
+        },
+        {
+            "id": 8474135,
+            "name": "Brett Bellemore"
+        },
+        {
+            "id": 8475753,
+            "name": "Justin Faulk"
+        },
+        {
+            "id": 8469476,
+            "name": "Tim Gleason"
+        },
+        {
+            "id": 8468493,
+            "name": "Ron Hainsey"
+        },
+        {
+            "id": 8469531,
+            "name": "Jay Harrison"
+        },
+        {
+            "id": 8469460,
+            "name": "Mike Komisarek"
+        },
+        {
+            "id": 8468639,
+            "name": "John-Michael Liles"
+        },
+        {
+            "id": 8476465,
+            "name": "Ryan Murphy"
+        },
+        {
+            "id": 8471284,
+            "name": "Andrej Sekera"
+        },
+        {
+            "id": 8471418,
+            "name": "Anton Khudobin"
+        },
+        {
+            "id": 8471251,
+            "name": "Justin Peters"
+        },
+        {
+            "id": 8470320,
+            "name": "Cam Ward"
+        }
+    ]
+}

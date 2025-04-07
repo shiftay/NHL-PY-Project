@@ -1,0 +1,156 @@
+{
+    "players": [
+        {
+            "id": 8470655,
+            "name": "David Backes"
+        },
+        {
+            "id": 8470638,
+            "name": "Patrice Bergeron"
+        },
+        {
+            "id": 8478075,
+            "name": "Anders Bjork"
+        },
+        {
+            "id": 8477320,
+            "name": "Anton Blidh"
+        },
+        {
+            "id": 8474008,
+            "name": "Paul Carey"
+        },
+        {
+            "id": 8477417,
+            "name": "Peter Cehlarik"
+        },
+        {
+            "id": 8475745,
+            "name": "Charlie Coyle"
+        },
+        {
+            "id": 8478498,
+            "name": "Jake DeBrusk"
+        },
+        {
+            "id": 8479365,
+            "name": "Trent Frederic"
+        },
+        {
+            "id": 8476867,
+            "name": "Brendan Gaunce"
+        },
+        {
+            "id": 8478046,
+            "name": "Danton Heinen"
+        },
+        {
+            "id": 8478888,
+            "name": "Cameron Hughes"
+        },
+        {
+            "id": 8478131,
+            "name": "Ondrej Kase"
+        },
+        {
+            "id": 8471276,
+            "name": "David Krejci"
+        },
+        {
+            "id": 8480901,
+            "name": "Karson Kuhlman"
+        },
+        {
+            "id": 8476374,
+            "name": "Sean Kuraly"
+        },
+        {
+            "id": 8480944,
+            "name": "Par Lindholm"
+        },
+        {
+            "id": 8473419,
+            "name": "Brad Marchand"
+        },
+        {
+            "id": 8475807,
+            "name": "Joakim Nordstrom"
+        },
+        {
+            "id": 8477956,
+            "name": "David Pastrnak"
+        },
+        {
+            "id": 8476439,
+            "name": "Brett Ritchie"
+        },
+        {
+            "id": 8477941,
+            "name": "Nick Ritchie"
+        },
+        {
+            "id": 8478485,
+            "name": "Zach Senyshyn"
+        },
+        {
+            "id": 8480021,
+            "name": "Jack Studnicka"
+        },
+        {
+            "id": 8475780,
+            "name": "Chris Wagner"
+        },
+        {
+            "id": 8478443,
+            "name": "Brandon Carlo"
+        },
+        {
+            "id": 8465009,
+            "name": "Zdeno Chara"
+        },
+        {
+            "id": 8477365,
+            "name": "Connor Clifton"
+        },
+        {
+            "id": 8476891,
+            "name": "Matt Grzelcyk"
+        },
+        {
+            "id": 8474000,
+            "name": "Steven Kampfer"
+        },
+        {
+            "id": 8476792,
+            "name": "Torey Krug"
+        },
+        {
+            "id": 8478468,
+            "name": "Jeremy Lauzon"
+        },
+        {
+            "id": 8479325,
+            "name": "Charlie McAvoy"
+        },
+        {
+            "id": 8475186,
+            "name": "John Moore"
+        },
+        {
+            "id": 8480001,
+            "name": "Urho Vaakanainen"
+        },
+        {
+            "id": 8470860,
+            "name": "Jaroslav Halak"
+        },
+        {
+            "id": 8471695,
+            "name": "Tuukka Rask"
+        },
+        {
+            "id": 8478435,
+            "name": "Dan Vladar"
+        }
+    ]
+}

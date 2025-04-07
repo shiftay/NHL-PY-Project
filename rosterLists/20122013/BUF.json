@@ -1,0 +1,128 @@
+{
+    "players": [
+        {
+            "id": 8474609,
+            "name": "Luke Adam"
+        },
+        {
+            "id": 8470018,
+            "name": "Matt Ellis"
+        },
+        {
+            "id": 8474589,
+            "name": "Tyler Ennis"
+        },
+        {
+            "id": 8476808,
+            "name": "Brian Flynn"
+        },
+        {
+            "id": 8475220,
+            "name": "Marcus Foligno"
+        },
+        {
+            "id": 8471804,
+            "name": "Nathan Gerbe"
+        },
+        {
+            "id": 8476888,
+            "name": "Mikhail Grigorenko"
+        },
+        {
+            "id": 8462077,
+            "name": "Jochen Hecht"
+        },
+        {
+            "id": 8474570,
+            "name": "Cody Hodgson"
+        },
+        {
+            "id": 8471388,
+            "name": "Patrick Kaleta"
+        },
+        {
+            "id": 8474551,
+            "name": "Ville Leino"
+        },
+        {
+            "id": 8469591,
+            "name": "Cody McCormick"
+        },
+        {
+            "id": 8468505,
+            "name": "Steve Ott"
+        },
+        {
+            "id": 8469506,
+            "name": "Jason Pominville"
+        },
+        {
+            "id": 8471331,
+            "name": "Kevin Porter"
+        },
+        {
+            "id": 8473722,
+            "name": "John Scott"
+        },
+        {
+            "id": 8471226,
+            "name": "Drew Stafford"
+        },
+        {
+            "id": 8470598,
+            "name": "Thomas Vanek"
+        },
+        {
+            "id": 8474113,
+            "name": "TJ Brennan"
+        },
+        {
+            "id": 8469555,
+            "name": "Christian Ehrhoff"
+        },
+        {
+            "id": 8467917,
+            "name": "Jordan Leopold"
+        },
+        {
+            "id": 8474574,
+            "name": "Tyler Myers"
+        },
+        {
+            "id": 8471385,
+            "name": "Adam Pardy"
+        },
+        {
+            "id": 8475796,
+            "name": "Mark Pysyk"
+        },
+        {
+            "id": 8467344,
+            "name": "Robyn Regehr"
+        },
+        {
+            "id": 8477244,
+            "name": "Chad Ruhwedel"
+        },
+        {
+            "id": 8471284,
+            "name": "Andrej Sekera"
+        },
+        {
+            "id": 8470685,
+            "name": "Alexander Sulzer"
+        },
+        {
+            "id": 8473426,
+            "name": "Mike Weber"
+        },
+        {
+            "id": 8473523,
+            "name": "Jhonas Enroth"
+        },
+        {
+            "id": 8468011,
+            "name": "Ryan Miller"
+        }
+    ]
+}

@@ -1,0 +1,144 @@
+{
+    "players": [
+        {
+            "id": 8471680,
+            "name": "Gilbert Brule"
+        },
+        {
+            "id": 8471699,
+            "name": "Andrew Cogliano"
+        },
+        {
+            "id": 8474586,
+            "name": "Jordan Eberle"
+        },
+        {
+            "id": 8470662,
+            "name": "Colin Fraser"
+        },
+        {
+            "id": 8474040,
+            "name": "Sam Gagner"
+        },
+        {
+            "id": 8468086,
+            "name": "Alexandre Giroux"
+        },
+        {
+            "id": 8475791,
+            "name": "Taylor Hall"
+        },
+        {
+            "id": 8474719,
+            "name": "Teemu Hartikainen"
+        },
+        {
+            "id": 8469466,
+            "name": "Ales Hemsky"
+        },
+        {
+            "id": 8467423,
+            "name": "Shawn Horcoff"
+        },
+        {
+            "id": 8470661,
+            "name": "Jean-Francois Jacques"
+        },
+        {
+            "id": 8471323,
+            "name": "Ryan Jones"
+        },
+        {
+            "id": 8470896,
+            "name": "Steve MacIntyre"
+        },
+        {
+            "id": 8471689,
+            "name": "Ryan O'Marra"
+        },
+        {
+            "id": 8474059,
+            "name": "Linus Omark"
+        },
+        {
+            "id": 8475175,
+            "name": "Magnus Paajarvi"
+        },
+        {
+            "id": 8471208,
+            "name": "Dustin Penner"
+        },
+        {
+            "id": 8471324,
+            "name": "Liam Reddox"
+        },
+        {
+            "id": 8470687,
+            "name": "Zack Stortini"
+        },
+        {
+            "id": 8471762,
+            "name": "Chris VandeVelde"
+        },
+        {
+            "id": 8470623,
+            "name": "Shawn Belle"
+        },
+        {
+            "id": 8471710,
+            "name": "Taylor Chorney"
+        },
+        {
+            "id": 8468520,
+            "name": "Kurtis Foster"
+        },
+        {
+            "id": 8470104,
+            "name": "Tom Gilbert"
+        },
+        {
+            "id": 8473525,
+            "name": "Theo Peckham"
+        },
+        {
+            "id": 8469564,
+            "name": "Richard Petiot"
+        },
+        {
+            "id": 8473507,
+            "name": "Jeff Petry"
+        },
+        {
+            "id": 8474046,
+            "name": "Alex Plante"
+        },
+        {
+            "id": 8471222,
+            "name": "Ladislav Smid"
+        },
+        {
+            "id": 8460555,
+            "name": "Jason Strudwick"
+        },
+        {
+            "id": 8468213,
+            "name": "Jim Vandermeer"
+        },
+        {
+            "id": 8470309,
+            "name": "Ryan Whitney"
+        },
+        {
+            "id": 8471227,
+            "name": "Devan Dubnyk"
+        },
+        {
+            "id": 8469675,
+            "name": "Martin Gerber"
+        },
+        {
+            "id": 8459140,
+            "name": "Nikolai Khabibulin"
+        }
+    ]
+}

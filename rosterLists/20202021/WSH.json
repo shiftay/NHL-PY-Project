@@ -1,0 +1,132 @@
+{
+    "players": [
+        {
+            "id": 8473563,
+            "name": "Nicklas Backstrom"
+        },
+        {
+            "id": 8477901,
+            "name": "Daniel Carr"
+        },
+        {
+            "id": 8475343,
+            "name": "Nic Dowd"
+        },
+        {
+            "id": 8474189,
+            "name": "Lars Eller"
+        },
+        {
+            "id": 8474176,
+            "name": "Carl Hagelin"
+        },
+        {
+            "id": 8477903,
+            "name": "Garnet Hathaway"
+        },
+        {
+            "id": 8475744,
+            "name": "Evgeny Kuznetsov"
+        },
+        {
+            "id": 8477544,
+            "name": "Philippe Maillet"
+        },
+        {
+            "id": 8477511,
+            "name": "Anthony Mantha"
+        },
+        {
+            "id": 8481580,
+            "name": "Connor McMichael"
+        },
+        {
+            "id": 8471698,
+            "name": "T.J. Oshie"
+        },
+        {
+            "id": 8471214,
+            "name": "Alex Ovechkin"
+        },
+        {
+            "id": 8475209,
+            "name": "Richard Panik"
+        },
+        {
+            "id": 8479516,
+            "name": "Garrett Pilon"
+        },
+        {
+            "id": 8477314,
+            "name": "Brian Pinho"
+        },
+        {
+            "id": 8477290,
+            "name": "Michael Raffl"
+        },
+        {
+            "id": 8475958,
+            "name": "Michael Sgarbossa"
+        },
+        {
+            "id": 8477839,
+            "name": "Conor Sheary"
+        },
+        {
+            "id": 8478466,
+            "name": "Daniel Sprong"
+        },
+        {
+            "id": 8477944,
+            "name": "Jakub Vrana"
+        },
+        {
+            "id": 8476880,
+            "name": "Tom Wilson"
+        },
+        {
+            "id": 8474590,
+            "name": "John Carlson"
+        },
+        {
+            "id": 8465009,
+            "name": "Zdeno Chara"
+        },
+        {
+            "id": 8475455,
+            "name": "Brenden Dillon"
+        },
+        {
+            "id": 8475324,
+            "name": "Nick Jensen"
+        },
+        {
+            "id": 8475200,
+            "name": "Dmitry Orlov"
+        },
+        {
+            "id": 8474602,
+            "name": "Justin Schultz"
+        },
+        {
+            "id": 8478399,
+            "name": "Jonas Siegenthaler"
+        },
+        {
+            "id": 8477845,
+            "name": "Trevor van Riemsdyk"
+        },
+        {
+            "id": 8467950,
+            "name": "Craig Anderson"
+        },
+        {
+            "id": 8478492,
+            "name": "Ilya Samsonov"
+        },
+        {
+            "id": 8477970,
+            "name": "Vitek Vanecek"
+        }
+    ]
+}

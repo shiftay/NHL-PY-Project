@@ -1,0 +1,144 @@
+{
+    "players": [
+        {
+            "id": 8476857,
+            "name": "Pontus Aberg"
+        },
+        {
+            "id": 8476806,
+            "name": "JT Brown"
+        },
+        {
+            "id": 8475745,
+            "name": "Charlie Coyle"
+        },
+        {
+            "id": 8477987,
+            "name": "Ryan Donato"
+        },
+        {
+            "id": 8478493,
+            "name": "Joel Eriksson Ek"
+        },
+        {
+            "id": 8470611,
+            "name": "Eric Fehr"
+        },
+        {
+            "id": 8477942,
+            "name": "Kevin Fiala"
+        },
+        {
+            "id": 8475220,
+            "name": "Marcus Foligno"
+        },
+        {
+            "id": 8475798,
+            "name": "Mikael Granlund"
+        },
+        {
+            "id": 8478413,
+            "name": "Jordan Greenway"
+        },
+        {
+            "id": 8468611,
+            "name": "Matt Hendricks"
+        },
+        {
+            "id": 8469459,
+            "name": "Mikko Koivu"
+        },
+        {
+            "id": 8479316,
+            "name": "Luke Kunin"
+        },
+        {
+            "id": 8475799,
+            "name": "Nino Niederreiter"
+        },
+        {
+            "id": 8470610,
+            "name": "Zach Parise"
+        },
+        {
+            "id": 8476437,
+            "name": "Victor Rask"
+        },
+        {
+            "id": 8476415,
+            "name": "Kyle Rau"
+        },
+        {
+            "id": 8476177,
+            "name": "Matt Read"
+        },
+        {
+            "id": 8470595,
+            "name": "Eric Staal"
+        },
+        {
+            "id": 8481477,
+            "name": "Nico Sturm"
+        },
+        {
+            "id": 8475722,
+            "name": "Jason Zucker"
+        },
+        {
+            "id": 8474749,
+            "name": "Matt Bartkowski"
+        },
+        {
+            "id": 8478011,
+            "name": "Louie Belpedio"
+        },
+        {
+            "id": 8475868,
+            "name": "Anthony Bitetto"
+        },
+        {
+            "id": 8476463,
+            "name": "Jonas Brodin"
+        },
+        {
+            "id": 8476856,
+            "name": "Mathew Dumba"
+        },
+        {
+            "id": 8476779,
+            "name": "Brad Hunt"
+        },
+        {
+            "id": 8476465,
+            "name": "Ryan Murphy"
+        },
+        {
+            "id": 8474688,
+            "name": "Greg Pateryn"
+        },
+        {
+            "id": 8475613,
+            "name": "Nate Prosser"
+        },
+        {
+            "id": 8476372,
+            "name": "Nick Seeler"
+        },
+        {
+            "id": 8474716,
+            "name": "Jared Spurgeon"
+        },
+        {
+            "id": 8470600,
+            "name": "Ryan Suter"
+        },
+        {
+            "id": 8471227,
+            "name": "Devan Dubnyk"
+        },
+        {
+            "id": 8471774,
+            "name": "Alex Stalock"
+        }
+    ]
+}

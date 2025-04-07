@@ -1,0 +1,128 @@
+{
+    "players": [
+        {
+            "id": 8477987,
+            "name": "Ryan Donato"
+        },
+        {
+            "id": 8475254,
+            "name": "Gabriel Dumont"
+        },
+        {
+            "id": 8478493,
+            "name": "Joel Eriksson Ek"
+        },
+        {
+            "id": 8477942,
+            "name": "Kevin Fiala"
+        },
+        {
+            "id": 8475220,
+            "name": "Marcus Foligno"
+        },
+        {
+            "id": 8476851,
+            "name": "Alex Galchenyuk"
+        },
+        {
+            "id": 8478413,
+            "name": "Jordan Greenway"
+        },
+        {
+            "id": 8477451,
+            "name": "Ryan Hartman"
+        },
+        {
+            "id": 8477366,
+            "name": "Luke Johnson"
+        },
+        {
+            "id": 8469459,
+            "name": "Mikko Koivu"
+        },
+        {
+            "id": 8479316,
+            "name": "Luke Kunin"
+        },
+        {
+            "id": 8479933,
+            "name": "Gerry Mayhew"
+        },
+        {
+            "id": 8470610,
+            "name": "Zach Parise"
+        },
+        {
+            "id": 8476437,
+            "name": "Victor Rask"
+        },
+        {
+            "id": 8470595,
+            "name": "Eric Staal"
+        },
+        {
+            "id": 8481477,
+            "name": "Nico Sturm"
+        },
+        {
+            "id": 8475692,
+            "name": "Mats Zuccarello"
+        },
+        {
+            "id": 8475722,
+            "name": "Jason Zucker"
+        },
+        {
+            "id": 8474749,
+            "name": "Matt Bartkowski"
+        },
+        {
+            "id": 8476463,
+            "name": "Jonas Brodin"
+        },
+        {
+            "id": 8476856,
+            "name": "Mathew Dumba"
+        },
+        {
+            "id": 8476779,
+            "name": "Brad Hunt"
+        },
+        {
+            "id": 8479734,
+            "name": "Brennan Menell"
+        },
+        {
+            "id": 8474688,
+            "name": "Greg Pateryn"
+        },
+        {
+            "id": 8476372,
+            "name": "Nick Seeler"
+        },
+        {
+            "id": 8477369,
+            "name": "Carson Soucy"
+        },
+        {
+            "id": 8474716,
+            "name": "Jared Spurgeon"
+        },
+        {
+            "id": 8470600,
+            "name": "Ryan Suter"
+        },
+        {
+            "id": 8471227,
+            "name": "Devan Dubnyk"
+        },
+        {
+            "id": 8478039,
+            "name": "Kaapo Kahkonen"
+        },
+        {
+            "id": 8471774,
+            "name": "Alex Stalock"
+        }
+    ]
+}

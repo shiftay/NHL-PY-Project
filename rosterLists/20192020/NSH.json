@@ -1,0 +1,128 @@
+{
+    "players": [
+        {
+            "id": 8478042,
+            "name": "Viktor Arvidsson"
+        },
+        {
+            "id": 8476278,
+            "name": "Colin Blackwell"
+        },
+        {
+            "id": 8474009,
+            "name": "Nick Bonino"
+        },
+        {
+            "id": 8477901,
+            "name": "Daniel Carr"
+        },
+        {
+            "id": 8475168,
+            "name": "Matt Duchene"
+        },
+        {
+            "id": 8476887,
+            "name": "Filip Forsberg"
+        },
+        {
+            "id": 8475798,
+            "name": "Mikael Granlund"
+        },
+        {
+            "id": 8476428,
+            "name": "Rocco Grimaldi"
+        },
+        {
+            "id": 8475714,
+            "name": "Calle Jarnkrok"
+        },
+        {
+            "id": 8475793,
+            "name": "Ryan Johansen"
+        },
+        {
+            "id": 8479671,
+            "name": "Mathieu Olivier"
+        },
+        {
+            "id": 8478409,
+            "name": "Anthony Richard"
+        },
+        {
+            "id": 8476447,
+            "name": "Miikka Salomaki"
+        },
+        {
+            "id": 8476925,
+            "name": "Colton Sissons"
+        },
+        {
+            "id": 8475225,
+            "name": "Craig Smith"
+        },
+        {
+            "id": 8478508,
+            "name": "Yakov Trenin"
+        },
+        {
+            "id": 8474068,
+            "name": "Kyle Turris"
+        },
+        {
+            "id": 8475766,
+            "name": "Austin Watson"
+        },
+        {
+            "id": 8478851,
+            "name": "Alexandre Carrier"
+        },
+        {
+            "id": 8475218,
+            "name": "Mattias Ekholm"
+        },
+        {
+            "id": 8475176,
+            "name": "Ryan Ellis"
+        },
+        {
+            "id": 8479371,
+            "name": "Dante Fabbro"
+        },
+        {
+            "id": 8469465,
+            "name": "Dan Hamhuis"
+        },
+        {
+            "id": 8473560,
+            "name": "Korbinian Holzer"
+        },
+        {
+            "id": 8475625,
+            "name": "Matt Irwin"
+        },
+        {
+            "id": 8474600,
+            "name": "Roman Josi"
+        },
+        {
+            "id": 8477463,
+            "name": "Steven Santini"
+        },
+        {
+            "id": 8475797,
+            "name": "Jarred Tinordi"
+        },
+        {
+            "id": 8474134,
+            "name": "Yannick Weber"
+        },
+        {
+            "id": 8471469,
+            "name": "Pekka Rinne"
+        },
+        {
+            "id": 8477424,
+            "name": "Juuse Saros"
+        }
+    ]
+}

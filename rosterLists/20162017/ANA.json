@@ -1,0 +1,160 @@
+{
+    "players": [
+        {
+            "id": 8471766,
+            "name": "Jared Boll"
+        },
+        {
+            "id": 8471699,
+            "name": "Andrew Cogliano"
+        },
+        {
+            "id": 8476390,
+            "name": "Joseph Cramarossa"
+        },
+        {
+            "id": 8470622,
+            "name": "Patrick Eaves"
+        },
+        {
+            "id": 8475770,
+            "name": "Emerson Etem"
+        },
+        {
+            "id": 8476116,
+            "name": "Ryan Garbutt"
+        },
+        {
+            "id": 8470612,
+            "name": "Ryan Getzlaf"
+        },
+        {
+            "id": 8478131,
+            "name": "Ondrej Kase"
+        },
+        {
+            "id": 8476866,
+            "name": "Nicolas Kerdiles"
+        },
+        {
+            "id": 8470616,
+            "name": "Ryan Kesler"
+        },
+        {
+            "id": 8479290,
+            "name": "Kalle Kossila"
+        },
+        {
+            "id": 8476474,
+            "name": "Stefan Noesen"
+        },
+        {
+            "id": 8470621,
+            "name": "Corey Perry"
+        },
+        {
+            "id": 8476483,
+            "name": "Rickard Rakell"
+        },
+        {
+            "id": 8471664,
+            "name": "Mason Raymond"
+        },
+        {
+            "id": 8477941,
+            "name": "Nick Ritchie"
+        },
+        {
+            "id": 8475958,
+            "name": "Michael Sgarbossa"
+        },
+        {
+            "id": 8476400,
+            "name": "Logan Shaw"
+        },
+        {
+            "id": 8475164,
+            "name": "Jakob Silfverberg"
+        },
+        {
+            "id": 8477466,
+            "name": "Nick Sorensen"
+        },
+        {
+            "id": 8470775,
+            "name": "Nate Thompson"
+        },
+        {
+            "id": 8474130,
+            "name": "Corey Tropp"
+        },
+        {
+            "id": 8468535,
+            "name": "Antoine Vermette"
+        },
+        {
+            "id": 8475780,
+            "name": "Chris Wagner"
+        },
+        {
+            "id": 8469598,
+            "name": "Kevin Bieksa"
+        },
+        {
+            "id": 8475155,
+            "name": "Simon Despres"
+        },
+        {
+            "id": 8475764,
+            "name": "Cam Fowler"
+        },
+        {
+            "id": 8473560,
+            "name": "Korbinian Holzer"
+        },
+        {
+            "id": 8478491,
+            "name": "Jacob Larsson"
+        },
+        {
+            "id": 8476854,
+            "name": "Hampus Lindholm"
+        },
+        {
+            "id": 8476312,
+            "name": "Josh Manson"
+        },
+        {
+            "id": 8477034,
+            "name": "Jaycob Megna"
+        },
+        {
+            "id": 8477986,
+            "name": "Brandon Montour"
+        },
+        {
+            "id": 8470886,
+            "name": "Clayton Stoner"
+        },
+        {
+            "id": 8477447,
+            "name": "Shea Theodore"
+        },
+        {
+            "id": 8475222,
+            "name": "Sami Vatanen"
+        },
+        {
+            "id": 8473541,
+            "name": "Jonathan Bernier"
+        },
+        {
+            "id": 8476434,
+            "name": "John Gibson"
+        },
+        {
+            "id": 8474682,
+            "name": "Dustin Tokarski"
+        }
+    ]
+}

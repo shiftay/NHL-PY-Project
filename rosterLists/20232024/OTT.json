@@ -1,0 +1,72 @@
+{
+    "players": [
+        {
+            "id": 8480208,
+            "name": "Drake Batherson"
+        },
+        {
+            "id": 8473512,
+            "name": "Claude Giroux"
+        },
+        {
+            "id": 8482092,
+            "name": "Ridly Greig"
+        },
+        {
+            "id": 8478472,
+            "name": "Mathieu Joseph"
+        },
+        {
+            "id": 8479772,
+            "name": "Zack MacEwen"
+        },
+        {
+            "id": 8480064,
+            "name": "Josh Norris"
+        },
+        {
+            "id": 8481596,
+            "name": "Shane Pinto"
+        },
+        {
+            "id": 8482116,
+            "name": "Tim St\u00fctzle"
+        },
+        {
+            "id": 8480801,
+            "name": "Brady Tkachuk"
+        },
+        {
+            "id": 8480879,
+            "name": "Jacob Bernard-Docker"
+        },
+        {
+            "id": 8478469,
+            "name": "Thomas Chabot"
+        },
+        {
+            "id": 8479345,
+            "name": "Jakob Chychrun"
+        },
+        {
+            "id": 8474612,
+            "name": "Travis Hamonic"
+        },
+        {
+            "id": 8482105,
+            "name": "Jake Sanderson"
+        },
+        {
+            "id": 8482245,
+            "name": "Artem Zub"
+        },
+        {
+            "id": 8476341,
+            "name": "Anton Forsberg"
+        },
+        {
+            "id": 8476999,
+            "name": "Linus Ullmark"
+        }
+    ]
+}

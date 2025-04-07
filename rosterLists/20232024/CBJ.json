@@ -1,0 +1,80 @@
+{
+    "players": [
+        {
+            "id": 8484149,
+            "name": "Gavin Brindley"
+        },
+        {
+            "id": 8482475,
+            "name": "Yegor Chinakhov"
+        },
+        {
+            "id": 8479941,
+            "name": "Justin Danforth"
+        },
+        {
+            "id": 8484166,
+            "name": "Adam Fantilli"
+        },
+        {
+            "id": 8476346,
+            "name": "Johnny Gaudreau"
+        },
+        {
+            "id": 8476432,
+            "name": "Boone Jenner"
+        },
+        {
+            "id": 8482660,
+            "name": "Kent Johnson"
+        },
+        {
+            "id": 8476374,
+            "name": "Sean Kuraly"
+        },
+        {
+            "id": 8480893,
+            "name": "Kirill Marchenko"
+        },
+        {
+            "id": 8479671,
+            "name": "Mathieu Olivier"
+        },
+        {
+            "id": 8482705,
+            "name": "Cole Sillinger"
+        },
+        {
+            "id": 8481716,
+            "name": "Dmitri Voronkov"
+        },
+        {
+            "id": 8480871,
+            "name": "Adam Boqvist"
+        },
+        {
+            "id": 8475790,
+            "name": "Erik Gudbranson"
+        },
+        {
+            "id": 8478500,
+            "name": "Ivan Provorov"
+        },
+        {
+            "id": 8476923,
+            "name": "Damon Severson"
+        },
+        {
+            "id": 8478460,
+            "name": "Zach Werenski"
+        },
+        {
+            "id": 8478007,
+            "name": "Elvis Merzlikins"
+        },
+        {
+            "id": 8480193,
+            "name": "Daniil Tarasov"
+        }
+    ]
+}

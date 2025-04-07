@@ -1,0 +1,80 @@
+{
+    "players": [
+        {
+            "id": 8484153,
+            "name": "Leo Carlsson"
+        },
+        {
+            "id": 8482118,
+            "name": "Sam Colangelo"
+        },
+        {
+            "id": 8483445,
+            "name": "Cutter Gauthier"
+        },
+        {
+            "id": 8477527,
+            "name": "Ross Johnston"
+        },
+        {
+            "id": 8473986,
+            "name": "Alex Killorn"
+        },
+        {
+            "id": 8480806,
+            "name": "Isac Lundestrom"
+        },
+        {
+            "id": 8476934,
+            "name": "Brock McGinn"
+        },
+        {
+            "id": 8482745,
+            "name": "Mason McTavish"
+        },
+        {
+            "id": 8476458,
+            "name": "Ryan Strome"
+        },
+        {
+            "id": 8478873,
+            "name": "Troy Terry"
+        },
+        {
+            "id": 8478366,
+            "name": "Frank Vatrano"
+        },
+        {
+            "id": 8481533,
+            "name": "Trevor Zegras"
+        },
+        {
+            "id": 8475764,
+            "name": "Cam Fowler"
+        },
+        {
+            "id": 8475462,
+            "name": "Radko Gudas"
+        },
+        {
+            "id": 8481605,
+            "name": "Jackson LaCombe"
+        },
+        {
+            "id": 8483490,
+            "name": "Pavel Mintyukov"
+        },
+        {
+            "id": 8482803,
+            "name": "Olen Zellweger"
+        },
+        {
+            "id": 8480843,
+            "name": "Lukas Dostal"
+        },
+        {
+            "id": 8476434,
+            "name": "John Gibson"
+        }
+    ]
+}

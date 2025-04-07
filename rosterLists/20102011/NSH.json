@@ -1,0 +1,144 @@
+{
+    "players": [
+        {
+            "id": 8464994,
+            "name": "Steve Begin"
+        },
+        {
+            "id": 8460502,
+            "name": "Wade Belak"
+        },
+        {
+            "id": 8464957,
+            "name": "J-P Dumont"
+        },
+        {
+            "id": 8468064,
+            "name": "Martin Erat"
+        },
+        {
+            "id": 8467370,
+            "name": "Mike Fisher"
+        },
+        {
+            "id": 8473608,
+            "name": "Blake Geoffrion"
+        },
+        {
+            "id": 8469473,
+            "name": "Marcel Goc"
+        },
+        {
+            "id": 8474094,
+            "name": "Matt Halischuk"
+        },
+        {
+            "id": 8471887,
+            "name": "Patric Hornqvist"
+        },
+        {
+            "id": 8475677,
+            "name": "Linus Klasen"
+        },
+        {
+            "id": 8471859,
+            "name": "Sergei Kostitsyn"
+        },
+        {
+            "id": 8467330,
+            "name": "David Legwand"
+        },
+        {
+            "id": 8468695,
+            "name": "Matthew Lombardi"
+        },
+        {
+            "id": 8474535,
+            "name": "Chris Mueller"
+        },
+        {
+            "id": 8471811,
+            "name": "Cal O'Reilly"
+        },
+        {
+            "id": 8468162,
+            "name": "Jerred Smithson"
+        },
+        {
+            "id": 8474096,
+            "name": "Nick Spaling"
+        },
+        {
+            "id": 8460719,
+            "name": "Steve Sullivan"
+        },
+        {
+            "id": 8469670,
+            "name": "Marek Svatos"
+        },
+        {
+            "id": 8474154,
+            "name": "Andreas Thuresson"
+        },
+        {
+            "id": 8469547,
+            "name": "Jordin Tootoo"
+        },
+        {
+            "id": 8468208,
+            "name": "Joel Ward"
+        },
+        {
+            "id": 8474569,
+            "name": "Colin Wilson"
+        },
+        {
+            "id": 8474164,
+            "name": "Jonathon Blum"
+        },
+        {
+            "id": 8465914,
+            "name": "Francis Bouillon"
+        },
+        {
+            "id": 8471742,
+            "name": "Cody Franson"
+        },
+        {
+            "id": 8470630,
+            "name": "Kevin Klein"
+        },
+        {
+            "id": 8471741,
+            "name": "Teemu Laakso"
+        },
+        {
+            "id": 8470839,
+            "name": "Shane O'Brien"
+        },
+        {
+            "id": 8470685,
+            "name": "Alexander Sulzer"
+        },
+        {
+            "id": 8470600,
+            "name": "Ryan Suter"
+        },
+        {
+            "id": 8470642,
+            "name": "Shea Weber"
+        },
+        {
+            "id": 8473532,
+            "name": "Mark Dekanich"
+        },
+        {
+            "id": 8474765,
+            "name": "Anders Lindback"
+        },
+        {
+            "id": 8471469,
+            "name": "Pekka Rinne"
+        }
+    ]
+}
