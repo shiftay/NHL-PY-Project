@@ -1,0 +1,144 @@
+{
+    "players": [
+        {
+            "id": 8459439,
+            "name": "Jason Allison"
+        },
+        {
+            "id": 8467353,
+            "name": "Nik Antropov"
+        },
+        {
+            "id": 8460502,
+            "name": "Wade Belak"
+        },
+        {
+            "id": 8458620,
+            "name": "Mariusz Czerkawski"
+        },
+        {
+            "id": 8446454,
+            "name": "Tie Domi"
+        },
+        {
+            "id": 8462035,
+            "name": "Chad Kilger"
+        },
+        {
+            "id": 8458515,
+            "name": "Eric Lindros"
+        },
+        {
+            "id": 8460495,
+            "name": "Jeff O'Neill"
+        },
+        {
+            "id": 8468868,
+            "name": "Ben Ondrus"
+        },
+        {
+            "id": 8462072,
+            "name": "Nathan Perrott"
+        },
+        {
+            "id": 8467565,
+            "name": "John Pohl"
+        },
+        {
+            "id": 8467412,
+            "name": "Alexei Ponikarovsky"
+        },
+        {
+            "id": 8470162,
+            "name": "Matt Stajan"
+        },
+        {
+            "id": 8470257,
+            "name": "Alexander Steen"
+        },
+        {
+            "id": 8468536,
+            "name": "Aleksander Suglobov"
+        },
+        {
+            "id": 8451774,
+            "name": "Mats Sundin"
+        },
+        {
+            "id": 8459574,
+            "name": "Darcy Tucker"
+        },
+        {
+            "id": 8469581,
+            "name": "Kyle Wellwood"
+        },
+        {
+            "id": 8470809,
+            "name": "Jeremy Williams"
+        },
+        {
+            "id": 8462182,
+            "name": "Clarke Wilm"
+        },
+        {
+            "id": 8469516,
+            "name": "Brendan Bell"
+        },
+        {
+            "id": 8462034,
+            "name": "Aki Berg"
+        },
+        {
+            "id": 8469470,
+            "name": "Carlo Colaiacovo"
+        },
+        {
+            "id": 8469531,
+            "name": "Jay Harrison"
+        },
+        {
+            "id": 8465200,
+            "name": "Tomas Kaberle"
+        },
+        {
+            "id": 8468105,
+            "name": "Alexander Khavanov"
+        },
+        {
+            "id": 8456850,
+            "name": "Ken Klee"
+        },
+        {
+            "id": 8470058,
+            "name": "Staffan Kronwall"
+        },
+        {
+            "id": 8459462,
+            "name": "Bryan McCabe"
+        },
+        {
+            "id": 8450824,
+            "name": "Luke Richardson"
+        },
+        {
+            "id": 8470273,
+            "name": "Ian White"
+        },
+        {
+            "id": 8471188,
+            "name": "Andy Wozniewski"
+        },
+        {
+            "id": 8462102,
+            "name": "Jean-Sebastien Aubin"
+        },
+        {
+            "id": 8445386,
+            "name": "Ed Belfour"
+        },
+        {
+            "id": 8468550,
+            "name": "Mikael Tellqvist"
+        }
+    ]
+}

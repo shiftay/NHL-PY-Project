@@ -1,0 +1,144 @@
+{
+    "players": [
+        {
+            "id": 8459446,
+            "name": "Kevyn Adams"
+        },
+        {
+            "id": 8460742,
+            "name": "Sergei Berezin"
+        },
+        {
+            "id": 8459995,
+            "name": "Lonny Bohonos"
+        },
+        {
+            "id": 8446454,
+            "name": "Tie Domi"
+        },
+        {
+            "id": 8456567,
+            "name": "Darby Hendrickson"
+        },
+        {
+            "id": 8466109,
+            "name": "Mike Johnson"
+        },
+        {
+            "id": 8448489,
+            "name": "Derek King"
+        },
+        {
+            "id": 8448487,
+            "name": "Kris King"
+        },
+        {
+            "id": 8460663,
+            "name": "Ladislav Kohn"
+        },
+        {
+            "id": 8458974,
+            "name": "Igor Korolev"
+        },
+        {
+            "id": 8466216,
+            "name": "Adam Mair"
+        },
+        {
+            "id": 8462068,
+            "name": "Chris McAllister"
+        },
+        {
+            "id": 8462105,
+            "name": "Alyn McCauley"
+        },
+        {
+            "id": 8460556,
+            "name": "Freddy Modin"
+        },
+        {
+            "id": 8458561,
+            "name": "Yanic Perreault"
+        },
+        {
+            "id": 8460522,
+            "name": "Jason Podollan"
+        },
+        {
+            "id": 8460719,
+            "name": "Steve Sullivan"
+        },
+        {
+            "id": 8451774,
+            "name": "Mats Sundin"
+        },
+        {
+            "id": 8451898,
+            "name": "Steve Thomas"
+        },
+        {
+            "id": 8452161,
+            "name": "Garry Valk"
+        },
+        {
+            "id": 8458941,
+            "name": "Todd Warriner"
+        },
+        {
+            "id": 8462032,
+            "name": "Bryan Berard"
+        },
+        {
+            "id": 8446181,
+            "name": "Sylvain Cote"
+        },
+        {
+            "id": 8456000,
+            "name": "Kevin Dahl"
+        },
+        {
+            "id": 8456153,
+            "name": "Dallas Eakins"
+        },
+        {
+            "id": 8465200,
+            "name": "Tomas Kaberle"
+        },
+        {
+            "id": 8456793,
+            "name": "Alexander Karpovtsev"
+        },
+        {
+            "id": 8462258,
+            "name": "Danny Markov"
+        },
+        {
+            "id": 8458954,
+            "name": "Jason Smith"
+        },
+        {
+            "id": 8462177,
+            "name": "Yannick Tremblay"
+        },
+        {
+            "id": 8458636,
+            "name": "Dmitry Yushkevich"
+        },
+        {
+            "id": 8447709,
+            "name": "Glenn Healy"
+        },
+        {
+            "id": 8448382,
+            "name": "Curtis Joseph"
+        },
+        {
+            "id": 8457714,
+            "name": "Felix Potvin"
+        },
+        {
+            "id": 8450743,
+            "name": "Jeff Reese"
+        }
+    ]
+}

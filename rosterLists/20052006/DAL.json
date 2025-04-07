@@ -1,0 +1,128 @@
+{
+    "players": [
+        {
+            "id": 8459429,
+            "name": "Jason Arnott"
+        },
+        {
+            "id": 8455521,
+            "name": "Stu Barnes"
+        },
+        {
+            "id": 8456464,
+            "name": "Bill Guerin"
+        },
+        {
+            "id": 8467943,
+            "name": "Niklas Hagman"
+        },
+        {
+            "id": 8469638,
+            "name": "Jussi Jokinen"
+        },
+        {
+            "id": 8467516,
+            "name": "Niko Kapanen"
+        },
+        {
+            "id": 8459024,
+            "name": "Jere Lehtinen"
+        },
+        {
+            "id": 8471206,
+            "name": "Junior Lessard"
+        },
+        {
+            "id": 8468704,
+            "name": "Antti Miettinen"
+        },
+        {
+            "id": 8449645,
+            "name": "Mike Modano"
+        },
+        {
+            "id": 8466160,
+            "name": "Brenden Morrow"
+        },
+        {
+            "id": 8458658,
+            "name": "David Oliver"
+        },
+        {
+            "id": 8468505,
+            "name": "Steve Ott"
+        },
+        {
+            "id": 8462072,
+            "name": "Nathan Perrott"
+        },
+        {
+            "id": 8470629,
+            "name": "Vojtech Polak"
+        },
+        {
+            "id": 8458996,
+            "name": "Jeremy Stevenson"
+        },
+        {
+            "id": 8467535,
+            "name": "Jaroslav Svoboda"
+        },
+        {
+            "id": 8467969,
+            "name": "Mathias Tjarnqvist"
+        },
+        {
+            "id": 8458527,
+            "name": "Philippe Boucher"
+        },
+        {
+            "id": 8470110,
+            "name": "Trevor Daley"
+        },
+        {
+            "id": 8467365,
+            "name": "John Erskine"
+        },
+        {
+            "id": 8467939,
+            "name": "Dan Jancevski"
+        },
+        {
+            "id": 8456852,
+            "name": "Jon Klemm"
+        },
+        {
+            "id": 8465185,
+            "name": "Willie Mitchell"
+        },
+        {
+            "id": 8459458,
+            "name": "Janne Niinimaa"
+        },
+        {
+            "id": 8462196,
+            "name": "Stephane Robidas"
+        },
+        {
+            "id": 8467343,
+            "name": "Martin Skoula"
+        },
+        {
+            "id": 8458986,
+            "name": "Patrick Traverse"
+        },
+        {
+            "id": 8458494,
+            "name": "Sergei Zubov"
+        },
+        {
+            "id": 8460704,
+            "name": "Johan Hedberg"
+        },
+        {
+            "id": 8460612,
+            "name": "Marty Turco"
+        }
+    ]
+}

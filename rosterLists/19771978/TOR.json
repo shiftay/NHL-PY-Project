@@ -1,0 +1,128 @@
+{
+    "players": [
+        {
+            "id": 8444944,
+            "name": "John Anderson"
+        },
+        {
+            "id": 8445103,
+            "name": "Don Ashby"
+        },
+        {
+            "id": 8445407,
+            "name": "Alain Belanger"
+        },
+        {
+            "id": 8445613,
+            "name": "Bruce Boudreau"
+        },
+        {
+            "id": 8445618,
+            "name": "Pat Boutette"
+        },
+        {
+            "id": 8445808,
+            "name": "Jerry Butler"
+        },
+        {
+            "id": 8446668,
+            "name": "Ron Ellis"
+        },
+        {
+            "id": 8446174,
+            "name": "Paul Evans"
+        },
+        {
+            "id": 8446809,
+            "name": "George Ferguson"
+        },
+        {
+            "id": 8447494,
+            "name": "Inge Hammarstrom"
+        },
+        {
+            "id": 8447950,
+            "name": "Larry Hopkins"
+        },
+        {
+            "id": 8448367,
+            "name": "Jimmy Jones"
+        },
+        {
+            "id": 8449104,
+            "name": "Dan Maloney"
+        },
+        {
+            "id": 8449423,
+            "name": "Lanny Mcdonald"
+        },
+        {
+            "id": 8449813,
+            "name": "Bob Neely"
+        },
+        {
+            "id": 8451386,
+            "name": "Darryl Sittler"
+        },
+        {
+            "id": 8451892,
+            "name": "Errol Thompson"
+        },
+        {
+            "id": 8452155,
+            "name": "Jack Valiquette"
+        },
+        {
+            "id": 8452364,
+            "name": "Stan Weir"
+        },
+        {
+            "id": 8452457,
+            "name": "Dave Williams"
+        },
+        {
+            "id": 8445938,
+            "name": "Randy Carlyle"
+        },
+        {
+            "id": 8447218,
+            "name": "Brian Glennie"
+        },
+        {
+            "id": 8448285,
+            "name": "Trevor Johansen"
+        },
+        {
+            "id": 8449476,
+            "name": "Jim McKenny"
+        },
+        {
+            "id": 8448130,
+            "name": "Mike Pelyk"
+        },
+        {
+            "id": 8451102,
+            "name": "Borje Salming"
+        },
+        {
+            "id": 8451990,
+            "name": "Ian Turnbull"
+        },
+        {
+            "id": 8449311,
+            "name": "Kurt Walker"
+        },
+        {
+            "id": 8452484,
+            "name": "Ron Wilson"
+        },
+        {
+            "id": 8449515,
+            "name": "Gord McRae"
+        },
+        {
+            "id": 8450132,
+            "name": "Mike Palmateer"
+        }
+    ]
+}

@@ -1,0 +1,144 @@
+{
+    "players": [
+        {
+            "id": 8460502,
+            "name": "Wade Belak"
+        },
+        {
+            "id": 8471266,
+            "name": "David Booth"
+        },
+        {
+            "id": 8471906,
+            "name": "David Brine"
+        },
+        {
+            "id": 8470169,
+            "name": "Gregory Campbell"
+        },
+        {
+            "id": 8462041,
+            "name": "Radek Dvorak"
+        },
+        {
+            "id": 8470854,
+            "name": "Tanner Glass"
+        },
+        {
+            "id": 8470305,
+            "name": "Rob Globke"
+        },
+        {
+            "id": 8470596,
+            "name": "Nathan Horton"
+        },
+        {
+            "id": 8466140,
+            "name": "Olli Jokinen"
+        },
+        {
+            "id": 8470631,
+            "name": "Kamil Kreps"
+        },
+        {
+            "id": 8470970,
+            "name": "Drew Larman"
+        },
+        {
+            "id": 8473574,
+            "name": "Shawn Matthias"
+        },
+        {
+            "id": 8465968,
+            "name": "Brett McLean"
+        },
+        {
+            "id": 8470648,
+            "name": "Stefan Meyer"
+        },
+        {
+            "id": 8469528,
+            "name": "Garth Murray"
+        },
+        {
+            "id": 8471220,
+            "name": "Rostislav Olesz"
+        },
+        {
+            "id": 8459479,
+            "name": "Ville Peltonen"
+        },
+        {
+            "id": 8470618,
+            "name": "Anthony Stewart"
+        },
+        {
+            "id": 8458554,
+            "name": "Jozef Stumpel"
+        },
+        {
+            "id": 8469457,
+            "name": "Stephen Weiss"
+        },
+        {
+            "id": 8460735,
+            "name": "Richard Zednik"
+        },
+        {
+            "id": 8467332,
+            "name": "Bryan Allen"
+        },
+        {
+            "id": 8470151,
+            "name": "Jay Bouwmeester"
+        },
+        {
+            "id": 8458543,
+            "name": "Jassen Cullimore"
+        },
+        {
+            "id": 8473981,
+            "name": "Magnus Johansson"
+        },
+        {
+            "id": 8470698,
+            "name": "Martin Lojek"
+        },
+        {
+            "id": 8467883,
+            "name": "Branislav Mezei"
+        },
+        {
+            "id": 8468927,
+            "name": "Steve Montador"
+        },
+        {
+            "id": 8473924,
+            "name": "Cory Murphy"
+        },
+        {
+            "id": 8464962,
+            "name": "Ruslan Salei"
+        },
+        {
+            "id": 8467519,
+            "name": "Karlis Skrastins"
+        },
+        {
+            "id": 8467350,
+            "name": "Mike Van Ryn"
+        },
+        {
+            "id": 8469505,
+            "name": "Noah Welch"
+        },
+        {
+            "id": 8467950,
+            "name": "Craig Anderson"
+        },
+        {
+            "id": 8460712,
+            "name": "Tomas Vokoun"
+        }
+    ]
+}

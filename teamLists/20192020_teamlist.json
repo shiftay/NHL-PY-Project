@@ -1,4 +1,36 @@
 {
     "seasonId": "20192020",
-    "teams": []
+    "teams": [
+        "WSH",
+        "BOS",
+        "STL",
+        "NYI",
+        "PIT",
+        "COL",
+        "DAL",
+        "TBL",
+        "CAR",
+        "TOR",
+        "PHI",
+        "VGK",
+        "FLA",
+        "VAN",
+        "ARI",
+        "WPG",
+        "CBJ",
+        "EDM",
+        "CGY",
+        "NSH",
+        "NYR",
+        "MIN",
+        "MTL",
+        "BUF",
+        "CHI",
+        "SJS",
+        "LAK",
+        "OTT",
+        "ANA",
+        "NJD",
+        "DET"
+    ]
 }

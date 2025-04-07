@@ -1,0 +1,112 @@
+{
+    "players": [
+        {
+            "id": 8445611,
+            "name": "Mike Bossy"
+        },
+        {
+            "id": 8445617,
+            "name": "Bob Bourne"
+        },
+        {
+            "id": 8445983,
+            "name": "Billy Carroll"
+        },
+        {
+            "id": 8446404,
+            "name": "Kevin Devine"
+        },
+        {
+            "id": 8447169,
+            "name": "Greg Gilbert"
+        },
+        {
+            "id": 8447193,
+            "name": "Clark Gillies"
+        },
+        {
+            "id": 8447296,
+            "name": "Butch Goring"
+        },
+        {
+            "id": 8447479,
+            "name": "Mats Hallin"
+        },
+        {
+            "id": 8448403,
+            "name": "Anders Kallur"
+        },
+        {
+            "id": 8449570,
+            "name": "Wayne Merrick"
+        },
+        {
+            "id": 8449932,
+            "name": "Bobby Nystrom"
+        },
+        {
+            "id": 8451794,
+            "name": "Brent Sutter"
+        },
+        {
+            "id": 8451800,
+            "name": "Duane Sutter"
+        },
+        {
+            "id": 8451917,
+            "name": "John Tonelli"
+        },
+        {
+            "id": 8451965,
+            "name": "Bryan Trottier"
+        },
+        {
+            "id": 8445625,
+            "name": "Paul Boutilier"
+        },
+        {
+            "id": 8446424,
+            "name": "Gord Dineen"
+        },
+        {
+            "id": 8448370,
+            "name": "Tomas Jonsson"
+        },
+        {
+            "id": 8448649,
+            "name": "Gord Lane"
+        },
+        {
+            "id": 8448643,
+            "name": "Dave Langevin"
+        },
+        {
+            "id": 8449420,
+            "name": "Mike McEwen"
+        },
+        {
+            "id": 8449713,
+            "name": "Ken Morrow"
+        },
+        {
+            "id": 8450314,
+            "name": "Stefan Persson"
+        },
+        {
+            "id": 8450505,
+            "name": "Denis Potvin"
+        },
+        {
+            "id": 8450804,
+            "name": "Darcy Regier"
+        },
+        {
+            "id": 8449547,
+            "name": "Roland Melanson"
+        },
+        {
+            "id": 8451525,
+            "name": "Billy Smith"
+        }
+    ]
+}

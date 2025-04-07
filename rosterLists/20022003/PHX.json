@@ -1,0 +1,160 @@
+{
+    "players": [
+        {
+            "id": 8467356,
+            "name": "Ramzi Abid"
+        },
+        {
+            "id": 8455429,
+            "name": "Tony Amonte"
+        },
+        {
+            "id": 8459570,
+            "name": "Frank Banham"
+        },
+        {
+            "id": 8464975,
+            "name": "Daniel Bri\u00e8re"
+        },
+        {
+            "id": 8445733,
+            "name": "Kelly Buchberger"
+        },
+        {
+            "id": 8462038,
+            "name": "Shane Doan"
+        },
+        {
+            "id": 8459425,
+            "name": "Chris Gratton"
+        },
+        {
+            "id": 8468660,
+            "name": "Darcy Hordichuk"
+        },
+        {
+            "id": 8462159,
+            "name": "Jan Hrdina"
+        },
+        {
+            "id": 8467944,
+            "name": "Jason Jaspers"
+        },
+        {
+            "id": 8466109,
+            "name": "Mike Johnson"
+        },
+        {
+            "id": 8468499,
+            "name": "Krys Kolanos"
+        },
+        {
+            "id": 8462036,
+            "name": "Daymond Langkow"
+        },
+        {
+            "id": 8448772,
+            "name": "Claude Lemieux"
+        },
+        {
+            "id": 8457261,
+            "name": "Brad May"
+        },
+        {
+            "id": 8466304,
+            "name": "Ladislav Nagy"
+        },
+        {
+            "id": 8458947,
+            "name": "Andrei Nazarov"
+        },
+        {
+            "id": 8457646,
+            "name": "Scott Pellerin"
+        },
+        {
+            "id": 8467966,
+            "name": "Branko Radivojevic"
+        },
+        {
+            "id": 8450653,
+            "name": "Paul Ranheim"
+        },
+        {
+            "id": 8458682,
+            "name": "Brian Savage"
+        },
+        {
+            "id": 8468510,
+            "name": "Jeff Taffe"
+        },
+        {
+            "id": 8459441,
+            "name": "Landon Wilson"
+        },
+        {
+            "id": 8445413,
+            "name": "Drake Berehowsky"
+        },
+        {
+            "id": 8466146,
+            "name": "Brad Ference"
+        },
+        {
+            "id": 8464964,
+            "name": "Dan Focht"
+        },
+        {
+            "id": 8467918,
+            "name": "Martin Grenier"
+        },
+        {
+            "id": 8466144,
+            "name": "Paul Mara"
+        },
+        {
+            "id": 8462258,
+            "name": "Danny Markov"
+        },
+        {
+            "id": 8449924,
+            "name": "Teppo Numminen"
+        },
+        {
+            "id": 8460521,
+            "name": "Deron Quint"
+        },
+        {
+            "id": 8460782,
+            "name": "Todd Simpson"
+        },
+        {
+            "id": 8466443,
+            "name": "Radoslav Suchy"
+        },
+        {
+            "id": 8467369,
+            "name": "Ossi Vaananen"
+        },
+        {
+            "id": 8462247,
+            "name": "Zac Bierk"
+        },
+        {
+            "id": 8462052,
+            "name": "Brian Boucher"
+        },
+        {
+            "id": 8445769,
+            "name": "Sean Burke"
+        },
+        {
+            "id": 8467340,
+            "name": "Patrick Desrochers"
+        },
+        {
+            "id": 8466165,
+            "name": "Jean-Marc Pelletier"
+        }
+    ]
+}

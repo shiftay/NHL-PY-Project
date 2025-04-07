@@ -1,26 +1,26 @@
 {
     "seasonId": "19871988",
     "teams": [
-        "CGY",
         "MTL",
-        "EDM",
+        "CGY",
         "BOS",
-        "DET",
+        "EDM",
         "NYI",
-        "WSH",
         "PHI",
-        "BUF",
         "NJD",
-        "NYR",
+        "WSH",
+        "DET",
         "PIT",
-        "HFD",
-        "WIN",
         "STL",
+        "BUF",
+        "WIN",
+        "HFD",
+        "NYR",
         "QUE",
-        "CHI",
-        "LAK",
-        "VAN",
         "TOR",
-        "MNS"
+        "CHI",
+        "MNS",
+        "VAN",
+        "LAK"
     ]
 }

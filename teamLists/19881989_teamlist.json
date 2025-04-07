@@ -1,4 +1,26 @@
 {
     "seasonId": "19881989",
-    "teams": []
+    "teams": [
+        "MTL",
+        "CGY",
+        "LAK",
+        "PIT",
+        "NYR",
+        "EDM",
+        "PHI",
+        "WSH",
+        "DET",
+        "BOS",
+        "BUF",
+        "WIN",
+        "STL",
+        "VAN",
+        "HFD",
+        "NJD",
+        "MNS",
+        "TOR",
+        "QUE",
+        "CHI",
+        "NYI"
+    ]
 }

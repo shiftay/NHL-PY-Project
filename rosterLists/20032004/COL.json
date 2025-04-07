@@ -1,0 +1,160 @@
+{
+    "players": [
+        {
+            "id": 8459019,
+            "name": "Matthew Barnaby"
+        },
+        {
+            "id": 8460620,
+            "name": "Bates Battaglia"
+        },
+        {
+            "id": 8459996,
+            "name": "Dennis Bonvie"
+        },
+        {
+            "id": 8464993,
+            "name": "Travis Brigley"
+        },
+        {
+            "id": 8455984,
+            "name": "Jim Cummins"
+        },
+        {
+            "id": 8458520,
+            "name": "Peter Forsberg"
+        },
+        {
+            "id": 8459425,
+            "name": "Chris Gratton"
+        },
+        {
+            "id": 8468056,
+            "name": "Riku Hahl"
+        },
+        {
+            "id": 8460577,
+            "name": "Milan Hejduk"
+        },
+        {
+            "id": 8456567,
+            "name": "Darby Hendrickson"
+        },
+        {
+            "id": 8465175,
+            "name": "Dan Hinote"
+        },
+        {
+            "id": 8459426,
+            "name": "Paul Kariya"
+        },
+        {
+            "id": 8458572,
+            "name": "Steve Konowalchuk"
+        },
+        {
+            "id": 8468025,
+            "name": "Jordan Krestanovich"
+        },
+        {
+            "id": 8467898,
+            "name": "Mikhail Kuleshov"
+        },
+        {
+            "id": 8462082,
+            "name": "Brad Larsen"
+        },
+        {
+            "id": 8462068,
+            "name": "Chris McAllister"
+        },
+        {
+            "id": 8469591,
+            "name": "Cody McCormick"
+        },
+        {
+            "id": 8467379,
+            "name": "Steve Moore"
+        },
+        {
+            "id": 8458983,
+            "name": "Andrei Nikolishin"
+        },
+        {
+            "id": 8451101,
+            "name": "Joe Sakic"
+        },
+        {
+            "id": 8457981,
+            "name": "Teemu Selanne"
+        },
+        {
+            "id": 8467904,
+            "name": "Charlie Stephens"
+        },
+        {
+            "id": 8469670,
+            "name": "Marek Svatos"
+        },
+        {
+            "id": 8467338,
+            "name": "Alex Tanguay"
+        },
+        {
+            "id": 8462198,
+            "name": "Peter Worrell"
+        },
+        {
+            "id": 8445550,
+            "name": "Rob Blake"
+        },
+        {
+            "id": 8455666,
+            "name": "Bob Boughner"
+        },
+        {
+            "id": 8465122,
+            "name": "Brett Clark"
+        },
+        {
+            "id": 8456283,
+            "name": "Adam Foote"
+        },
+        {
+            "id": 8468639,
+            "name": "John-Michael Liles"
+        },
+        {
+            "id": 8464966,
+            "name": "Derek Morris"
+        },
+        {
+            "id": 8468568,
+            "name": "Kurt Sauer"
+        },
+        {
+            "id": 8467343,
+            "name": "Martin Skoula"
+        },
+        {
+            "id": 8467519,
+            "name": "Karlis Skrastins"
+        },
+        {
+            "id": 8467369,
+            "name": "Ossi Vaananen"
+        },
+        {
+            "id": 8466290,
+            "name": "David Aebischer"
+        },
+        {
+            "id": 8459541,
+            "name": "Tommy Salo"
+        },
+        {
+            "id": 8467364,
+            "name": "Philippe Sauve"
+        }
+    ]
+}

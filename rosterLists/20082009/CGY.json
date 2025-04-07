@@ -1,0 +1,144 @@
+{
+    "players": [
+        {
+            "id": 8474150,
+            "name": "Mikael Backlund"
+        },
+        {
+            "id": 8459444,
+            "name": "Todd Bertuzzi"
+        },
+        {
+            "id": 8471504,
+            "name": "Rene Bourque"
+        },
+        {
+            "id": 8471310,
+            "name": "Dustin Boyd"
+        },
+        {
+            "id": 8469500,
+            "name": "Michael Cammalleri"
+        },
+        {
+            "id": 8471237,
+            "name": "Kris Chucko"
+        },
+        {
+            "id": 8455919,
+            "name": "Craig Conroy"
+        },
+        {
+            "id": 8471185,
+            "name": "Curtis Glencross"
+        },
+        {
+            "id": 8473904,
+            "name": "Kyle Greentree"
+        },
+        {
+            "id": 8462042,
+            "name": "Jarome Iginla"
+        },
+        {
+            "id": 8466140,
+            "name": "Olli Jokinen"
+        },
+        {
+            "id": 8462036,
+            "name": "Daymond Langkow"
+        },
+        {
+            "id": 8468695,
+            "name": "Matthew Lombardi"
+        },
+        {
+            "id": 8467882,
+            "name": "Jamie Lundmark"
+        },
+        {
+            "id": 8469664,
+            "name": "David Moss"
+        },
+        {
+            "id": 8470180,
+            "name": "Eric Nystrom"
+        },
+        {
+            "id": 8468887,
+            "name": "Warren Peters"
+        },
+        {
+            "id": 8460507,
+            "name": "Wayne Primeau"
+        },
+        {
+            "id": 8471283,
+            "name": "Brandon Prust"
+        },
+        {
+            "id": 8460639,
+            "name": "Andre Roy"
+        },
+        {
+            "id": 8471840,
+            "name": "Brett Sutter"
+        },
+        {
+            "id": 8470189,
+            "name": "David Van Der Gulik"
+        },
+        {
+            "id": 8459053,
+            "name": "Adrian Aucoin"
+        },
+        {
+            "id": 8459443,
+            "name": "Anders Eriksson"
+        },
+        {
+            "id": 8470966,
+            "name": "Mark Giordano"
+        },
+        {
+            "id": 8467917,
+            "name": "Jordan Leopold"
+        },
+        {
+            "id": 8474076,
+            "name": "John Negrin"
+        },
+        {
+            "id": 8471385,
+            "name": "Adam Pardy"
+        },
+        {
+            "id": 8471700,
+            "name": "Matt Pelech"
+        },
+        {
+            "id": 8470602,
+            "name": "Dion Phaneuf"
+        },
+        {
+            "id": 8467344,
+            "name": "Robyn Regehr"
+        },
+        {
+            "id": 8464981,
+            "name": "Cory Sarich"
+        },
+        {
+            "id": 8468213,
+            "name": "Jim Vandermeer"
+        },
+        {
+            "id": 8462147,
+            "name": "Miikka Kiprusoff"
+        },
+        {
+            "id": 8470147,
+            "name": "Curtis McElhinney"
+        }
+    ]
+}

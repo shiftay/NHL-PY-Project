@@ -1,0 +1,128 @@
+{
+    "players": [
+        {
+            "id": 8471516,
+            "name": "Riley Armstrong"
+        },
+        {
+            "id": 8469629,
+            "name": "Tom Cavanagh"
+        },
+        {
+            "id": 8467357,
+            "name": "Jonathan Cheechoo"
+        },
+        {
+            "id": 8469622,
+            "name": "Ryane Clowe"
+        },
+        {
+            "id": 8469473,
+            "name": "Marcel Goc"
+        },
+        {
+            "id": 8459640,
+            "name": "Mike Grier"
+        },
+        {
+            "id": 8471235,
+            "name": "Lukas Kaspar"
+        },
+        {
+            "id": 8448772,
+            "name": "Claude Lemieux"
+        },
+        {
+            "id": 8466139,
+            "name": "Patrick Marleau"
+        },
+        {
+            "id": 8473465,
+            "name": "Jamie McGinn"
+        },
+        {
+            "id": 8470599,
+            "name": "Milan Michalek"
+        },
+        {
+            "id": 8471338,
+            "name": "Torrey Mitchell"
+        },
+        {
+            "id": 8468635,
+            "name": "Travis Moen"
+        },
+        {
+            "id": 8470794,
+            "name": "Joe Pavelski"
+        },
+        {
+            "id": 8469587,
+            "name": "Tomas Plihal"
+        },
+        {
+            "id": 8450978,
+            "name": "Jeremy Roenick"
+        },
+        {
+            "id": 8471682,
+            "name": "Devin Setoguchi"
+        },
+        {
+            "id": 8462535,
+            "name": "Jody Shelley"
+        },
+        {
+            "id": 8471521,
+            "name": "Brad Staubitz"
+        },
+        {
+            "id": 8466138,
+            "name": "Joe Thornton"
+        },
+        {
+            "id": 8472215,
+            "name": "Ryan Vesce"
+        },
+        {
+            "id": 8445550,
+            "name": "Rob Blake"
+        },
+        {
+            "id": 8467096,
+            "name": "Dan Boyle"
+        },
+        {
+            "id": 8469555,
+            "name": "Christian Ehrhoff"
+        },
+        {
+            "id": 8471810,
+            "name": "Derek Joslin"
+        },
+        {
+            "id": 8460580,
+            "name": "Brad Lukowich"
+        },
+        {
+            "id": 8468114,
+            "name": "Douglas Murray"
+        },
+        {
+            "id": 8467909,
+            "name": "Alexei Semenov"
+        },
+        {
+            "id": 8471709,
+            "name": "Marc-Edouard Vlasic"
+        },
+        {
+            "id": 8462052,
+            "name": "Brian Boucher"
+        },
+        {
+            "id": 8460705,
+            "name": "Evgeni Nabokov"
+        }
+    ]
+}

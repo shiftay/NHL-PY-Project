@@ -1,0 +1,156 @@
+{
+    "players": [
+        {
+            "id": 8445789,
+            "name": "Shawn Burr"
+        },
+        {
+            "id": 8445979,
+            "name": "Jimmy Carson"
+        },
+        {
+            "id": 8446252,
+            "name": "Troy Crowder"
+        },
+        {
+            "id": 8455984,
+            "name": "Jim Cummins"
+        },
+        {
+            "id": 8446788,
+            "name": "Sergei Fedorov"
+        },
+        {
+            "id": 8446791,
+            "name": "Brent Fedyk"
+        },
+        {
+            "id": 8447001,
+            "name": "Gerard Gallant"
+        },
+        {
+            "id": 8447071,
+            "name": "Johan Garpenlov"
+        },
+        {
+            "id": 8448455,
+            "name": "Sheldon Kennedy"
+        },
+        {
+            "id": 8448467,
+            "name": "Alan Kerr"
+        },
+        {
+            "id": 8448499,
+            "name": "Scott King"
+        },
+        {
+            "id": 8456887,
+            "name": "Vyacheslav Kozlov"
+        },
+        {
+            "id": 8458524,
+            "name": "Martin Lapointe"
+        },
+        {
+            "id": 8448980,
+            "name": "Brian MacLellan"
+        },
+        {
+            "id": 8449607,
+            "name": "Kevin Miller"
+        },
+        {
+            "id": 8450504,
+            "name": "Marc Potvin"
+        },
+        {
+            "id": 8450550,
+            "name": "Keith Primeau"
+        },
+        {
+            "id": 8450561,
+            "name": "Bob Probert"
+        },
+        {
+            "id": 8451343,
+            "name": "Ray Sheppard"
+        },
+        {
+            "id": 8451359,
+            "name": "Mike Sillinger"
+        },
+        {
+            "id": 8451849,
+            "name": "Chris Tancill"
+        },
+        {
+            "id": 8452148,
+            "name": "Dennis Vial"
+        },
+        {
+            "id": 8452571,
+            "name": "Paul Ysebaert"
+        },
+        {
+            "id": 8452578,
+            "name": "Steve Yzerman"
+        },
+        {
+            "id": 8446051,
+            "name": "Steve Chiasson"
+        },
+        {
+            "id": 8446238,
+            "name": "Doug Crossman"
+        },
+        {
+            "id": 8446435,
+            "name": "Bobby Dollas"
+        },
+        {
+            "id": 8456870,
+            "name": "Vladimir Konstantinov"
+        },
+        {
+            "id": 8457063,
+            "name": "Nicklas Lidstrom"
+        },
+        {
+            "id": 8449175,
+            "name": "Brad Marsh"
+        },
+        {
+            "id": 8449403,
+            "name": "Brad McCrimmon"
+        },
+        {
+            "id": 8449442,
+            "name": "Bob Mcgill"
+        },
+        {
+            "id": 8450658,
+            "name": "Yves Racine"
+        },
+        {
+            "id": 8452583,
+            "name": "Rick Zombo"
+        },
+        {
+            "id": 8445458,
+            "name": "Allan Bester"
+        },
+        {
+            "id": 8446082,
+            "name": "Tim Cheveldae"
+        },
+        {
+            "id": 8449627,
+            "name": "Greg Millen"
+        },
+        {
+            "id": 8450834,
+            "name": "Vincent Riendeau"
+        }
+    ]
+}

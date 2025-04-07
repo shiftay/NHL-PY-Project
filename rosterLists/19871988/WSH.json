@@ -1,0 +1,136 @@
+{
+    "players": [
+        {
+            "id": 8444898,
+            "name": "Greg Adams"
+        },
+        {
+            "id": 8446079,
+            "name": "Dave Christian"
+        },
+        {
+            "id": 8446163,
+            "name": "Yvon Corriveau"
+        },
+        {
+            "id": 8446952,
+            "name": "Lou Franceschetti"
+        },
+        {
+            "id": 8447067,
+            "name": "Mike Gartner"
+        },
+        {
+            "id": 8447305,
+            "name": "Bobby Gould"
+        },
+        {
+            "id": 8447391,
+            "name": "Jeff Greenlaw"
+        },
+        {
+            "id": 8447429,
+            "name": "Bengt-Ake Gustafsson"
+        },
+        {
+            "id": 8448117,
+            "name": "Dale Hunter"
+        },
+        {
+            "id": 8448272,
+            "name": "David Jensen"
+        },
+        {
+            "id": 8448413,
+            "name": "Ed Kastelic"
+        },
+        {
+            "id": 8448713,
+            "name": "Craig Laughlin"
+        },
+        {
+            "id": 8448764,
+            "name": "Stephen Leach"
+        },
+        {
+            "id": 8449621,
+            "name": "Kelly Miller"
+        },
+        {
+            "id": 8450408,
+            "name": "Michal Pivonka"
+        },
+        {
+            "id": 8450820,
+            "name": "Michael Richard"
+        },
+        {
+            "id": 8450832,
+            "name": "Mike Ridley"
+        },
+        {
+            "id": 8451784,
+            "name": "Peter Sundstrom"
+        },
+        {
+            "id": 8445375,
+            "name": "Yves Beaudoin"
+        },
+        {
+            "id": 8446014,
+            "name": "Paul Cavallini"
+        },
+        {
+            "id": 8446779,
+            "name": "Chris Felix"
+        },
+        {
+            "id": 8447004,
+            "name": "Garry Galley"
+        },
+        {
+            "id": 8447680,
+            "name": "Kevin Hatcher"
+        },
+        {
+            "id": 8447979,
+            "name": "Bill Houlder"
+        },
+        {
+            "id": 8448271,
+            "name": "Grant Jennings"
+        },
+        {
+            "id": 8448651,
+            "name": "Rod Langway"
+        },
+        {
+            "id": 8448740,
+            "name": "Grant Ledyard"
+        },
+        {
+            "id": 8449745,
+            "name": "Larry Murphy"
+        },
+        {
+            "id": 8451531,
+            "name": "Greg Smith"
+        },
+        {
+            "id": 8451715,
+            "name": "Scott Stevens"
+        },
+        {
+            "id": 8449096,
+            "name": "Clint Malarchuk"
+        },
+        {
+            "id": 8450343,
+            "name": "Pete Peeters"
+        },
+        {
+            "id": 8450680,
+            "name": "Alain Raymond"
+        }
+    ]
+}

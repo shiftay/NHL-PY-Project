@@ -1,0 +1,144 @@
+{
+    "players": [
+        {
+            "id": 8460510,
+            "name": "Jason Botterill"
+        },
+        {
+            "id": 8446036,
+            "name": "Guy Carbonneau"
+        },
+        {
+            "id": 8458666,
+            "name": "Kelly Fairchild"
+        },
+        {
+            "id": 8459010,
+            "name": "Aaron Gavey"
+        },
+        {
+            "id": 8445423,
+            "name": "Benoit Hogue"
+        },
+        {
+            "id": 8448017,
+            "name": "Tony Hrkac"
+        },
+        {
+            "id": 8448091,
+            "name": "Brett Hull"
+        },
+        {
+            "id": 8448415,
+            "name": "Mike Keane"
+        },
+        {
+            "id": 8459457,
+            "name": "Jamie Langenbrunner"
+        },
+        {
+            "id": 8459024,
+            "name": "Jere Lehtinen"
+        },
+        {
+            "id": 8458959,
+            "name": "Grant Marshall"
+        },
+        {
+            "id": 8449645,
+            "name": "Mike Modano"
+        },
+        {
+            "id": 8449893,
+            "name": "Joe Nieuwendyk"
+        },
+        {
+            "id": 8457686,
+            "name": "Derek Plante"
+        },
+        {
+            "id": 8450773,
+            "name": "Dave Reid"
+        },
+        {
+            "id": 8451293,
+            "name": "Brent Severyn"
+        },
+        {
+            "id": 8465024,
+            "name": "Jon Sim"
+        },
+        {
+            "id": 8451427,
+            "name": "Brian Skrudland"
+        },
+        {
+            "id": 8466971,
+            "name": "Blake Sloan"
+        },
+        {
+            "id": 8452216,
+            "name": "Pat Verbeek"
+        },
+        {
+            "id": 8460587,
+            "name": "Jamie Wright"
+        },
+        {
+            "id": 8462090,
+            "name": "Petr Buzek"
+        },
+        {
+            "id": 8446042,
+            "name": "Shawn Chambers"
+        },
+        {
+            "id": 8462096,
+            "name": "Sergey Gusev"
+        },
+        {
+            "id": 8456531,
+            "name": "Derian Hatcher"
+        },
+        {
+            "id": 8448419,
+            "name": "Dan Keczmer"
+        },
+        {
+            "id": 8448839,
+            "name": "Doug Lidster"
+        },
+        {
+            "id": 8448845,
+            "name": "Craig Ludwig"
+        },
+        {
+            "id": 8460580,
+            "name": "Brad Lukowich"
+        },
+        {
+            "id": 8458522,
+            "name": "Richard Matvichuk"
+        },
+        {
+            "id": 8458172,
+            "name": "Darryl Sydor"
+        },
+        {
+            "id": 8458494,
+            "name": "Sergei Zubov"
+        },
+        {
+            "id": 8445386,
+            "name": "Ed Belfour"
+        },
+        {
+            "id": 8458988,
+            "name": "Manny Fernandez"
+        },
+        {
+            "id": 8458266,
+            "name": "Roman Turek"
+        }
+    ]
+}

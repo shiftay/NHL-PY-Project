@@ -1,0 +1,128 @@
+{
+    "players": [
+        {
+            "id": 8465059,
+            "name": "Matt Bradley"
+        },
+        {
+            "id": 8446303,
+            "name": "Vincent Damphousse"
+        },
+        {
+            "id": 8460501,
+            "name": "Jeff Friesen"
+        },
+        {
+            "id": 8447350,
+            "name": "Tony Granato"
+        },
+        {
+            "id": 8459431,
+            "name": "Todd Harvey"
+        },
+        {
+            "id": 8460629,
+            "name": "Alexander Korolyuk"
+        },
+        {
+            "id": 8456903,
+            "name": "Paul Kruse"
+        },
+        {
+            "id": 8458617,
+            "name": "Bill Lindsay"
+        },
+        {
+            "id": 8466139,
+            "name": "Patrick Marleau"
+        },
+        {
+            "id": 8449295,
+            "name": "Stephane Matteau"
+        },
+        {
+            "id": 8459412,
+            "name": "Jim Montgomery"
+        },
+        {
+            "id": 8449895,
+            "name": "Owen Nolan"
+        },
+        {
+            "id": 8450817,
+            "name": "Mike Ricci"
+        },
+        {
+            "id": 8467463,
+            "name": "Mikael Samuelsson"
+        },
+        {
+            "id": 8457981,
+            "name": "Teemu Selanne"
+        },
+        {
+            "id": 8466343,
+            "name": "Mark Smith"
+        },
+        {
+            "id": 8464979,
+            "name": "Marco Sturm"
+        },
+        {
+            "id": 8459430,
+            "name": "Niklas Sundstrom"
+        },
+        {
+            "id": 8451972,
+            "name": "Scott Thornton"
+        },
+        {
+            "id": 8446435,
+            "name": "Bobby Dollas"
+        },
+        {
+            "id": 8466158,
+            "name": "Scott Hannan"
+        },
+        {
+            "id": 8463125,
+            "name": "Shawn Heins"
+        },
+        {
+            "id": 8449137,
+            "name": "Bryan Marchment"
+        },
+        {
+            "id": 8449902,
+            "name": "Jeff Norton"
+        },
+        {
+            "id": 8459035,
+            "name": "Marcus Ragnarsson"
+        },
+        {
+            "id": 8458940,
+            "name": "Mike Rathje"
+        },
+        {
+            "id": 8467331,
+            "name": "Brad Stuart"
+        },
+        {
+            "id": 8451804,
+            "name": "Gary Suter"
+        },
+        {
+            "id": 8462147,
+            "name": "Miikka Kiprusoff"
+        },
+        {
+            "id": 8460705,
+            "name": "Evgeni Nabokov"
+        },
+        {
+            "id": 8458615,
+            "name": "Steve Shields"
+        }
+    ]
+}

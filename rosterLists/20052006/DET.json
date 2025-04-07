@@ -1,0 +1,128 @@
+{
+    "players": [
+        {
+            "id": 8466149,
+            "name": "Daniel Cleary"
+        },
+        {
+            "id": 8467514,
+            "name": "Pavel Datsyuk"
+        },
+        {
+            "id": 8446485,
+            "name": "Kris Draper"
+        },
+        {
+            "id": 8470047,
+            "name": "Valtteri Filppula"
+        },
+        {
+            "id": 8471309,
+            "name": "Johan Franzen"
+        },
+        {
+            "id": 8460743,
+            "name": "Tomas Holmstrom"
+        },
+        {
+            "id": 8470201,
+            "name": "Jiri Hudler"
+        },
+        {
+            "id": 8468518,
+            "name": "Tomas Kopecky"
+        },
+        {
+            "id": 8456966,
+            "name": "Robert Lang"
+        },
+        {
+            "id": 8462062,
+            "name": "Donald MacLean"
+        },
+        {
+            "id": 8459001,
+            "name": "Kirk Maltby"
+        },
+        {
+            "id": 8467323,
+            "name": "Mark Mowers"
+        },
+        {
+            "id": 8467463,
+            "name": "Mikael Samuelsson"
+        },
+        {
+            "id": 8451302,
+            "name": "Brendan Shanahan"
+        },
+        {
+            "id": 8468789,
+            "name": "Jason Williams"
+        },
+        {
+            "id": 8452578,
+            "name": "Steve Yzerman"
+        },
+        {
+            "id": 8468083,
+            "name": "Henrik Zetterberg"
+        },
+        {
+            "id": 8446053,
+            "name": "Chris Chelios"
+        },
+        {
+            "id": 8458929,
+            "name": "Cory Cross"
+        },
+        {
+            "id": 8467349,
+            "name": "Jiri Fischer"
+        },
+        {
+            "id": 8468509,
+            "name": "Niklas Kronwall"
+        },
+        {
+            "id": 8471187,
+            "name": "Brett Lebda"
+        },
+        {
+            "id": 8457063,
+            "name": "Nicklas Lidstrom"
+        },
+        {
+            "id": 8468534,
+            "name": "Andreas Lilja"
+        },
+        {
+            "id": 8470724,
+            "name": "Kyle Quincey"
+        },
+        {
+            "id": 8459484,
+            "name": "Jamie Rivers"
+        },
+        {
+            "id": 8451224,
+            "name": "Mathieu Schneider"
+        },
+        {
+            "id": 8458454,
+            "name": "Jason Woolley"
+        },
+        {
+            "id": 8470657,
+            "name": "Jimmy Howard"
+        },
+        {
+            "id": 8459308,
+            "name": "Manny Legace"
+        },
+        {
+            "id": 8458568,
+            "name": "Chris Osgood"
+        }
+    ]
+}

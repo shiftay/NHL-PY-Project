@@ -3,21 +3,21 @@
     "teams": [
         "MTL",
         "PHI",
-        "BOS",
-        "NYI",
         "BUF",
-        "LAK",
-        "PIT",
-        "TOR",
+        "NYI",
+        "BOS",
         "AFM",
-        "STL",
+        "TOR",
         "NYR",
-        "MNS",
+        "PIT",
+        "STL",
+        "LAK",
         "CHI",
+        "DET",
         "CBN",
-        "VAN",
         "WSH",
         "CLR",
-        "DET"
+        "VAN",
+        "MNS"
     ]
 }

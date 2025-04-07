@@ -1,0 +1,128 @@
+{
+    "players": [
+        {
+            "id": 8444969,
+            "name": "Michel Archambault"
+        },
+        {
+            "id": 8445591,
+            "name": "Ivan Boldirev"
+        },
+        {
+            "id": 8445600,
+            "name": "J.P. Bordeleau"
+        },
+        {
+            "id": 8445144,
+            "name": "Kirk Bowman"
+        },
+        {
+            "id": 8445773,
+            "name": "Ted Bulley"
+        },
+        {
+            "id": 8446285,
+            "name": "Alain Daigle"
+        },
+        {
+            "id": 8447664,
+            "name": "Jim Harrison"
+        },
+        {
+            "id": 8446881,
+            "name": "Dan Hinton"
+        },
+        {
+            "id": 8446967,
+            "name": "Dennis Hull"
+        },
+        {
+            "id": 8448526,
+            "name": "Cliff Koroll"
+        },
+        {
+            "id": 8449166,
+            "name": "John Marks"
+        },
+        {
+            "id": 8447627,
+            "name": "Pit Martin"
+        },
+        {
+            "id": 8449415,
+            "name": "Jeffrey McDill"
+        },
+        {
+            "id": 8449602,
+            "name": "Stan Mikita"
+        },
+        {
+            "id": 8449734,
+            "name": "Grant Mulvey"
+        },
+        {
+            "id": 8451025,
+            "name": "Darcy Rota"
+        },
+        {
+            "id": 8452195,
+            "name": "Gregory Vaydik"
+        },
+        {
+            "id": 8449637,
+            "name": "Duane Wylie"
+        },
+        {
+            "id": 8447941,
+            "name": "Randy Holt"
+        },
+        {
+            "id": 8448871,
+            "name": "David Logan"
+        },
+        {
+            "id": 8449032,
+            "name": "Keith Magnuson"
+        },
+        {
+            "id": 8447789,
+            "name": "Ian McKegney"
+        },
+        {
+            "id": 8449769,
+            "name": "Bob Murray"
+        },
+        {
+            "id": 8450070,
+            "name": "Bobby Orr"
+        },
+        {
+            "id": 8450737,
+            "name": "Dick Redmond"
+        },
+        {
+            "id": 8451075,
+            "name": "Phil Russell"
+        },
+        {
+            "id": 8451853,
+            "name": "Dale Tallon"
+        },
+        {
+            "id": 8449903,
+            "name": "Michel Dumas"
+        },
+        {
+            "id": 8446720,
+            "name": "Tony Esposito"
+        },
+        {
+            "id": 8452205,
+            "name": "Mike Veisor"
+        },
+        {
+            "id": 8450138,
+            "name": "Gilles Villemure"
+        }
+    ]
+}

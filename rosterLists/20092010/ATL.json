@@ -1,0 +1,124 @@
+{
+    "players": [
+        {
+            "id": 8466202,
+            "name": "Maxim Afinogenov"
+        },
+        {
+            "id": 8467353,
+            "name": "Nik Antropov"
+        },
+        {
+            "id": 8469474,
+            "name": "Colby Armstrong"
+        },
+        {
+            "id": 8469543,
+            "name": "Evgeny Artyukhin"
+        },
+        {
+            "id": 8471697,
+            "name": "Niclas Bergfors"
+        },
+        {
+            "id": 8460720,
+            "name": "Eric Boulton"
+        },
+        {
+            "id": 8475169,
+            "name": "Evander Kane"
+        },
+        {
+            "id": 8469454,
+            "name": "Ilya Kovalchuk"
+        },
+        {
+            "id": 8456887,
+            "name": "Vyacheslav Kozlov"
+        },
+        {
+            "id": 8473412,
+            "name": "Bryan Little"
+        },
+        {
+            "id": 8470667,
+            "name": "Clarke MacArthur"
+        },
+        {
+            "id": 8471514,
+            "name": "Rich Peverley"
+        },
+        {
+            "id": 8464967,
+            "name": "Marty Reasoner"
+        },
+        {
+            "id": 8470289,
+            "name": "Jim Slater"
+        },
+        {
+            "id": 8472379,
+            "name": "Tim Stapleton"
+        },
+        {
+            "id": 8469501,
+            "name": "Chris Thorburn"
+        },
+        {
+            "id": 8466392,
+            "name": "Todd White"
+        },
+        {
+            "id": 8474567,
+            "name": "Zach Bogosian"
+        },
+        {
+            "id": 8446053,
+            "name": "Chris Chelios"
+        },
+        {
+            "id": 8470828,
+            "name": "Toby Enstrom"
+        },
+        {
+            "id": 8468493,
+            "name": "Ron Hainsey"
+        },
+        {
+            "id": 8465210,
+            "name": "Pavel Kubina"
+        },
+        {
+            "id": 8473459,
+            "name": "Arturs Kulda"
+        },
+        {
+            "id": 8469665,
+            "name": "Johnny Oduya"
+        },
+        {
+            "id": 8469488,
+            "name": "Mark Popovic"
+        },
+        {
+            "id": 8474557,
+            "name": "Anssi Salmela"
+        },
+        {
+            "id": 8469575,
+            "name": "Christoph Schubert"
+        },
+        {
+            "id": 8471223,
+            "name": "Boris Valabik"
+        },
+        {
+            "id": 8460704,
+            "name": "Johan Hedberg"
+        },
+        {
+            "id": 8471715,
+            "name": "Ondrej Pavelec"
+        }
+    ]
+}

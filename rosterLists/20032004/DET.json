@@ -1,0 +1,140 @@
+{
+    "players": [
+        {
+            "id": 8467381,
+            "name": "Ryan Barnes"
+        },
+        {
+            "id": 8468732,
+            "name": "Darryl Bootland"
+        },
+        {
+            "id": 8460540,
+            "name": "Mathieu Dandenault"
+        },
+        {
+            "id": 8467514,
+            "name": "Pavel Datsyuk"
+        },
+        {
+            "id": 8464960,
+            "name": "Boyd Devereaux"
+        },
+        {
+            "id": 8446485,
+            "name": "Kris Draper"
+        },
+        {
+            "id": 8460743,
+            "name": "Tomas Holmstrom"
+        },
+        {
+            "id": 8470201,
+            "name": "Jiri Hudler"
+        },
+        {
+            "id": 8448091,
+            "name": "Brett Hull"
+        },
+        {
+            "id": 8456966,
+            "name": "Robert Lang"
+        },
+        {
+            "id": 8459001,
+            "name": "Kirk Maltby"
+        },
+        {
+            "id": 8458982,
+            "name": "Darren McCarty"
+        },
+        {
+            "id": 8449607,
+            "name": "Kevin Miller"
+        },
+        {
+            "id": 8467323,
+            "name": "Mark Mowers"
+        },
+        {
+            "id": 8470418,
+            "name": "Nathan Robinson"
+        },
+        {
+            "id": 8451302,
+            "name": "Brendan Shanahan"
+        },
+        {
+            "id": 8451898,
+            "name": "Steve Thomas"
+        },
+        {
+            "id": 8458537,
+            "name": "Ray Whitney"
+        },
+        {
+            "id": 8468789,
+            "name": "Jason Williams"
+        },
+        {
+            "id": 8452578,
+            "name": "Steve Yzerman"
+        },
+        {
+            "id": 8468083,
+            "name": "Henrik Zetterberg"
+        },
+        {
+            "id": 8446053,
+            "name": "Chris Chelios"
+        },
+        {
+            "id": 8467349,
+            "name": "Jiri Fischer"
+        },
+        {
+            "id": 8456531,
+            "name": "Derian Hatcher"
+        },
+        {
+            "id": 8468509,
+            "name": "Niklas Kronwall"
+        },
+        {
+            "id": 8457063,
+            "name": "Nicklas Lidstrom"
+        },
+        {
+            "id": 8459550,
+            "name": "Anders Myrvold"
+        },
+        {
+            "id": 8459484,
+            "name": "Jamie Rivers"
+        },
+        {
+            "id": 8451224,
+            "name": "Mathieu Schneider"
+        },
+        {
+            "id": 8458454,
+            "name": "Jason Woolley"
+        },
+        {
+            "id": 8447687,
+            "name": "Dominik Hasek"
+        },
+        {
+            "id": 8448382,
+            "name": "Curtis Joseph"
+        },
+        {
+            "id": 8459028,
+            "name": "Marc Lamothe"
+        },
+        {
+            "id": 8459308,
+            "name": "Manny Legace"
+        }
+    ]
+}

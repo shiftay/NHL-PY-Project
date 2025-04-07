@@ -1,0 +1,144 @@
+{
+    "players": [
+        {
+            "id": 8465067,
+            "name": "Jesse Boulerice"
+        },
+        {
+            "id": 8459246,
+            "name": "Donald Brashear"
+        },
+        {
+            "id": 8467877,
+            "name": "Pavel Brendl"
+        },
+        {
+            "id": 8467500,
+            "name": "Tomas Divisek"
+        },
+        {
+            "id": 8459069,
+            "name": "Jiri Dopita"
+        },
+        {
+            "id": 8466292,
+            "name": "Todd Fedoruk"
+        },
+        {
+            "id": 8468172,
+            "name": "Ruslan Fedotenko"
+        },
+        {
+            "id": 8467346,
+            "name": "Simon Gagne"
+        },
+        {
+            "id": 8462081,
+            "name": "Jan Hlavac"
+        },
+        {
+            "id": 8448622,
+            "name": "John Leclair"
+        },
+        {
+            "id": 8468707,
+            "name": "Guillaume Lefebvre"
+        },
+        {
+            "id": 8457203,
+            "name": "Kent Manderville"
+        },
+        {
+            "id": 8462068,
+            "name": "Chris McAllister"
+        },
+        {
+            "id": 8459521,
+            "name": "Marty Murray"
+        },
+        {
+            "id": 8449951,
+            "name": "Adam Oates"
+        },
+        {
+            "id": 8468081,
+            "name": "Vaclav Pletka"
+        },
+        {
+            "id": 8450550,
+            "name": "Keith Primeau"
+        },
+        {
+            "id": 8450653,
+            "name": "Paul Ranheim"
+        },
+        {
+            "id": 8450725,
+            "name": "Mark Recchi"
+        },
+        {
+            "id": 8450978,
+            "name": "Jeremy Roenick"
+        },
+        {
+            "id": 8451392,
+            "name": "Jarrod Skalde"
+        },
+        {
+            "id": 8468438,
+            "name": "Billy Tibbetts"
+        },
+        {
+            "id": 8451925,
+            "name": "Rick Tocchet"
+        },
+        {
+            "id": 8468508,
+            "name": "Justin Williams"
+        },
+        {
+            "id": 8446407,
+            "name": "Eric Desjardins"
+        },
+        {
+            "id": 8460770,
+            "name": "Kim Johnsson"
+        },
+        {
+            "id": 8459174,
+            "name": "Dan Mcgillis"
+        },
+        {
+            "id": 8450824,
+            "name": "Luke Richardson"
+        },
+        {
+            "id": 8458048,
+            "name": "John Slaney"
+        },
+        {
+            "id": 8467558,
+            "name": "Bruno St. Jacques"
+        },
+        {
+            "id": 8458202,
+            "name": "Chris Therien"
+        },
+        {
+            "id": 8452353,
+            "name": "Eric Weinrich"
+        },
+        {
+            "id": 8462052,
+            "name": "Brian Boucher"
+        },
+        {
+            "id": 8468651,
+            "name": "Roman Cechmanek"
+        },
+        {
+            "id": 8458738,
+            "name": "Neil Little"
+        }
+    ]
+}

@@ -1,22 +1,22 @@
 {
     "seasonId": "19781979",
     "teams": [
-        "MTL",
         "NYI",
+        "MTL",
         "BOS",
-        "PHI",
         "NYR",
         "AFM",
+        "PHI",
+        "TOR",
         "BUF",
         "PIT",
-        "TOR",
         "LAK",
-        "CHI",
         "MNS",
+        "CHI",
         "VAN",
-        "WSH",
         "DET",
-        "STL",
-        "CLR"
+        "WSH",
+        "CLR",
+        "STL"
     ]
 }

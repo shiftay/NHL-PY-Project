@@ -1,0 +1,128 @@
+{
+    "players": [
+        {
+            "id": 8465050,
+            "name": "Eric Belanger"
+        },
+        {
+            "id": 8469647,
+            "name": "Derek Boogaard"
+        },
+        {
+            "id": 8470153,
+            "name": "Pierre-Marc Bouchard"
+        },
+        {
+            "id": 8473504,
+            "name": "Cal Clutterbuck"
+        },
+        {
+            "id": 8459648,
+            "name": "Pavol Demitra"
+        },
+        {
+            "id": 8466292,
+            "name": "Todd Fedoruk"
+        },
+        {
+            "id": 8470165,
+            "name": "Matt Foy"
+        },
+        {
+            "id": 8468483,
+            "name": "Marian Gaborik"
+        },
+        {
+            "id": 8462037,
+            "name": "Steve Kelly"
+        },
+        {
+            "id": 8469459,
+            "name": "Mikko Koivu"
+        },
+        {
+            "id": 8468575,
+            "name": "Dominic Moore"
+        },
+        {
+            "id": 8465026,
+            "name": "Mark Parrish"
+        },
+        {
+            "id": 8471678,
+            "name": "Benoit Pouliot"
+        },
+        {
+            "id": 8467966,
+            "name": "Branko Radivojevic"
+        },
+        {
+            "id": 8458525,
+            "name": "Brian Rolston"
+        },
+        {
+            "id": 8473536,
+            "name": "James Sheppard"
+        },
+        {
+            "id": 8458031,
+            "name": "Chris Simon"
+        },
+        {
+            "id": 8469542,
+            "name": "Stephane Veilleux"
+        },
+        {
+            "id": 8469672,
+            "name": "Aaron Voros"
+        },
+        {
+            "id": 8452285,
+            "name": "Wes Walz"
+        },
+        {
+            "id": 8470613,
+            "name": "Brent Burns"
+        },
+        {
+            "id": 8455805,
+            "name": "Keith Carney"
+        },
+        {
+            "id": 8468520,
+            "name": "Kurtis Foster"
+        },
+        {
+            "id": 8456595,
+            "name": "Sean Hill"
+        },
+        {
+            "id": 8460770,
+            "name": "Kim Johnsson"
+        },
+        {
+            "id": 8468613,
+            "name": "Petteri Nummelin"
+        },
+        {
+            "id": 8468650,
+            "name": "Erik Reitz"
+        },
+        {
+            "id": 8468513,
+            "name": "Nick Schultz"
+        },
+        {
+            "id": 8467343,
+            "name": "Martin Skoula"
+        },
+        {
+            "id": 8473404,
+            "name": "Niklas Backstrom"
+        },
+        {
+            "id": 8470216,
+            "name": "Josh Harding"
+        }
+    ]
+}

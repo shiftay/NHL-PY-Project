@@ -1,0 +1,144 @@
+{
+    "players": [
+        {
+            "id": 8459439,
+            "name": "Jason Allison"
+        },
+        {
+            "id": 8469502,
+            "name": "Jaroslav Bednar"
+        },
+        {
+            "id": 8465050,
+            "name": "Eric Belanger"
+        },
+        {
+            "id": 8459089,
+            "name": "Ken Belanger"
+        },
+        {
+            "id": 8467427,
+            "name": "Kip Brennan"
+        },
+        {
+            "id": 8445733,
+            "name": "Kelly Buchberger"
+        },
+        {
+            "id": 8467682,
+            "name": "Brad Chartrand"
+        },
+        {
+            "id": 8459436,
+            "name": "Adam Deadmarsh"
+        },
+        {
+            "id": 8456087,
+            "name": "Ted Donato"
+        },
+        {
+            "id": 8468120,
+            "name": "Mikko Eloranta"
+        },
+        {
+            "id": 8446675,
+            "name": "Nelson Emerson"
+        },
+        {
+            "id": 8467461,
+            "name": "Ryan Flinn"
+        },
+        {
+            "id": 8456556,
+            "name": "Steve Heinze"
+        },
+        {
+            "id": 8456729,
+            "name": "Craig Johnson"
+        },
+        {
+            "id": 8462037,
+            "name": "Steve Kelly"
+        },
+        {
+            "id": 8459094,
+            "name": "Ian Laperriere"
+        },
+        {
+            "id": 8466216,
+            "name": "Adam Mair"
+        },
+        {
+            "id": 8458532,
+            "name": "Glen Murray"
+        },
+        {
+            "id": 8458540,
+            "name": "Ziggy Palffy"
+        },
+        {
+            "id": 8466110,
+            "name": "Randy Robitaille"
+        },
+        {
+            "id": 8451005,
+            "name": "Cliff Ronning"
+        },
+        {
+            "id": 8458069,
+            "name": "Bryan Smolinski"
+        },
+        {
+            "id": 8458554,
+            "name": "Jozef Stumpel"
+        },
+        {
+            "id": 8458628,
+            "name": "Rob Valicevic"
+        },
+        {
+            "id": 8458527,
+            "name": "Philippe Boucher"
+        },
+        {
+            "id": 8460529,
+            "name": "Jason Holland"
+        },
+        {
+            "id": 8459569,
+            "name": "Jere Karalahti"
+        },
+        {
+            "id": 8468534,
+            "name": "Andreas Lilja"
+        },
+        {
+            "id": 8457384,
+            "name": "Aaron Miller"
+        },
+        {
+            "id": 8457403,
+            "name": "Jaroslav Modry"
+        },
+        {
+            "id": 8458984,
+            "name": "Mattias Norstrom"
+        },
+        {
+            "id": 8451224,
+            "name": "Mathieu Schneider"
+        },
+        {
+            "id": 8468598,
+            "name": "Lubomir Visnovsky"
+        },
+        {
+            "id": 8457714,
+            "name": "Felix Potvin"
+        },
+        {
+            "id": 8460497,
+            "name": "Jamie Storr"
+        }
+    ]
+}

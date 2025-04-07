@@ -1,0 +1,140 @@
+{
+    "players": [
+        {
+            "id": 8445582,
+            "name": "Serge Boisvert"
+        },
+        {
+            "id": 8445752,
+            "name": "Randy Bucyk"
+        },
+        {
+            "id": 8446036,
+            "name": "Guy Carbonneau"
+        },
+        {
+            "id": 8446167,
+            "name": "Shayne Corson"
+        },
+        {
+            "id": 8446287,
+            "name": "Kjell Dahlin"
+        },
+        {
+            "id": 8446353,
+            "name": "Lucien DeBlois"
+        },
+        {
+            "id": 8446998,
+            "name": "Bob Gainey"
+        },
+        {
+            "id": 8448534,
+            "name": "John Kordic"
+        },
+        {
+            "id": 8448772,
+            "name": "Claude Lemieux"
+        },
+        {
+            "id": 8449095,
+            "name": "David Maley"
+        },
+        {
+            "id": 8449495,
+            "name": "Mike Mcphee"
+        },
+        {
+            "id": 8449669,
+            "name": "Sergio Momesso"
+        },
+        {
+            "id": 8449796,
+            "name": "Mats Naslund"
+        },
+        {
+            "id": 8449883,
+            "name": "Chris Nilan"
+        },
+        {
+            "id": 8450825,
+            "name": "Stephane Richer"
+        },
+        {
+            "id": 8451008,
+            "name": "Steve Rooney"
+        },
+        {
+            "id": 8451427,
+            "name": "Brian Skrudland"
+        },
+        {
+            "id": 8451476,
+            "name": "Bobby Smith"
+        },
+        {
+            "id": 8451959,
+            "name": "Mario Tremblay"
+        },
+        {
+            "id": 8451981,
+            "name": "Alfie Turcotte"
+        },
+        {
+            "id": 8452281,
+            "name": "Ryan Walter"
+        },
+        {
+            "id": 8445905,
+            "name": "Dom Campedelli"
+        },
+        {
+            "id": 8445936,
+            "name": "Kent Carlson"
+        },
+        {
+            "id": 8446053,
+            "name": "Chris Chelios"
+        },
+        {
+            "id": 8447205,
+            "name": "Gaston Gingras"
+        },
+        {
+            "id": 8447402,
+            "name": "Rick Green"
+        },
+        {
+            "id": 8448568,
+            "name": "Tom Kurvers"
+        },
+        {
+            "id": 8448633,
+            "name": "Mike Lalor"
+        },
+        {
+            "id": 8448845,
+            "name": "Craig Ludwig"
+        },
+        {
+            "id": 8450936,
+            "name": "Larry Robinson"
+        },
+        {
+            "id": 8451789,
+            "name": "Petr Svoboda"
+        },
+        {
+            "id": 8450311,
+            "name": "Steve Penney"
+        },
+        {
+            "id": 8451033,
+            "name": "Patrick Roy"
+        },
+        {
+            "id": 8451595,
+            "name": "Doug Soetaert"
+        }
+    ]
+}

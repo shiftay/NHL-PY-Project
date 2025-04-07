@@ -1,0 +1,120 @@
+{
+    "players": [
+        {
+            "id": 8445430,
+            "name": "Michel Bergeron"
+        },
+        {
+            "id": 8445611,
+            "name": "Mike Bossy"
+        },
+        {
+            "id": 8445617,
+            "name": "Bob Bourne"
+        },
+        {
+            "id": 8446482,
+            "name": "Jude Drouin"
+        },
+        {
+            "id": 8447193,
+            "name": "Clark Gillies"
+        },
+        {
+            "id": 8447551,
+            "name": "Richie Hansen"
+        },
+        {
+            "id": 8447658,
+            "name": "Billy Harris"
+        },
+        {
+            "id": 8447740,
+            "name": "Lorne Henning"
+        },
+        {
+            "id": 8447995,
+            "name": "Garry Howatt"
+        },
+        {
+            "id": 8448401,
+            "name": "Mike Kaszycki"
+        },
+        {
+            "id": 8449457,
+            "name": "Alex McKendry"
+        },
+        {
+            "id": 8449570,
+            "name": "Wayne Merrick"
+        },
+        {
+            "id": 8449932,
+            "name": "Bobby Nystrom"
+        },
+        {
+            "id": 8450196,
+            "name": "J.P. Parise"
+        },
+        {
+            "id": 8451741,
+            "name": "Andre St. Laurent"
+        },
+        {
+            "id": 8451965,
+            "name": "Bryan Trottier"
+        },
+        {
+            "id": 8449384,
+            "name": "Ed Westfall"
+        },
+        {
+            "id": 8447666,
+            "name": "Gerry Hart"
+        },
+        {
+            "id": 8448811,
+            "name": "Dave Lewis"
+        },
+        {
+            "id": 8448885,
+            "name": "Bob Lorimer"
+        },
+        {
+            "id": 8449206,
+            "name": "Bert Marshall"
+        },
+        {
+            "id": 8449877,
+            "name": "Neil Nicholson"
+        },
+        {
+            "id": 8450314,
+            "name": "Stefan Persson"
+        },
+        {
+            "id": 8450505,
+            "name": "Denis Potvin"
+        },
+        {
+            "id": 8450508,
+            "name": "Jean Potvin"
+        },
+        {
+            "id": 8450554,
+            "name": "Pat Price"
+        },
+        {
+            "id": 8447945,
+            "name": "Goran Hogosta"
+        },
+        {
+            "id": 8450802,
+            "name": "Glenn Resch"
+        },
+        {
+            "id": 8451525,
+            "name": "Billy Smith"
+        }
+    ]
+}

@@ -1,0 +1,160 @@
+{
+    "players": [
+        {
+            "id": 8455575,
+            "name": "Josef Beranek"
+        },
+        {
+            "id": 8445733,
+            "name": "Kelly Buchberger"
+        },
+        {
+            "id": 8446133,
+            "name": "Zdeno Ciger"
+        },
+        {
+            "id": 8446167,
+            "name": "Shayne Corson"
+        },
+        {
+            "id": 8446250,
+            "name": "Dan Currie"
+        },
+        {
+            "id": 8456031,
+            "name": "Louie Debrusk"
+        },
+        {
+            "id": 8446624,
+            "name": "Todd Elik"
+        },
+        {
+            "id": 8447091,
+            "name": "Martin Gelinas"
+        },
+        {
+            "id": 8447177,
+            "name": "Brent Gilchrist"
+        },
+        {
+            "id": 8448046,
+            "name": "Mike Hudson"
+        },
+        {
+            "id": 8448490,
+            "name": "Petr Klima"
+        },
+        {
+            "id": 8449020,
+            "name": "Craig MacTavish"
+        },
+        {
+            "id": 8449095,
+            "name": "David Maley"
+        },
+        {
+            "id": 8449399,
+            "name": "William Mcdougall"
+        },
+        {
+            "id": 8449545,
+            "name": "Scott Mellanby"
+        },
+        {
+            "id": 8449881,
+            "name": "Bernie Nicholls"
+        },
+        {
+            "id": 8457704,
+            "name": "Shjon Podein"
+        },
+        {
+            "id": 8450812,
+            "name": "Steven Rice"
+        },
+        {
+            "id": 8451376,
+            "name": "Craig Simpson"
+        },
+        {
+            "id": 8451972,
+            "name": "Scott Thornton"
+        },
+        {
+            "id": 8451905,
+            "name": "Esa Tikkanen"
+        },
+        {
+            "id": 8451901,
+            "name": "Kevin Todd"
+        },
+        {
+            "id": 8452147,
+            "name": "Shaun Van Allen"
+        },
+        {
+            "id": 8458587,
+            "name": "Vladimir Vujtek"
+        },
+        {
+            "id": 8458361,
+            "name": "Doug Weight"
+        },
+        {
+            "id": 8458526,
+            "name": "Tyler Wright"
+        },
+        {
+            "id": 8445419,
+            "name": "Brian Benning"
+        },
+        {
+            "id": 8447630,
+            "name": "Brian Glynn"
+        },
+        {
+            "id": 8447690,
+            "name": "Greg Hawgood"
+        },
+        {
+            "id": 8448380,
+            "name": "Chris Joseph"
+        },
+        {
+            "id": 8458585,
+            "name": "Igor Kravchuk"
+        },
+        {
+            "id": 8448822,
+            "name": "Francois Leroux"
+        },
+        {
+            "id": 8449123,
+            "name": "Dave Manson"
+        },
+        {
+            "id": 8449749,
+            "name": "Craig Muni"
+        },
+        {
+            "id": 8450824,
+            "name": "Luke Richardson"
+        },
+        {
+            "id": 8451527,
+            "name": "Geoff Smith"
+        },
+        {
+            "id": 8458373,
+            "name": "Brad Werenka"
+        },
+        {
+            "id": 8450651,
+            "name": "Bill Ranford"
+        },
+        {
+            "id": 8451837,
+            "name": "Ron Tugnutt"
+        }
+    ]
+}

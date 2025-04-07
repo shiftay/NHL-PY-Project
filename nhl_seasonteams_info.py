@@ -10,7 +10,7 @@ import random
 # To compile a comprehensive list of all the teams for ~50 years it will take ~4 hours
 def get_nhl_season_info(SEASON_ID):
 	#https://api-web.nhle.com/v1/standings/2024-04-03
-	base_url = f"https://api-web.nhle.com/v1/standings/{SEASON_ID[-4:]}-04-03"
+	base_url = f"https://api-web.nhle.com/v1/standings/{SEASON_ID[-4:]}-01-03"
 
 	headers = {
 	    "User-Agent": "Mozilla/5.0"

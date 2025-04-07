@@ -1,0 +1,128 @@
+{
+    "players": [
+        {
+            "id": 8467353,
+            "name": "Nik Antropov"
+        },
+        {
+            "id": 8460502,
+            "name": "Wade Belak"
+        },
+        {
+            "id": 8460742,
+            "name": "Sergei Berezin"
+        },
+        {
+            "id": 8446167,
+            "name": "Shayne Corson"
+        },
+        {
+            "id": 8446454,
+            "name": "Tie Domi"
+        },
+        {
+            "id": 8466191,
+            "name": "Jeff Farkas"
+        },
+        {
+            "id": 8459158,
+            "name": "Jonas Hoglund"
+        },
+        {
+            "id": 8448484,
+            "name": "Dmitri Khristich"
+        },
+        {
+            "id": 8458974,
+            "name": "Igor Korolev"
+        },
+        {
+            "id": 8462062,
+            "name": "Donald MacLean"
+        },
+        {
+            "id": 8466216,
+            "name": "Adam Mair"
+        },
+        {
+            "id": 8462105,
+            "name": "Alyn McCauley"
+        },
+        {
+            "id": 8458561,
+            "name": "Yanic Perreault"
+        },
+        {
+            "id": 8467412,
+            "name": "Alexei Ponikarovsky"
+        },
+        {
+            "id": 8450900,
+            "name": "Gary Roberts"
+        },
+        {
+            "id": 8451774,
+            "name": "Mats Sundin"
+        },
+        {
+            "id": 8451898,
+            "name": "Steve Thomas"
+        },
+        {
+            "id": 8459574,
+            "name": "Darcy Tucker"
+        },
+        {
+            "id": 8452161,
+            "name": "Garry Valk"
+        },
+        {
+            "id": 8462034,
+            "name": "Aki Berg"
+        },
+        {
+            "id": 8458948,
+            "name": "David Cooper"
+        },
+        {
+            "id": 8458929,
+            "name": "Cory Cross"
+        },
+        {
+            "id": 8459181,
+            "name": "Nathan Dempsey"
+        },
+        {
+            "id": 8465200,
+            "name": "Tomas Kaberle"
+        },
+        {
+            "id": 8449123,
+            "name": "Dave Manson"
+        },
+        {
+            "id": 8462258,
+            "name": "Danny Markov"
+        },
+        {
+            "id": 8459462,
+            "name": "Bryan McCabe"
+        },
+        {
+            "id": 8467510,
+            "name": "Petr Svoboda"
+        },
+        {
+            "id": 8458636,
+            "name": "Dmitry Yushkevich"
+        },
+        {
+            "id": 8447709,
+            "name": "Glenn Healy"
+        },
+        {
+            "id": 8448382,
+            "name": "Curtis Joseph"
+        }
+    ]
+}

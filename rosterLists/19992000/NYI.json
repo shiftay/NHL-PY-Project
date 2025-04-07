@@ -1,0 +1,192 @@
+{
+    "players": [
+        {
+            "id": 8444963,
+            "name": "Mikael Andersson"
+        },
+        {
+            "id": 8455447,
+            "name": "Niklas Andersson"
+        },
+        {
+            "id": 8467878,
+            "name": "Tim Connolly"
+        },
+        {
+            "id": 8458620,
+            "name": "Mariusz Czerkawski"
+        },
+        {
+            "id": 8460518,
+            "name": "Johan Davidsson"
+        },
+        {
+            "id": 8456118,
+            "name": "Ted Drury"
+        },
+        {
+            "id": 8459021,
+            "name": "Chris Ferraro"
+        },
+        {
+            "id": 8464984,
+            "name": "Josh Green"
+        },
+        {
+            "id": 8460539,
+            "name": "Sean Haggerty"
+        },
+        {
+            "id": 8448017,
+            "name": "Tony Hrkac"
+        },
+        {
+            "id": 8462094,
+            "name": "Brad Isbister"
+        },
+        {
+            "id": 8466140,
+            "name": "Olli Jokinen"
+        },
+        {
+            "id": 8460713,
+            "name": "Jorgen Jonsson"
+        },
+        {
+            "id": 8467857,
+            "name": "Jason Krog"
+        },
+        {
+            "id": 8456932,
+            "name": "Daniel Lacroix"
+        },
+        {
+            "id": 8448674,
+            "name": "Claude Lapointe"
+        },
+        {
+            "id": 8458632,
+            "name": "Mark Lawrence"
+        },
+        {
+            "id": 8459437,
+            "name": "Mats Lindgren"
+        },
+        {
+            "id": 8466217,
+            "name": "Petr Mika"
+        },
+        {
+            "id": 8460707,
+            "name": "Bill Muckalt"
+        },
+        {
+            "id": 8462049,
+            "name": "Dimitri Nabokov"
+        },
+        {
+            "id": 8449961,
+            "name": "Gino Odjick"
+        },
+        {
+            "id": 8462136,
+            "name": "Vladimir Orszagh"
+        },
+        {
+            "id": 8450267,
+            "name": "Scott Pearson"
+        },
+        {
+            "id": 8460533,
+            "name": "Dave Scatchard"
+        },
+        {
+            "id": 8460523,
+            "name": "Mike Watt"
+        },
+        {
+            "id": 8460664,
+            "name": "Steve Webb"
+        },
+        {
+            "id": 8467345,
+            "name": "Mathieu Biron"
+        },
+        {
+            "id": 8466142,
+            "name": "Eric Brewer"
+        },
+        {
+            "id": 8458600,
+            "name": "Aris Brimanis"
+        },
+        {
+            "id": 8459008,
+            "name": "Eric Cairns"
+        },
+        {
+            "id": 8465009,
+            "name": "Zdeno Chara"
+        },
+        {
+            "id": 8459487,
+            "name": "Vladimir Chebaturkin"
+        },
+        {
+            "id": 8456153,
+            "name": "Dallas Eakins"
+        },
+        {
+            "id": 8460689,
+            "name": "Raymond Giroux"
+        },
+        {
+            "id": 8456576,
+            "name": "Ian Herbers"
+        },
+        {
+            "id": 8456588,
+            "name": "Jamie Heward"
+        },
+        {
+            "id": 8459434,
+            "name": "Kenny Jonsson"
+        },
+        {
+            "id": 8465165,
+            "name": "Evgeny Korolev"
+        },
+        {
+            "id": 8450389,
+            "name": "Rich Pilon"
+        },
+        {
+            "id": 8459484,
+            "name": "Jamie Rivers"
+        },
+        {
+            "id": 8462215,
+            "name": "Ray Schultz"
+        },
+        {
+            "id": 8456264,
+            "name": "Wade Flaherty"
+        },
+        {
+            "id": 8466141,
+            "name": "Roberto Luongo"
+        },
+        {
+            "id": 8457714,
+            "name": "Felix Potvin"
+        },
+        {
+            "id": 8465161,
+            "name": "Steve Valiquette"
+        },
+        {
+            "id": 8459463,
+            "name": "Kevin Weekes"
+        }
+    ]
+}

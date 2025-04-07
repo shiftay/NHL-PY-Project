@@ -1,4 +1,26 @@
 {
     "seasonId": "19901991",
-    "teams": []
+    "teams": [
+        "CHI",
+        "NYR",
+        "STL",
+        "BOS",
+        "CGY",
+        "NJD",
+        "PHI",
+        "LAK",
+        "MTL",
+        "PIT",
+        "DET",
+        "BUF",
+        "WSH",
+        "EDM",
+        "HFD",
+        "VAN",
+        "WIN",
+        "NYI",
+        "MNS",
+        "TOR",
+        "QUE"
+    ]
 }

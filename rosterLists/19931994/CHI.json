@@ -1,0 +1,156 @@
+{
+    "players": [
+        {
+            "id": 8455429,
+            "name": "Tony Amonte"
+        },
+        {
+            "id": 8446079,
+            "name": "Dave Christian"
+        },
+        {
+            "id": 8446261,
+            "name": "Randy Cunneyworth"
+        },
+        {
+            "id": 8456121,
+            "name": "Steve Dubinsky"
+        },
+        {
+            "id": 8447310,
+            "name": "Michel Goulet"
+        },
+        {
+            "id": 8447345,
+            "name": "Dirk Graham"
+        },
+        {
+            "id": 8447963,
+            "name": "Tony Horacek"
+        },
+        {
+            "id": 8448483,
+            "name": "Darin Kimble"
+        },
+        {
+            "id": 8458949,
+            "name": "Sergei Krivokrasov"
+        },
+        {
+            "id": 8448781,
+            "name": "Jocelyn Lemieux"
+        },
+        {
+            "id": 8449295,
+            "name": "Stephane Matteau"
+        },
+        {
+            "id": 8449751,
+            "name": "Joe Murphy"
+        },
+        {
+            "id": 8449773,
+            "name": "Troy Murray"
+        },
+        {
+            "id": 8449894,
+            "name": "Brian Noonan"
+        },
+        {
+            "id": 8458523,
+            "name": "Patrick Poulin"
+        },
+        {
+            "id": 8450978,
+            "name": "Jeremy Roenick"
+        },
+        {
+            "id": 8451080,
+            "name": "Christian Ruuttu"
+        },
+        {
+            "id": 8458972,
+            "name": "Jeff Shantz"
+        },
+        {
+            "id": 8451794,
+            "name": "Brent Sutter"
+        },
+        {
+            "id": 8451791,
+            "name": "Rich Sutter"
+        },
+        {
+            "id": 8451901,
+            "name": "Kevin Todd"
+        },
+        {
+            "id": 8452571,
+            "name": "Paul Ysebaert"
+        },
+        {
+            "id": 8455805,
+            "name": "Keith Carney"
+        },
+        {
+            "id": 8446053,
+            "name": "Chris Chelios"
+        },
+        {
+            "id": 8446376,
+            "name": "Robert Dirk"
+        },
+        {
+            "id": 8456115,
+            "name": "Ivan Droppa"
+        },
+        {
+            "id": 8448543,
+            "name": "Frantisek Kucera"
+        },
+        {
+            "id": 8449137,
+            "name": "Bryan Marchment"
+        },
+        {
+            "id": 8449749,
+            "name": "Craig Muni"
+        },
+        {
+            "id": 8451073,
+            "name": "Cam Russell"
+        },
+        {
+            "id": 8451558,
+            "name": "Steve Smith"
+        },
+        {
+            "id": 8451570,
+            "name": "Greg Smyth"
+        },
+        {
+            "id": 8451804,
+            "name": "Gary Suter"
+        },
+        {
+            "id": 8452353,
+            "name": "Eric Weinrich"
+        },
+        {
+            "id": 8452503,
+            "name": "Neil Wilkinson"
+        },
+        {
+            "id": 8445386,
+            "name": "Ed Belfour"
+        },
+        {
+            "id": 8447449,
+            "name": "Jeff Hackett"
+        },
+        {
+            "id": 8459411,
+            "name": "Christian Soucy"
+        }
+    ]
+}

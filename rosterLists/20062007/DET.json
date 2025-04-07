@@ -1,0 +1,132 @@
+{
+    "players": [
+        {
+            "id": 8459444,
+            "name": "Todd Bertuzzi"
+        },
+        {
+            "id": 8468732,
+            "name": "Darryl Bootland"
+        },
+        {
+            "id": 8466260,
+            "name": "Kyle Calder"
+        },
+        {
+            "id": 8466149,
+            "name": "Daniel Cleary"
+        },
+        {
+            "id": 8467514,
+            "name": "Pavel Datsyuk"
+        },
+        {
+            "id": 8446485,
+            "name": "Kris Draper"
+        },
+        {
+            "id": 8470018,
+            "name": "Matt Ellis"
+        },
+        {
+            "id": 8470047,
+            "name": "Valtteri Filppula"
+        },
+        {
+            "id": 8471309,
+            "name": "Johan Franzen"
+        },
+        {
+            "id": 8460743,
+            "name": "Tomas Holmstrom"
+        },
+        {
+            "id": 8470201,
+            "name": "Jiri Hudler"
+        },
+        {
+            "id": 8467564,
+            "name": "Matt Hussey"
+        },
+        {
+            "id": 8468518,
+            "name": "Tomas Kopecky"
+        },
+        {
+            "id": 8456966,
+            "name": "Robert Lang"
+        },
+        {
+            "id": 8466200,
+            "name": "Josh Langfeld"
+        },
+        {
+            "id": 8459001,
+            "name": "Kirk Maltby"
+        },
+        {
+            "id": 8467463,
+            "name": "Mikael Samuelsson"
+        },
+        {
+            "id": 8468789,
+            "name": "Jason Williams"
+        },
+        {
+            "id": 8468083,
+            "name": "Henrik Zetterberg"
+        },
+        {
+            "id": 8446053,
+            "name": "Chris Chelios"
+        },
+        {
+            "id": 8468509,
+            "name": "Niklas Kronwall"
+        },
+        {
+            "id": 8471187,
+            "name": "Brett Lebda"
+        },
+        {
+            "id": 8457063,
+            "name": "Nicklas Lidstrom"
+        },
+        {
+            "id": 8468534,
+            "name": "Andreas Lilja"
+        },
+        {
+            "id": 8462258,
+            "name": "Danny Markov"
+        },
+        {
+            "id": 8470061,
+            "name": "Derek Meech"
+        },
+        {
+            "id": 8459636,
+            "name": "Brad Norton"
+        },
+        {
+            "id": 8470724,
+            "name": "Kyle Quincey"
+        },
+        {
+            "id": 8451224,
+            "name": "Mathieu Schneider"
+        },
+        {
+            "id": 8447687,
+            "name": "Dominik Hasek"
+        },
+        {
+            "id": 8469732,
+            "name": "Joey MacDonald"
+        },
+        {
+            "id": 8458568,
+            "name": "Chris Osgood"
+        }
+    ]
+}

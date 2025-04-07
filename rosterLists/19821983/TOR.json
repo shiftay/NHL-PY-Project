@@ -1,0 +1,176 @@
+{
+    "players": [
+        {
+            "id": 8444896,
+            "name": "Russ Adam"
+        },
+        {
+            "id": 8444944,
+            "name": "John Anderson"
+        },
+        {
+            "id": 8445167,
+            "name": "Norm Aubin"
+        },
+        {
+            "id": 8445582,
+            "name": "Serge Boisvert"
+        },
+        {
+            "id": 8445613,
+            "name": "Bruce Boudreau"
+        },
+        {
+            "id": 8446311,
+            "name": "Dan Daoust"
+        },
+        {
+            "id": 8446363,
+            "name": "Bill Derlago"
+        },
+        {
+            "id": 8446981,
+            "name": "Miroslav Frycer"
+        },
+        {
+            "id": 8447078,
+            "name": "Stew Gavin"
+        },
+        {
+            "id": 8447658,
+            "name": "Billy Harris"
+        },
+        {
+            "id": 8447811,
+            "name": "Paul Higgins"
+        },
+        {
+            "id": 8448125,
+            "name": "Peter Ihnacak"
+        },
+        {
+            "id": 8448401,
+            "name": "Mike Kaszycki"
+        },
+        {
+            "id": 8448754,
+            "name": "Gary Leeman"
+        },
+        {
+            "id": 8449035,
+            "name": "Marc Magnan"
+        },
+        {
+            "id": 8449277,
+            "name": "Terry Martin"
+        },
+        {
+            "id": 8449882,
+            "name": "Frank Nigro"
+        },
+        {
+            "id": 8450483,
+            "name": "Walt Poddubny"
+        },
+        {
+            "id": 8451099,
+            "name": "Rocky Saganiuk"
+        },
+        {
+            "id": 8451763,
+            "name": "Ken Strong"
+        },
+        {
+            "id": 8451882,
+            "name": "Greg Terrion"
+        },
+        {
+            "id": 8452152,
+            "name": "Rick Vaive"
+        },
+        {
+            "id": 8452219,
+            "name": "Leigh Verstraete"
+        },
+        {
+            "id": 8452453,
+            "name": "Rod Willard"
+        },
+        {
+            "id": 8452549,
+            "name": "Gary Yaremchuk"
+        },
+        {
+            "id": 8445211,
+            "name": "Reid Bailey"
+        },
+        {
+            "id": 8445416,
+            "name": "Jim Benning"
+        },
+        {
+            "id": 8445584,
+            "name": "Fred Boimistruck"
+        },
+        {
+            "id": 8446519,
+            "name": "Vitezslav Duris"
+        },
+        {
+            "id": 8446774,
+            "name": "Dave Farrish"
+        },
+        {
+            "id": 8447205,
+            "name": "Gaston Gingras"
+        },
+        {
+            "id": 8448523,
+            "name": "Jim Korn"
+        },
+        {
+            "id": 8449442,
+            "name": "Bob Mcgill"
+        },
+        {
+            "id": 8449555,
+            "name": "Barry Melrose"
+        },
+        {
+            "id": 8449749,
+            "name": "Craig Muni"
+        },
+        {
+            "id": 8449925,
+            "name": "Gary Nylund"
+        },
+        {
+            "id": 8451102,
+            "name": "Borje Salming"
+        },
+        {
+            "id": 8451323,
+            "name": "Dave Shand"
+        },
+        {
+            "id": 8448700,
+            "name": "Michel Larocque"
+        },
+        {
+            "id": 8450132,
+            "name": "Mike Palmateer"
+        },
+        {
+            "id": 8450179,
+            "name": "Robert Parent"
+        },
+        {
+            "id": 8451626,
+            "name": "Rick St. Croix"
+        },
+        {
+            "id": 8451958,
+            "name": "Vincent Tremblay"
+        }
+    ]
+}

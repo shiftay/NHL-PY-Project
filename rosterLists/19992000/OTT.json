@@ -1,0 +1,160 @@
+{
+    "players": [
+        {
+            "id": 8460621,
+            "name": "Daniel Alfredsson"
+        },
+        {
+            "id": 8466249,
+            "name": "Magnus Arvedson"
+        },
+        {
+            "id": 8460105,
+            "name": "Radek Bonk"
+        },
+        {
+            "id": 8455752,
+            "name": "Viacheslav Butsayev"
+        },
+        {
+            "id": 8465090,
+            "name": "Andreas Dackell"
+        },
+        {
+            "id": 8446423,
+            "name": "Kevin Dineen"
+        },
+        {
+            "id": 8459545,
+            "name": "John Emmons"
+        },
+        {
+            "id": 8467370,
+            "name": "Mike Fisher"
+        },
+        {
+            "id": 8460654,
+            "name": "Colin Forbes"
+        },
+        {
+            "id": 8458645,
+            "name": "Bruce Gardiner"
+        },
+        {
+            "id": 8466148,
+            "name": "Marian Hossa"
+        },
+        {
+            "id": 8456760,
+            "name": "Joe Juneau"
+        },
+        {
+            "id": 8460484,
+            "name": "Steve Martins"
+        },
+        {
+            "id": 8457297,
+            "name": "Shawn McEachern"
+        },
+        {
+            "id": 8449607,
+            "name": "Kevin Miller"
+        },
+        {
+            "id": 8459492,
+            "name": "Vinny Prospal"
+        },
+        {
+            "id": 8460639,
+            "name": "Andre Roy"
+        },
+        {
+            "id": 8458575,
+            "name": "Yves Sarault"
+        },
+        {
+            "id": 8467425,
+            "name": "Petr Schastlivy"
+        },
+        {
+            "id": 8452147,
+            "name": "Shaun Van Allen"
+        },
+        {
+            "id": 8458477,
+            "name": "Rob Zamuner"
+        },
+        {
+            "id": 8446435,
+            "name": "Bobby Dollas"
+        },
+        {
+            "id": 8465222,
+            "name": "Erich Goldmann"
+        },
+        {
+            "id": 8456455,
+            "name": "John Gruden"
+        },
+        {
+            "id": 8458585,
+            "name": "Igor Kravchuk"
+        },
+        {
+            "id": 8458805,
+            "name": "Janne Laukkanen"
+        },
+        {
+            "id": 8448740,
+            "name": "Grant Ledyard"
+        },
+        {
+            "id": 8464956,
+            "name": "Chris Phillips"
+        },
+        {
+            "id": 8466353,
+            "name": "Karel Rachunek"
+        },
+        {
+            "id": 8462033,
+            "name": "Wade Redden"
+        },
+        {
+            "id": 8465202,
+            "name": "Sami Salo"
+        },
+        {
+            "id": 8458986,
+            "name": "Patrick Traverse"
+        },
+        {
+            "id": 8462527,
+            "name": "David Van Drunen"
+        },
+        {
+            "id": 8458468,
+            "name": "Jason York"
+        },
+        {
+            "id": 8445275,
+            "name": "Tom Barrasso"
+        },
+        {
+            "id": 8458981,
+            "name": "Mike Fountain"
+        },
+        {
+            "id": 8466192,
+            "name": "Jani Hurme"
+        },
+        {
+            "id": 8459579,
+            "name": "Patrick Lalime"
+        },
+        {
+            "id": 8451837,
+            "name": "Ron Tugnutt"
+        }
+    ]
+}

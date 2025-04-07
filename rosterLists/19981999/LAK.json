@@ -1,0 +1,160 @@
+{
+    "players": [
+        {
+            "id": 8445176,
+            "name": "Donald Audette"
+        },
+        {
+            "id": 8467844,
+            "name": "Jason Blake"
+        },
+        {
+            "id": 8455763,
+            "name": "Dan Bylsma"
+        },
+        {
+            "id": 8458945,
+            "name": "Brandon Convery"
+        },
+        {
+            "id": 8446208,
+            "name": "Russ Courtnall"
+        },
+        {
+            "id": 8446823,
+            "name": "Ray Ferraro"
+        },
+        {
+            "id": 8464984,
+            "name": "Josh Green"
+        },
+        {
+            "id": 8456729,
+            "name": "Craig Johnson"
+        },
+        {
+            "id": 8460524,
+            "name": "Matt Johnson"
+        },
+        {
+            "id": 8466140,
+            "name": "Olli Jokinen"
+        },
+        {
+            "id": 8456933,
+            "name": "Eric Lacroix"
+        },
+        {
+            "id": 8458579,
+            "name": "Nathan LaFayette"
+        },
+        {
+            "id": 8459094,
+            "name": "Ian Laperriere"
+        },
+        {
+            "id": 8464875,
+            "name": "Steve McKenna"
+        },
+        {
+            "id": 8457406,
+            "name": "Sandy Moger"
+        },
+        {
+            "id": 8458532,
+            "name": "Glen Murray"
+        },
+        {
+            "id": 8458561,
+            "name": "Yanic Perreault"
+        },
+        {
+            "id": 8460522,
+            "name": "Jason Podollan"
+        },
+        {
+            "id": 8458565,
+            "name": "Sean Pronger"
+        },
+        {
+            "id": 8450941,
+            "name": "Luc Robitaille"
+        },
+        {
+            "id": 8462078,
+            "name": "Pavel Rosa"
+        },
+        {
+            "id": 8458554,
+            "name": "Jozef Stumpel"
+        },
+        {
+            "id": 8460239,
+            "name": "Vladimir Tsyplakov"
+        },
+        {
+            "id": 8460660,
+            "name": "Roman Vopat"
+        },
+        {
+            "id": 8445208,
+            "name": "Dave Babych"
+        },
+        {
+            "id": 8445550,
+            "name": "Rob Blake"
+        },
+        {
+            "id": 8445568,
+            "name": "Doug Bodger"
+        },
+        {
+            "id": 8458527,
+            "name": "Philippe Boucher"
+        },
+        {
+            "id": 8446494,
+            "name": "Steve Duchesne"
+        },
+        {
+            "id": 8447004,
+            "name": "Garry Galley"
+        },
+        {
+            "id": 8457403,
+            "name": "Jaroslav Modry"
+        },
+        {
+            "id": 8460701,
+            "name": "Jan Nemecek"
+        },
+        {
+            "id": 8458984,
+            "name": "Mattias Norstrom"
+        },
+        {
+            "id": 8458637,
+            "name": "Sean O'Donnell"
+        },
+        {
+            "id": 8459020,
+            "name": "Mark Visheau"
+        },
+        {
+            "id": 8459198,
+            "name": "Ryan Bach"
+        },
+        {
+            "id": 8446831,
+            "name": "Stephane Fiset"
+        },
+        {
+            "id": 8459308,
+            "name": "Manny Legace"
+        },
+        {
+            "id": 8460497,
+            "name": "Jamie Storr"
+        }
+    ]
+}

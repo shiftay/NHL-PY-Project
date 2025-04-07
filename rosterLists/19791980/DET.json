@@ -1,0 +1,128 @@
+{
+    "players": [
+        {
+            "id": 8445599,
+            "name": "Dan Bolduc"
+        },
+        {
+            "id": 8446876,
+            "name": "Mike Foligno"
+        },
+        {
+            "id": 8447800,
+            "name": "Glenn Hicks"
+        },
+        {
+            "id": 8447929,
+            "name": "Bill Hogaboam"
+        },
+        {
+            "id": 8448599,
+            "name": "Dan Labraaten"
+        },
+        {
+            "id": 8448914,
+            "name": "George Lyle"
+        },
+        {
+            "id": 8449062,
+            "name": "Peter Mahovlich"
+        },
+        {
+            "id": 8449377,
+            "name": "Dale McCourt"
+        },
+        {
+            "id": 8449809,
+            "name": "Vaclav Nedomansky"
+        },
+        {
+            "id": 8449972,
+            "name": "John Ogrodnick"
+        },
+        {
+            "id": 8450341,
+            "name": "Brent Peterson"
+        },
+        {
+            "id": 8450409,
+            "name": "Alex Pirus"
+        },
+        {
+            "id": 8450495,
+            "name": "Dennis Polonich"
+        },
+        {
+            "id": 8451172,
+            "name": "Kevin Schamehorn"
+        },
+        {
+            "id": 8451580,
+            "name": "Dennis Sobchuk"
+        },
+        {
+            "id": 8451892,
+            "name": "Errol Thompson"
+        },
+        {
+            "id": 8452360,
+            "name": "Tom Webster"
+        },
+        {
+            "id": 8452506,
+            "name": "Paul Woods"
+        },
+        {
+            "id": 8445445,
+            "name": "Thommie Bergman"
+        },
+        {
+            "id": 8446099,
+            "name": "Rejean Cloutier"
+        },
+        {
+            "id": 8447482,
+            "name": "Jean Hamel"
+        },
+        {
+            "id": 8447839,
+            "name": "John Hilworth"
+        },
+        {
+            "id": 8448025,
+            "name": "Willie Huber"
+        },
+        {
+            "id": 8448363,
+            "name": "Greg Joly"
+        },
+        {
+            "id": 8448523,
+            "name": "Jim Korn"
+        },
+        {
+            "id": 8448708,
+            "name": "Reed Larson"
+        },
+        {
+            "id": 8448876,
+            "name": "Barry Long"
+        },
+        {
+            "id": 8449626,
+            "name": "Perry Miller"
+        },
+        {
+            "id": 8452196,
+            "name": "Rick Vasko"
+        },
+        {
+            "id": 8451076,
+            "name": "Jim Rutherford"
+        },
+        {
+            "id": 8452122,
+            "name": "Rogie Vachon"
+        }
+    ]
+}

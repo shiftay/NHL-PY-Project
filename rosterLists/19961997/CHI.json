@@ -1,0 +1,144 @@
+{
+    "players": [
+        {
+            "id": 8455429,
+            "name": "Tony Amonte"
+        },
+        {
+            "id": 8445493,
+            "name": "James Black"
+        },
+        {
+            "id": 8446023,
+            "name": "Dave Chyzowski"
+        },
+        {
+            "id": 8446217,
+            "name": "Murray Craven"
+        },
+        {
+            "id": 8446226,
+            "name": "Adam Creighton"
+        },
+        {
+            "id": 8455984,
+            "name": "Jim Cummins"
+        },
+        {
+            "id": 8446295,
+            "name": "Ulf Dahlen"
+        },
+        {
+            "id": 8459515,
+            "name": "Eric Daze"
+        },
+        {
+            "id": 8456121,
+            "name": "Steve Dubinsky"
+        },
+        {
+            "id": 8458977,
+            "name": "Sergei Klimovich"
+        },
+        {
+            "id": 8458949,
+            "name": "Sergei Krivokrasov"
+        },
+        {
+            "id": 8460531,
+            "name": "Jean-Yves Leroux"
+        },
+        {
+            "id": 8449498,
+            "name": "Basil Mcrae"
+        },
+        {
+            "id": 8449607,
+            "name": "Kevin Miller"
+        },
+        {
+            "id": 8460504,
+            "name": "Ethan Moreau"
+        },
+        {
+            "id": 8450561,
+            "name": "Bob Probert"
+        },
+        {
+            "id": 8459097,
+            "name": "Mike Prokopec"
+        },
+        {
+            "id": 8451146,
+            "name": "Denis Savard"
+        },
+        {
+            "id": 8458972,
+            "name": "Jeff Shantz"
+        },
+        {
+            "id": 8451794,
+            "name": "Brent Sutter"
+        },
+        {
+            "id": 8458487,
+            "name": "Alexei Zhamnov"
+        },
+        {
+            "id": 8455805,
+            "name": "Keith Carney"
+        },
+        {
+            "id": 8446053,
+            "name": "Chris Chelios"
+        },
+        {
+            "id": 8455875,
+            "name": "Enrico Ciccone"
+        },
+        {
+            "id": 8458965,
+            "name": "Tuomas Gronman"
+        },
+        {
+            "id": 8462073,
+            "name": "Christian Laflamme"
+        },
+        {
+            "id": 8451073,
+            "name": "Cam Russell"
+        },
+        {
+            "id": 8451558,
+            "name": "Steve Smith"
+        },
+        {
+            "id": 8451804,
+            "name": "Gary Suter"
+        },
+        {
+            "id": 8459059,
+            "name": "Michal Sykora"
+        },
+        {
+            "id": 8452353,
+            "name": "Eric Weinrich"
+        },
+        {
+            "id": 8445386,
+            "name": "Ed Belfour"
+        },
+        {
+            "id": 8447449,
+            "name": "Jeff Hackett"
+        },
+        {
+            "id": 8451860,
+            "name": "Chris Terreri"
+        },
+        {
+            "id": 8452246,
+            "name": "Jimmy Waite"
+        }
+    ]
+}

@@ -1,0 +1,156 @@
+{
+    "players": [
+        {
+            "id": 8470283,
+            "name": "Tim Brent"
+        },
+        {
+            "id": 8473646,
+            "name": "Ryan Carter"
+        },
+        {
+            "id": 8469458,
+            "name": "Stanislav Chistov"
+        },
+        {
+            "id": 8466292,
+            "name": "Todd Fedoruk"
+        },
+        {
+            "id": 8470612,
+            "name": "Ryan Getzlaf"
+        },
+        {
+            "id": 8471185,
+            "name": "Curtis Glencross"
+        },
+        {
+            "id": 8456430,
+            "name": "Travis Green"
+        },
+        {
+            "id": 8469997,
+            "name": "Mark Hartigan"
+        },
+        {
+            "id": 8470543,
+            "name": "Chris Kunitz"
+        },
+        {
+            "id": 8459587,
+            "name": "Todd Marchant"
+        },
+        {
+            "id": 8457261,
+            "name": "Brad May"
+        },
+        {
+            "id": 8468434,
+            "name": "Andy McDonald"
+        },
+        {
+            "id": 8468036,
+            "name": "Bjorn Melin"
+        },
+        {
+            "id": 8470778,
+            "name": "Drew Miller"
+        },
+        {
+            "id": 8468635,
+            "name": "Travis Moen"
+        },
+        {
+            "id": 8470564,
+            "name": "Joe Motzko"
+        },
+        {
+            "id": 8459427,
+            "name": "Rob Niedermayer"
+        },
+        {
+            "id": 8465192,
+            "name": "Samuel Pahlsson"
+        },
+        {
+            "id": 8468095,
+            "name": "George Parros"
+        },
+        {
+            "id": 8471208,
+            "name": "Dustin Penner"
+        },
+        {
+            "id": 8470621,
+            "name": "Corey Perry"
+        },
+        {
+            "id": 8457981,
+            "name": "Teemu Selanne"
+        },
+        {
+            "id": 8471634,
+            "name": "Ryan Shannon"
+        },
+        {
+            "id": 8465978,
+            "name": "Shawn Thornton"
+        },
+        {
+            "id": 8467400,
+            "name": "Francois Beauchemin"
+        },
+        {
+            "id": 8467387,
+            "name": "Joe Dipenta"
+        },
+        {
+            "id": 8467478,
+            "name": "Kent Huskins"
+        },
+        {
+            "id": 8464959,
+            "name": "Ric Jackman"
+        },
+        {
+            "id": 8457421,
+            "name": "Ian Moran"
+        },
+        {
+            "id": 8458517,
+            "name": "Scott Niedermayer"
+        },
+        {
+            "id": 8470839,
+            "name": "Shane O'Brien"
+        },
+        {
+            "id": 8458637,
+            "name": "Sean O'Donnell"
+        },
+        {
+            "id": 8459424,
+            "name": "Chris Pronger"
+        },
+        {
+            "id": 8470310,
+            "name": "Aaron Rome"
+        },
+        {
+            "id": 8468524,
+            "name": "Ilya Bryzgalov"
+        },
+        {
+            "id": 8467959,
+            "name": "Sebastien Caron"
+        },
+        {
+            "id": 8462044,
+            "name": "Jean-Sebastien Giguere"
+        },
+        {
+            "id": 8471526,
+            "name": "Michael Wall"
+        }
+    ]
+}

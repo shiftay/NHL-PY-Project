@@ -1,0 +1,108 @@
+{
+    "players": [
+        {
+            "id": 8444944,
+            "name": "John Anderson"
+        },
+        {
+            "id": 8445103,
+            "name": "Don Ashby"
+        },
+        {
+            "id": 8445613,
+            "name": "Bruce Boudreau"
+        },
+        {
+            "id": 8445618,
+            "name": "Pat Boutette"
+        },
+        {
+            "id": 8445808,
+            "name": "Jerry Butler"
+        },
+        {
+            "id": 8446668,
+            "name": "Ron Ellis"
+        },
+        {
+            "id": 8447047,
+            "name": "Paul Gardner"
+        },
+        {
+            "id": 8448367,
+            "name": "Jimmy Jones"
+        },
+        {
+            "id": 8449104,
+            "name": "Dan Maloney"
+        },
+        {
+            "id": 8449423,
+            "name": "Lanny Mcdonald"
+        },
+        {
+            "id": 8449440,
+            "name": "Walt McKechnie"
+        },
+        {
+            "id": 8447883,
+            "name": "Garry Monahan"
+        },
+        {
+            "id": 8451099,
+            "name": "Rocky Saganiuk"
+        },
+        {
+            "id": 8451386,
+            "name": "Darryl Sittler"
+        },
+        {
+            "id": 8451629,
+            "name": "Lorne Stamler"
+        },
+        {
+            "id": 8452457,
+            "name": "Dave Williams"
+        },
+        {
+            "id": 8445792,
+            "name": "Dave Burrows"
+        },
+        {
+            "id": 8456667,
+            "name": "Dave Hutchison"
+        },
+        {
+            "id": 8448285,
+            "name": "Trevor Johansen"
+        },
+        {
+            "id": 8450633,
+            "name": "Joel Quenneville"
+        },
+        {
+            "id": 8451102,
+            "name": "Borje Salming"
+        },
+        {
+            "id": 8451990,
+            "name": "Ian Turnbull"
+        },
+        {
+            "id": 8452484,
+            "name": "Ron Wilson"
+        },
+        {
+            "id": 8447483,
+            "name": "Pierre Hamel"
+        },
+        {
+            "id": 8447663,
+            "name": "Paul Harrison"
+        },
+        {
+            "id": 8450132,
+            "name": "Mike Palmateer"
+        }
+    ]
+}

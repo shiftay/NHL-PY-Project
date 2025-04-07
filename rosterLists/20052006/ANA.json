@@ -1,0 +1,136 @@
+{
+    "players": [
+        {
+            "id": 8467427,
+            "name": "Kip Brennan"
+        },
+        {
+            "id": 8446788,
+            "name": "Sergei Fedorov"
+        },
+        {
+            "id": 8466292,
+            "name": "Todd Fedoruk"
+        },
+        {
+            "id": 8460501,
+            "name": "Jeff Friesen"
+        },
+        {
+            "id": 8459010,
+            "name": "Aaron Gavey"
+        },
+        {
+            "id": 8470612,
+            "name": "Ryan Getzlaf"
+        },
+        {
+            "id": 8467579,
+            "name": "Trevor Gillies"
+        },
+        {
+            "id": 8466345,
+            "name": "Jonathan Hedstrom"
+        },
+        {
+            "id": 8469820,
+            "name": "Zenon Konopka"
+        },
+        {
+            "id": 8470543,
+            "name": "Chris Kunitz"
+        },
+        {
+            "id": 8470207,
+            "name": "Joffrey Lupul"
+        },
+        {
+            "id": 8459587,
+            "name": "Todd Marchant"
+        },
+        {
+            "id": 8468434,
+            "name": "Andy McDonald"
+        },
+        {
+            "id": 8468635,
+            "name": "Travis Moen"
+        },
+        {
+            "id": 8459427,
+            "name": "Rob Niedermayer"
+        },
+        {
+            "id": 8465192,
+            "name": "Samuel Pahlsson"
+        },
+        {
+            "id": 8471208,
+            "name": "Dustin Penner"
+        },
+        {
+            "id": 8470621,
+            "name": "Corey Perry"
+        },
+        {
+            "id": 8457981,
+            "name": "Teemu Selanne"
+        },
+        {
+            "id": 8460465,
+            "name": "Petr Sykora"
+        },
+        {
+            "id": 8458526,
+            "name": "Tyler Wright"
+        },
+        {
+            "id": 8467400,
+            "name": "Francois Beauchemin"
+        },
+        {
+            "id": 8455805,
+            "name": "Keith Carney"
+        },
+        {
+            "id": 8467387,
+            "name": "Joe Dipenta"
+        },
+        {
+            "id": 8457222,
+            "name": "Jason Marshall"
+        },
+        {
+            "id": 8458517,
+            "name": "Scott Niedermayer"
+        },
+        {
+            "id": 8458637,
+            "name": "Sean O'Donnell"
+        },
+        {
+            "id": 8458544,
+            "name": "Sandis Ozolinsh"
+        },
+        {
+            "id": 8464962,
+            "name": "Ruslan Salei"
+        },
+        {
+            "id": 8467558,
+            "name": "Bruno St. Jacques"
+        },
+        {
+            "id": 8467352,
+            "name": "Vitaly Vishnevski"
+        },
+        {
+            "id": 8468524,
+            "name": "Ilya Bryzgalov"
+        },
+        {
+            "id": 8462044,
+            "name": "Jean-Sebastien Giguere"
+        }
+    ]
+}

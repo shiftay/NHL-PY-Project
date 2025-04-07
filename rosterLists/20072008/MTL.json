@@ -1,0 +1,124 @@
+{
+    "players": [
+        {
+            "id": 8464994,
+            "name": "Steve Begin"
+        },
+        {
+            "id": 8471231,
+            "name": "Kyle Chipchura"
+        },
+        {
+            "id": 8471851,
+            "name": "Matt D'Agostini"
+        },
+        {
+            "id": 8471362,
+            "name": "Mikhail Grabovski"
+        },
+        {
+            "id": 8470274,
+            "name": "Chris Higgins"
+        },
+        {
+            "id": 8459442,
+            "name": "Saku Koivu"
+        },
+        {
+            "id": 8470603,
+            "name": "Andrei Kostitsyn"
+        },
+        {
+            "id": 8471859,
+            "name": "Sergei Kostitsyn"
+        },
+        {
+            "id": 8466398,
+            "name": "Tom Kostopoulos"
+        },
+        {
+            "id": 8458529,
+            "name": "Alex Kovalev"
+        },
+        {
+            "id": 8470654,
+            "name": "Maxim Lapierre"
+        },
+        {
+            "id": 8471670,
+            "name": "Guillaume Latendresse"
+        },
+        {
+            "id": 8470705,
+            "name": "Corey Locke"
+        },
+        {
+            "id": 8469528,
+            "name": "Garth Murray"
+        },
+        {
+            "id": 8469521,
+            "name": "Tomas Plekanec"
+        },
+        {
+            "id": 8467545,
+            "name": "Michael Ryder"
+        },
+        {
+            "id": 8458069,
+            "name": "Bryan Smolinski"
+        },
+        {
+            "id": 8471457,
+            "name": "Gregory Stewart"
+        },
+        {
+            "id": 8465914,
+            "name": "Francis Bouillon"
+        },
+        {
+            "id": 8445739,
+            "name": "Patrice Brisebois"
+        },
+        {
+            "id": 8460540,
+            "name": "Mathieu Dandenault"
+        },
+        {
+            "id": 8470324,
+            "name": "Josh Gorges"
+        },
+        {
+            "id": 8458938,
+            "name": "Roman Hamrlik"
+        },
+        {
+            "id": 8469460,
+            "name": "Mike Komisarek"
+        },
+        {
+            "id": 8467496,
+            "name": "Andrei Markov"
+        },
+        {
+            "id": 8470672,
+            "name": "Ryan O'Byrne"
+        },
+        {
+            "id": 8468309,
+            "name": "Mark Streit"
+        },
+        {
+            "id": 8470860,
+            "name": "Jaroslav Halak"
+        },
+        {
+            "id": 8469658,
+            "name": "Cristobal Huet"
+        },
+        {
+            "id": 8471679,
+            "name": "Carey Price"
+        }
+    ]
+}

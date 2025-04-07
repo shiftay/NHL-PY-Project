@@ -1,0 +1,160 @@
+{
+    "players": [
+        {
+            "id": 8459019,
+            "name": "Matthew Barnaby"
+        },
+        {
+            "id": 8455738,
+            "name": "Pavel Bure"
+        },
+        {
+            "id": 8446133,
+            "name": "Zdeno Ciger"
+        },
+        {
+            "id": 8458549,
+            "name": "Jason Dawe"
+        },
+        {
+            "id": 8462041,
+            "name": "Radek Dvorak"
+        },
+        {
+            "id": 8467333,
+            "name": "Rico Fata"
+        },
+        {
+            "id": 8446847,
+            "name": "Theo Fleury"
+        },
+        {
+            "id": 8459568,
+            "name": "Michal Grosek"
+        },
+        {
+            "id": 8467893,
+            "name": "Barrett Heisten"
+        },
+        {
+            "id": 8458650,
+            "name": "Andreas Johansson"
+        },
+        {
+            "id": 8458515,
+            "name": "Eric Lindros"
+        },
+        {
+            "id": 8466186,
+            "name": "Roman Lyashenko"
+        },
+        {
+            "id": 8467334,
+            "name": "Manny Malhotra"
+        },
+        {
+            "id": 8458566,
+            "name": "Sandy McCarthy"
+        },
+        {
+            "id": 8464875,
+            "name": "Steve McKenna"
+        },
+        {
+            "id": 8449573,
+            "name": "Mark Messier"
+        },
+        {
+            "id": 8459071,
+            "name": "Rem Murray"
+        },
+        {
+            "id": 8449807,
+            "name": "Petr Nedved"
+        },
+        {
+            "id": 8458534,
+            "name": "Martin Rucinsky"
+        },
+        {
+            "id": 8467463,
+            "name": "Mikael Samuelsson"
+        },
+        {
+            "id": 8468300,
+            "name": "Richard Scott"
+        },
+        {
+            "id": 8459146,
+            "name": "Jeff Toms"
+        },
+        {
+            "id": 8465056,
+            "name": "Trent Whitfield"
+        },
+        {
+            "id": 8466266,
+            "name": "Mike York"
+        },
+        {
+            "id": 8462032,
+            "name": "Bryan Berard"
+        },
+        {
+            "id": 8458582,
+            "name": "Dave Karpa"
+        },
+        {
+            "id": 8467450,
+            "name": "Tomas Kloucek"
+        },
+        {
+            "id": 8448769,
+            "name": "Brian Leetch"
+        },
+        {
+            "id": 8448770,
+            "name": "Sylvain Lefebvre"
+        },
+        {
+            "id": 8457191,
+            "name": "Vladimir Malakhov"
+        },
+        {
+            "id": 8466309,
+            "name": "Mike Mottau"
+        },
+        {
+            "id": 8465012,
+            "name": "Tom Poti"
+        },
+        {
+            "id": 8462148,
+            "name": "Dale Purinton"
+        },
+        {
+            "id": 8467958,
+            "name": "Peter Smrek"
+        },
+        {
+            "id": 8458715,
+            "name": "Igor Ulanov"
+        },
+        {
+            "id": 8459249,
+            "name": "Darren Van Impe"
+        },
+        {
+            "id": 8469463,
+            "name": "Dan Blackburn"
+        },
+        {
+            "id": 8466303,
+            "name": "Johan Holmqvist"
+        },
+        {
+            "id": 8450833,
+            "name": "Mike Richter"
+        }
+    ]
+}

@@ -1,4 +1,26 @@
 {
     "seasonId": "19831984",
-    "teams": []
+    "teams": [
+        "EDM",
+        "NYI",
+        "BOS",
+        "NYR",
+        "PHI",
+        "BUF",
+        "QUE",
+        "MNS",
+        "WSH",
+        "MTL",
+        "STL",
+        "VAN",
+        "TOR",
+        "CGY",
+        "DET",
+        "WIN",
+        "CHI",
+        "LAK",
+        "HFD",
+        "PIT",
+        "NJD"
+    ]
 }

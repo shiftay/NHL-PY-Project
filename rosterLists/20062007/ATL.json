@@ -1,0 +1,132 @@
+{
+    "players": [
+        {
+            "id": 8465050,
+            "name": "Eric Belanger"
+        },
+        {
+            "id": 8460720,
+            "name": "Eric Boulton"
+        },
+        {
+            "id": 8466393,
+            "name": "Pascal Dupuis"
+        },
+        {
+            "id": 8462185,
+            "name": "Denis Hamel"
+        },
+        {
+            "id": 8468121,
+            "name": "Darren Haydar"
+        },
+        {
+            "id": 8447958,
+            "name": "Bobby Holik"
+        },
+        {
+            "id": 8466148,
+            "name": "Marian Hossa"
+        },
+        {
+            "id": 8467516,
+            "name": "Niko Kapanen"
+        },
+        {
+            "id": 8469454,
+            "name": "Ilya Kovalchuk"
+        },
+        {
+            "id": 8456887,
+            "name": "Vyacheslav Kozlov"
+        },
+        {
+            "id": 8467857,
+            "name": "Jason Krog"
+        },
+        {
+            "id": 8462082,
+            "name": "Brad Larsen"
+        },
+        {
+            "id": 8468001,
+            "name": "Derek MacKenzie"
+        },
+        {
+            "id": 8449545,
+            "name": "Scott Mellanby"
+        },
+        {
+            "id": 8462823,
+            "name": "Glen Metropolit"
+        },
+        {
+            "id": 8459284,
+            "name": "Steve Rucchin"
+        },
+        {
+            "id": 8465024,
+            "name": "Jon Sim"
+        },
+        {
+            "id": 8470289,
+            "name": "Jim Slater"
+        },
+        {
+            "id": 8458229,
+            "name": "Keith Tkachuk"
+        },
+        {
+            "id": 8468443,
+            "name": "Jean-Pierre Vigier"
+        },
+        {
+            "id": 8470601,
+            "name": "Braydon Coburn"
+        },
+        {
+            "id": 8460254,
+            "name": "Greg De Vries"
+        },
+        {
+            "id": 8468090,
+            "name": "Garnet Exelby"
+        },
+        {
+            "id": 8467956,
+            "name": "Niclas Havelid"
+        },
+        {
+            "id": 8460661,
+            "name": "Shane Hnidy"
+        },
+        {
+            "id": 8467896,
+            "name": "Steve McCarthy"
+        },
+        {
+            "id": 8469488,
+            "name": "Mark Popovic"
+        },
+        {
+            "id": 8467304,
+            "name": "Andy Sutton"
+        },
+        {
+            "id": 8467352,
+            "name": "Vitaly Vishnevski"
+        },
+        {
+            "id": 8458595,
+            "name": "Alexei Zhitnik"
+        },
+        {
+            "id": 8460704,
+            "name": "Johan Hedberg"
+        },
+        {
+            "id": 8470140,
+            "name": "Kari Lehtonen"
+        }
+    ]
+}

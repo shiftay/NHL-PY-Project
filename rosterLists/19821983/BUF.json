@@ -1,0 +1,136 @@
+{
+    "players": [
+        {
+            "id": 8445000,
+            "name": "Dave Andreychuk"
+        },
+        {
+            "id": 8446264,
+            "name": "Paul Cyr"
+        },
+        {
+            "id": 8446329,
+            "name": "Mal Davis"
+        },
+        {
+            "id": 8446876,
+            "name": "Mike Foligno"
+        },
+        {
+            "id": 8447194,
+            "name": "Jere Gillis"
+        },
+        {
+            "id": 8447485,
+            "name": "Gilles Hamel"
+        },
+        {
+            "id": 8449320,
+            "name": "Gary McAdam"
+        },
+        {
+            "id": 8449377,
+            "name": "Dale McCourt"
+        },
+        {
+            "id": 8449445,
+            "name": "Tony McKegney"
+        },
+        {
+            "id": 8449475,
+            "name": "Sean Mckenna"
+        },
+        {
+            "id": 8449660,
+            "name": "Mike Moller"
+        },
+        {
+            "id": 8450218,
+            "name": "Steve Patrick"
+        },
+        {
+            "id": 8450308,
+            "name": "Gilbert Perreault"
+        },
+        {
+            "id": 8450341,
+            "name": "Brent Peterson"
+        },
+        {
+            "id": 8450640,
+            "name": "Craig Ramsay"
+        },
+        {
+            "id": 8450919,
+            "name": "Geordie Robertson"
+        },
+        {
+            "id": 8451053,
+            "name": "Lindy Ruff"
+        },
+        {
+            "id": 8451141,
+            "name": "Jean-Francois Sauve"
+        },
+        {
+            "id": 8451144,
+            "name": "Andre Savard"
+        },
+        {
+            "id": 8451255,
+            "name": "Ric Seiling"
+        },
+        {
+            "id": 8446796,
+            "name": "David Fenyves"
+        },
+        {
+            "id": 8446821,
+            "name": "Ron Fischer"
+        },
+        {
+            "id": 8447445,
+            "name": "Bill Hajt"
+        },
+        {
+            "id": 8447989,
+            "name": "Phil Housley"
+        },
+        {
+            "id": 8450469,
+            "name": "Larry Playfair"
+        },
+        {
+            "id": 8450645,
+            "name": "Mike Ramsey"
+        },
+        {
+            "id": 8451777,
+            "name": "Kai Suikkanen"
+        },
+        {
+            "id": 8452156,
+            "name": "John Van Boxmeer"
+        },
+        {
+            "id": 8452233,
+            "name": "Hannu Virta"
+        },
+        {
+            "id": 8452449,
+            "name": "Jim Wiemer"
+        },
+        {
+            "id": 8446089,
+            "name": "Jacques Cloutier"
+        },
+        {
+            "id": 8449784,
+            "name": "Phil Myre"
+        },
+        {
+            "id": 8451143,
+            "name": "Bob Sauve"
+        }
+    ]
+}

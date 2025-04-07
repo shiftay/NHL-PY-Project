@@ -1,0 +1,124 @@
+{
+    "players": [
+        {
+            "id": 8455521,
+            "name": "Stu Barnes"
+        },
+        {
+            "id": 8445689,
+            "name": "Rob Brown"
+        },
+        {
+            "id": 8462843,
+            "name": "Robert Dome"
+        },
+        {
+            "id": 8459021,
+            "name": "Chris Ferraro"
+        },
+        {
+            "id": 8458960,
+            "name": "Peter Ferraro"
+        },
+        {
+            "id": 8446951,
+            "name": "Ron Francis"
+        },
+        {
+            "id": 8459256,
+            "name": "Alex Hicks"
+        },
+        {
+            "id": 8448208,
+            "name": "Jaromir Jagr"
+        },
+        {
+            "id": 8458650,
+            "name": "Andreas Johansson"
+        },
+        {
+            "id": 8456734,
+            "name": "Greg Johnson"
+        },
+        {
+            "id": 8456966,
+            "name": "Robert Lang"
+        },
+        {
+            "id": 8462054,
+            "name": "Aleksey Morozov"
+        },
+        {
+            "id": 8449973,
+            "name": "Eddie Olczyk"
+        },
+        {
+            "id": 8458565,
+            "name": "Sean Pronger"
+        },
+        {
+            "id": 8458955,
+            "name": "Martin Straka"
+        },
+        {
+            "id": 8452161,
+            "name": "Garry Valk"
+        },
+        {
+            "id": 8458526,
+            "name": "Tyler Wright"
+        },
+        {
+            "id": 8460548,
+            "name": "Sven Butenschon"
+        },
+        {
+            "id": 8458965,
+            "name": "Tuomas Gronman"
+        },
+        {
+            "id": 8447680,
+            "name": "Kevin Hatcher"
+        },
+        {
+            "id": 8458942,
+            "name": "Darius Kasparaitis"
+        },
+        {
+            "id": 8457421,
+            "name": "Ian Moran"
+        },
+        {
+            "id": 8449971,
+            "name": "Fredrik Olausson"
+        },
+        {
+            "id": 8458052,
+            "name": "Jiri Slegr"
+        },
+        {
+            "id": 8458179,
+            "name": "Chris Tamer"
+        },
+        {
+            "id": 8458373,
+            "name": "Brad Werenka"
+        },
+        {
+            "id": 8452503,
+            "name": "Neil Wilkinson"
+        },
+        {
+            "id": 8445275,
+            "name": "Tom Barrasso"
+        },
+        {
+            "id": 8464715,
+            "name": "Peter Skudra"
+        },
+        {
+            "id": 8452535,
+            "name": "Ken Wregget"
+        }
+    ]
+}

@@ -1,0 +1,140 @@
+{
+    "players": [
+        {
+            "id": 8460621,
+            "name": "Daniel Alfredsson"
+        },
+        {
+            "id": 8466249,
+            "name": "Magnus Arvedson"
+        },
+        {
+            "id": 8460105,
+            "name": "Radek Bonk"
+        },
+        {
+            "id": 8459996,
+            "name": "Dennis Bonvie"
+        },
+        {
+            "id": 8469728,
+            "name": "Toni Dahlman"
+        },
+        {
+            "id": 8467370,
+            "name": "Mike Fisher"
+        },
+        {
+            "id": 8467899,
+            "name": "Martin Havlat"
+        },
+        {
+            "id": 8466148,
+            "name": "Marian Hossa"
+        },
+        {
+            "id": 8448092,
+            "name": "Jody Hull"
+        },
+        {
+            "id": 8466200,
+            "name": "Josh Langfeld"
+        },
+        {
+            "id": 8460484,
+            "name": "Steve Martins"
+        },
+        {
+            "id": 8467493,
+            "name": "Chris Neil"
+        },
+        {
+            "id": 8450678,
+            "name": "Rob Ray"
+        },
+        {
+            "id": 8462093,
+            "name": "Peter Schaefer"
+        },
+        {
+            "id": 8467425,
+            "name": "Petr Schastlivy"
+        },
+        {
+            "id": 8458069,
+            "name": "Bryan Smolinski"
+        },
+        {
+            "id": 8460044,
+            "name": "Brad Smyth"
+        },
+        {
+            "id": 8469455,
+            "name": "Jason Spezza"
+        },
+        {
+            "id": 8465035,
+            "name": "Joey Tetarenko"
+        },
+        {
+            "id": 8452147,
+            "name": "Shaun Van Allen"
+        },
+        {
+            "id": 8460579,
+            "name": "Vaclav Varada"
+        },
+        {
+            "id": 8466392,
+            "name": "Todd White"
+        },
+        {
+            "id": 8465009,
+            "name": "Zdeno Chara"
+        },
+        {
+            "id": 8460661,
+            "name": "Shane Hnidy"
+        },
+        {
+            "id": 8465168,
+            "name": "Joel Kwiatkowski"
+        },
+        {
+            "id": 8448797,
+            "name": "Curtis Leschyshyn"
+        },
+        {
+            "id": 8464956,
+            "name": "Chris Phillips"
+        },
+        {
+            "id": 8468427,
+            "name": "Brian Pothier"
+        },
+        {
+            "id": 8466353,
+            "name": "Karel Rachunek"
+        },
+        {
+            "id": 8462033,
+            "name": "Wade Redden"
+        },
+        {
+            "id": 8468501,
+            "name": "Anton Volchenkov"
+        },
+        {
+            "id": 8469548,
+            "name": "Ray Emery"
+        },
+        {
+            "id": 8459579,
+            "name": "Patrick Lalime"
+        },
+        {
+            "id": 8468037,
+            "name": "Martin Prusek"
+        }
+    ]
+}

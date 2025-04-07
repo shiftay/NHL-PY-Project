@@ -1,0 +1,156 @@
+{
+    "players": [
+        {
+            "id": 8445424,
+            "name": "Bill Berg"
+        },
+        {
+            "id": 8460015,
+            "name": "Sylvain Blouin"
+        },
+        {
+            "id": 8456156,
+            "name": "Mike Eastwood"
+        },
+        {
+            "id": 8446715,
+            "name": "Bob Errey"
+        },
+        {
+            "id": 8458960,
+            "name": "Peter Ferraro"
+        },
+        {
+            "id": 8460538,
+            "name": "Daniel Goneau"
+        },
+        {
+            "id": 8447364,
+            "name": "Adam Graves"
+        },
+        {
+            "id": 8447400,
+            "name": "Wayne Gretzky"
+        },
+        {
+            "id": 8448415,
+            "name": "Mike Keane"
+        },
+        {
+            "id": 8458529,
+            "name": "Alex Kovalev"
+        },
+        {
+            "id": 8448626,
+            "name": "Pat LaFontaine"
+        },
+        {
+            "id": 8459391,
+            "name": "Darren Langdon"
+        },
+        {
+            "id": 8466264,
+            "name": "Johan Lindbom"
+        },
+        {
+            "id": 8462118,
+            "name": "Marc Savard"
+        },
+        {
+            "id": 8457991,
+            "name": "Pierre Sevigny"
+        },
+        {
+            "id": 8451427,
+            "name": "Brian Skrudland"
+        },
+        {
+            "id": 8460044,
+            "name": "Brad Smyth"
+        },
+        {
+            "id": 8451711,
+            "name": "Kevin Stevens"
+        },
+        {
+            "id": 8465960,
+            "name": "P.J. Stock"
+        },
+        {
+            "id": 8459430,
+            "name": "Niklas Sundstrom"
+        },
+        {
+            "id": 8451827,
+            "name": "Tim Sweeney"
+        },
+        {
+            "id": 8459109,
+            "name": "Ryan Vandenbussche"
+        },
+        {
+            "id": 8459176,
+            "name": "Vladimir Vorobiev"
+        },
+        {
+            "id": 8462824,
+            "name": "Harry York"
+        },
+        {
+            "id": 8445461,
+            "name": "Jeff Beukeboom"
+        },
+        {
+            "id": 8459008,
+            "name": "Eric Cairns"
+        },
+        {
+            "id": 8446484,
+            "name": "Bruce Driver"
+        },
+        {
+            "id": 8446826,
+            "name": "Jeff Finley"
+        },
+        {
+            "id": 8459482,
+            "name": "Maxim Galanov"
+        },
+        {
+            "id": 8456793,
+            "name": "Alexander Karpovtsev"
+        },
+        {
+            "id": 8448769,
+            "name": "Brian Leetch"
+        },
+        {
+            "id": 8448839,
+            "name": "Doug Lidster"
+        },
+        {
+            "id": 8451107,
+            "name": "Ulf Samuelsson"
+        },
+        {
+            "id": 8451527,
+            "name": "Geoff Smith"
+        },
+        {
+            "id": 8465236,
+            "name": "Ronnie Sundin"
+        },
+        {
+            "id": 8460516,
+            "name": "Dan Cloutier"
+        },
+        {
+            "id": 8457463,
+            "name": "Jason Muzzatti"
+        },
+        {
+            "id": 8450833,
+            "name": "Mike Richter"
+        }
+    ]
+}

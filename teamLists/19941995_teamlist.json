@@ -1,31 +1,4 @@
 {
     "seasonId": "19941995",
-    "teams": [
-        "QUE",
-        "DET",
-        "PIT",
-        "STL",
-        "CHI",
-        "PHI",
-        "CGY",
-        "WSH",
-        "TOR",
-        "BOS",
-        "NJD",
-        "BUF",
-        "VAN",
-        "FLA",
-        "HFD",
-        "NYR",
-        "LAK",
-        "DAL",
-        "MTL",
-        "TBL",
-        "EDM",
-        "SJS",
-        "NYI",
-        "ANA",
-        "WIN",
-        "OTT"
-    ]
+    "teams": []
 }

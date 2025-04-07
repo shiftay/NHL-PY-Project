@@ -1,0 +1,144 @@
+{
+    "players": [
+        {
+            "id": 8445628,
+            "name": "Dan Bourbonnais"
+        },
+        {
+            "id": 8446219,
+            "name": "Bob Crawford"
+        },
+        {
+            "id": 8446237,
+            "name": "Mike Crombeen"
+        },
+        {
+            "id": 8446279,
+            "name": "Tony Currie"
+        },
+        {
+            "id": 8446535,
+            "name": "Norm Dupont"
+        },
+        {
+            "id": 8446951,
+            "name": "Ron Francis"
+        },
+        {
+            "id": 8448304,
+            "name": "Mark Johnson"
+        },
+        {
+            "id": 8448691,
+            "name": "Paul Lawless"
+        },
+        {
+            "id": 8448919,
+            "name": "Paul Macdermid"
+        },
+        {
+            "id": 8449101,
+            "name": "Greg Malone"
+        },
+        {
+            "id": 8449860,
+            "name": "Ray Neufeld"
+        },
+        {
+            "id": 8450384,
+            "name": "Randy Pierce"
+        },
+        {
+            "id": 8450920,
+            "name": "Torrie Robertson"
+        },
+        {
+            "id": 8451770,
+            "name": "Blaine Stoughton"
+        },
+        {
+            "id": 8451771,
+            "name": "Steve Stoyanovich"
+        },
+        {
+            "id": 8451778,
+            "name": "Doug Sulliman"
+        },
+        {
+            "id": 8451911,
+            "name": "Dave Tippett"
+        },
+        {
+            "id": 8451988,
+            "name": "Sylvain Turgeon"
+        },
+        {
+            "id": 8452555,
+            "name": "Richard Yates"
+        },
+        {
+            "id": 8452694,
+            "name": "Mike Zuke"
+        },
+        {
+            "id": 8445211,
+            "name": "Reid Bailey"
+        },
+        {
+            "id": 8445719,
+            "name": "Jack Brownschidle"
+        },
+        {
+            "id": 8446533,
+            "name": "Richie Dunn"
+        },
+        {
+            "id": 8446985,
+            "name": "Mark Fusco"
+        },
+        {
+            "id": 8447757,
+            "name": "Bob Hess"
+        },
+        {
+            "id": 8447980,
+            "name": "Ed Hospodar"
+        },
+        {
+            "id": 8448005,
+            "name": "Marty Howe"
+        },
+        {
+            "id": 8448529,
+            "name": "Chris Kotsopoulos"
+        },
+        {
+            "id": 8449418,
+            "name": "Girard McDonald"
+        },
+        {
+            "id": 8450219,
+            "name": "Mark Paterson"
+        },
+        {
+            "id": 8450633,
+            "name": "Joel Quenneville"
+        },
+        {
+            "id": 8451362,
+            "name": "Risto Siltanen"
+        },
+        {
+            "id": 8449627,
+            "name": "Greg Millen"
+        },
+        {
+            "id": 8451655,
+            "name": "Ed Staniowski"
+        },
+        {
+            "id": 8452205,
+            "name": "Mike Veisor"
+        }
+    ]
+}

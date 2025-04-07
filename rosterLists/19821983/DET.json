@@ -1,0 +1,148 @@
+{
+    "players": [
+        {
+            "id": 8445546,
+            "name": "Mike Blaisdell"
+        },
+        {
+            "id": 8445591,
+            "name": "Ivan Boldirev"
+        },
+        {
+            "id": 8446217,
+            "name": "Murray Craven"
+        },
+        {
+            "id": 8455965,
+            "name": "Bobby Crawford"
+        },
+        {
+            "id": 8446939,
+            "name": "Dwight Foster"
+        },
+        {
+            "id": 8446950,
+            "name": "Bobby Francis"
+        },
+        {
+            "id": 8447062,
+            "name": "Danny Gare"
+        },
+        {
+            "id": 8448503,
+            "name": "Mark Kirton"
+        },
+        {
+            "id": 8448505,
+            "name": "Kelly Kisio"
+        },
+        {
+            "id": 8448729,
+            "name": "Reggie Leach"
+        },
+        {
+            "id": 8448873,
+            "name": "Mark Lofthouse"
+        },
+        {
+            "id": 8448870,
+            "name": "Claude Loiselle"
+        },
+        {
+            "id": 8449440,
+            "name": "Walt McKechnie"
+        },
+        {
+            "id": 8449972,
+            "name": "John Ogrodnick"
+        },
+        {
+            "id": 8450073,
+            "name": "Mark Osborne"
+        },
+        {
+            "id": 8450221,
+            "name": "Joe Paterson"
+        },
+        {
+            "id": 8450495,
+            "name": "Dennis Polonich"
+        },
+        {
+            "id": 8451028,
+            "name": "Tom Rowe"
+        },
+        {
+            "id": 8451493,
+            "name": "Brad Smith"
+        },
+        {
+            "id": 8451513,
+            "name": "Derek Smith"
+        },
+        {
+            "id": 8451584,
+            "name": "Ken Solheim"
+        },
+        {
+            "id": 8452364,
+            "name": "Stan Weir"
+        },
+        {
+            "id": 8452506,
+            "name": "Paul Woods"
+        },
+        {
+            "id": 8445276,
+            "name": "John Barrett"
+        },
+        {
+            "id": 8445893,
+            "name": "Colin Campbell"
+        },
+        {
+            "id": 8448025,
+            "name": "Willie Huber"
+        },
+        {
+            "id": 8448363,
+            "name": "Greg Joly"
+        },
+        {
+            "id": 8448616,
+            "name": "Randy Ladouceur"
+        },
+        {
+            "id": 8448708,
+            "name": "Reed Larson"
+        },
+        {
+            "id": 8451241,
+            "name": "Jim Schoenfeld"
+        },
+        {
+            "id": 8451531,
+            "name": "Greg Smith"
+        },
+        {
+            "id": 8451938,
+            "name": "Larry Trader"
+        },
+        {
+            "id": 8447170,
+            "name": "Gilles Gilbert"
+        },
+        {
+            "id": 8449582,
+            "name": "Corrado Micalef"
+        },
+        {
+            "id": 8451076,
+            "name": "Jim Rutherford"
+        },
+        {
+            "id": 8451701,
+            "name": "Greg Stefan"
+        }
+    ]
+}

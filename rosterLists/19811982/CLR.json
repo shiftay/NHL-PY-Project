@@ -1,0 +1,160 @@
+{
+    "players": [
+        {
+            "id": 8445118,
+            "name": "Brent Ashton"
+        },
+        {
+            "id": 8445725,
+            "name": "Aaron Broten"
+        },
+        {
+            "id": 8445878,
+            "name": "Dave Cameron"
+        },
+        {
+            "id": 8446054,
+            "name": "Richard Chernomaz"
+        },
+        {
+            "id": 8446162,
+            "name": "Ed Cooper"
+        },
+        {
+            "id": 8446439,
+            "name": "Jim Dobson"
+        },
+        {
+            "id": 8446939,
+            "name": "Dwight Foster"
+        },
+        {
+            "id": 8446993,
+            "name": "Paul Gagne"
+        },
+        {
+            "id": 8447434,
+            "name": "Peter Gustavsson"
+        },
+        {
+            "id": 8448426,
+            "name": "Christer Kellgren"
+        },
+        {
+            "id": 8448474,
+            "name": "Veli-Pekka Ketola"
+        },
+        {
+            "id": 8448706,
+            "name": "Jeff Larmer"
+        },
+        {
+            "id": 8448808,
+            "name": "Don Lever"
+        },
+        {
+            "id": 8448991,
+            "name": "Bob MacMillan"
+        },
+        {
+            "id": 8449100,
+            "name": "Merlin Malinowski"
+        },
+        {
+            "id": 8449318,
+            "name": "Kevin Maxwell"
+        },
+        {
+            "id": 8449423,
+            "name": "Lanny Mcdonald"
+        },
+        {
+            "id": 8449611,
+            "name": "Paul Miller"
+        },
+        {
+            "id": 8449623,
+            "name": "Bob Miller"
+        },
+        {
+            "id": 8450384,
+            "name": "Randy Pierce"
+        },
+        {
+            "id": 8450501,
+            "name": "Jukka Porvari"
+        },
+        {
+            "id": 8451857,
+            "name": "Steve Tambellini"
+        },
+        {
+            "id": 8452197,
+            "name": "Yvon Vautour"
+        },
+        {
+            "id": 8452364,
+            "name": "Stan Weir"
+        },
+        {
+            "id": 8452368,
+            "name": "John Wensink"
+        },
+        {
+            "id": 8445212,
+            "name": "Bill Baker"
+        },
+        {
+            "id": 8446062,
+            "name": "Joe Cirella"
+        },
+        {
+            "id": 8448071,
+            "name": "Jack Hughes"
+        },
+        {
+            "id": 8448498,
+            "name": "Mike Kitchen"
+        },
+        {
+            "id": 8448817,
+            "name": "Tapio Levo"
+        },
+        {
+            "id": 8448885,
+            "name": "Bob Lorimer"
+        },
+        {
+            "id": 8449580,
+            "name": "Joe Micheletti"
+        },
+        {
+            "id": 8449880,
+            "name": "Graeme Nicolson"
+        },
+        {
+            "id": 8450633,
+            "name": "Joel Quenneville"
+        },
+        {
+            "id": 8450642,
+            "name": "Rob Ramage"
+        },
+        {
+            "id": 8448218,
+            "name": "Steve Janaszak"
+        },
+        {
+            "id": 8448614,
+            "name": "Richard Laferriere"
+        },
+        {
+            "id": 8449784,
+            "name": "Phil Myre"
+        },
+        {
+            "id": 8450802,
+            "name": "Glenn Resch"
+        }
+    ]
+}

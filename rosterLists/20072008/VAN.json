@@ -1,0 +1,140 @@
+{
+    "players": [
+        {
+            "id": 8467880,
+            "name": "Kris Beech"
+        },
+        {
+            "id": 8471371,
+            "name": "Mike Brown"
+        },
+        {
+            "id": 8470358,
+            "name": "Alexandre Burrows"
+        },
+        {
+            "id": 8465951,
+            "name": "Matt Cooke"
+        },
+        {
+            "id": 8462419,
+            "name": "Jeff Cowan"
+        },
+        {
+            "id": 8471498,
+            "name": "Jannik Hansen"
+        },
+        {
+            "id": 8462094,
+            "name": "Brad Isbister"
+        },
+        {
+            "id": 8468881,
+            "name": "Jason Jaffray"
+        },
+        {
+            "id": 8470616,
+            "name": "Ryan Kesler"
+        },
+        {
+            "id": 8448825,
+            "name": "Trevor Linden"
+        },
+        {
+            "id": 8459461,
+            "name": "Brendan Morrison"
+        },
+        {
+            "id": 8458530,
+            "name": "Markus Naslund"
+        },
+        {
+            "id": 8468523,
+            "name": "Matt Pettinger"
+        },
+        {
+            "id": 8467881,
+            "name": "Taylor Pyatt"
+        },
+        {
+            "id": 8471664,
+            "name": "Mason Raymond"
+        },
+        {
+            "id": 8462197,
+            "name": "Byron Ritchie"
+        },
+        {
+            "id": 8471628,
+            "name": "Rick Rypien"
+        },
+        {
+            "id": 8467875,
+            "name": "Daniel Sedin"
+        },
+        {
+            "id": 8467876,
+            "name": "Henrik Sedin"
+        },
+        {
+            "id": 8471634,
+            "name": "Ryan Shannon"
+        },
+        {
+            "id": 8469598,
+            "name": "Kevin Bieksa"
+        },
+        {
+            "id": 8471684,
+            "name": "Luc Bourdon"
+        },
+        {
+            "id": 8471303,
+            "name": "Alexander Edler"
+        },
+        {
+            "id": 8470681,
+            "name": "Zack Fitzgerald"
+        },
+        {
+            "id": 8469477,
+            "name": "Lukas Krajicek"
+        },
+        {
+            "id": 8470843,
+            "name": "Nathan McIver"
+        },
+        {
+            "id": 8457384,
+            "name": "Aaron Miller"
+        },
+        {
+            "id": 8465185,
+            "name": "Willie Mitchell"
+        },
+        {
+            "id": 8460503,
+            "name": "Mattias Ohlund"
+        },
+        {
+            "id": 8465202,
+            "name": "Sami Salo"
+        },
+        {
+            "id": 8468478,
+            "name": "Mike Weaver"
+        },
+        {
+            "id": 8466141,
+            "name": "Roberto Luongo"
+        },
+        {
+            "id": 8469569,
+            "name": "Drew MacIntyre"
+        },
+        {
+            "id": 8468166,
+            "name": "Curtis Sanford"
+        }
+    ]
+}

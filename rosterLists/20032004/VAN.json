@@ -1,0 +1,148 @@
+{
+    "players": [
+        {
+            "id": 8466249,
+            "name": "Magnus Arvedson"
+        },
+        {
+            "id": 8459444,
+            "name": "Todd Bertuzzi"
+        },
+        {
+            "id": 8467383,
+            "name": "Tyler Bouck"
+        },
+        {
+            "id": 8467359,
+            "name": "Artem Chubarov"
+        },
+        {
+            "id": 8465951,
+            "name": "Matt Cooke"
+        },
+        {
+            "id": 8468055,
+            "name": "Fedor Fedorov"
+        },
+        {
+            "id": 8466184,
+            "name": "Pat Kavanagh"
+        },
+        {
+            "id": 8448415,
+            "name": "Mike Keane"
+        },
+        {
+            "id": 8470616,
+            "name": "Ryan Kesler"
+        },
+        {
+            "id": 8469656,
+            "name": "Jason King"
+        },
+        {
+            "id": 8448825,
+            "name": "Trevor Linden"
+        },
+        {
+            "id": 8457261,
+            "name": "Brad May"
+        },
+        {
+            "id": 8459461,
+            "name": "Brendan Morrison"
+        },
+        {
+            "id": 8458530,
+            "name": "Markus Naslund"
+        },
+        {
+            "id": 8458565,
+            "name": "Sean Pronger"
+        },
+        {
+            "id": 8468161,
+            "name": "Brandon Reid"
+        },
+        {
+            "id": 8458534,
+            "name": "Martin Rucinsky"
+        },
+        {
+            "id": 8467393,
+            "name": "Jarkko Ruutu"
+        },
+        {
+            "id": 8457921,
+            "name": "Geoff Sanderson"
+        },
+        {
+            "id": 8467875,
+            "name": "Daniel Sedin"
+        },
+        {
+            "id": 8467876,
+            "name": "Henrik Sedin"
+        },
+        {
+            "id": 8468503,
+            "name": "Nathan Smith"
+        },
+        {
+            "id": 8467332,
+            "name": "Bryan Allen"
+        },
+        {
+            "id": 8460500,
+            "name": "Nolan Baumgartner"
+        },
+        {
+            "id": 8445428,
+            "name": "Marc Bergevin"
+        },
+        {
+            "id": 8469044,
+            "name": "Wade Brookbank"
+        },
+        {
+            "id": 8467918,
+            "name": "Martin Grenier"
+        },
+        {
+            "id": 8460492,
+            "name": "Ed Jovanovski"
+        },
+        {
+            "id": 8459493,
+            "name": "Marek Malik"
+        },
+        {
+            "id": 8460503,
+            "name": "Mattias Ohlund"
+        },
+        {
+            "id": 8465202,
+            "name": "Sami Salo"
+        },
+        {
+            "id": 8458052,
+            "name": "Jiri Slegr"
+        },
+        {
+            "id": 8462176,
+            "name": "Brent Sopel"
+        },
+        {
+            "id": 8467913,
+            "name": "Alex Auld"
+        },
+        {
+            "id": 8460516,
+            "name": "Dan Cloutier"
+        },
+        {
+            "id": 8460704,
+            "name": "Johan Hedberg"
+        }
+    ]
+}

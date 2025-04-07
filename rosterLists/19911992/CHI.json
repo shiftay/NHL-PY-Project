@@ -1,0 +1,180 @@
+{
+    "players": [
+        {
+            "id": 8445689,
+            "name": "Rob Brown"
+        },
+        {
+            "id": 8445823,
+            "name": "Shawn Byram"
+        },
+        {
+            "id": 8458883,
+            "name": "Rob Conn"
+        },
+        {
+            "id": 8446226,
+            "name": "Adam Creighton"
+        },
+        {
+            "id": 8447169,
+            "name": "Greg Gilbert"
+        },
+        {
+            "id": 8447192,
+            "name": "Paul Gillis"
+        },
+        {
+            "id": 8447310,
+            "name": "Michel Goulet"
+        },
+        {
+            "id": 8447345,
+            "name": "Dirk Graham"
+        },
+        {
+            "id": 8447386,
+            "name": "Stu Grimson"
+        },
+        {
+            "id": 8447963,
+            "name": "Tony Horacek"
+        },
+        {
+            "id": 8448017,
+            "name": "Tony Hrkac"
+        },
+        {
+            "id": 8448046,
+            "name": "Mike Hudson"
+        },
+        {
+            "id": 8448204,
+            "name": "Jeff Jackson"
+        },
+        {
+            "id": 8448703,
+            "name": "Steve Larmer"
+        },
+        {
+            "id": 8448664,
+            "name": "Brad Lauer"
+        },
+        {
+            "id": 8448781,
+            "name": "Jocelyn Lemieux"
+        },
+        {
+            "id": 8449295,
+            "name": "Stephane Matteau"
+        },
+        {
+            "id": 8458536,
+            "name": "Dean McAmmond"
+        },
+        {
+            "id": 8449894,
+            "name": "Brian Noonan"
+        },
+        {
+            "id": 8450293,
+            "name": "Mike Peluso"
+        },
+        {
+            "id": 8450978,
+            "name": "Jeremy Roenick"
+        },
+        {
+            "id": 8451673,
+            "name": "Mike Stapleton"
+        },
+        {
+            "id": 8451794,
+            "name": "Brent Sutter"
+        },
+        {
+            "id": 8451898,
+            "name": "Steve Thomas"
+        },
+        {
+            "id": 8451917,
+            "name": "John Tonelli"
+        },
+        {
+            "id": 8452226,
+            "name": "Dan Vincelette"
+        },
+        {
+            "id": 8458418,
+            "name": "Sean Williams"
+        },
+        {
+            "id": 8455572,
+            "name": "Adam Bennett"
+        },
+        {
+            "id": 8445713,
+            "name": "Keith Brown"
+        },
+        {
+            "id": 8445796,
+            "name": "Rod Buskas"
+        },
+        {
+            "id": 8446053,
+            "name": "Chris Chelios"
+        },
+        {
+            "id": 8456149,
+            "name": "Karl Dykhuis"
+        },
+        {
+            "id": 8448521,
+            "name": "Steve Konroyd"
+        },
+        {
+            "id": 8458585,
+            "name": "Igor Kravchuk"
+        },
+        {
+            "id": 8448543,
+            "name": "Frantisek Kucera"
+        },
+        {
+            "id": 8448667,
+            "name": "Rick Lanz"
+        },
+        {
+            "id": 8449137,
+            "name": "Bryan Marchment"
+        },
+        {
+            "id": 8449453,
+            "name": "Ryan McGill"
+        },
+        {
+            "id": 8451073,
+            "name": "Cam Russell"
+        },
+        {
+            "id": 8451558,
+            "name": "Steve Smith"
+        },
+        {
+            "id": 8445386,
+            "name": "Ed Belfour"
+        },
+        {
+            "id": 8447687,
+            "name": "Dominik Hasek"
+        },
+        {
+            "id": 8457025,
+            "name": "Ray Leblanc"
+        },
+        {
+            "id": 8452246,
+            "name": "Jimmy Waite"
+        }
+    ]
+}

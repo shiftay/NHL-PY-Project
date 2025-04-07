@@ -1,0 +1,160 @@
+{
+    "players": [
+        {
+            "id": 8462209,
+            "name": "P.J. Axelsson"
+        },
+        {
+            "id": 8459996,
+            "name": "Dennis Bonvie"
+        },
+        {
+            "id": 8468120,
+            "name": "Mikko Eloranta"
+        },
+        {
+            "id": 8459545,
+            "name": "John Emmons"
+        },
+        {
+            "id": 8456464,
+            "name": "Bill Guerin"
+        },
+        {
+            "id": 8468517,
+            "name": "Andy Hilbert"
+        },
+        {
+            "id": 8445423,
+            "name": "Benoit Hogue"
+        },
+        {
+            "id": 8468539,
+            "name": "Ivan Huml"
+        },
+        {
+            "id": 8458590,
+            "name": "Mike Knuble"
+        },
+        {
+            "id": 8458524,
+            "name": "Martin Lapointe"
+        },
+        {
+            "id": 8459472,
+            "name": "Eric Manlow"
+        },
+        {
+            "id": 8457319,
+            "name": "Marty Mcinnis"
+        },
+        {
+            "id": 8458532,
+            "name": "Glen Murray"
+        },
+        {
+            "id": 8458947,
+            "name": "Andrei Nazarov"
+        },
+        {
+            "id": 8457646,
+            "name": "Scott Pellerin"
+        },
+        {
+            "id": 8458525,
+            "name": "Brian Rolston"
+        },
+        {
+            "id": 8466035,
+            "name": "Sergei Samsonov"
+        },
+        {
+            "id": 8465960,
+            "name": "P.J. Stock"
+        },
+        {
+            "id": 8458554,
+            "name": "Jozef Stumpel"
+        },
+        {
+            "id": 8466138,
+            "name": "Joe Thornton"
+        },
+        {
+            "id": 8460601,
+            "name": "Tony Tuzzolino"
+        },
+        {
+            "id": 8458477,
+            "name": "Rob Zamuner"
+        },
+        {
+            "id": 8466145,
+            "name": "Nick Boynton"
+        },
+        {
+            "id": 8462051,
+            "name": "Sean Brown"
+        },
+        {
+            "id": 8459628,
+            "name": "Hal Gill"
+        },
+        {
+            "id": 8467374,
+            "name": "Jonathan Girard"
+        },
+        {
+            "id": 8464959,
+            "name": "Ric Jackman"
+        },
+        {
+            "id": 8459553,
+            "name": "Chris Kelleher"
+        },
+        {
+            "id": 8468748,
+            "name": "Pavel Kolarik"
+        },
+        {
+            "id": 8468654,
+            "name": "Jarno Kultanen"
+        },
+        {
+            "id": 8462040,
+            "name": "Kyle McLaren"
+        },
+        {
+            "id": 8449754,
+            "name": "Gord Murphy"
+        },
+        {
+            "id": 8449902,
+            "name": "Jeff Norton"
+        },
+        {
+            "id": 8458637,
+            "name": "Sean O'Donnell"
+        },
+        {
+            "id": 8459484,
+            "name": "Jamie Rivers"
+        },
+        {
+            "id": 8451819,
+            "name": "Don Sweeney"
+        },
+        {
+            "id": 8455994,
+            "name": "Byron Dafoe"
+        },
+        {
+            "id": 8460715,
+            "name": "John Grahame"
+        },
+        {
+            "id": 8467453,
+            "name": "Andrew Raycroft"
+        }
+    ]
+}

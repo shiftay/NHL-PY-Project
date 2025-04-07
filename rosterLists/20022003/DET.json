@@ -1,0 +1,116 @@
+{
+    "players": [
+        {
+            "id": 8468224,
+            "name": "Sean Avery"
+        },
+        {
+            "id": 8460540,
+            "name": "Mathieu Dandenault"
+        },
+        {
+            "id": 8467514,
+            "name": "Pavel Datsyuk"
+        },
+        {
+            "id": 8464960,
+            "name": "Boyd Devereaux"
+        },
+        {
+            "id": 8446485,
+            "name": "Kris Draper"
+        },
+        {
+            "id": 8446788,
+            "name": "Sergei Fedorov"
+        },
+        {
+            "id": 8460743,
+            "name": "Tomas Holmstrom"
+        },
+        {
+            "id": 8448091,
+            "name": "Brett Hull"
+        },
+        {
+            "id": 8448669,
+            "name": "Igor Larionov"
+        },
+        {
+            "id": 8459001,
+            "name": "Kirk Maltby"
+        },
+        {
+            "id": 8458982,
+            "name": "Darren McCarty"
+        },
+        {
+            "id": 8450941,
+            "name": "Luc Robitaille"
+        },
+        {
+            "id": 8460061,
+            "name": "Stacy Roest"
+        },
+        {
+            "id": 8451302,
+            "name": "Brendan Shanahan"
+        },
+        {
+            "id": 8468789,
+            "name": "Jason Williams"
+        },
+        {
+            "id": 8452578,
+            "name": "Steve Yzerman"
+        },
+        {
+            "id": 8468083,
+            "name": "Henrik Zetterberg"
+        },
+        {
+            "id": 8459490,
+            "name": "Patrick Boileau"
+        },
+        {
+            "id": 8469701,
+            "name": "Dmitri Bykov"
+        },
+        {
+            "id": 8446053,
+            "name": "Chris Chelios"
+        },
+        {
+            "id": 8467349,
+            "name": "Jiri Fischer"
+        },
+        {
+            "id": 8462056,
+            "name": "Maxim Kuznetsov"
+        },
+        {
+            "id": 8457063,
+            "name": "Nicklas Lidstrom"
+        },
+        {
+            "id": 8451224,
+            "name": "Mathieu Schneider"
+        },
+        {
+            "id": 8464976,
+            "name": "Jesse Wallin"
+        },
+        {
+            "id": 8458454,
+            "name": "Jason Woolley"
+        },
+        {
+            "id": 8448382,
+            "name": "Curtis Joseph"
+        },
+        {
+            "id": 8459308,
+            "name": "Manny Legace"
+        }
+    ]
+}

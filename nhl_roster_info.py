@@ -53,7 +53,7 @@ def get_nhl_roster(TEAM_ABBR, SEASON_ID):
 	data = response.json()
 
 
-	with open(f"rosterLists/{SEASON_ID}_{TEAM_ABBR}.json", "w") as f:
+	with open(f"rosterLists/{SEASON_ID}/{TEAM_ABBR}.json", "w") as f:
 		json.dump(parseinfo(data), f, indent=4)
 
 
@@ -71,17 +71,46 @@ def get_files_in_directory(dir_path):
 filepath = "teamLists"
 data = get_files_in_directory(filepath)
 seconds = random.randint(5,10)
-
+count = 0
+time_started = time.time()
 # Uncomment when ready to create full files.
 # Comprehensive list estimates that it will take ~4 hours to put together the full list
 for files in data:
 	with open(f"{filepath}/{files}", 'r') as f:
 		contents = json.load(f)
+		# Make the folder to hold the output
+		try:
+			os.mkdir(f"rosterLists/{contents['seasonId']}")
+		except FileExistsError:
+		    print(f"Folder 'rosterLists/{contents['seasonId']}' already exists.")
+		    continue
+		except FileNotFoundError:
+		    print("Path specified is invalid.")
+		except Exception as e:
+		    print(f"An error occurred: {e}")
+
+		length = len(contents['teams'])
+		print(f"Creating {contents['seasonId']} - Time Estimate: {length * 5} ~ {length * 10}")
 		for teamAbbrev in contents['teams']:
 			get_nhl_roster(teamAbbrev, contents['seasonId'])
 			time.sleep(seconds)
 			seconds = random.randint(5,10)
+			count += 1
+		if count > 0:
+			break
 
+
+print(f"It took {time.time() - time_started} to complete.")
 		# print(len(contents['teams']))
 # filepath = "players.json"
 # get_nhl_roster("WSH", 20232024)
+
+
+
+# DEBUG
+# with open("teamLists/19901991_teamlist.json", 'r') as f:
+	# contents = json.load(f)
+	# for teamAbbrev in contents['teams']:
+	# 	get_nhl_roster(teamAbbrev, contents['seasonId'])
+	# 	time.sleep(seconds)
+	# 	seconds = random.randint(5,10)

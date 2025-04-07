@@ -1,0 +1,128 @@
+{
+    "players": [
+        {
+            "id": 8445000,
+            "name": "Dave Andreychuk"
+        },
+        {
+            "id": 8446101,
+            "name": "Real Cloutier"
+        },
+        {
+            "id": 8446226,
+            "name": "Adam Creighton"
+        },
+        {
+            "id": 8446264,
+            "name": "Paul Cyr"
+        },
+        {
+            "id": 8446329,
+            "name": "Mal Davis"
+        },
+        {
+            "id": 8446876,
+            "name": "Mike Foligno"
+        },
+        {
+            "id": 8447485,
+            "name": "Gilles Hamel"
+        },
+        {
+            "id": 8448654,
+            "name": "Chris Langevin"
+        },
+        {
+            "id": 8449377,
+            "name": "Dale McCourt"
+        },
+        {
+            "id": 8449475,
+            "name": "Sean Mckenna"
+        },
+        {
+            "id": 8449660,
+            "name": "Mike Moller"
+        },
+        {
+            "id": 8449678,
+            "name": "Robert Mongrain"
+        },
+        {
+            "id": 8450218,
+            "name": "Steve Patrick"
+        },
+        {
+            "id": 8450308,
+            "name": "Gilbert Perreault"
+        },
+        {
+            "id": 8450341,
+            "name": "Brent Peterson"
+        },
+        {
+            "id": 8450640,
+            "name": "Craig Ramsay"
+        },
+        {
+            "id": 8451053,
+            "name": "Lindy Ruff"
+        },
+        {
+            "id": 8451255,
+            "name": "Ric Seiling"
+        },
+        {
+            "id": 8451987,
+            "name": "John Tucker"
+        },
+        {
+            "id": 8452215,
+            "name": "Claude Verret"
+        },
+        {
+            "id": 8446796,
+            "name": "David Fenyves"
+        },
+        {
+            "id": 8447445,
+            "name": "Bill Hajt"
+        },
+        {
+            "id": 8447989,
+            "name": "Phil Housley"
+        },
+        {
+            "id": 8448524,
+            "name": "Jerry Korab"
+        },
+        {
+            "id": 8450469,
+            "name": "Larry Playfair"
+        },
+        {
+            "id": 8450645,
+            "name": "Mike Ramsey"
+        },
+        {
+            "id": 8450798,
+            "name": "Mark Renaud"
+        },
+        {
+            "id": 8452233,
+            "name": "Hannu Virta"
+        },
+        {
+            "id": 8452449,
+            "name": "Jim Wiemer"
+        },
+        {
+            "id": 8445275,
+            "name": "Tom Barrasso"
+        },
+        {
+            "id": 8451143,
+            "name": "Bob Sauve"
+        }
+    ]
+}

@@ -1,36 +1,4 @@
 {
     "seasonId": "20202021",
-    "teams": [
-        "TBL",
-        "COL",
-        "FLA",
-        "WSH",
-        "NYI",
-        "CAR",
-        "TOR",
-        "VGK",
-        "PIT",
-        "MIN",
-        "EDM",
-        "WPG",
-        "BOS",
-        "MTL",
-        "NSH",
-        "PHI",
-        "NYR",
-        "ARI",
-        "CHI",
-        "STL",
-        "SJS",
-        "DAL",
-        "CBJ",
-        "VAN",
-        "CGY",
-        "LAK",
-        "NJD",
-        "OTT",
-        "DET",
-        "ANA",
-        "BUF"
-    ]
+    "teams": []
 }

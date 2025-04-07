@@ -1,0 +1,156 @@
+{
+    "players": [
+        {
+            "id": 8455521,
+            "name": "Stu Barnes"
+        },
+        {
+            "id": 8455659,
+            "name": "Luciano Borsato"
+        },
+        {
+            "id": 8445683,
+            "name": "Andy Brickley"
+        },
+        {
+            "id": 8456019,
+            "name": "Evgeny Davydov"
+        },
+        {
+            "id": 8446454,
+            "name": "Tie Domi"
+        },
+        {
+            "id": 8446485,
+            "name": "Kris Draper"
+        },
+        {
+            "id": 8446487,
+            "name": "John Druce"
+        },
+        {
+            "id": 8446551,
+            "name": "Mike Eagles"
+        },
+        {
+            "id": 8446705,
+            "name": "Bryan Erickson"
+        },
+        {
+            "id": 8448374,
+            "name": "Bob Joyce"
+        },
+        {
+            "id": 8448467,
+            "name": "Alan Kerr"
+        },
+        {
+            "id": 8448487,
+            "name": "Kris King"
+        },
+        {
+            "id": 8448765,
+            "name": "John Leblanc"
+        },
+        {
+            "id": 8457061,
+            "name": "Scott Levins"
+        },
+        {
+            "id": 8449761,
+            "name": "Rob Murray"
+        },
+        {
+            "id": 8449773,
+            "name": "Troy Murray"
+        },
+        {
+            "id": 8449973,
+            "name": "Eddie Olczyk"
+        },
+        {
+            "id": 8457847,
+            "name": "Russ Romaniuk"
+        },
+        {
+            "id": 8457981,
+            "name": "Teemu Selanne"
+        },
+        {
+            "id": 8451334,
+            "name": "Darrin Shannon"
+        },
+        {
+            "id": 8451697,
+            "name": "Thomas Steen"
+        },
+        {
+            "id": 8458229,
+            "name": "Keith Tkachuk"
+        },
+        {
+            "id": 8458487,
+            "name": "Alexei Zhamnov"
+        },
+        {
+            "id": 8458953,
+            "name": "Sergei Bautin"
+        },
+        {
+            "id": 8445938,
+            "name": "Randy Carlyle"
+        },
+        {
+            "id": 8456153,
+            "name": "Dallas Eakins"
+        },
+        {
+            "id": 8459359,
+            "name": "Anatoli Fedotov"
+        },
+        {
+            "id": 8447989,
+            "name": "Phil Housley"
+        },
+        {
+            "id": 8448449,
+            "name": "Dean Kennedy"
+        },
+        {
+            "id": 8448633,
+            "name": "Mike Lalor"
+        },
+        {
+            "id": 8449924,
+            "name": "Teppo Numminen"
+        },
+        {
+            "id": 8449971,
+            "name": "Fredrik Olausson"
+        },
+        {
+            "id": 8457589,
+            "name": "Mark Osiecki"
+        },
+        {
+            "id": 8458715,
+            "name": "Igor Ulanov"
+        },
+        {
+            "id": 8446719,
+            "name": "Bob Essensa"
+        },
+        {
+            "id": 8448014,
+            "name": "Jim Hrivnak"
+        },
+        {
+            "id": 8457559,
+            "name": "Michael O'Neill"
+        },
+        {
+            "id": 8451834,
+            "name": "Rick Tabaracci"
+        }
+    ]
+}

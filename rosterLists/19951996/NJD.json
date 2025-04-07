@@ -1,0 +1,144 @@
+{
+    "players": [
+        {
+            "id": 8445000,
+            "name": "Dave Andreychuk"
+        },
+        {
+            "id": 8445724,
+            "name": "Neal Broten"
+        },
+        {
+            "id": 8458978,
+            "name": "Sergei Brylin"
+        },
+        {
+            "id": 8445977,
+            "name": "Bobby Carpenter"
+        },
+        {
+            "id": 8456100,
+            "name": "Jim Dowd"
+        },
+        {
+            "id": 8460542,
+            "name": "Patrik Elias"
+        },
+        {
+            "id": 8456464,
+            "name": "Bill Guerin"
+        },
+        {
+            "id": 8447958,
+            "name": "Bobby Holik"
+        },
+        {
+            "id": 8448781,
+            "name": "Jocelyn Lemieux"
+        },
+        {
+            "id": 8449499,
+            "name": "John MacLean"
+        },
+        {
+            "id": 8449450,
+            "name": "Randy Mckay"
+        },
+        {
+            "id": 8459435,
+            "name": "Denis Pederson"
+        },
+        {
+            "id": 8457646,
+            "name": "Scott Pellerin"
+        },
+        {
+            "id": 8450293,
+            "name": "Mike Peluso"
+        },
+        {
+            "id": 8450825,
+            "name": "Stephane Richer"
+        },
+        {
+            "id": 8458525,
+            "name": "Brian Rolston"
+        },
+        {
+            "id": 8458036,
+            "name": "Reid Simpson"
+        },
+        {
+            "id": 8460719,
+            "name": "Steve Sullivan"
+        },
+        {
+            "id": 8460465,
+            "name": "Petr Sykora"
+        },
+        {
+            "id": 8451898,
+            "name": "Steve Thomas"
+        },
+        {
+            "id": 8451905,
+            "name": "Esa Tikkanen"
+        },
+        {
+            "id": 8458483,
+            "name": "Valeri Zelepukin"
+        },
+        {
+            "id": 8444919,
+            "name": "Tommy Albelin"
+        },
+        {
+            "id": 8446042,
+            "name": "Shawn Chambers"
+        },
+        {
+            "id": 8446309,
+            "name": "Ken Daneyko"
+        },
+        {
+            "id": 8456024,
+            "name": "Kevin Dean"
+        },
+        {
+            "id": 8447989,
+            "name": "Phil Housley"
+        },
+        {
+            "id": 8459002,
+            "name": "Cale Hulse"
+        },
+        {
+            "id": 8458517,
+            "name": "Scott Niedermayer"
+        },
+        {
+            "id": 8457661,
+            "name": "Ricard Persson"
+        },
+        {
+            "id": 8458954,
+            "name": "Jason Smith"
+        },
+        {
+            "id": 8451715,
+            "name": "Scott Stevens"
+        },
+        {
+            "id": 8455710,
+            "name": "Martin Brodeur"
+        },
+        {
+            "id": 8457969,
+            "name": "Corey Schwab"
+        },
+        {
+            "id": 8451860,
+            "name": "Chris Terreri"
+        }
+    ]
+}

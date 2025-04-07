@@ -1,0 +1,156 @@
+{
+    "players": [
+        {
+            "id": 8455429,
+            "name": "Tony Amonte"
+        },
+        {
+            "id": 8445493,
+            "name": "James Black"
+        },
+        {
+            "id": 8466149,
+            "name": "Daniel Cleary"
+        },
+        {
+            "id": 8455984,
+            "name": "Jim Cummins"
+        },
+        {
+            "id": 8459515,
+            "name": "Eric Daze"
+        },
+        {
+            "id": 8456121,
+            "name": "Steve Dubinsky"
+        },
+        {
+            "id": 8466451,
+            "name": "Brian Felsner"
+        },
+        {
+            "id": 8459007,
+            "name": "Martin Gendron"
+        },
+        {
+            "id": 8459497,
+            "name": "Ryan Huska"
+        },
+        {
+            "id": 8456734,
+            "name": "Greg Johnson"
+        },
+        {
+            "id": 8462035,
+            "name": "Chad Kilger"
+        },
+        {
+            "id": 8458949,
+            "name": "Sergei Krivokrasov"
+        },
+        {
+            "id": 8460531,
+            "name": "Jean-Yves Leroux"
+        },
+        {
+            "id": 8449607,
+            "name": "Kevin Miller"
+        },
+        {
+            "id": 8460596,
+            "name": "Craig Mills"
+        },
+        {
+            "id": 8460504,
+            "name": "Ethan Moreau"
+        },
+        {
+            "id": 8462049,
+            "name": "Dimitri Nabokov"
+        },
+        {
+            "id": 8450561,
+            "name": "Bob Probert"
+        },
+        {
+            "id": 8458972,
+            "name": "Jeff Shantz"
+        },
+        {
+            "id": 8458036,
+            "name": "Reid Simpson"
+        },
+        {
+            "id": 8451392,
+            "name": "Jarrod Skalde"
+        },
+        {
+            "id": 8451794,
+            "name": "Brent Sutter"
+        },
+        {
+            "id": 8459109,
+            "name": "Ryan Vandenbussche"
+        },
+        {
+            "id": 8459555,
+            "name": "Petri Varis"
+        },
+        {
+            "id": 8466392,
+            "name": "Todd White"
+        },
+        {
+            "id": 8458487,
+            "name": "Alexei Zhamnov"
+        },
+        {
+            "id": 8455805,
+            "name": "Keith Carney"
+        },
+        {
+            "id": 8446053,
+            "name": "Chris Chelios"
+        },
+        {
+            "id": 8462073,
+            "name": "Christian Laflamme"
+        },
+        {
+            "id": 8449694,
+            "name": "Jayson More"
+        },
+        {
+            "id": 8451073,
+            "name": "Cam Russell"
+        },
+        {
+            "id": 8451804,
+            "name": "Gary Suter"
+        },
+        {
+            "id": 8459059,
+            "name": "Michal Sykora"
+        },
+        {
+            "id": 8452353,
+            "name": "Eric Weinrich"
+        },
+        {
+            "id": 8452556,
+            "name": "Trent Yawney"
+        },
+        {
+            "id": 8447449,
+            "name": "Jeff Hackett"
+        },
+        {
+            "id": 8451860,
+            "name": "Chris Terreri"
+        },
+        {
+            "id": 8458800,
+            "name": "Andrei Trefilov"
+        }
+    ]
+}

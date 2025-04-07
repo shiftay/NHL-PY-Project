@@ -1,0 +1,128 @@
+{
+    "players": [
+        {
+            "id": 8445611,
+            "name": "Mike Bossy"
+        },
+        {
+            "id": 8445617,
+            "name": "Bob Bourne"
+        },
+        {
+            "id": 8447193,
+            "name": "Clark Gillies"
+        },
+        {
+            "id": 8447296,
+            "name": "Butch Goring"
+        },
+        {
+            "id": 8447658,
+            "name": "Billy Harris"
+        },
+        {
+            "id": 8447740,
+            "name": "Lorne Henning"
+        },
+        {
+            "id": 8447995,
+            "name": "Garry Howatt"
+        },
+        {
+            "id": 8448403,
+            "name": "Anders Kallur"
+        },
+        {
+            "id": 8448401,
+            "name": "Mike Kaszycki"
+        },
+        {
+            "id": 8448957,
+            "name": "Garth MacGuigan"
+        },
+        {
+            "id": 8449457,
+            "name": "Alex McKendry"
+        },
+        {
+            "id": 8449570,
+            "name": "Wayne Merrick"
+        },
+        {
+            "id": 8449932,
+            "name": "Bobby Nystrom"
+        },
+        {
+            "id": 8451800,
+            "name": "Duane Sutter"
+        },
+        {
+            "id": 8451857,
+            "name": "Steve Tambellini"
+        },
+        {
+            "id": 8451917,
+            "name": "John Tonelli"
+        },
+        {
+            "id": 8451965,
+            "name": "Bryan Trottier"
+        },
+        {
+            "id": 8452197,
+            "name": "Yvon Vautour"
+        },
+        {
+            "id": 8447949,
+            "name": "Mike Hordy"
+        },
+        {
+            "id": 8448361,
+            "name": "Randy Johnston"
+        },
+        {
+            "id": 8448649,
+            "name": "Gord Lane"
+        },
+        {
+            "id": 8448643,
+            "name": "Dave Langevin"
+        },
+        {
+            "id": 8448811,
+            "name": "Dave Lewis"
+        },
+        {
+            "id": 8448885,
+            "name": "Bob Lorimer"
+        },
+        {
+            "id": 8449713,
+            "name": "Ken Morrow"
+        },
+        {
+            "id": 8450314,
+            "name": "Stefan Persson"
+        },
+        {
+            "id": 8450505,
+            "name": "Denis Potvin"
+        },
+        {
+            "id": 8450508,
+            "name": "Jean Potvin"
+        },
+        {
+            "id": 8445694,
+            "name": "Richard Brodeur"
+        },
+        {
+            "id": 8450802,
+            "name": "Glenn Resch"
+        },
+        {
+            "id": 8451525,
+            "name": "Billy Smith"
+        }
+    ]
+}

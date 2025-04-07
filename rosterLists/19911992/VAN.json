@@ -1,0 +1,128 @@
+{
+    "players": [
+        {
+            "id": 8444894,
+            "name": "Greg Adams"
+        },
+        {
+            "id": 8445017,
+            "name": "Shawn Antoski"
+        },
+        {
+            "id": 8445335,
+            "name": "Robin Bawa"
+        },
+        {
+            "id": 8455738,
+            "name": "Pavel Bure"
+        },
+        {
+            "id": 8446205,
+            "name": "Geoff Courtnall"
+        },
+        {
+            "id": 8446807,
+            "name": "Tom Fergus"
+        },
+        {
+            "id": 8448542,
+            "name": "Robert Kron"
+        },
+        {
+            "id": 8448669,
+            "name": "Igor Larionov"
+        },
+        {
+            "id": 8448825,
+            "name": "Trevor Linden"
+        },
+        {
+            "id": 8449319,
+            "name": "Jay Mazur"
+        },
+        {
+            "id": 8449326,
+            "name": "Andrew Mcbain"
+        },
+        {
+            "id": 8449669,
+            "name": "Sergio Momesso"
+        },
+        {
+            "id": 8449755,
+            "name": "Rob Murphy"
+        },
+        {
+            "id": 8449807,
+            "name": "Petr Nedved"
+        },
+        {
+            "id": 8449961,
+            "name": "Gino Odjick"
+        },
+        {
+            "id": 8451005,
+            "name": "Cliff Ronning"
+        },
+        {
+            "id": 8451119,
+            "name": "Jim Sandlak"
+        },
+        {
+            "id": 8452161,
+            "name": "Garry Valk"
+        },
+        {
+            "id": 8452281,
+            "name": "Ryan Walter"
+        },
+        {
+            "id": 8444893,
+            "name": "Jim Agnew"
+        },
+        {
+            "id": 8445208,
+            "name": "Dave Babych"
+        },
+        {
+            "id": 8446417,
+            "name": "Gerald Diduck"
+        },
+        {
+            "id": 8446376,
+            "name": "Robert Dirk"
+        },
+        {
+            "id": 8447398,
+            "name": "Randy Gregg"
+        },
+        {
+            "id": 8447489,
+            "name": "Ken Hammond"
+        },
+        {
+            "id": 8448839,
+            "name": "Doug Lidster"
+        },
+        {
+            "id": 8448824,
+            "name": "Jyrki Lumme"
+        },
+        {
+            "id": 8449774,
+            "name": "Dana Murzyn"
+        },
+        {
+            "id": 8450471,
+            "name": "Adrian Plavsic"
+        },
+        {
+            "id": 8447029,
+            "name": "Troy Gamble"
+        },
+        {
+            "id": 8449474,
+            "name": "Kirk McLean"
+        }
+    ]
+}

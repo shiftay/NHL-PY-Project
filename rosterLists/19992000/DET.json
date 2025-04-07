@@ -1,0 +1,128 @@
+{
+    "players": [
+        {
+            "id": 8445730,
+            "name": "Doug Brown"
+        },
+        {
+            "id": 8466183,
+            "name": "Yuri Butsayev"
+        },
+        {
+            "id": 8460540,
+            "name": "Mathieu Dandenault"
+        },
+        {
+            "id": 8446485,
+            "name": "Kris Draper"
+        },
+        {
+            "id": 8446788,
+            "name": "Sergei Fedorov"
+        },
+        {
+            "id": 8447177,
+            "name": "Brent Gilchrist"
+        },
+        {
+            "id": 8460743,
+            "name": "Tomas Holmstrom"
+        },
+        {
+            "id": 8456887,
+            "name": "Vyacheslav Kozlov"
+        },
+        {
+            "id": 8462087,
+            "name": "Darryl Laplante"
+        },
+        {
+            "id": 8458524,
+            "name": "Martin Lapointe"
+        },
+        {
+            "id": 8448669,
+            "name": "Igor Larionov"
+        },
+        {
+            "id": 8459001,
+            "name": "Kirk Maltby"
+        },
+        {
+            "id": 8458982,
+            "name": "Darren McCarty"
+        },
+        {
+            "id": 8459298,
+            "name": "Marc Rodgers"
+        },
+        {
+            "id": 8460061,
+            "name": "Stacy Roest"
+        },
+        {
+            "id": 8451302,
+            "name": "Brendan Shanahan"
+        },
+        {
+            "id": 8452216,
+            "name": "Pat Verbeek"
+        },
+        {
+            "id": 8466286,
+            "name": "B.J. Young"
+        },
+        {
+            "id": 8452578,
+            "name": "Steve Yzerman"
+        },
+        {
+            "id": 8446053,
+            "name": "Chris Chelios"
+        },
+        {
+            "id": 8446494,
+            "name": "Steve Duchesne"
+        },
+        {
+            "id": 8467349,
+            "name": "Jiri Fischer"
+        },
+        {
+            "id": 8447187,
+            "name": "Todd Gill"
+        },
+        {
+            "id": 8460513,
+            "name": "Yan Golubovsky"
+        },
+        {
+            "id": 8457063,
+            "name": "Nicklas Lidstrom"
+        },
+        {
+            "id": 8449745,
+            "name": "Larry Murphy"
+        },
+        {
+            "id": 8464976,
+            "name": "Jesse Wallin"
+        },
+        {
+            "id": 8458519,
+            "name": "Aaron Ward"
+        },
+        {
+            "id": 8459308,
+            "name": "Manny Legace"
+        },
+        {
+            "id": 8458568,
+            "name": "Chris Osgood"
+        },
+        {
+            "id": 8452535,
+            "name": "Ken Wregget"
+        }
+    ]
+}

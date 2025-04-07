@@ -1,0 +1,160 @@
+{
+    "players": [
+        {
+            "id": 8445417,
+            "name": "Brian Bellows"
+        },
+        {
+            "id": 8460851,
+            "name": "Jan Benda"
+        },
+        {
+            "id": 8445440,
+            "name": "Craig Berube"
+        },
+        {
+            "id": 8445575,
+            "name": "Peter Bondra"
+        },
+        {
+            "id": 8459596,
+            "name": "Andrew Brunette"
+        },
+        {
+            "id": 8464998,
+            "name": "Jan Bulis"
+        },
+        {
+            "id": 8462048,
+            "name": "Brad Church"
+        },
+        {
+            "id": 8446551,
+            "name": "Mike Eagles"
+        },
+        {
+            "id": 8462135,
+            "name": "Benoit Gratton"
+        },
+        {
+            "id": 8462071,
+            "name": "Dwayne Hay"
+        },
+        {
+            "id": 8448117,
+            "name": "Dale Hunter"
+        },
+        {
+            "id": 8456760,
+            "name": "Joe Juneau"
+        },
+        {
+            "id": 8458572,
+            "name": "Steve Konowalchuk"
+        },
+        {
+            "id": 8448549,
+            "name": "Todd Krygier"
+        },
+        {
+            "id": 8449621,
+            "name": "Kelly Miller"
+        },
+        {
+            "id": 8459110,
+            "name": "Ryan Mulhern"
+        },
+        {
+            "id": 8458983,
+            "name": "Andrei Nikolishin"
+        },
+        {
+            "id": 8449951,
+            "name": "Adam Oates"
+        },
+        {
+            "id": 8458528,
+            "name": "Pat Peake"
+        },
+        {
+            "id": 8450408,
+            "name": "Michal Pivonka"
+        },
+        {
+            "id": 8458031,
+            "name": "Chris Simon"
+        },
+        {
+            "id": 8464970,
+            "name": "Jaroslav Svejkovsky"
+        },
+        {
+            "id": 8451905,
+            "name": "Esa Tikkanen"
+        },
+        {
+            "id": 8459146,
+            "name": "Jeff Toms"
+        },
+        {
+            "id": 8460735,
+            "name": "Richard Zednik"
+        },
+        {
+            "id": 8460500,
+            "name": "Nolan Baumgartner"
+        },
+        {
+            "id": 8445700,
+            "name": "Jeff Brown"
+        },
+        {
+            "id": 8446181,
+            "name": "Sylvain Cote"
+        },
+        {
+            "id": 8458951,
+            "name": "Sergei Gonchar"
+        },
+        {
+            "id": 8456514,
+            "name": "David Harlock"
+        },
+        {
+            "id": 8447989,
+            "name": "Phil Housley"
+        },
+        {
+            "id": 8448287,
+            "name": "Calle Johansson"
+        },
+        {
+            "id": 8456850,
+            "name": "Ken Klee"
+        },
+        {
+            "id": 8457193,
+            "name": "Stewart Malgunas"
+        },
+        {
+            "id": 8450742,
+            "name": "Joe Reekie"
+        },
+        {
+            "id": 8451869,
+            "name": "Mark Tinordi"
+        },
+        {
+            "id": 8459433,
+            "name": "Brendan Witt"
+        },
+        {
+            "id": 8448535,
+            "name": "Olie Kolzig"
+        },
+        {
+            "id": 8450651,
+            "name": "Bill Ranford"
+        }
+    ]
+}

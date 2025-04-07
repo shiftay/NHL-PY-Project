@@ -1,0 +1,148 @@
+{
+    "players": [
+        {
+            "id": 8460620,
+            "name": "Bates Battaglia"
+        },
+        {
+            "id": 8459023,
+            "name": "Kevin Brown"
+        },
+        {
+            "id": 8446305,
+            "name": "Jeff Daniels"
+        },
+        {
+            "id": 8446423,
+            "name": "Kevin Dineen"
+        },
+        {
+            "id": 8446675,
+            "name": "Nelson Emerson"
+        },
+        {
+            "id": 8447091,
+            "name": "Martin Gelinas"
+        },
+        {
+            "id": 8447386,
+            "name": "Stu Grimson"
+        },
+        {
+            "id": 8462114,
+            "name": "Sami Kapanen"
+        },
+        {
+            "id": 8448542,
+            "name": "Robert Kron"
+        },
+        {
+            "id": 8448764,
+            "name": "Stephen Leach"
+        },
+        {
+            "id": 8457203,
+            "name": "Kent Manderville"
+        },
+        {
+            "id": 8460484,
+            "name": "Steve Martins"
+        },
+        {
+            "id": 8460545,
+            "name": "Chris Murray"
+        },
+        {
+            "id": 8460495,
+            "name": "Jeff O'Neill"
+        },
+        {
+            "id": 8450550,
+            "name": "Keith Primeau"
+        },
+        {
+            "id": 8450653,
+            "name": "Paul Ranheim"
+        },
+        {
+            "id": 8450812,
+            "name": "Steven Rice"
+        },
+        {
+            "id": 8450900,
+            "name": "Gary Roberts"
+        },
+        {
+            "id": 8457921,
+            "name": "Geoff Sanderson"
+        },
+        {
+            "id": 8451343,
+            "name": "Ray Sheppard"
+        },
+        {
+            "id": 8445700,
+            "name": "Jeff Brown"
+        },
+        {
+            "id": 8445783,
+            "name": "Adam Burt"
+        },
+        {
+            "id": 8446051,
+            "name": "Steve Chiasson"
+        },
+        {
+            "id": 8455875,
+            "name": "Enrico Ciccone"
+        },
+        {
+            "id": 8459161,
+            "name": "Steven Halko"
+        },
+        {
+            "id": 8447477,
+            "name": "Kevin Haller"
+        },
+        {
+            "id": 8456595,
+            "name": "Sean Hill"
+        },
+        {
+            "id": 8448797,
+            "name": "Curtis Leschyshyn"
+        },
+        {
+            "id": 8459538,
+            "name": "Nolan Pratt"
+        },
+        {
+            "id": 8460007,
+            "name": "Michael Rucinski"
+        },
+        {
+            "id": 8452371,
+            "name": "Glen Wesley"
+        },
+        {
+            "id": 8445769,
+            "name": "Sean Burke"
+        },
+        {
+            "id": 8458981,
+            "name": "Mike Fountain"
+        },
+        {
+            "id": 8448207,
+            "name": "Pat Jablonski"
+        },
+        {
+            "id": 8456830,
+            "name": "Trevor Kidd"
+        },
+        {
+            "id": 8449474,
+            "name": "Kirk McLean"
+        }
+    ]
+}

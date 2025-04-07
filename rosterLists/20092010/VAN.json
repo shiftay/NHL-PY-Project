@@ -1,0 +1,144 @@
+{
+    "players": [
+        {
+            "id": 8470609,
+            "name": "Steve Bernier"
+        },
+        {
+            "id": 8471863,
+            "name": "Mario Bliznak"
+        },
+        {
+            "id": 8470719,
+            "name": "Alexandre Bolduc"
+        },
+        {
+            "id": 8470358,
+            "name": "Alexandre Burrows"
+        },
+        {
+            "id": 8459648,
+            "name": "Pavol Demitra"
+        },
+        {
+            "id": 8470708,
+            "name": "Guillaume Desbiens"
+        },
+        {
+            "id": 8470854,
+            "name": "Tanner Glass"
+        },
+        {
+            "id": 8473546,
+            "name": "Michael Grabner"
+        },
+        {
+            "id": 8471498,
+            "name": "Jannik Hansen"
+        },
+        {
+            "id": 8468660,
+            "name": "Darcy Hordichuk"
+        },
+        {
+            "id": 8460527,
+            "name": "Ryan Johnson"
+        },
+        {
+            "id": 8470616,
+            "name": "Ryan Kesler"
+        },
+        {
+            "id": 8468523,
+            "name": "Matt Pettinger"
+        },
+        {
+            "id": 8471664,
+            "name": "Mason Raymond"
+        },
+        {
+            "id": 8471628,
+            "name": "Rick Rypien"
+        },
+        {
+            "id": 8467463,
+            "name": "Mikael Samuelsson"
+        },
+        {
+            "id": 8467875,
+            "name": "Daniel Sedin"
+        },
+        {
+            "id": 8467876,
+            "name": "Henrik Sedin"
+        },
+        {
+            "id": 8473488,
+            "name": "Sergei Shirokov"
+        },
+        {
+            "id": 8469581,
+            "name": "Kyle Wellwood"
+        },
+        {
+            "id": 8469626,
+            "name": "Andrew Alberts"
+        },
+        {
+            "id": 8460500,
+            "name": "Nolan Baumgartner"
+        },
+        {
+            "id": 8469598,
+            "name": "Kevin Bieksa"
+        },
+        {
+            "id": 8471303,
+            "name": "Alexander Edler"
+        },
+        {
+            "id": 8469555,
+            "name": "Christian Ehrhoff"
+        },
+        {
+            "id": 8460580,
+            "name": "Brad Lukowich"
+        },
+        {
+            "id": 8465185,
+            "name": "Willie Mitchell"
+        },
+        {
+            "id": 8470839,
+            "name": "Shane O'Brien"
+        },
+        {
+            "id": 8475104,
+            "name": "Evan Oberg"
+        },
+        {
+            "id": 8470310,
+            "name": "Aaron Rome"
+        },
+        {
+            "id": 8465202,
+            "name": "Sami Salo"
+        },
+        {
+            "id": 8451224,
+            "name": "Mathieu Schneider"
+        },
+        {
+            "id": 8466141,
+            "name": "Roberto Luongo"
+        },
+        {
+            "id": 8467453,
+            "name": "Andrew Raycroft"
+        },
+        {
+            "id": 8471239,
+            "name": "Cory Schneider"
+        }
+    ]
+}

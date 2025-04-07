@@ -1,0 +1,124 @@
+{
+    "players": [
+        {
+            "id": 8445437,
+            "name": "Tim Bergland"
+        },
+        {
+            "id": 8445575,
+            "name": "Peter Bondra"
+        },
+        {
+            "id": 8445790,
+            "name": "Randy Burridge"
+        },
+        {
+            "id": 8446063,
+            "name": "Dino Ciccarelli"
+        },
+        {
+            "id": 8446487,
+            "name": "John Druce"
+        },
+        {
+            "id": 8447391,
+            "name": "Jeff Greenlaw"
+        },
+        {
+            "id": 8448117,
+            "name": "Dale Hunter"
+        },
+        {
+            "id": 8448484,
+            "name": "Dmitri Khristich"
+        },
+        {
+            "id": 8458572,
+            "name": "Steve Konowalchuk"
+        },
+        {
+            "id": 8448549,
+            "name": "Todd Krygier"
+        },
+        {
+            "id": 8448539,
+            "name": "Nick Kypreos"
+        },
+        {
+            "id": 8448919,
+            "name": "Paul Macdermid"
+        },
+        {
+            "id": 8449297,
+            "name": "Alan May"
+        },
+        {
+            "id": 8449621,
+            "name": "Kelly Miller"
+        },
+        {
+            "id": 8450408,
+            "name": "Michal Pivonka"
+        },
+        {
+            "id": 8450832,
+            "name": "Mike Ridley"
+        },
+        {
+            "id": 8451911,
+            "name": "Dave Tippett"
+        },
+        {
+            "id": 8446042,
+            "name": "Shawn Chambers"
+        },
+        {
+            "id": 8446181,
+            "name": "Sylvain Cote"
+        },
+        {
+            "id": 8447680,
+            "name": "Kevin Hatcher"
+        },
+        {
+            "id": 8448124,
+            "name": "Al Iafrate"
+        },
+        {
+            "id": 8448287,
+            "name": "Calle Johansson"
+        },
+        {
+            "id": 8448633,
+            "name": "Mike Lalor"
+        },
+        {
+            "id": 8448651,
+            "name": "Rod Langway"
+        },
+        {
+            "id": 8451097,
+            "name": "Ken Sabourin"
+        },
+        {
+            "id": 8457955,
+            "name": "Brad Schlegel"
+        },
+        {
+            "id": 8458454,
+            "name": "Jason Woolley"
+        },
+        {
+            "id": 8445381,
+            "name": "Don Beaupre"
+        },
+        {
+            "id": 8448014,
+            "name": "Jim Hrivnak"
+        },
+        {
+            "id": 8448865,
+            "name": "Mike Liut"
+        }
+    ]
+}

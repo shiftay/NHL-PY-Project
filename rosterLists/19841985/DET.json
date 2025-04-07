@@ -1,0 +1,128 @@
+{
+    "players": [
+        {
+            "id": 8445169,
+            "name": "Pierre Aubry"
+        },
+        {
+            "id": 8445591,
+            "name": "Ivan Boldirev"
+        },
+        {
+            "id": 8445789,
+            "name": "Shawn Burr"
+        },
+        {
+            "id": 8446034,
+            "name": "Frantisek Cernik"
+        },
+        {
+            "id": 8446531,
+            "name": "Ron Duguay"
+        },
+        {
+            "id": 8446939,
+            "name": "Dwight Foster"
+        },
+        {
+            "id": 8447001,
+            "name": "Gerard Gallant"
+        },
+        {
+            "id": 8447062,
+            "name": "Danny Gare"
+        },
+        {
+            "id": 8448505,
+            "name": "Kelly Kisio"
+        },
+        {
+            "id": 8448519,
+            "name": "Joey Kocur"
+        },
+        {
+            "id": 8448655,
+            "name": "Lane Lambert"
+        },
+        {
+            "id": 8448870,
+            "name": "Claude Loiselle"
+        },
+        {
+            "id": 8449972,
+            "name": "John Ogrodnick"
+        },
+        {
+            "id": 8451361,
+            "name": "Dave Silk"
+        },
+        {
+            "id": 8451386,
+            "name": "Darryl Sittler"
+        },
+        {
+            "id": 8451493,
+            "name": "Brad Smith"
+        },
+        {
+            "id": 8452457,
+            "name": "Dave Williams"
+        },
+        {
+            "id": 8452578,
+            "name": "Steve Yzerman"
+        },
+        {
+            "id": 8445276,
+            "name": "John Barrett"
+        },
+        {
+            "id": 8445893,
+            "name": "Colin Campbell"
+        },
+        {
+            "id": 8446037,
+            "name": "Milan Chalupa"
+        },
+        {
+            "id": 8448616,
+            "name": "Randy Ladouceur"
+        },
+        {
+            "id": 8448708,
+            "name": "Reed Larson"
+        },
+        {
+            "id": 8449121,
+            "name": "Bob Manno"
+        },
+        {
+            "id": 8450206,
+            "name": "Brad Park"
+        },
+        {
+            "id": 8451531,
+            "name": "Greg Smith"
+        },
+        {
+            "id": 8451938,
+            "name": "Larry Trader"
+        },
+        {
+            "id": 8452583,
+            "name": "Rick Zombo"
+        },
+        {
+            "id": 8449582,
+            "name": "Corrado Micalef"
+        },
+        {
+            "id": 8449618,
+            "name": "Eddie Mio"
+        },
+        {
+            "id": 8451701,
+            "name": "Greg Stefan"
+        }
+    ]
+}

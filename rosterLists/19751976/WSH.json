@@ -1,0 +1,148 @@
+{
+    "players": [
+        {
+            "id": 8444997,
+            "name": "Garnet Bailey"
+        },
+        {
+            "id": 8445056,
+            "name": "Harvey Bennett"
+        },
+        {
+            "id": 8445667,
+            "name": "Rick Bragnalo"
+        },
+        {
+            "id": 8446100,
+            "name": "Bill Clement"
+        },
+        {
+            "id": 8446141,
+            "name": "Jack Egers"
+        },
+        {
+            "id": 8446586,
+            "name": "Stan Gilbertson"
+        },
+        {
+            "id": 8446654,
+            "name": "Bob Gryp"
+        },
+        {
+            "id": 8447196,
+            "name": "Brian Kinsella"
+        },
+        {
+            "id": 8448642,
+            "name": "Ron Lalonde"
+        },
+        {
+            "id": 8447314,
+            "name": "Mike Lampman"
+        },
+        {
+            "id": 8449248,
+            "name": "Mike Marson"
+        },
+        {
+            "id": 8447829,
+            "name": "Gerry Meehan"
+        },
+        {
+            "id": 8449675,
+            "name": "Hartland Monahan"
+        },
+        {
+            "id": 8448009,
+            "name": "Paul Nicholson"
+        },
+        {
+            "id": 8450090,
+            "name": "John Paddock"
+        },
+        {
+            "id": 8450631,
+            "name": "Nelson Pyatt"
+        },
+        {
+            "id": 8451385,
+            "name": "Bob Sirois"
+        },
+        {
+            "id": 8449158,
+            "name": "Brian Stapleton"
+        },
+        {
+            "id": 8451731,
+            "name": "Blair Stewart"
+        },
+        {
+            "id": 8452427,
+            "name": "Tony White"
+        },
+        {
+            "id": 8449481,
+            "name": "Tommy Williams"
+        },
+        {
+            "id": 8445114,
+            "name": "Larry Bolonchuk"
+        },
+        {
+            "id": 8445179,
+            "name": "Willie Brossart"
+        },
+        {
+            "id": 8448363,
+            "name": "Greg Joly"
+        },
+        {
+            "id": 8447116,
+            "name": "Ron Jones"
+        },
+        {
+            "id": 8448595,
+            "name": "Yvon Labre"
+        },
+        {
+            "id": 8448649,
+            "name": "Gord Lane"
+        },
+        {
+            "id": 8447452,
+            "name": "Jean Lemieux"
+        },
+        {
+            "id": 8447531,
+            "name": "Jack Lynch"
+        },
+        {
+            "id": 8449500,
+            "name": "Robert McLean"
+        },
+        {
+            "id": 8450168,
+            "name": "Bob Paradise"
+        },
+        {
+            "id": 8451162,
+            "name": "Peter Scamurra"
+        },
+        {
+            "id": 8451529,
+            "name": "Gord Smith"
+        },
+        {
+            "id": 8449811,
+            "name": "Michel Belhumeur"
+        },
+        {
+            "id": 8448891,
+            "name": "Ron Low"
+        },
+        {
+            "id": 8452519,
+            "name": "Bernie Wolfe"
+        }
+    ]
+}

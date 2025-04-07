@@ -1,0 +1,124 @@
+{
+    "players": [
+        {
+            "id": 8468224,
+            "name": "Sean Avery"
+        },
+        {
+            "id": 8467361,
+            "name": "Blair Betts"
+        },
+        {
+            "id": 8471261,
+            "name": "Dane Byers"
+        },
+        {
+            "id": 8471339,
+            "name": "Ryan Callahan"
+        },
+        {
+            "id": 8470741,
+            "name": "Nigel Dawes"
+        },
+        {
+            "id": 8460562,
+            "name": "Chris Drury"
+        },
+        {
+            "id": 8471273,
+            "name": "Brandon Dubinsky"
+        },
+        {
+            "id": 8467351,
+            "name": "Scott Gomez"
+        },
+        {
+            "id": 8469681,
+            "name": "Ryan Hollweg"
+        },
+        {
+            "id": 8468496,
+            "name": "Marcel Hossa"
+        },
+        {
+            "id": 8448208,
+            "name": "Jaromir Jagr"
+        },
+        {
+            "id": 8471232,
+            "name": "Lauri Korpikoski"
+        },
+        {
+            "id": 8470735,
+            "name": "Greg Moore"
+        },
+        {
+            "id": 8468778,
+            "name": "Colton Orr"
+        },
+        {
+            "id": 8470072,
+            "name": "Petr Prucha"
+        },
+        {
+            "id": 8451302,
+            "name": "Brendan Shanahan"
+        },
+        {
+            "id": 8469464,
+            "name": "Fredrik Sjostrom"
+        },
+        {
+            "id": 8458955,
+            "name": "Martin Straka"
+        },
+        {
+            "id": 8467348,
+            "name": "Christian Backman"
+        },
+        {
+            "id": 8470643,
+            "name": "Ivan Baranka"
+        },
+        {
+            "id": 8471958,
+            "name": "Dan Girardi"
+        },
+        {
+            "id": 8459493,
+            "name": "Marek Malik"
+        },
+        {
+            "id": 8466144,
+            "name": "Paul Mara"
+        },
+        {
+            "id": 8469919,
+            "name": "Thomas Pock"
+        },
+        {
+            "id": 8465058,
+            "name": "Michal Rozsival"
+        },
+        {
+            "id": 8471686,
+            "name": "Marc Staal"
+        },
+        {
+            "id": 8460555,
+            "name": "Jason Strudwick"
+        },
+        {
+            "id": 8469492,
+            "name": "Fedor Tyutin"
+        },
+        {
+            "id": 8468685,
+            "name": "Henrik Lundqvist"
+        },
+        {
+            "id": 8465161,
+            "name": "Steve Valiquette"
+        }
+    ]
+}

@@ -1,0 +1,144 @@
+{
+    "players": [
+        {
+            "id": 8473573,
+            "name": "Artem Anisimov"
+        },
+        {
+            "id": 8468224,
+            "name": "Sean Avery"
+        },
+        {
+            "id": 8470619,
+            "name": "Brian Boyle"
+        },
+        {
+            "id": 8459246,
+            "name": "Donald Brashear"
+        },
+        {
+            "id": 8471261,
+            "name": "Dane Byers"
+        },
+        {
+            "id": 8471339,
+            "name": "Ryan Callahan"
+        },
+        {
+            "id": 8470299,
+            "name": "Erik Christensen"
+        },
+        {
+            "id": 8460562,
+            "name": "Chris Drury"
+        },
+        {
+            "id": 8471273,
+            "name": "Brandon Dubinsky"
+        },
+        {
+            "id": 8468483,
+            "name": "Marian Gaborik"
+        },
+        {
+            "id": 8470274,
+            "name": "Chris Higgins"
+        },
+        {
+            "id": 8466140,
+            "name": "Olli Jokinen"
+        },
+        {
+            "id": 8467502,
+            "name": "Ales Kotalik"
+        },
+        {
+            "id": 8471263,
+            "name": "Enver Lisin"
+        },
+        {
+            "id": 8470705,
+            "name": "Corey Locke"
+        },
+        {
+            "id": 8469707,
+            "name": "PA Parenteau"
+        },
+        {
+            "id": 8459492,
+            "name": "Vinny Prospal"
+        },
+        {
+            "id": 8471283,
+            "name": "Brandon Prust"
+        },
+        {
+            "id": 8462535,
+            "name": "Jody Shelley"
+        },
+        {
+            "id": 8469672,
+            "name": "Aaron Voros"
+        },
+        {
+            "id": 8474584,
+            "name": "Michael Del Zotto"
+        },
+        {
+            "id": 8459443,
+            "name": "Anders Eriksson"
+        },
+        {
+            "id": 8475118,
+            "name": "Matt Gilroy"
+        },
+        {
+            "id": 8471958,
+            "name": "Dan Girardi"
+        },
+        {
+            "id": 8475128,
+            "name": "Ilkka Heikkinen"
+        },
+        {
+            "id": 8470714,
+            "name": "Corey Potter"
+        },
+        {
+            "id": 8462033,
+            "name": "Wade Redden"
+        },
+        {
+            "id": 8465058,
+            "name": "Michal Rozsival"
+        },
+        {
+            "id": 8473610,
+            "name": "Bobby Sanguinetti"
+        },
+        {
+            "id": 8471686,
+            "name": "Marc Staal"
+        },
+        {
+            "id": 8467913,
+            "name": "Alex Auld"
+        },
+        {
+            "id": 8473434,
+            "name": "Chad Johnson"
+        },
+        {
+            "id": 8468685,
+            "name": "Henrik Lundqvist"
+        },
+        {
+            "id": 8465161,
+            "name": "Steve Valiquette"
+        },
+        {
+            "id": 8470820,
+            "name": "Matt Zaba"
+        }
+    ]
+}

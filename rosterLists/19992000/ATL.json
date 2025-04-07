@@ -1,0 +1,176 @@
+{
+    "players": [
+        {
+            "id": 8467867,
+            "name": "Bryan Adams"
+        },
+        {
+            "id": 8445176,
+            "name": "Donald Audette"
+        },
+        {
+            "id": 8460014,
+            "name": "Eric Bertrand"
+        },
+        {
+            "id": 8460510,
+            "name": "Jason Botterill"
+        },
+        {
+            "id": 8459596,
+            "name": "Andrew Brunette"
+        },
+        {
+            "id": 8445733,
+            "name": "Kelly Buchberger"
+        },
+        {
+            "id": 8460573,
+            "name": "Hnat Domenichelli"
+        },
+        {
+            "id": 8459450,
+            "name": "Shean Donovan"
+        },
+        {
+            "id": 8446675,
+            "name": "Nelson Emerson"
+        },
+        {
+            "id": 8446823,
+            "name": "Ray Ferraro"
+        },
+        {
+            "id": 8447071,
+            "name": "Johan Garpenlov"
+        },
+        {
+            "id": 8460482,
+            "name": "Stephen Guolla"
+        },
+        {
+            "id": 8460524,
+            "name": "Matt Johnson"
+        },
+        {
+            "id": 8459571,
+            "name": "Andreas Karlsson"
+        },
+        {
+            "id": 8458888,
+            "name": "Denny Lambert"
+        },
+        {
+            "id": 8458649,
+            "name": "Martin Prochazka"
+        },
+        {
+            "id": 8451673,
+            "name": "Mike Stapleton"
+        },
+        {
+            "id": 8467055,
+            "name": "Patrik Stefan"
+        },
+        {
+            "id": 8459562,
+            "name": "Per Svartvadet"
+        },
+        {
+            "id": 8459414,
+            "name": "Dean Sylvester"
+        },
+        {
+            "id": 8465975,
+            "name": "Herbert Vasiljevs"
+        },
+        {
+            "id": 8458587,
+            "name": "Vladimir Vujtek"
+        },
+        {
+            "id": 8458348,
+            "name": "Ed Ward"
+        },
+        {
+            "id": 8462090,
+            "name": "Petr Buzek"
+        },
+        {
+            "id": 8465122,
+            "name": "Brett Clark"
+        },
+        {
+            "id": 8456024,
+            "name": "Kevin Dean"
+        },
+        {
+            "id": 8459482,
+            "name": "Maxim Galanov"
+        },
+        {
+            "id": 8456514,
+            "name": "David Harlock"
+        },
+        {
+            "id": 8467949,
+            "name": "Frantisek Kaberle"
+        },
+        {
+            "id": 8459098,
+            "name": "Geordie Kinnear"
+        },
+        {
+            "id": 8457264,
+            "name": "Chris Mcalpine"
+        },
+        {
+            "id": 8449754,
+            "name": "Gord Murphy"
+        },
+        {
+            "id": 8460004,
+            "name": "Ruman Ndur"
+        },
+        {
+            "id": 8451333,
+            "name": "Darryl Shannon"
+        },
+        {
+            "id": 8458541,
+            "name": "Steve Staios"
+        },
+        {
+            "id": 8458179,
+            "name": "Chris Tamer"
+        },
+        {
+            "id": 8462177,
+            "name": "Yannick Tremblay"
+        },
+        {
+            "id": 8462097,
+            "name": "Sergei Vyshedkevich"
+        },
+        {
+            "id": 8460761,
+            "name": "Scott Fankhouser"
+        },
+        {
+            "id": 8459453,
+            "name": "Scott Langkow"
+        },
+        {
+            "id": 8459549,
+            "name": "Norm Maracle"
+        },
+        {
+            "id": 8457791,
+            "name": "Damian Rhodes"
+        },
+        {
+            "id": 8451834,
+            "name": "Rick Tabaracci"
+        }
+    ]
+}

@@ -1,0 +1,184 @@
+{
+    "players": [
+        {
+            "id": 8468488,
+            "name": "Nikita Alexeev"
+        },
+        {
+            "id": 8467386,
+            "name": "Denis Arkhipov"
+        },
+        {
+            "id": 8471254,
+            "name": "Bryan Bickell"
+        },
+        {
+            "id": 8471663,
+            "name": "Mike Blunden"
+        },
+        {
+            "id": 8469666,
+            "name": "Brandon Bochenski"
+        },
+        {
+            "id": 8471245,
+            "name": "Dave Bolland"
+        },
+        {
+            "id": 8445575,
+            "name": "Peter Bondra"
+        },
+        {
+            "id": 8471504,
+            "name": "Rene Bourque"
+        },
+        {
+            "id": 8471426,
+            "name": "Troy Brouwer"
+        },
+        {
+            "id": 8470063,
+            "name": "Adam Burish"
+        },
+        {
+            "id": 8470834,
+            "name": "Dustin Byfuglien"
+        },
+        {
+            "id": 8469847,
+            "name": "Carl Corazzini"
+        },
+        {
+            "id": 8470662,
+            "name": "Colin Fraser"
+        },
+        {
+            "id": 8470373,
+            "name": "Jeff Hamilton"
+        },
+        {
+            "id": 8462129,
+            "name": "Michal Handzus"
+        },
+        {
+            "id": 8467899,
+            "name": "Martin Havlat"
+        },
+        {
+            "id": 8466153,
+            "name": "Michael Holmqvist"
+        },
+        {
+            "id": 8469510,
+            "name": "Matt Keith"
+        },
+        {
+            "id": 8468626,
+            "name": "David Koci"
+        },
+        {
+            "id": 8458524,
+            "name": "Martin Lapointe"
+        },
+        {
+            "id": 8465207,
+            "name": "Reed Low"
+        },
+        {
+            "id": 8465041,
+            "name": "Craig MacDonald"
+        },
+        {
+            "id": 8468529,
+            "name": "Jonas Nordqvist"
+        },
+        {
+            "id": 8469707,
+            "name": "PA Parenteau"
+        },
+        {
+            "id": 8469462,
+            "name": "Tuomo Ruutu"
+        },
+        {
+            "id": 8467914,
+            "name": "Tony Salmelainen"
+        },
+        {
+            "id": 8469544,
+            "name": "Patrick Sharp"
+        },
+        {
+            "id": 8458069,
+            "name": "Bryan Smolinski"
+        },
+        {
+            "id": 8470366,
+            "name": "Martin St. Pierre"
+        },
+        {
+            "id": 8469786,
+            "name": "Karl Stewart"
+        },
+        {
+            "id": 8468085,
+            "name": "Radim Vrbata"
+        },
+        {
+            "id": 8468789,
+            "name": "Jason Williams"
+        },
+        {
+            "id": 8459053,
+            "name": "Adrian Aucoin"
+        },
+        {
+            "id": 8471216,
+            "name": "Cam Barker"
+        },
+        {
+            "id": 8458543,
+            "name": "Jassen Cullimore"
+        },
+        {
+            "id": 8470281,
+            "name": "Duncan Keith"
+        },
+        {
+            "id": 8470743,
+            "name": "Lasse Kukkonen"
+        },
+        {
+            "id": 8470624,
+            "name": "Danny Richmond"
+        },
+        {
+            "id": 8470607,
+            "name": "Brent Seabrook"
+        },
+        {
+            "id": 8468213,
+            "name": "Jim Vandermeer"
+        },
+        {
+            "id": 8470222,
+            "name": "James Wisniewski"
+        },
+        {
+            "id": 8462052,
+            "name": "Brian Boucher"
+        },
+        {
+            "id": 8467959,
+            "name": "Sebastien Caron"
+        },
+        {
+            "id": 8459140,
+            "name": "Nikolai Khabibulin"
+        },
+        {
+            "id": 8459579,
+            "name": "Patrick Lalime"
+        }
+    ]
+}

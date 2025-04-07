@@ -1,0 +1,152 @@
+{
+    "players": [
+        {
+            "id": 8468224,
+            "name": "Sean Avery"
+        },
+        {
+            "id": 8467361,
+            "name": "Blair Betts"
+        },
+        {
+            "id": 8471339,
+            "name": "Ryan Callahan"
+        },
+        {
+            "id": 8464989,
+            "name": "Matt Cullen"
+        },
+        {
+            "id": 8470741,
+            "name": "Nigel Dawes"
+        },
+        {
+            "id": 8471273,
+            "name": "Brandon Dubinsky"
+        },
+        {
+            "id": 8466393,
+            "name": "Pascal Dupuis"
+        },
+        {
+            "id": 8467925,
+            "name": "Adam Hall"
+        },
+        {
+            "id": 8469681,
+            "name": "Ryan Hollweg"
+        },
+        {
+            "id": 8468496,
+            "name": "Marcel Hossa"
+        },
+        {
+            "id": 8470282,
+            "name": "Jarkko Immonen"
+        },
+        {
+            "id": 8462094,
+            "name": "Brad Isbister"
+        },
+        {
+            "id": 8448208,
+            "name": "Jaromir Jagr"
+        },
+        {
+            "id": 8467857,
+            "name": "Jason Krog"
+        },
+        {
+            "id": 8458573,
+            "name": "Michael Nylander"
+        },
+        {
+            "id": 8468778,
+            "name": "Colton Orr"
+        },
+        {
+            "id": 8470580,
+            "name": "Jed Ortmeyer"
+        },
+        {
+            "id": 8470072,
+            "name": "Petr Prucha"
+        },
+        {
+            "id": 8451302,
+            "name": "Brendan Shanahan"
+        },
+        {
+            "id": 8458955,
+            "name": "Martin Straka"
+        },
+        {
+            "id": 8466147,
+            "name": "Jason Ward"
+        },
+        {
+            "id": 8471958,
+            "name": "Dan Girardi"
+        },
+        {
+            "id": 8458942,
+            "name": "Darius Kasparaitis"
+        },
+        {
+            "id": 8469561,
+            "name": "Bryce Lampman"
+        },
+        {
+            "id": 8470656,
+            "name": "David Liffiton"
+        },
+        {
+            "id": 8459493,
+            "name": "Marek Malik"
+        },
+        {
+            "id": 8466144,
+            "name": "Paul Mara"
+        },
+        {
+            "id": 8458544,
+            "name": "Sandis Ozolinsh"
+        },
+        {
+            "id": 8469919,
+            "name": "Thomas Pock"
+        },
+        {
+            "id": 8466353,
+            "name": "Karel Rachunek"
+        },
+        {
+            "id": 8465058,
+            "name": "Michal Rozsival"
+        },
+        {
+            "id": 8460555,
+            "name": "Jason Strudwick"
+        },
+        {
+            "id": 8469492,
+            "name": "Fedor Tyutin"
+        },
+        {
+            "id": 8458519,
+            "name": "Aaron Ward"
+        },
+        {
+            "id": 8468685,
+            "name": "Henrik Lundqvist"
+        },
+        {
+            "id": 8465161,
+            "name": "Steve Valiquette"
+        },
+        {
+            "id": 8459463,
+            "name": "Kevin Weekes"
+        }
+    ]
+}

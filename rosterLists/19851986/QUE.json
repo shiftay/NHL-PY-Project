@@ -1,0 +1,152 @@
+{
+    "players": [
+        {
+            "id": 8444944,
+            "name": "John Anderson"
+        },
+        {
+            "id": 8445118,
+            "name": "Brent Ashton"
+        },
+        {
+            "id": 8445207,
+            "name": "Wayne Babych"
+        },
+        {
+            "id": 8446178,
+            "name": "Alain Cote"
+        },
+        {
+            "id": 8446551,
+            "name": "Mike Eagles"
+        },
+        {
+            "id": 8447074,
+            "name": "Jean-Marc Gaulin"
+        },
+        {
+            "id": 8447192,
+            "name": "Paul Gillis"
+        },
+        {
+            "id": 8447310,
+            "name": "Michel Goulet"
+        },
+        {
+            "id": 8448117,
+            "name": "Dale Hunter"
+        },
+        {
+            "id": 8448563,
+            "name": "Mark Kumpel"
+        },
+        {
+            "id": 8448686,
+            "name": "David Latta"
+        },
+        {
+            "id": 8448773,
+            "name": "Alain Lemieux"
+        },
+        {
+            "id": 8449101,
+            "name": "Greg Malone"
+        },
+        {
+            "id": 8449119,
+            "name": "Jimmy Mann"
+        },
+        {
+            "id": 8450107,
+            "name": "Wilf Paiement"
+        },
+        {
+            "id": 8450218,
+            "name": "Steve Patrick"
+        },
+        {
+            "id": 8451141,
+            "name": "Jean-Francois Sauve"
+        },
+        {
+            "id": 8451688,
+            "name": "Anton Stastny"
+        },
+        {
+            "id": 8451689,
+            "name": "Peter Stastny"
+        },
+        {
+            "id": 8451753,
+            "name": "Trevor Stienburg"
+        },
+        {
+            "id": 8444962,
+            "name": "Peter Andersson"
+        },
+        {
+            "id": 8445700,
+            "name": "Jeff Brown"
+        },
+        {
+            "id": 8446372,
+            "name": "Gilbert Delorme"
+        },
+        {
+            "id": 8446437,
+            "name": "Gord Donnelly"
+        },
+        {
+            "id": 8446825,
+            "name": "Steven Finn"
+        },
+        {
+            "id": 8448385,
+            "name": "Claude Julien"
+        },
+        {
+            "id": 8449171,
+            "name": "Mario Marois"
+        },
+        {
+            "id": 8449662,
+            "name": "Randy Moller"
+        },
+        {
+            "id": 8450359,
+            "name": "Robert Picard"
+        },
+        {
+            "id": 8450509,
+            "name": "Daniel Poudrier"
+        },
+        {
+            "id": 8450554,
+            "name": "Pat Price"
+        },
+        {
+            "id": 8450953,
+            "name": "Normand Rochefort"
+        },
+        {
+            "id": 8451314,
+            "name": "David Shaw"
+        },
+        {
+            "id": 8451362,
+            "name": "Risto Siltanen"
+        },
+        {
+            "id": 8447303,
+            "name": "Mario Gosselin"
+        },
+        {
+            "id": 8449096,
+            "name": "Clint Malarchuk"
+        },
+        {
+            "id": 8451308,
+            "name": "Richard Sevigny"
+        }
+    ]
+}

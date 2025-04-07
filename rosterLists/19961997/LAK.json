@@ -1,0 +1,160 @@
+{
+    "players": [
+        {
+            "id": 8445724,
+            "name": "Neal Broten"
+        },
+        {
+            "id": 8455763,
+            "name": "Dan Bylsma"
+        },
+        {
+            "id": 8456080,
+            "name": "Paul Di Pietro"
+        },
+        {
+            "id": 8446823,
+            "name": "Ray Ferraro"
+        },
+        {
+            "id": 8456441,
+            "name": "Brent Grieve"
+        },
+        {
+            "id": 8456729,
+            "name": "Craig Johnson"
+        },
+        {
+            "id": 8460524,
+            "name": "Matt Johnson"
+        },
+        {
+            "id": 8448484,
+            "name": "Dmitri Khristich"
+        },
+        {
+            "id": 8448490,
+            "name": "Petr Klima"
+        },
+        {
+            "id": 8458579,
+            "name": "Nathan LaFayette"
+        },
+        {
+            "id": 8459094,
+            "name": "Ian Laperriere"
+        },
+        {
+            "id": 8457214,
+            "name": "Chris Marinucci"
+        },
+        {
+            "id": 8464875,
+            "name": "Steve McKenna"
+        },
+        {
+            "id": 8462149,
+            "name": "Jason Morgan"
+        },
+        {
+            "id": 8458532,
+            "name": "Glen Murray"
+        },
+        {
+            "id": 8465167,
+            "name": "Kai Nurminen"
+        },
+        {
+            "id": 8449973,
+            "name": "Eddie Olczyk"
+        },
+        {
+            "id": 8458561,
+            "name": "Yanic Perreault"
+        },
+        {
+            "id": 8459332,
+            "name": "Barry Potomski"
+        },
+        {
+            "id": 8459047,
+            "name": "Jeff Shevalier"
+        },
+        {
+            "id": 8460044,
+            "name": "Brad Smyth"
+        },
+        {
+            "id": 8451711,
+            "name": "Kevin Stevens"
+        },
+        {
+            "id": 8460239,
+            "name": "Vladimir Tsyplakov"
+        },
+        {
+            "id": 8460660,
+            "name": "Roman Vopat"
+        },
+        {
+            "id": 8460551,
+            "name": "Vitali Yachmenev"
+        },
+        {
+            "id": 8462034,
+            "name": "Aki Berg"
+        },
+        {
+            "id": 8445550,
+            "name": "Rob Blake"
+        },
+        {
+            "id": 8458527,
+            "name": "Philippe Boucher"
+        },
+        {
+            "id": 8446825,
+            "name": "Steven Finn"
+        },
+        {
+            "id": 8457403,
+            "name": "Jaroslav Modry"
+        },
+        {
+            "id": 8458984,
+            "name": "Mattias Norstrom"
+        },
+        {
+            "id": 8458637,
+            "name": "Sean O'Donnell"
+        },
+        {
+            "id": 8458048,
+            "name": "John Slaney"
+        },
+        {
+            "id": 8458993,
+            "name": "Jan Vopat"
+        },
+        {
+            "id": 8458492,
+            "name": "Doug Zmolek"
+        },
+        {
+            "id": 8445438,
+            "name": "Jean Claude Bergeron"
+        },
+        {
+            "id": 8455994,
+            "name": "Byron Dafoe"
+        },
+        {
+            "id": 8446831,
+            "name": "Stephane Fiset"
+        },
+        {
+            "id": 8460497,
+            "name": "Jamie Storr"
+        }
+    ]
+}

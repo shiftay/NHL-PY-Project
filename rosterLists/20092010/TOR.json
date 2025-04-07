@@ -1,0 +1,156 @@
+{
+    "players": [
+        {
+            "id": 8467844,
+            "name": "Jason Blake"
+        },
+        {
+            "id": 8475098,
+            "name": "Tyler Bozak"
+        },
+        {
+            "id": 8470283,
+            "name": "Tim Brent"
+        },
+        {
+            "id": 8473997,
+            "name": "Luca Caputi"
+        },
+        {
+            "id": 8470301,
+            "name": "Andre Deveaux"
+        },
+        {
+            "id": 8471362,
+            "name": "Mikhail Grabovski"
+        },
+        {
+            "id": 8467943,
+            "name": "Niklas Hagman"
+        },
+        {
+            "id": 8475087,
+            "name": "Christian Hanson"
+        },
+        {
+            "id": 8475638,
+            "name": "Brayden Irwin"
+        },
+        {
+            "id": 8475172,
+            "name": "Nazem Kadri"
+        },
+        {
+            "id": 8473548,
+            "name": "Phil Kessel"
+        },
+        {
+            "id": 8473579,
+            "name": "Nikolay Kulemin"
+        },
+        {
+            "id": 8467882,
+            "name": "Jamie Lundmark"
+        },
+        {
+            "id": 8459514,
+            "name": "Jamal Mayers"
+        },
+        {
+            "id": 8470750,
+            "name": "John Mitchell"
+        },
+        {
+            "id": 8468778,
+            "name": "Colton Orr"
+        },
+        {
+            "id": 8467412,
+            "name": "Alexei Ponikarovsky"
+        },
+        {
+            "id": 8460507,
+            "name": "Wayne Primeau"
+        },
+        {
+            "id": 8470816,
+            "name": "Jay Rosehill"
+        },
+        {
+            "id": 8469464,
+            "name": "Fredrik Sjostrom"
+        },
+        {
+            "id": 8470162,
+            "name": "Matt Stajan"
+        },
+        {
+            "id": 8473537,
+            "name": "Viktor Stalberg"
+        },
+        {
+            "id": 8470740,
+            "name": "Lee Stempniak"
+        },
+        {
+            "id": 8473482,
+            "name": "Jiri Tlusty"
+        },
+        {
+            "id": 8467491,
+            "name": "Rickard Wallin"
+        },
+        {
+            "id": 8467400,
+            "name": "Francois Beauchemin"
+        },
+        {
+            "id": 8468090,
+            "name": "Garnet Exelby"
+        },
+        {
+            "id": 8468113,
+            "name": "Jeff Finger"
+        },
+        {
+            "id": 8474125,
+            "name": "Carl Gunnarsson"
+        },
+        {
+            "id": 8465200,
+            "name": "Tomas Kaberle"
+        },
+        {
+            "id": 8469460,
+            "name": "Mike Komisarek"
+        },
+        {
+            "id": 8470602,
+            "name": "Dion Phaneuf"
+        },
+        {
+            "id": 8474568,
+            "name": "Luke Schenn"
+        },
+        {
+            "id": 8470273,
+            "name": "Ian White"
+        },
+        {
+            "id": 8462044,
+            "name": "Jean-Sebastien Giguere"
+        },
+        {
+            "id": 8475361,
+            "name": "Jonas Gustavsson"
+        },
+        {
+            "id": 8469732,
+            "name": "Joey MacDonald"
+        },
+        {
+            "id": 8462117,
+            "name": "Vesa Toskala"
+        }
+    ]
+}

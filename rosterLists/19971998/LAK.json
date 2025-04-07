@@ -1,0 +1,128 @@
+{
+    "players": [
+        {
+            "id": 8455763,
+            "name": "Dan Bylsma"
+        },
+        {
+            "id": 8446208,
+            "name": "Russ Courtnall"
+        },
+        {
+            "id": 8446823,
+            "name": "Ray Ferraro"
+        },
+        {
+            "id": 8456729,
+            "name": "Craig Johnson"
+        },
+        {
+            "id": 8460524,
+            "name": "Matt Johnson"
+        },
+        {
+            "id": 8466140,
+            "name": "Olli Jokinen"
+        },
+        {
+            "id": 8458579,
+            "name": "Nathan LaFayette"
+        },
+        {
+            "id": 8459094,
+            "name": "Ian Laperriere"
+        },
+        {
+            "id": 8462062,
+            "name": "Donald MacLean"
+        },
+        {
+            "id": 8464875,
+            "name": "Steve McKenna"
+        },
+        {
+            "id": 8457406,
+            "name": "Sandy Moger"
+        },
+        {
+            "id": 8462149,
+            "name": "Jason Morgan"
+        },
+        {
+            "id": 8458532,
+            "name": "Glen Murray"
+        },
+        {
+            "id": 8458561,
+            "name": "Yanic Perreault"
+        },
+        {
+            "id": 8450941,
+            "name": "Luc Robitaille"
+        },
+        {
+            "id": 8460044,
+            "name": "Brad Smyth"
+        },
+        {
+            "id": 8458554,
+            "name": "Jozef Stumpel"
+        },
+        {
+            "id": 8460239,
+            "name": "Vladimir Tsyplakov"
+        },
+        {
+            "id": 8460660,
+            "name": "Roman Vopat"
+        },
+        {
+            "id": 8460551,
+            "name": "Vitali Yachmenev"
+        },
+        {
+            "id": 8462034,
+            "name": "Aki Berg"
+        },
+        {
+            "id": 8445550,
+            "name": "Rob Blake"
+        },
+        {
+            "id": 8458527,
+            "name": "Philippe Boucher"
+        },
+        {
+            "id": 8447004,
+            "name": "Garry Galley"
+        },
+        {
+            "id": 8458984,
+            "name": "Mattias Norstrom"
+        },
+        {
+            "id": 8458637,
+            "name": "Sean O'Donnell"
+        },
+        {
+            "id": 8458993,
+            "name": "Jan Vopat"
+        },
+        {
+            "id": 8458492,
+            "name": "Doug Zmolek"
+        },
+        {
+            "id": 8446134,
+            "name": "Frederic Chabot"
+        },
+        {
+            "id": 8446831,
+            "name": "Stephane Fiset"
+        },
+        {
+            "id": 8460497,
+            "name": "Jamie Storr"
+        }
+    ]
+}

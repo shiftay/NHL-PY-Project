@@ -1,0 +1,160 @@
+{
+    "players": [
+        {
+            "id": 8459446,
+            "name": "Kevyn Adams"
+        },
+        {
+            "id": 8460649,
+            "name": "Serge Aubin"
+        },
+        {
+            "id": 8459993,
+            "name": "William Bowler"
+        },
+        {
+            "id": 8459011,
+            "name": "Jan Caloun"
+        },
+        {
+            "id": 8468463,
+            "name": "Mathieu Darche"
+        },
+        {
+            "id": 8462121,
+            "name": "Matt Davidson"
+        },
+        {
+            "id": 8446423,
+            "name": "Kevin Dineen"
+        },
+        {
+            "id": 8456118,
+            "name": "Ted Drury"
+        },
+        {
+            "id": 8458645,
+            "name": "Bruce Gardiner"
+        },
+        {
+            "id": 8456556,
+            "name": "Steve Heinze"
+        },
+        {
+            "id": 8456857,
+            "name": "Espen Knutsen"
+        },
+        {
+            "id": 8448542,
+            "name": "Robert Kron"
+        },
+        {
+            "id": 8449093,
+            "name": "Steve Maltais"
+        },
+        {
+            "id": 8459889,
+            "name": "Mike Maneluk"
+        },
+        {
+            "id": 8467362,
+            "name": "Chris Nielsen"
+        },
+        {
+            "id": 8459486,
+            "name": "Krzysztof Oliwa"
+        },
+        {
+            "id": 8457921,
+            "name": "Geoff Sanderson"
+        },
+        {
+            "id": 8460628,
+            "name": "Alexander Selivanov"
+        },
+        {
+            "id": 8459605,
+            "name": "Sean Selmser"
+        },
+        {
+            "id": 8462535,
+            "name": "Jody Shelley"
+        },
+        {
+            "id": 8466971,
+            "name": "Blake Sloan"
+        },
+        {
+            "id": 8462184,
+            "name": "Martin Spanhel"
+        },
+        {
+            "id": 8459455,
+            "name": "David Vyborny"
+        },
+        {
+            "id": 8458537,
+            "name": "Ray Whitney"
+        },
+        {
+            "id": 8458526,
+            "name": "Tyler Wright"
+        },
+        {
+            "id": 8459449,
+            "name": "Radim Bicanek"
+        },
+        {
+            "id": 8456000,
+            "name": "Kevin Dahl"
+        },
+        {
+            "id": 8458801,
+            "name": "Michael Gaul"
+        },
+        {
+            "id": 8462211,
+            "name": "Jean-Luc Grand-Pierre"
+        },
+        {
+            "id": 8456588,
+            "name": "Jamie Heward"
+        },
+        {
+            "id": 8468484,
+            "name": "Rostislav Klesla"
+        },
+        {
+            "id": 8448543,
+            "name": "Frantisek Kucera"
+        },
+        {
+            "id": 8468613,
+            "name": "Petteri Nummelin"
+        },
+        {
+            "id": 8449957,
+            "name": "Lyle Odelein"
+        },
+        {
+            "id": 8458546,
+            "name": "Jamie Pushor"
+        },
+        {
+            "id": 8460521,
+            "name": "Deron Quint"
+        },
+        {
+            "id": 8459144,
+            "name": "Mattias Timander"
+        },
+        {
+            "id": 8462055,
+            "name": "Marc Denis"
+        },
+        {
+            "id": 8451837,
+            "name": "Ron Tugnutt"
+        }
+    ]
+}

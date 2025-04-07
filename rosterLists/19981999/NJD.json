@@ -1,0 +1,120 @@
+{
+    "players": [
+        {
+            "id": 8445000,
+            "name": "Dave Andreychuk"
+        },
+        {
+            "id": 8459429,
+            "name": "Jason Arnott"
+        },
+        {
+            "id": 8458978,
+            "name": "Sergei Brylin"
+        },
+        {
+            "id": 8445977,
+            "name": "Bobby Carpenter"
+        },
+        {
+            "id": 8456009,
+            "name": "Scott Daniels"
+        },
+        {
+            "id": 8460542,
+            "name": "Patrik Elias"
+        },
+        {
+            "id": 8447958,
+            "name": "Bobby Holik"
+        },
+        {
+            "id": 8462835,
+            "name": "Sasha Lakovic"
+        },
+        {
+            "id": 8466371,
+            "name": "John Madden"
+        },
+        {
+            "id": 8449450,
+            "name": "Randy Mckay"
+        },
+        {
+            "id": 8459461,
+            "name": "Brendan Morrison"
+        },
+        {
+            "id": 8457491,
+            "name": "Sergei Nemchinov"
+        },
+        {
+            "id": 8459486,
+            "name": "Krzysztof Oliwa"
+        },
+        {
+            "id": 8459454,
+            "name": "Jay Pandolfo"
+        },
+        {
+            "id": 8459435,
+            "name": "Denis Pederson"
+        },
+        {
+            "id": 8458525,
+            "name": "Brian Rolston"
+        },
+        {
+            "id": 8460515,
+            "name": "Vadim Sharifijanov"
+        },
+        {
+            "id": 8460465,
+            "name": "Petr Sykora"
+        },
+        {
+            "id": 8455653,
+            "name": "Brad Bombardir"
+        },
+        {
+            "id": 8446309,
+            "name": "Ken Daneyko"
+        },
+        {
+            "id": 8456024,
+            "name": "Kevin Dean"
+        },
+        {
+            "id": 8463638,
+            "name": "Bryan Muir"
+        },
+        {
+            "id": 8458517,
+            "name": "Scott Niedermayer"
+        },
+        {
+            "id": 8449957,
+            "name": "Lyle Odelein"
+        },
+        {
+            "id": 8460561,
+            "name": "Sheldon Souray"
+        },
+        {
+            "id": 8451715,
+            "name": "Scott Stevens"
+        },
+        {
+            "id": 8451805,
+            "name": "Ken Sutton"
+        },
+        {
+            "id": 8455710,
+            "name": "Martin Brodeur"
+        },
+        {
+            "id": 8451860,
+            "name": "Chris Terreri"
+        }
+    ]
+}

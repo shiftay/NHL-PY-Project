@@ -1,0 +1,144 @@
+{
+    "players": [
+        {
+            "id": 8444918,
+            "name": "Brad Aitken"
+        },
+        {
+            "id": 8444945,
+            "name": "Glenn Anderson"
+        },
+        {
+            "id": 8445712,
+            "name": "Dave Brown"
+        },
+        {
+            "id": 8445733,
+            "name": "Kelly Buchberger"
+        },
+        {
+            "id": 8446250,
+            "name": "Dan Currie"
+        },
+        {
+            "id": 8447091,
+            "name": "Martin Gelinas"
+        },
+        {
+            "id": 8447364,
+            "name": "Adam Graves"
+        },
+        {
+            "id": 8447450,
+            "name": "David Haas"
+        },
+        {
+            "id": 8448490,
+            "name": "Petr Klima"
+        },
+        {
+            "id": 8448641,
+            "name": "Mark Lamb"
+        },
+        {
+            "id": 8448857,
+            "name": "Ken Linseman"
+        },
+        {
+            "id": 8449020,
+            "name": "Craig MacTavish"
+        },
+        {
+            "id": 8449573,
+            "name": "Mark Messier"
+        },
+        {
+            "id": 8449589,
+            "name": "Max Middendorf"
+        },
+        {
+            "id": 8449751,
+            "name": "Joe Murphy"
+        },
+        {
+            "id": 8451291,
+            "name": "Anatoli Semenov"
+        },
+        {
+            "id": 8451376,
+            "name": "Craig Simpson"
+        },
+        {
+            "id": 8451628,
+            "name": "Tomas Srsen"
+        },
+        {
+            "id": 8451905,
+            "name": "Esa Tikkanen"
+        },
+        {
+            "id": 8452147,
+            "name": "Shaun Van Allen"
+        },
+        {
+            "id": 8452238,
+            "name": "Igor Viazmikin"
+        },
+        {
+            "id": 8445461,
+            "name": "Jeff Beukeboom"
+        },
+        {
+            "id": 8447690,
+            "name": "Greg Hawgood"
+        },
+        {
+            "id": 8448038,
+            "name": "Charlie Huddy"
+        },
+        {
+            "id": 8448380,
+            "name": "Chris Joseph"
+        },
+        {
+            "id": 8448822,
+            "name": "Francois Leroux"
+        },
+        {
+            "id": 8448884,
+            "name": "Kevin Lowe"
+        },
+        {
+            "id": 8448961,
+            "name": "Norm MacIver"
+        },
+        {
+            "id": 8449749,
+            "name": "Craig Muni"
+        },
+        {
+            "id": 8451527,
+            "name": "Geoff Smith"
+        },
+        {
+            "id": 8451558,
+            "name": "Steve Smith"
+        },
+        {
+            "id": 8446991,
+            "name": "Grant Fuhr"
+        },
+        {
+            "id": 8450651,
+            "name": "Bill Ranford"
+        },
+        {
+            "id": 8450727,
+            "name": "Eldon Reddick"
+        },
+        {
+            "id": 8451845,
+            "name": "Kari Takko"
+        }
+    ]
+}

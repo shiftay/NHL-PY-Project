@@ -1,0 +1,148 @@
+{
+    "players": [
+        {
+            "id": 8445430,
+            "name": "Michel Bergeron"
+        },
+        {
+            "id": 8445073,
+            "name": "Fred Berry"
+        },
+        {
+            "id": 8445101,
+            "name": "Mike Bloom"
+        },
+        {
+            "id": 8446105,
+            "name": "Stephen Coates"
+        },
+        {
+            "id": 8447352,
+            "name": "Danny Grant"
+        },
+        {
+            "id": 8446729,
+            "name": "Buster Harvey"
+        },
+        {
+            "id": 8447774,
+            "name": "Dennis Hextall"
+        },
+        {
+            "id": 8447147,
+            "name": "Dave Kelly"
+        },
+        {
+            "id": 8447353,
+            "name": "Fern LeBlanc"
+        },
+        {
+            "id": 8448731,
+            "name": "J.P. Leblanc"
+        },
+        {
+            "id": 8448846,
+            "name": "Nick Libett"
+        },
+        {
+            "id": 8448866,
+            "name": "Bill Lochead"
+        },
+        {
+            "id": 8449104,
+            "name": "Dan Maloney"
+        },
+        {
+            "id": 8447631,
+            "name": "Don Martineau"
+        },
+        {
+            "id": 8447742,
+            "name": "Brian McCutcheon"
+        },
+        {
+            "id": 8449440,
+            "name": "Walt McKechnie"
+        },
+        {
+            "id": 8450495,
+            "name": "Dennis Polonich"
+        },
+        {
+            "id": 8448335,
+            "name": "Bob Ritchie"
+        },
+        {
+            "id": 8451172,
+            "name": "Kevin Schamehorn"
+        },
+        {
+            "id": 8449004,
+            "name": "Bobby Sheehan"
+        },
+        {
+            "id": 8452456,
+            "name": "Fred Williams"
+        },
+        {
+            "id": 8445877,
+            "name": "Al Cameron"
+        },
+        {
+            "id": 8447209,
+            "name": "Larry Giroux"
+        },
+        {
+            "id": 8447482,
+            "name": "Jean Hamel"
+        },
+        {
+            "id": 8447568,
+            "name": "Terry Harper"
+        },
+        {
+            "id": 8448363,
+            "name": "Greg Joly"
+        },
+        {
+            "id": 8448695,
+            "name": "Rick Lapointe"
+        },
+        {
+            "id": 8448708,
+            "name": "Reed Larson"
+        },
+        {
+            "id": 8449772,
+            "name": "Terry Murray"
+        },
+        {
+            "id": 8447973,
+            "name": "Jim Nahrgang"
+        },
+        {
+            "id": 8451239,
+            "name": "Dwight Schofield"
+        },
+        {
+            "id": 8449367,
+            "name": "Bryan Watson"
+        },
+        {
+            "id": 8449979,
+            "name": "Ed Giacomin"
+        },
+        {
+            "id": 8450829,
+            "name": "Terrance Richardson"
+        },
+        {
+            "id": 8451076,
+            "name": "Jim Rutherford"
+        },
+        {
+            "id": 8452477,
+            "name": "Rick Wilson"
+        }
+    ]
+}

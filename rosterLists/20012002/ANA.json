@@ -1,0 +1,128 @@
+{
+    "players": [
+        {
+            "id": 8455763,
+            "name": "Dan Bylsma"
+        },
+        {
+            "id": 8462061,
+            "name": "Marc Chouinard"
+        },
+        {
+            "id": 8464989,
+            "name": "Matt Cullen"
+        },
+        {
+            "id": 8455984,
+            "name": "Jim Cummins"
+        },
+        {
+            "id": 8460501,
+            "name": "Jeff Friesen"
+        },
+        {
+            "id": 8459426,
+            "name": "Paul Kariya"
+        },
+        {
+            "id": 8456848,
+            "name": "Patric Kjellberg"
+        },
+        {
+            "id": 8458949,
+            "name": "Sergei Krivokrasov"
+        },
+        {
+            "id": 8458888,
+            "name": "Denny Lambert"
+        },
+        {
+            "id": 8462084,
+            "name": "Mike Leclerc"
+        },
+        {
+            "id": 8468434,
+            "name": "Andy McDonald"
+        },
+        {
+            "id": 8457319,
+            "name": "Marty Mcinnis"
+        },
+        {
+            "id": 8465192,
+            "name": "Samuel Pahlsson"
+        },
+        {
+            "id": 8469551,
+            "name": "Timo Parssinen"
+        },
+        {
+            "id": 8459284,
+            "name": "Steve Rucchin"
+        },
+        {
+            "id": 8460836,
+            "name": "Kevin Sawyer"
+        },
+        {
+            "id": 8468103,
+            "name": "Petr Tenkrat"
+        },
+        {
+            "id": 8459672,
+            "name": "German Titov"
+        },
+        {
+            "id": 8458962,
+            "name": "Drew Bannister"
+        },
+        {
+            "id": 8458600,
+            "name": "Aris Brimanis"
+        },
+        {
+            "id": 8455805,
+            "name": "Keith Carney"
+        },
+        {
+            "id": 8467956,
+            "name": "Niclas Havelid"
+        },
+        {
+            "id": 8465034,
+            "name": "Antti Jussi Niemi"
+        },
+        {
+            "id": 8464962,
+            "name": "Ruslan Salei"
+        },
+        {
+            "id": 8460594,
+            "name": "Pavel Trnka"
+        },
+        {
+            "id": 8460493,
+            "name": "Oleg Tverdovsky"
+        },
+        {
+            "id": 8467352,
+            "name": "Vitaly Vishnevski"
+        },
+        {
+            "id": 8458468,
+            "name": "Jason York"
+        },
+        {
+            "id": 8468524,
+            "name": "Ilya Bryzgalov"
+        },
+        {
+            "id": 8462044,
+            "name": "Jean-Sebastien Giguere"
+        },
+        {
+            "id": 8458615,
+            "name": "Steve Shields"
+        }
+    ]
+}

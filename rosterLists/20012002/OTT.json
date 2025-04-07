@@ -1,0 +1,144 @@
+{
+    "players": [
+        {
+            "id": 8460621,
+            "name": "Daniel Alfredsson"
+        },
+        {
+            "id": 8466249,
+            "name": "Magnus Arvedson"
+        },
+        {
+            "id": 8467384,
+            "name": "Chris Bala"
+        },
+        {
+            "id": 8460105,
+            "name": "Radek Bonk"
+        },
+        {
+            "id": 8445734,
+            "name": "Benoit Brunet"
+        },
+        {
+            "id": 8465230,
+            "name": "Ivan Ciernik"
+        },
+        {
+            "id": 8469728,
+            "name": "Toni Dahlman"
+        },
+        {
+            "id": 8467370,
+            "name": "Mike Fisher"
+        },
+        {
+            "id": 8467899,
+            "name": "Martin Havlat"
+        },
+        {
+            "id": 8459159,
+            "name": "Chris Herperger"
+        },
+        {
+            "id": 8466148,
+            "name": "Marian Hossa"
+        },
+        {
+            "id": 8448092,
+            "name": "Jody Hull"
+        },
+        {
+            "id": 8466200,
+            "name": "Josh Langfeld"
+        },
+        {
+            "id": 8460484,
+            "name": "Steve Martins"
+        },
+        {
+            "id": 8457297,
+            "name": "Shawn McEachern"
+        },
+        {
+            "id": 8460707,
+            "name": "Bill Muckalt"
+        },
+        {
+            "id": 8467493,
+            "name": "Chris Neil"
+        },
+        {
+            "id": 8460639,
+            "name": "Andre Roy"
+        },
+        {
+            "id": 8467425,
+            "name": "Petr Schastlivy"
+        },
+        {
+            "id": 8466392,
+            "name": "Todd White"
+        },
+        {
+            "id": 8458605,
+            "name": "Juha Ylonen"
+        },
+        {
+            "id": 8465009,
+            "name": "Zdeno Chara"
+        },
+        {
+            "id": 8460661,
+            "name": "Shane Hnidy"
+        },
+        {
+            "id": 8465168,
+            "name": "Joel Kwiatkowski"
+        },
+        {
+            "id": 8448797,
+            "name": "Curtis Leschyshyn"
+        },
+        {
+            "id": 8457661,
+            "name": "Ricard Persson"
+        },
+        {
+            "id": 8464956,
+            "name": "Chris Phillips"
+        },
+        {
+            "id": 8466353,
+            "name": "Karel Rachunek"
+        },
+        {
+            "id": 8462033,
+            "name": "Wade Redden"
+        },
+        {
+            "id": 8459484,
+            "name": "Jamie Rivers"
+        },
+        {
+            "id": 8465202,
+            "name": "Sami Salo"
+        },
+        {
+            "id": 8466192,
+            "name": "Jani Hurme"
+        },
+        {
+            "id": 8467921,
+            "name": "Simon Lajeunesse"
+        },
+        {
+            "id": 8459579,
+            "name": "Patrick Lalime"
+        },
+        {
+            "id": 8468037,
+            "name": "Martin Prusek"
+        }
+    ]
+}
