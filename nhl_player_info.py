@@ -4,6 +4,9 @@ import os
 import random
 import time
 
+# Setting up clearing of the console, incase I want to do a progress report
+# clear = lambda: os.system('cls')
+
 def get_files_in_directory(dir_path):
     try:
         files = [f for f in os.listdir(dir_path) if os.path.isfile(os.path.join(dir_path, f))]
@@ -101,6 +104,8 @@ time_elapsed = time.time()
 
 data = get_files_in_directory(file_path)
 
+progress = ''
+
 for files in data:
     seasonId = files[:8]
     with open(f"{file_path}/{files}", 'r') as f:
@@ -115,10 +120,15 @@ for files in data:
         except Exception as e:
             print(f"An error occurred: {e}")
 
-        print(f"Estimated Time for {seasonId} is approx. {len(contents['players']) * 7} seconds.")
+        print(f"\nEstimated Time for {seasonId} is approx. {round((len(contents['players']) * 10) / 60, 2)} minutes. Gathering information for {len(contents['players'])} players.")
 
         for players in contents['players']:
             completed_info.append(get_nhl_player_details(players['id']))
+
+            # current_step = contents['players'].index(players) / (len(contents['players']) + 1) 
+            if contents['players'].index(players) % 10 == 0: 
+                progress += '.'
+                print(f"Progress: { (contents['players'].index(players) / len(contents['players'])) * 100}")
             time.sleep(seconds)
             seconds = random.randint(5,10)
     break;
@@ -132,4 +142,4 @@ final_info = {
 with open(f"playerInfo/{seasonId}/{seasonId}_players.json", "w") as f:
     json.dump(final_info, f, indent=4)
 
-print(f"It took {time.time() - time_elapsed} seconds to complete request")
+print(f"It took {round((time.time() - time_elapsed)/60)} minutes to complete request")
