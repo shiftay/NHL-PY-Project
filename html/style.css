@@ -1,0 +1,174 @@
+body {
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 80%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #2c3e50;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.word-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.completed-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+
+
+.word {
+    background-color: #af2b2b;
+    color: #f8f8f8;
+    border: 1px solid #b3e5fc;
+    border-radius: 6px;
+    padding: 15px;
+    text-align: center;
+    font-size: 1em;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.word.selected {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #0056b3;
+}
+
+.word-completed {
+    background-color: #e0f2f7;
+    color: #007bff;
+    border: 1px solid #b3e5fc;
+    border-radius: 6px;
+    padding: 15px;
+    text-align: center;
+    font-size: 1em;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.selection-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.selected-words {
+    display: flex;
+    gap: 10px;
+}
+
+.selected-word {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 6px;
+    padding: 10px 15px;
+    font-size: 0.9em;
+}
+
+.button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.button:not(:disabled):hover {
+    background-color: #1e7e34;
+}
+
+/*#submit-group {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+}*/
+
+#submit-group:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#submit-group:not(:disabled):hover {
+    background-color: #1e7e34;
+}
+
+#attempts {
+    font-size: 0.9em;
+    color: #777;
+}
+
+#game-status {
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.group-names {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    text-align: center;
+    color: #555;
+    font-size: 0.9em;
+}
+
+.group-name {
+    min-height: 30px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #777;
+    font-size: 0.8em;
+}

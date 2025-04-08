@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>AspnetO.com | Fade In and Fade Out effect Using CSS3 Transition</title>
+</head>
+<body>
+    <div id="wrapper">
+        <p>
+            <button type="button">Show HTML Element</button>
+            <button type="button">Hide HTML Element</button>
+        </p>
+        <br />
+        <div class="hidden">
+          AspnetO - Quick Way To Learn Asp.net 
+        </div>
+    </div>
+
+    <style type="text/css">
+        /* Fade-In Effect */
+        .visible
+        {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 2s linear;
+        }
+
+        /* Fade-Out Effect */
+        .hidden
+        {
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s 2s, opacity 2s linear;
+        }
+
+        #wrapper > div
+        {
+            background: none repeat scroll 0 0 #f5f;
+            border: 5px solid #808080;
+            border-radius: 50px;
+            padding: 10px;
+            width: 250px;
+        }
+    </style>
+
+    <script type="text/javascript">
+        // Add query Selector
+        var showButtonClick = document.querySelector("#wrapper button:nth-of-type(1)"),
+            hideButtonClick = document.querySelector("#wrapper button:nth-of-type(2)"),
+            content = document.querySelector("#wrapper > div");
+
+        // Show wrapper div content
+        showButtonClick.addEventListener("click", function () {
+            content.className = "visible";
+        }, false);
+
+        // Hide wrapper div content
+        hideButtonClick.addEventListener("click", function () {
+            content.className = "hidden";
+        }, false);
+    </script>
+</body>
+</html>
