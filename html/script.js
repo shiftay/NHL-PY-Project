@@ -1,17 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     const wordGrid = document.querySelector('.word-grid');
-    const selectedWordsContainer = document.querySelector('.selected-words');
+    const wordGridHolder = document.querySelector('.word-grid-holder');
     const submitButton = document.getElementById('submit-group');
     const shuffleButton = document.getElementById('shuffle');
     const attemptsDisplay = document.getElementById('attempts');
     const gameStatus = document.getElementById('game-status');
     const completedGrid = document.querySelector('.completed-grid')
-    const groupNameElements = {
-        1: document.getElementById('group-1-name'),
-        2: document.getElementById('group-2-name'),
-        3: document.getElementById('group-3-name'),
-        4: document.getElementById('group-4-name')
-    };
+    const popup = document.getElementById('popuptext');
+
 
     const wordsData = ["BLUE", "GREEN", "YELLOW", "RED", "NAVY", "TEAL", "LIME", "PURPLE", "SCARLET", "OLIVE", "CYAN", "MAGENTA", "FUCHSIA", "AQUA", "VIOLET", "MAROON"]; // Replace with your actual words
     const correctConnections = {
@@ -22,8 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     let selectedWords = [];
-    let attempts = 0;
+    let strikes = 0;
     let correctGroupsFound = 0;
+    let curentGroupId = 0;
 
     // Function to create word elements
     function createWord(wordText) {
@@ -66,63 +63,118 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
+    function cleanUpElements() {
+        var frag = document.createDocumentFragment();
+        selectedWords.forEach(word => {
+            const wordElement = Array.from(wordGridHolder.children).find(el => el.textContent === word);
+            frag.appendChild(wordElement);
+        });
+        ShowGroup();
+        selectedWords = [];
+    }
+
+    function ShowGroup() {
+
+        document.getElementById("word-grid-holder").style.marginBottom = "0px";
+
+        const wordElement = document.createElement('div');
+        wordElement.classList.add('word-completed');
+        wordElement.classList.add('animate');
+        wordElement.classList.add('blur');
+        wordElement.textContent = `Group ${curentGroupId} found.`;
+        // wordElement.id = 'hidden';
+        completedGrid.appendChild(wordElement);
+    }
+
+    function AppendtoStart() {
+        document.getElementById("word-grid-holder").style.marginBottom = "10px";
+        selectedWords.forEach(word => {
+            const wordElement = Array.from(wordGrid.children).find(el => el.textContent === word);
+            wordGridHolder.insertBefore(wordElement, wordGridHolder.firstChild);
+        });
+
+        setTimeout(function() {
+            cleanUpElements();
+        }, 500);
+    }
 
     submitButton.addEventListener('click', () => {
         if (selectedWords.length === 4) {
-            attempts++;
-            attemptsDisplay.textContent = `${attempts} of 4 Attempts`;
             let foundMatch = false;
+
+            selectedWords.forEach(word => {
+                const wordElement = Array.from(wordGrid.children).find(el => el.textContent === word);
+                wordElement.classList.add('animate');
+                wordElement.classList.add('test');
+            });
+
+            var amountCorrect = 0;
+            var highestAmount = 0;
+
 
             for (const groupId in correctConnections) {
                 const connection = correctConnections[groupId].sort();
                 const selected = selectedWords.sort();
-                if (connection.join(',') === selected.join(',')) {
+                amountCorrect = 0;
+                connection.forEach(n => {
+                    if(selected.includes(n)) {
+                        amountCorrect++;
+                    }
+                });
+
+                if(amountCorrect > highestAmount)
+                    highestAmount = amountCorrect;
+
+                if (amountCorrect == 4) {
                     var children = wordGrid.children;
                     foundMatch = true;
                     correctGroupsFound++;
-                    gameStatus.textContent = `Correct! Group ${groupId} found.`;
-                    var frag = document.createDocumentFragment();
+                    curentGroupId = groupId;
 
+                    setTimeout(function() {
+                        AppendtoStart();
+                    }, 1000);
 
-                    // Visually mark the correct group
-
-                    selectedWords.forEach(word => {
-                        const wordElement = Array.from(wordGrid.children).find(el => el.textContent === word);
-                        frag.appendChild(wordElement);
-                        if (wordElement) {
-                            wordElement.classList.add('correct'); // Add a CSS class for correct words
-                            wordElement.onclick = null; // Disable further clicks
-                        }
-                    });
-
-                    const wordElement = document.createElement('div');
-                    wordElement.classList.add('word-completed');
-                    wordElement.textContent = `Group ${groupId} found.`;
-                    completedGrid.appendChild(wordElement);
-                    // wordElement.addEventListener('click', () => handleWordClick(wordElement, wordText));
-                    // groupNameElements[groupId].textContent = Object.keys(correctConnections).find(key => correctConnections[key].sort().join(',') === connection.join(','));
-                    selectedWords = [];
-                    selectedWordsContainer.innerHTML = '';
                     submitButton.disabled = true;
                     break;
                 }
             }
 
             if (!foundMatch) {
-                gameStatus.textContent = "Not a match. Try again.";
+                const collection = document.getElementsByClassName("dot");
+                strikes++;
+                // Wait for the Box animation on the words to finish.
+                setTimeout(function() {
+                    popup.textContent = (highestAmount == 3) ? `One away...` : `Incorrect!`;
+                    popup.classList.toggle('show');
+                    collection[strikes - 1].classList.add('animate');
+                    collection[strikes - 1].classList.add('fill');
+                    // Let the pop up sit for a bit.
+                    setTimeout(function() {
+                        popup.classList.toggle('show');
+                        collection[strikes - 1].classList.add('filled');
+                        // Clean up the Selected elements.
+                        setTimeout(function() {
+                            const selectedElements = document.querySelectorAll('.word.selected');
+                            selectedElements.forEach(el => {
+                                el.classList.remove('selected');
+                                el.classList.remove('animate');
+                                el.classList.remove('test');
+                            });
+                            selectedWords = []; 
+                        }, 250);
+                    }, 1000);
+                }, 1000);
+
             }
 
             // Reset selected words visually
-            const selectedElements = document.querySelectorAll('.word.selected');
-            selectedElements.forEach(el => el.classList.remove('selected'));
-            selectedWords = [];
             submitButton.disabled = true;
 
-            if (attempts >= 4 && correctGroupsFound < 4) {
+            if (strikes == 3 && correctGroupsFound < 4) {
                 gameStatus.textContent = "Game Over!";
                 // Optionally reveal the correct answers
                 for (const groupId in correctConnections) {
-                    // groupNameElements[groupId].textContent = Object.keys(correctConnections).find(key => correctConnections[key].sort().join(',') === correctConnections[groupId].sort().join(','));
                     correctConnections[groupId].forEach(word => {
                         const wordElement = Array.from(wordGrid.children).find(el => el.textContent === word);
                         if (wordElement && !wordElement.classList.contains('correct')) {
@@ -137,6 +189,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 gameStatus.textContent = "You solved all the connections!";
                 submitButton.disabled = true;
             }
+
+
         }
     });
 });
