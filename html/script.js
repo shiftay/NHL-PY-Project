@@ -7,14 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const gameStatus = document.getElementById('game-status');
     const completedGrid = document.querySelector('.completed-grid')
     const popup = document.getElementById('popuptext');
+    const popover = document.getElementById('popover');
 
-
-    const wordsData = ["BLUE", "GREEN", "YELLOW", "RED", "NAVY", "TEAL", "LIME", "PURPLE", "SCARLET", "OLIVE", "CYAN", "MAGENTA", "FUCHSIA", "AQUA", "VIOLET", "MAROON"]; // Replace with your actual words
+    const wordsData = ["1", "1", "1", "1", "2", "2", "2", "2", "3", "3", "3", "3", "4", "4", "4", "4"]; // Replace with your actual words
     const correctConnections = {
-        1: ["BLUE", "NAVY", "TEAL", "CYAN"],      // Shades of Blue
-        2: ["GREEN", "LIME", "OLIVE", "AQUA"],    // Shades of Green
-        3: ["YELLOW", "SCARLET", "MAGENTA", "FUCHSIA"], // Shades of Red/Pink
-        4: ["RED", "PURPLE", "VIOLET", "MAROON"]    // Other Colors
+        1: ["1", "1", "1", "1"],      // Shades of Blue
+        2: ["2", "2", "2", "2"],    // Shades of Green
+        3: ["3", "3", "3", "3"],    // Shades of Red/Pink
+        4: ["4", "4", "4", "4"]    // Other Colors
     };
 
     let selectedWords = [];
@@ -74,15 +74,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function ShowGroup() {
-
         document.getElementById("word-grid-holder").style.marginBottom = "0px";
 
         const wordElement = document.createElement('div');
-        wordElement.classList.add('word-completed');
-        wordElement.classList.add('animate');
-        wordElement.classList.add('blur');
-        wordElement.textContent = `Group ${curentGroupId} found.`;
-        // wordElement.id = 'hidden';
+        wordElement.classList.add('word-completed', 'animate', 'blur');
+
+        const header = document.createElement('h3');
+        header.textContent = `${curentGroupId}`;
+
+        const div = document.createElement('div');
+        div.textContent = `${correctConnections[curentGroupId]}`;
+
+        wordElement.appendChild(header);
+        wordElement.appendChild(div);
         completedGrid.appendChild(wordElement);
     }
 
@@ -104,8 +108,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             selectedWords.forEach(word => {
                 const wordElement = Array.from(wordGrid.children).find(el => el.textContent === word);
-                wordElement.classList.add('animate');
-                wordElement.classList.add('test');
+                wordElement.classList.add('animate', 'test');
+                // wordElement.classList.add();
             });
 
             var amountCorrect = 0;
@@ -147,8 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(function() {
                     popup.textContent = (highestAmount == 3) ? `One away...` : `Incorrect!`;
                     popup.classList.toggle('show');
-                    collection[strikes - 1].classList.add('animate');
-                    collection[strikes - 1].classList.add('fill');
+                    collection[strikes - 1].classList.add('animate', 'fill');
                     // Let the pop up sit for a bit.
                     setTimeout(function() {
                         popup.classList.toggle('show');
@@ -157,9 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         setTimeout(function() {
                             const selectedElements = document.querySelectorAll('.word.selected');
                             selectedElements.forEach(el => {
-                                el.classList.remove('selected');
-                                el.classList.remove('animate');
-                                el.classList.remove('test');
+                                el.classList.remove('selected', 'animate', 'test');
                             });
                             selectedWords = []; 
                         }, 250);
@@ -186,8 +187,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             if (correctGroupsFound === 4) {
-                gameStatus.textContent = "You solved all the connections!";
-                submitButton.disabled = true;
+                setTimeout(function() {
+                    popover.showPopover();
+                }, 2500);
             }
 
 

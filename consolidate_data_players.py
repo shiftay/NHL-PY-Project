@@ -38,7 +38,7 @@ for files in data:
 			if player not in players:
 				players.append(player)
 				current_players.append(player)
-		consolidate_players(contents['seasonId'],current_players)	
+		consolidate_players(contents['seasonId'], current_players)	
 
 
 print(f"Player Amount: {len(players)}")		
