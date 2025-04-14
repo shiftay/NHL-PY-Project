@@ -9,13 +9,18 @@
 <body>
 
     <div class="container">
-
+        
+        <div class="hint"></div>
         <main>
             <div popover id="popover">
-                <h2>Popover</h2>
-                <hr>
-                <p>A popover is an element that is placed on top of everything else.</p>
-                <p>It can be used when you want to tell something important.</p>
+                <div class="popover-top"> <!-- Button Area -->
+                    <button class="button" id="close">Close</button>
+                </div>
+
+
+                <div class="popover-bottom"> <!-- Area for other links -->
+                    <button class="button" id="close">Close</button>
+                </div>
             </div>
             <div class="completed-grid">
                 </div>
@@ -37,7 +42,6 @@
                     <span class="dot"></span>
                     <span class="dot"></span>
                 </div>
-                <div id="game-status"></div>
             </div>
         </main>
 

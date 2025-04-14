@@ -1,0 +1,46 @@
+{
+    "answers":
+    [
+    {
+        "key": "More than 5 Stanley Cups",
+        "value":
+        [
+            "Mark Messier",
+            "Ken Dryden",
+            "Guy Lapointe",
+            "Jacques Lemaire"
+        ]
+    },
+    {
+        "key": "Multiple Hart Trophys",
+        "value":
+        [ 
+            "Dominik Hasek",
+            "Wayne Gretzky",
+            "Gordie Howe",
+            "Mario Lemieux"
+        ]
+    },
+    {
+        "key": "Have worn #11",
+        "value":
+        [
+            "Anze Kopitar",
+            "Vladimir Tarasenko",
+            "Saku Koivu",
+            "Owen Nolan"
+        ]
+    },
+    {
+        "key": "Round 3 Picks who won the Cup",
+        "value":
+        [
+            "Brad Marchand",
+            "Patrick Roy",
+            "Zdeno Chara",
+            "Kris Letang"
+        ]
+    }
+    ],
+    "hint": "Betcha Can't Pick Just One"
+}

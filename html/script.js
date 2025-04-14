@@ -3,24 +3,64 @@ document.addEventListener('DOMContentLoaded', () => {
     const wordGridHolder = document.querySelector('.word-grid-holder');
     const submitButton = document.getElementById('submit-group');
     const shuffleButton = document.getElementById('shuffle');
-    const attemptsDisplay = document.getElementById('attempts');
-    const gameStatus = document.getElementById('game-status');
     const completedGrid = document.querySelector('.completed-grid')
     const popup = document.getElementById('popuptext');
     const popover = document.getElementById('popover');
+    const hint = document.querySelector('.hint');
 
-    const wordsData = ["1", "1", "1", "1", "2", "2", "2", "2", "3", "3", "3", "3", "4", "4", "4", "4"]; // Replace with your actual words
-    const correctConnections = {
-        1: ["1", "1", "1", "1"],      // Shades of Blue
-        2: ["2", "2", "2", "2"],    // Shades of Green
-        3: ["3", "3", "3", "3"],    // Shades of Red/Pink
-        4: ["4", "4", "4", "4"]    // Other Colors
-    };
+
+    // Connections Info Containers
+    wordsData = []; 
+    correctConnections = [];
+    connectionNames = [];
+    
+    // Command to run a temp HTTP Server
+    // py -m http.server 8000
+    fetch('http://localhost:8000/data/answerKey.json') 
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json(); // Parse the JSON response
+    })
+    .then(jsonData => {
+        // Now you can work with the jsonData object
+        processJson(jsonData);
+    })
+    .catch(error => {
+        console.error('Error fetching or parsing JSON:', error);
+    });
+
+    function processJson(data) {
+        var tempInfo;
+        if(data.hasOwnProperty('answers')) 
+            tempInfo = data.answers;
+
+        tempInfo.forEach(n => {
+            correctConnections.push(n["value"]);
+            connectionNames.push(n["key"]);
+        });
+
+        correctConnections.forEach(n => {
+            n.forEach(x => {
+                wordsData.push(x);
+            });
+        });
+
+        if(data.hasOwnProperty('hint'))
+            hint.textContent = `Today's hint: ${data.hint}`;
+
+        // Render the initial word grid
+        wordsData.sort(() => Math.random() - 0.5); // Shuffle words
+        wordsData.forEach(word => {
+            wordGrid.appendChild(createWord(word));
+        });
+    }
 
     let selectedWords = [];
     let strikes = 0;
     let correctGroupsFound = 0;
-    let curentGroupId = 0;
+    let currentGroupId = 0;
 
     // Function to create word elements
     function createWord(wordText) {
@@ -31,11 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return wordElement;
     }
 
-    // Render the initial word grid
-    wordsData.sort(() => Math.random() - 0.5); // Shuffle words
-    wordsData.forEach(word => {
-        wordGrid.appendChild(createWord(word));
-    });
+
 
     function handleWordClick(wordElement, wordText) {
         if (wordElement.classList.contains('selected')) {
@@ -50,40 +86,74 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     shuffleButton.addEventListener('click', () => {
-        var children = wordGrid.children;
-        // Create a fragment to hold the children.
-        var frag = document.createDocumentFragment();
+        // var children = wordGrid.children;
+        // // Create a fragment to hold the children.
+        // var frag = document.createDocumentFragment();
 
-        // Grab a random child and add to the fragment
-        while(children.length) {
-            frag.appendChild(children[Math.floor(Math.random() * children.length)]);
-        }
+        // // Grab a random child and add to the fragment
+        // while(children.length) {
+        //     frag.appendChild(children[Math.floor(Math.random() * children.length)]);
+        // }
 
-        wordGrid.appendChild(frag);
+        // wordGrid.appendChild(frag);
+        popover.showPopover();
     });
 
 
-    function cleanUpElements() {
+    function cleanUpElements(groupId) {
         var frag = document.createDocumentFragment();
         selectedWords.forEach(word => {
             const wordElement = Array.from(wordGridHolder.children).find(el => el.textContent === word);
+            console.log(`${wordElement}`);
             frag.appendChild(wordElement);
         });
-        ShowGroup();
+        ShowGroup(groupId);
         selectedWords = [];
     }
 
-    function ShowGroup() {
+    function ShowBoard(groupId) {
+        var frag = document.createDocumentFragment();
+        selectedWords.forEach(word => {
+            const wordElement = Array.from(wordGrid.children).find(el => el.textContent === word);
+            frag.appendChild(wordElement);
+        });
+        ShowGroup(groupId);
+    }
+
+    function ShowGroup(groupId) {
         document.getElementById("word-grid-holder").style.marginBottom = "0px";
 
+        var value;
+        console.log(groupId);
+        switch(groupId.toString()) {
+            case "0":
+                value = "one";
+                break;
+            case "1":
+                value = "two";
+                break;
+            case "2":
+                value = "three";
+                break;
+            case "3":
+                value = "four";
+                break;
+            default:
+                console.log("It broked");
+        }
+
+        console.log(value);
+
         const wordElement = document.createElement('div');
-        wordElement.classList.add('word-completed', 'animate', 'blur');
+        wordElement.classList.add('word-completed', 'animate', 'blur', `${value}`);
 
         const header = document.createElement('h3');
-        header.textContent = `${curentGroupId}`;
+        header.classList.add('answerkey');
+        header.textContent = `${connectionNames[groupId]}`;
 
         const div = document.createElement('div');
-        div.textContent = `${correctConnections[curentGroupId]}`;
+        div.classList.add('answerval');
+        div.textContent = `${correctConnections[groupId]}`;
 
         wordElement.appendChild(header);
         wordElement.appendChild(div);
@@ -98,16 +168,40 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         setTimeout(function() {
-            cleanUpElements();
+            cleanUpElements(currentGroupId);
         }, 500);
+    }
+
+    function ShowPopover(time) {
+        // create popover content
+        const holder = document.createElement('div');
+
+        const header = document.createElement('h2');
+        header.textContent = `Congratulations!`;
+
+        const hr = document.createElement('hr');
+
+        const div = document.createElement('div');
+        div.textContent = `Test Text / GIF LINK AREA`;
+
+        holder.appendChild(header);
+        holder.appendChild(hr);
+        holder.appendChild(div);
+
+        popover.insertBefore(holder, popover.children[1]);
+
+        // Open popover on delay
+        setTimeout(function() {
+            popover.showPopover();
+        }, time);
     }
 
     submitButton.addEventListener('click', () => {
         if (selectedWords.length === 4) {
             let foundMatch = false;
-
             selectedWords.forEach(word => {
                 const wordElement = Array.from(wordGrid.children).find(el => el.textContent === word);
+                
                 wordElement.classList.add('animate', 'test');
                 // wordElement.classList.add();
             });
@@ -133,7 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     var children = wordGrid.children;
                     foundMatch = true;
                     correctGroupsFound++;
-                    curentGroupId = groupId;
+                    currentGroupId = groupId;
 
                     setTimeout(function() {
                         AppendtoStart();
@@ -145,54 +239,88 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             if (!foundMatch) {
-                const collection = document.getElementsByClassName("dot");
                 strikes++;
                 // Wait for the Box animation on the words to finish.
-                setTimeout(function() {
-                    popup.textContent = (highestAmount == 3) ? `One away...` : `Incorrect!`;
-                    popup.classList.toggle('show');
-                    collection[strikes - 1].classList.add('animate', 'fill');
-                    // Let the pop up sit for a bit.
+                if(strikes < 3) {
+                    const collection = document.getElementsByClassName("dot");
                     setTimeout(function() {
+                        popup.textContent = (highestAmount == 3) ? `One away...` : `Incorrect!`;
                         popup.classList.toggle('show');
-                        collection[strikes - 1].classList.add('filled');
-                        // Clean up the Selected elements.
+                        collection[strikes - 1].classList.add('animate', 'fill');
+                        // Let the pop up sit for a bit.
                         setTimeout(function() {
-                            const selectedElements = document.querySelectorAll('.word.selected');
-                            selectedElements.forEach(el => {
-                                el.classList.remove('selected', 'animate', 'test');
-                            });
-                            selectedWords = []; 
-                        }, 250);
+                            popup.classList.toggle('show');
+                            collection[strikes - 1].classList.add('filled');
+                            // Clean up the Selected elements.
+                            setTimeout(function() {
+                                const selectedElements = document.querySelectorAll('.word.selected');
+                                selectedElements.forEach(el => {
+                                    el.classList.remove('selected', 'animate', 'test');
+                                });
+                                selectedWords = []; 
+                            }, 250);
+                        }, 1000);
                     }, 1000);
-                }, 1000);
-
+                }
             }
 
             // Reset selected words visually
             submitButton.disabled = true;
 
-            if (strikes == 3 && correctGroupsFound < 4) {
-                gameStatus.textContent = "Game Over!";
+            if (strikes >= 3 && correctGroupsFound < 4) {
+                console.log('We lost???');
                 // Optionally reveal the correct answers
-                for (const groupId in correctConnections) {
-                    correctConnections[groupId].forEach(word => {
-                        const wordElement = Array.from(wordGrid.children).find(el => el.textContent === word);
-                        if (wordElement && !wordElement.classList.contains('correct')) {
-                            wordElement.classList.add('revealed'); // Add a CSS class for revealed words
-                        }
-                    });
+                // ShowPopover(1000);
+    
+                const completedWords = document.querySelectorAll('.word-completed');
+
+                var completed = [];
+
+                completedWords.forEach(completedWord => {
+                    for(var i = 0; i < completedWord.children.length; i++) {
+                        if(completedWord.children[i].classList.contains('answerkey'))
+                            completed.push(completedWord.children[i].textContent);
+                    }
+                });
+
+                selectedWords = [];
+
+                for(var i = 0; i < connectionNames.length; i++) {
+                    if(completed.includes(connectionNames[i]))
+                        continue;
+
+                    for(var j = 0; j < correctConnections[i].length; j++) {
+                        selectedWords.push(correctConnections[i][j]);
+                    }
+
+                    console.log(`Selected Words: ${selectedWords}`);
+
+                    
+                    ShowBoard(i);
+                    selectedWords = [];
                 }
+
+                ShowPopover(500);
+
+
+                // for (const groupId in correctConnections) {
+                //     correctConnections[groupId].forEach(word => {
+                //         const wordElement = Array.from(wordGrid.children).find(el => el.textContent === word);
+                //         if (wordElement && !wordElement.classList.contains('correct')) {
+                //             wordElement.classList.add('revealed'); // Add a CSS class for revealed words
+                //         }
+                //     });
+                // }
                 submitButton.disabled = true;
             }
 
             if (correctGroupsFound === 4) {
-                setTimeout(function() {
-                    popover.showPopover();
-                }, 2500);
+                ShowPopover(2500);
             }
 
 
         }
     });
+
+
 });
