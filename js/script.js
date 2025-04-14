@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Command to run a temp HTTP Server
     // py -m http.server 8000
-    fetch('NHL-PY-Project/data/answerKey.json') 
+    fetch('data/answerKey.json') 
     .then(response => {
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
