@@ -208,7 +208,6 @@ document.addEventListener('DOMContentLoaded', () => {
             var amountCorrect = 0;
             var highestAmount = 0;
 
-
             for (const groupId in correctConnections) {
                 const connection = correctConnections[groupId].sort();
                 const selected = selectedWords.sort();
@@ -301,23 +300,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 ShowPopover(500);
 
-
-                // for (const groupId in correctConnections) {
-                //     correctConnections[groupId].forEach(word => {
-                //         const wordElement = Array.from(wordGrid.children).find(el => el.textContent === word);
-                //         if (wordElement && !wordElement.classList.contains('correct')) {
-                //             wordElement.classList.add('revealed'); // Add a CSS class for revealed words
-                //         }
-                //     });
-                // }
                 submitButton.disabled = true;
             }
 
             if (correctGroupsFound === 4) {
                 ShowPopover(2500);
             }
-
-
         }
     });
 
