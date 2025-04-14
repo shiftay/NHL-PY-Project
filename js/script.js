@@ -86,17 +86,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     shuffleButton.addEventListener('click', () => {
-        // var children = wordGrid.children;
-        // // Create a fragment to hold the children.
-        // var frag = document.createDocumentFragment();
+        var children = wordGrid.children;
+        // Create a fragment to hold the children.
+        var frag = document.createDocumentFragment();
 
-        // // Grab a random child and add to the fragment
-        // while(children.length) {
-        //     frag.appendChild(children[Math.floor(Math.random() * children.length)]);
-        // }
+        // Grab a random child and add to the fragment
+        while(children.length) {
+            frag.appendChild(children[Math.floor(Math.random() * children.length)]);
+        }
 
-        // wordGrid.appendChild(frag);
-        popover.showPopover();
+        wordGrid.appendChild(frag);
     });
 
 
