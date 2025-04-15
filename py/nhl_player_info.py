@@ -62,11 +62,13 @@ def parseinfo(info):
     player_data = {
         "playerId": info['playerId'],
         "name": info['firstName']['default'] + " " + info['lastName']['default'],
+        "currentTeamAbbrev": info['currentTeamAbbrev'] if "currentTeamAbbrev" in info else 'N/A',
         "sweaterNumber": info['sweaterNumber'] if "sweaterNumber" in info else 'N/A',
         "position": info['position'] if "position" in info else 'N/A',
         "headshot": info['headshot'] if "headshot" in info else 'N/A',
         "heightInInches": info['heightInInches'] if "heightInInches" in info else 'N/A',
         "birthCountry": info['birthCountry'] if "birthCountry" in info else 'N/A',
+        "birthDate": info['birthDate'] if "birthDate" in info else 'N/A',
         "draftDetails": draftInfo,
         "seasonsPlayed": season_totals,
         "awards": awards,
@@ -98,40 +100,40 @@ def get_nhl_player_details(player_id):
 completed_info = []
 seconds = random.randint(5,10)
 
-file_path = 'playerLists'
+file_path = '20242025_playerlist.json'
 
 time_elapsed = time.time()
 
-data = get_files_in_directory(file_path)
+# data = get_files_in_directory(file_path)
 
 progress = ''
 
-for files in data:
-    seasonId = files[:8]
-    with open(f"{file_path}/{files}", 'r') as f:
-        contents = json.load(f)
-        try:
-            os.mkdir(f"playerInfo/{seasonId}")
-        except FileExistsError:
-            print(f"Folder 'playerInfo/{seasonId}' already exists.")
-            continue
-        except FileNotFoundError:
-            print("Path specified is invalid.")
-        except Exception as e:
-            print(f"An error occurred: {e}")
+# for files in data:
+seasonId = file_path[:8]
+with open(f"{file_path}", 'r') as f:
+    contents = json.load(f)
+    # try:
+    #     os.mkdir(f"playerInfo/{seasonId}")
+    # except FileExistsError:
+    #     print(f"Folder 'playerInfo/{seasonId}' already exists.")
+    #     # continue
+    # except FileNotFoundError:
+    #     print("Path specified is invalid.")
+    # except Exception as e:
+    #     print(f"An error occurred: {e}")
 
-        print(f"\nEstimated Time for {seasonId} is approx. {round((len(contents['players']) * 10) / 60, 2)} minutes. Gathering information for {len(contents['players'])} players.")
+    print(f"\nEstimated Time for {seasonId} is approx. {round((len(contents['players']) * 10) / 60, 2)} minutes. Gathering information for {len(contents['players'])} players.")
 
-        for players in contents['players']:
-            completed_info.append(get_nhl_player_details(players['id']))
+    for players in contents['players']:
+        completed_info.append(get_nhl_player_details(players['id']))
 
-            # current_step = contents['players'].index(players) / (len(contents['players']) + 1) 
-            if contents['players'].index(players) % 10 == 0: 
-                progress += '.'
-                print(f"Progress: { (contents['players'].index(players) / len(contents['players'])) * 100}")
-            time.sleep(seconds)
-            seconds = random.randint(5,10)
-    break;
+        # current_step = contents['players'].index(players) / (len(contents['players']) + 1) 
+        if contents['players'].index(players) % 10 == 0: 
+            progress += '.'
+            print(f"Progress: { (contents['players'].index(players) / len(contents['players'])) * 100}")
+        time.sleep(seconds)
+        seconds = random.randint(5,10)
+    # break;
 
 
 final_info = {

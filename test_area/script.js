@@ -1,0 +1,318 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const guessInput = document.getElementById('guess-input');
+    const guessButton = document.getElementById('guess-button');
+    const guessGrid = document.querySelector('.guess-grid');
+    const attemptsDisplay = document.getElementById('attempts');
+    const gameStatus = document.getElementById('game-status');
+    const popover = document.getElementById('popover');
+
+    let targetPlayer;
+    let attempts = 0;
+    let up = '\u2191';
+    let down = '\u2193';
+    const maxAttempts = 7;
+    var playerNames = [];
+    var playerInfo = [];
+    var answerKey;
+    var answerId;
+    var targetsBirthDate;
+
+
+    // Reading JSON
+    // Command to run a temp HTTP Server
+    // py -m http.server 8000
+    fetch('http://localhost:8000/20242025_players.json') 
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json(); // Parse the JSON response
+    })
+    .then(jsonData => {
+        // Now you can work with the jsonData object
+        processJson(jsonData);
+    })
+    .catch(error => {
+        console.error('Error fetching or parsing JSON:', error);
+    });
+
+    function processJson(data) {
+        var tempInfo;
+        if(data.hasOwnProperty('players')) 
+            tempInfo = data.players;
+
+        tempInfo.forEach(n => {
+            playerInfo.push(n);
+        });
+
+        playerInfo.forEach(n => {
+            playerNames.push(n.name);
+        });
+
+        targetPlayer = getRandomPlayer();
+        targetsBirthDate = targetPlayer['birthDate'].split("-");
+    }
+
+
+    function getRandomPlayer() {
+        return playerInfo[Math.floor(Math.random() * playerInfo.length)];
+    }
+
+    function playerExists(guess) {
+        const guessedPlayer = playerInfo.find(player => player['name'].toLowerCase() === guess.toLowerCase());
+        if(!guessedPlayer) {
+            gameStatus.textContent = "Invalid guess. Player not found.";
+            return false;
+        }
+
+        return true;
+    }
+
+    function ShowPopover(time) {
+        // create popover content
+        const holder = document.createElement('div');
+
+        const header = document.createElement('h2');
+        header.textContent = `Congratulations!`;
+
+        const hr = document.createElement('hr');
+
+        const div = document.createElement('div');
+        div.textContent = `Test Text / GIF LINK AREA`;
+
+        holder.appendChild(header);
+        holder.appendChild(hr);
+        holder.appendChild(div);
+
+        popover.insertBefore(holder, popover.children[1]);
+
+        // Open popover on delay
+        setTimeout(function() {
+            popover.showPopover();
+        }, time);
+    }
+
+    function checkGuess() {
+        const guess = guessInput.value.trim();
+        if (!guess) return;
+
+        console.log(playerInfo);
+
+        if(!playerExists(guess)) return;
+
+        const guessedPlayer = playerInfo.find(player => player['name'].toLowerCase() === guess.toLowerCase());
+
+        gameStatus.textContent = "";
+
+        attempts++;
+        if(attempts == 1) {
+            document.getElementsByClassName('guess-grid')[0].removeAttribute("hidden");
+            document.getElementById('attempts').removeAttribute("hidden");
+        }
+        attemptsDisplay.textContent = `Attempts: ${attempts} / ${maxAttempts}`;
+
+        const guessRow = document.createElement('div');
+        guessRow.classList.add('guess-row', 'animate', 'blur');
+                        //  str     str         int               str               int             str             str
+        const attributes = ["name", "position", "sweaterNumber", "birthCountry", "heightInInches", "birthDate", "currentTeamAbbrev"];
+        attributes.forEach(attr => {
+            const cell = document.createElement('div');
+            cell.classList.add('attribute');
+
+            switch(attr) {
+                case "heightInInches":
+                    var feet = Math.floor(guessedPlayer[attr] / 12);
+                    var inches = guessedPlayer[attr] % 12;
+                    cell.textContent = `${feet}' ${inches}"`
+                    break;
+                case "birthDate":
+                    var dateParts = guessedPlayer[attr].split("-");
+                    cell.textContent = `${2025 - parseInt(dateParts[0])}`;
+                    break;
+                case "name":
+                    cell.classList.add('name');
+                    cell.textContent = guessedPlayer[attr];
+                    break;
+                default:
+                    cell.textContent = guessedPlayer[attr];
+            }
+            
+            // &darr;
+            // &uarr; 
+
+            if(attr !== "name") {
+                try {
+                    if(attr === "birthDate") {
+                        var diff = dateParts[0] - targetsBirthDate[0];
+                        diff < 0 ? diff *= -1 : diff;
+                        if (guessedPlayer[attr] === targetPlayer[attr]) {
+                            cell.classList.add('match');
+                        } else if (diff < 3) {
+                            cell.classList.add('close');
+                        } 
+
+                        // Add arrow if they don't match.
+                        if (guessedPlayer[attr] > targetPlayer[attr]) {
+                            cell.textContent += " " + down;
+                        } else if (guessedPlayer[attr] < targetPlayer[attr]) {
+                            cell.textContent += " " + up;
+                        }
+                    } else {
+                        if (guessedPlayer[attr].toLowerCase() === targetPlayer[attr].toLowerCase()) {
+                            cell.classList.add('match');
+                        }  
+                    }
+                } catch(error) {
+                    // console.log("An error occured: ", error.message);
+                    var diff = guessedPlayer[attr] - targetPlayer[attr];
+                    diff < 0 ? diff *= -1 : diff;
+
+                    if (guessedPlayer[attr] === targetPlayer[attr]) {
+                        cell.classList.add('match');
+                    } else if (diff < 3) {
+                        cell.classList.add('close');
+                    } 
+
+                    // Add arrow if they don't match.
+                    if (guessedPlayer[attr] > targetPlayer[attr]) {
+                        cell.textContent += " " + down;
+                    } else if (guessedPlayer[attr] < targetPlayer[attr]) {
+                        cell.textContent += " " + up;
+                    }
+                }
+            }
+
+            guessRow.appendChild(cell);
+        });
+
+        guessGrid.appendChild(guessRow);
+        guessInput.value = "";
+
+        console.log(`Target: ${targetPlayer.name}`);
+
+        if (guessedPlayer.name.toLowerCase() === targetPlayer.name.toLowerCase()) {
+            gameStatus.textContent = `You guessed it in ${attempts} attempts! It was ${targetPlayer.name}.`;
+            guessInput.disabled = true;
+            guessButton.disabled = true;
+            console.log("you win?");
+            ShowPopover(500);
+        } else if (attempts >= maxAttempts) {
+
+            gameStatus.textContent = `You ran out of attempts! The player was ${targetPlayer.name}.`;
+            guessInput.disabled = true;
+            guessButton.disabled = true;
+            ShowPopover(500);
+        }
+    }
+
+    guessButton.addEventListener('click', checkGuess);
+
+
+// Auto Complete Section
+    function autocomplete(inp, arr) {
+        /*the autocomplete function takes two arguments,
+        the text field element and an array of possible autocompleted values:*/
+        var currentFocus;
+        /*execute a function when someone writes in the text field:*/
+        inp.addEventListener("input", function(e) {
+            var a, b, i, val = this.value;
+            /*close any already open lists of autocompleted values*/
+            closeAllLists();
+            if (!val) { return false;}
+            currentFocus = -1;
+            /*create a DIV element that will contain the items (values):*/
+            a = document.createElement("DIV");
+            a.setAttribute("id", this.id + "autocomplete-list");
+            a.setAttribute("class", "autocomplete-items");
+            /*append the DIV element as a child of the autocomplete container:*/
+            this.parentNode.appendChild(a);
+            /*for each item in the array...*/
+            for (i = 0; i < arr.length; i++) {
+              /*check if the item starts with the same letters as the text field value:*/
+              if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+                /*create a DIV element for each matching element:*/
+                b = document.createElement("DIV");
+                /*make the matching letters bold:*/
+                b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+                b.innerHTML += arr[i].substr(val.length);
+                /*insert a input field that will hold the current array item's value:*/
+                b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                /*execute a function when someone clicks on the item value (DIV element):*/
+                    b.addEventListener("click", function(e) {
+                    /*insert the value for the autocomplete text field:*/
+                    inp.value = this.getElementsByTagName("input")[0].value;
+                    /*close the list of autocompleted values,
+                    (or any other open lists of autocompleted values:*/
+                    closeAllLists();
+                });
+                a.appendChild(b);
+              }
+            }
+        });
+        /*execute a function presses a key on the keyboard:*/
+        inp.addEventListener("keydown", function(e) {
+            var x = document.getElementById(this.id + "autocomplete-list");
+            if (x) x = x.getElementsByTagName("div");
+            if (e.keyCode == 40) {
+              /*If the arrow DOWN key is pressed,
+              increase the currentFocus variable:*/
+              currentFocus++;
+              /*and and make the current item more visible:*/
+              addActive(x);
+            } else if (e.keyCode == 38) { //up
+              /*If the arrow UP key is pressed,
+              decrease the currentFocus variable:*/
+              currentFocus--;
+              /*and and make the current item more visible:*/
+              addActive(x);
+            } else if (e.keyCode == 13) {
+              /*If the ENTER key is pressed, prevent the form from being submitted,*/
+              
+              e.preventDefault();
+              const guess = guessInput.value.trim();
+              console.log(`Current Focus - ${currentFocus} - guess - ${guess}`);
+              
+              if (currentFocus > -1) {
+                /*and simulate a click on the "active" item:*/
+                if (x) x[currentFocus].click();
+
+              } else if(playerExists(guess)) {
+                checkGuess();
+              } 
+              currentFocus = -1;
+            }
+        });
+        function addActive(x) {
+          /*a function to classify an item as "active":*/
+          if (!x) return false;
+          /*start by removing the "active" class on all items:*/
+          removeActive(x);
+          if (currentFocus >= x.length) currentFocus = 0;
+          if (currentFocus < 0) currentFocus = (x.length - 1);
+          /*add class "autocomplete-active":*/
+          x[currentFocus].classList.add("autocomplete-active");
+        }
+        function removeActive(x) {
+          /*a function to remove the "active" class from all autocomplete items:*/
+          for (var i = 0; i < x.length; i++) {
+            x[i].classList.remove("autocomplete-active");
+          }
+        }
+        function closeAllLists(elmnt) {
+          /*close all autocomplete lists in the document,
+          except the one passed as an argument:*/
+          var x = document.getElementsByClassName("autocomplete-items");
+          for (var i = 0; i < x.length; i++) {
+            if (elmnt != x[i] && elmnt != inp) {
+            x[i].parentNode.removeChild(x[i]);
+          }
+        }
+      }
+      /*execute a function when someone clicks in the document:*/
+      document.addEventListener("click", function (e) {
+          closeAllLists(e.target);
+      });
+      }
+
+      autocomplete(document.getElementById("guess-input"), playerNames);
+});

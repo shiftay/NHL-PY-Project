@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheldle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <main>
+            <div popover id="popover">
+                <div class="popover-top"> <!-- Button Area -->
+                    <button class="button" id="close">Close</button>
+                </div>
+                <div class="popover-bottom"> <!-- Area for other links -->
+                    <button class="button" id="close">Close</button>
+                </div>
+            </div>
+            <div class="guess-input-area">
+                <!-- <form autocomplete="off" action="/action_page.php">
+                    <div class="autocomplete" style="width:300px;">
+                      <input id="myInput" type="text" name="myCountry" placeholder="Country">
+                    </div>
+                    <input type="submit">
+                  </form> -->
+                <input type="text" id="guess-input" placeholder="Guess Player">
+                <button id="guess-button">Guess</button>
+            </div>
+
+            <div class="guess-grid" hidden>
+                <div class="guess-row header-row">
+                    <div class="attribute name">Name</div>
+                    <div class="attribute">Position</div>
+                    <div class="attribute">Number</div>
+                    <div class="attribute">Country</div>
+                    <div class="attribute">Height</div>
+                    <div class="attribute">Age</div>
+                    <div class="attribute">Team</div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <!-- <button id="new-puzzle">New Puzzle</button> -->
+                <div id="attempts" hidden>Attempts: 0 / 6</div>
+                <div id="game-status"></div>
+            </div>
+        </main>
+
+        <!-- <footer>
+            <p>&copy; 2025 My Weddle Inspired Project</p>
+        </footer> -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
