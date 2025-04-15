@@ -96,7 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const guess = guessInput.value.trim();
         if (!guess) return;
 
-        console.log(playerInfo);
 
         if(!playerExists(guess)) return;
 
@@ -163,7 +162,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         }  
                     }
                 } catch(error) {
-                    // console.log("An error occured: ", error.message);
                     var diff = guessedPlayer[attr] - targetPlayer[attr];
                     diff < 0 ? diff *= -1 : diff;
 
@@ -188,13 +186,10 @@ document.addEventListener('DOMContentLoaded', () => {
         guessGrid.appendChild(guessRow);
         guessInput.value = "";
 
-        console.log(`Target: ${targetPlayer.name}`);
-
         if (guessedPlayer.name.toLowerCase() === targetPlayer.name.toLowerCase()) {
             gameStatus.textContent = `You guessed it in ${attempts} attempts! It was ${targetPlayer.name}.`;
             guessInput.disabled = true;
             guessButton.disabled = true;
-            console.log("you win?");
             ShowPopover(500);
         } else if (attempts >= maxAttempts) {
 
@@ -270,7 +265,6 @@ document.addEventListener('DOMContentLoaded', () => {
               
               e.preventDefault();
               const guess = guessInput.value.trim();
-              console.log(`Current Focus - ${currentFocus} - guess - ${guess}`);
               
               if (currentFocus > -1) {
                 /*and simulate a click on the "active" item:*/
