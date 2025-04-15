@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Reading JSON
     // Command to run a temp HTTP Server
     // py -m http.server 8000
-    fetch('http://localhost:8000/20242025_players.json') 
+    fetch('20242025_players.json') 
     .then(response => {
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
