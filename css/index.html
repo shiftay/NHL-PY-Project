@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Roadshow</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="hint"></div>
+        <main>
+            <div popover id="popover">
+                <div class="popover-top"> <!-- Button Area -->
+                    <button class="button" id="close">Close</button>
+                </div>
+                <div class="popover-bottom"> <!-- Area for other links -->
+                    <button class="button" id="close">Close</button>
+                </div>
+            </div>
+            <div class="completed-grid">
+                </div>
+            <div class="word-grid-holder" id="word-grid-holder">
+                </div>
+            <div class="popup"> 
+                <div class="popuptext" id="popuptext"></div>
+            </div> 
+            <div class="word-grid">
+                </div>
+
+            <div class="selection-area">
+                <div class="button-area">
+                    <button class="button" id="shuffle">Shuffle</button>
+                    <button class="button" id="submit-group" disabled>Submit</button>
+                </div>
+                <div id="attempts">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
