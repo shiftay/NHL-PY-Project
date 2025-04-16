@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const attemptsDisplay = document.getElementById('attempts');
     const gameStatus = document.getElementById('game-status');
     const popover = document.getElementById('popover');
+    const body = document.getElementById('body');
+    const stylesheet = document.styleSheets[0];
+
 
     let targetPlayer;
     let attempts = 0;
@@ -13,10 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const maxAttempts = 7;
     var playerNames = [];
     var playerInfo = [];
+    var teamSVG = [];
     var answerKey;
     var answerId;
     var targetsBirthDate;
-
+    var colorCodes = [];
 
     // Reading JSON
     // Command to run a temp HTTP Server
@@ -46,13 +50,101 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         playerInfo.forEach(n => {
-            playerNames.push(n.name);
+            var names = n.name.split(" ");
+            playerNames.push(names);
         });
 
+        console.log(`Names: ${playerNames[0]}`);
         targetPlayer = getRandomPlayer();
         targetsBirthDate = targetPlayer['birthDate'].split("-");
     }
 
+    fetch('colorCodes.json') 
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json(); // Parse the JSON response
+    })
+    .then(jsonData => {
+        // Now you can work with the jsonData object
+        extractColor(jsonData);
+    })
+    .catch(error => {
+        console.error('Error fetching or parsing JSON:', error);
+    });
+
+    function extractColor(data) {
+        data.teams.forEach(n => {
+            colorCodes.push(n);
+        });
+    }
+
+    fetch('20242025_teamlist.json') 
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json(); // Parse the JSON response
+    })
+    .then(jsonData => {
+        // Now you can work with the jsonData object
+        extractTeams(jsonData);
+    })
+    .catch(error => {
+        console.error('Error fetching or parsing JSON:', error);
+    });
+    // Read in all data for Team SVGs
+    function extractTeams(data) {
+        data.teams.forEach(n => {
+            teamSVG.push(n);
+        });
+        // updateRandomTeam();
+    }
+
+    function initRandomTeam() {
+        var randomTeam = colorCodes[Math.floor(Math.random() * colorCodes.length)];
+
+
+
+    }
+
+    function updateRandomTeam() {
+        document.getElementById('logo');
+
+        var list = Array.from(stylesheet.cssRules);
+        var num = Math.floor(Math.random() * (colorCodes.length - 1));
+        console.log(`Num ${num}`);
+
+        var random = colorCodes[num];
+        list.find(n => n.selectorText === ".mainSVG").style.fill = random.colors[0];
+        list.find(n => n.selectorText === ".secondarySVG").style.fill = random.colors[1];
+
+        switch(random.colors.length) {
+            case 3:
+                // console.log
+                list.find(n => n.selectorText === ".mainSVG").style.stroke = random.colors[2];
+                // list.find(n => n.selectorText === ".mainSVG").style = 5;
+                break;
+            case 4:
+                list.find(n => n.selectorText === ".mainSVG").style.stroke = random.colors[2];
+                list.find(n => n.selectorText === ".secondarySVG").style.stroke = random.colors[3];
+                break;
+            default:
+                break;
+        }
+        // div = document.createElement('div');
+        img = document.createElement('img');
+
+
+        img.id = 'logo';
+        console.log(teamSVG)
+        img.src = Array.from(teamSVG).find(n => n.teamAbbrev === random.teamAbbrev).teamLogo;
+
+
+        // div.appendChild(img);
+        body.insertBefore(img, body.children[0]);
+    }
 
     function getRandomPlayer() {
         return playerInfo[Math.floor(Math.random() * playerInfo.length)];
@@ -221,27 +313,65 @@ document.addEventListener('DOMContentLoaded', () => {
             a.setAttribute("class", "autocomplete-items");
             /*append the DIV element as a child of the autocomplete container:*/
             this.parentNode.appendChild(a);
+
             /*for each item in the array...*/
             for (i = 0; i < arr.length; i++) {
-              /*check if the item starts with the same letters as the text field value:*/
-              if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-                /*create a DIV element for each matching element:*/
-                b = document.createElement("DIV");
-                /*make the matching letters bold:*/
-                b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
-                b.innerHTML += arr[i].substr(val.length);
-                /*insert a input field that will hold the current array item's value:*/
-                b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-                /*execute a function when someone clicks on the item value (DIV element):*/
-                    b.addEventListener("click", function(e) {
-                    /*insert the value for the autocomplete text field:*/
-                    inp.value = this.getElementsByTagName("input")[0].value;
-                    /*close the list of autocompleted values,
-                    (or any other open lists of autocompleted values:*/
-                    closeAllLists();
-                });
-                a.appendChild(b);
-              }
+                var combinedName = arr[i][0] + " " + arr[i][1];
+                // First Name
+                if (arr[i][0].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+                    /*create a DIV element for each matching element:*/
+                    b = document.createElement("DIV");
+                    /*make the matching letters bold:*/
+                    b.innerHTML = "<strong>" + arr[i][0].substr(0, val.length) + "</strong>";
+                    b.innerHTML += arr[i][0].substr(val.length) + " " + arr[i][1];
+                    /*insert a input field that will hold the current array item's value:*/
+                    b.innerHTML += "<input type='hidden' value='" + combinedName + "'>";
+                    /*execute a function when someone clicks on the item value (DIV element):*/
+                        b.addEventListener("click", function(e) {
+                        /*insert the value for the autocomplete text field:*/
+                        inp.value = this.getElementsByTagName("input")[0].value;
+                        /*close the list of autocompleted values,
+                        (or any other open lists of autocompleted values:*/
+                        closeAllLists();
+                    });
+                    a.appendChild(b);
+                } else if (arr[i][1].substr(0, val.length).toUpperCase() == val.toUpperCase()) { // Last Name
+                    /*create a DIV element for each matching element:*/
+                    b = document.createElement("DIV");
+                    /*make the matching letters bold:*/
+                    b.innerHTML = arr[i][0];
+                    b.innerHTML += " <strong>" + arr[i][1].substr(0, val.length) + "</strong>";
+                    b.innerHTML += arr[i][1].substr(val.length);
+                    /*insert a input field that will hold the current array item's value:*/
+                    b.innerHTML += "<input type='hidden' value='" + combinedName + "'>";
+                    /*execute a function when someone clicks on the item value (DIV element):*/
+                        b.addEventListener("click", function(e) {
+                        /*insert the value for the autocomplete text field:*/
+                        inp.value = this.getElementsByTagName("input")[0].value;
+                        /*close the list of autocompleted values,
+                        (or any other open lists of autocompleted values:*/
+                        closeAllLists();
+                    });
+                    a.appendChild(b);
+                } else if(combinedName.substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+                    /*create a DIV element for each matching element:*/
+                    b = document.createElement("DIV");
+                    /*make the matching letters bold:*/
+                    b.innerHTML += " <strong>" + combinedName.substr(0, val.length) + "</strong>";
+                    b.innerHTML += combinedName.substr(val.length);
+                    /*insert a input field that will hold the current array item's value:*/
+                    b.innerHTML += "<input type='hidden' value='" + combinedName + "'>";
+                    /*execute a function when someone clicks on the item value (DIV element):*/
+                        b.addEventListener("click", function(e) {
+                        /*insert the value for the autocomplete text field:*/
+                        inp.value = this.getElementsByTagName("input")[0].value;
+                        /*close the list of autocompleted values,
+                        (or any other open lists of autocompleted values:*/
+                        closeAllLists();
+                    });
+                    a.appendChild(b);
+                }
+
             }
         });
         /*execute a function presses a key on the keyboard:*/

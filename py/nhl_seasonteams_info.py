@@ -28,14 +28,18 @@ def get_nhl_season_info(SEASON_ID):
 
 	teams_data = []
 	for teams in data['standings']:
-		teams_data.append(teams['teamAbbrev']['default'])
+		team = {
+			"teamAbbrev": teams['teamAbbrev']['default'],
+			"teamLogo": teams['teamLogo']
+		}
+		teams_data.append(team)
 
 	player_data = {	
 		"seasonId": SEASON_ID,
 		"teams": teams_data
 	}
 
-	with open(f"teamLists/{SEASON_ID}_teamlist.json", "w") as f:
+	with open(f"{SEASON_ID}_teamlist.json", "w") as f:
 		json.dump(player_data, f, indent=4)
 
 # years = ['19751976', '19761977', '19771978', '19781979', '19791980', '19801981', '19811982', 
@@ -47,7 +51,7 @@ def get_nhl_season_info(SEASON_ID):
 # '20172018', '20182019', '20192020', '20202021', '20212022', '20222023', '20232024', 
 # '20242025']
 
-years = ['20202021']
+years = ['20242025']
 
 seconds = random.randint(5,10)
 #Comprehensive list estimates that it will take ~8 minutes to put together the full list

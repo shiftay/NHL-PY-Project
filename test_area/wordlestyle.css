@@ -2,16 +2,43 @@ body {
     font-family: sans-serif;
     background-color: #f4f4f4;
     color: #333;
-
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
 }
 
+svg {
+    position: absolute;
+    pointer-events: none;
+    width: 100%;
+    z-index: -2;
+}
+
+.mainSVG {
+    fill: #1e7e34;
+    stroke: none;
+    stroke-width: 5;
+}
+
+.secondarySVG{
+    fill: #66bb6a;
+    stroke: none;
+    stroke-width: 5;
+}
+
+#logo {
+    margin: 0;
+    position: fixed;
+    z-index: -1;
+    stroke-width: 1;
+    stroke: #fff;
+}
 
 .container {
-    background-color: #fff;
+    /* background-color: #fff; */
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 30px;
@@ -21,8 +48,6 @@ body {
     flex-direction: column;
     gap: 20px;
 }
-
-
 
 header {
     text-align: center;
@@ -222,6 +247,47 @@ footer {
     background-color: DodgerBlue !important; 
     color: #ffffff; 
   }
+
+/* ======================================================================= */
+/* =====                     Responsiveness                          ===== */
+/* ======================================================================= */
+
+      /* smartphones, iPhone, portrait 480x320 phones */
+    @media (min-width:320px)  { 
+        svg {
+            width: 300vw;
+        }
+    }
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+    @media (min-width:481px)  {
+        svg {
+            width: 200vw;
+        }
+    }
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+    @media (min-width:641px)  {
+        svg {
+            width: 200vw;
+        }
+    }
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    @media (min-width:961px)  {
+        svg {
+            width: 105vw;
+        }
+    }
+    /* big landscape tablets, laptops, and desktops */ 
+    @media (min-width:1025px) {
+        svg {
+            width: 105vw;
+        }
+    }
+    /* hi-res laptops and desktops */
+    @media (min-width:1281px) {
+        svg {
+            width: 105vw;
+        }
+    }
 
 
 /* ======================================================================= */
