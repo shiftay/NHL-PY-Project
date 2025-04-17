@@ -156,19 +156,24 @@ main {
     background-color: #0056b3;
 }
 
-.guess-grid {
-    /* display: grid; */
-    /* grid-template-columns: repeat(7, 1fr); */
-    /* gap: 5px; */
+/* .guess-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
     margin-bottom: 15px;
-}
+} */
 
 .guess-row {
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid: "name name position sweaternumber birthcountry heightininches birthdate currentteam";
     font-size: 0.75em;
+   
+    border-left: 2px solid #000000;
+    border-right: 2px solid #000000;
     border-bottom: 2px solid #000000;
     background-color: #c7c7c7; 
+
+    grid-auto-columns: 12.5%;
     /* gap: 5px; */
 }
 
@@ -178,7 +183,10 @@ main {
     font-size: 1em;
     color: #555;
     fill: #2c3e50;
+    border: 2px solid #000000;
     background-color: #ffffff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     /* padding-bottom: 8px;
     margin-bottom: 8px; */
 }
@@ -188,6 +196,28 @@ main {
     text-align: center;
     /* border: 1px solid #eee; */
     /* border-radius: 3px; */
+}
+
+.name {
+    grid-area: name;
+}
+.position {
+    grid-area: position;
+}
+.sweaterNumber {
+    grid-area: sweaternumber;
+}
+.birthCountry {
+    grid-area: birthcountry;
+}
+.heightInInches {
+    grid-area: heightininches;
+}
+.birthDate {
+    grid-area: birthdate;
+}
+.currentTeamAbbrev {
+    grid-area: currentteam;
 }
 
 .controls {
@@ -202,8 +232,12 @@ main {
 }
 
 #attempts {
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    padding: 10px;
     font-size: 0.9em;
-    color: #777;
+    border: 2px solid #000000;
+    color: #000000;
 }
 
 #game-status {
@@ -228,11 +262,6 @@ footer {
     background-color: #fdd835; /* Yellow - Close match (same value, different column) */
     color: #333;
     font-weight: bold;
-}
-
-.name {
-    grid-column: 1 /span 2;
-    /* width: 125px; */
 }
 
 #popover {
@@ -264,14 +293,14 @@ footer {
     position: relative;
     display: inline-block;
   }
-  
+  /* TODO: DARKMODE??? */
   input {
     border: 1px solid transparent;
     background-color: #f1f1f1;
     padding: 10px;
     font-size: 16px;
   }
-  
+  /* TODO: DARKMODE??? */
   input[type=text] {
     background-color: #f1f1f1;
     width: 100%;
@@ -283,6 +312,8 @@ footer {
     cursor: pointer;
   }
   
+
+  /* TODO: DARKMODE??? */
   .autocomplete-items {
     position: absolute;
     border: 1px solid #d4d4d4;
@@ -389,6 +420,17 @@ footer {
         svg {
             width: 300vw;
         }
+
+        .guess-row {
+            font-size: x-small;
+        }
+
+        .guess-row.header-row {
+            font-size: small;
+        }
+        .attribute {
+            padding: 6px;
+        }
     }
     /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
     @media (min-width:481px)  {
@@ -413,12 +455,25 @@ footer {
         svg {
             width: 105vw;
         }
+
+        .guess-row {
+            font-size: 0.75em;
+        }
+
+        .guess-row.header-row {
+            font-size: 1em;
+        }
+        .attribute {
+            padding: 10px;
+        }
     }
     /* hi-res laptops and desktops */
     @media (min-width:1281px) {
         svg {
             width: 105vw;
         }
+
+
     }
 
 

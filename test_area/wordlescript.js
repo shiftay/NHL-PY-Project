@@ -232,7 +232,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const attributes = ["name", "position", "sweaterNumber", "birthCountry", "heightInInches", "birthDate", "currentTeamAbbrev"];
         attributes.forEach(attr => {
             const cell = document.createElement('div');
-            cell.classList.add('attribute');
+            cell.classList.add('attribute' , `${attr}`);
 
             switch(attr) {
                 case "heightInInches":
@@ -245,7 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     cell.textContent = `${2025 - parseInt(dateParts[0])}`;
                     break;
                 case "name":
-                    cell.classList.add('name');
+                    // cell.classList.add('name');
                     cell.textContent = guessedPlayer[attr];
                     break;
                 default:
