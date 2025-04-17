@@ -7,7 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const popover = document.getElementById('popover');
     const body = document.getElementById('body');
     const stylesheet = document.styleSheets[0];
-
+    const logoSpace = document.getElementById("logoSpace");
+    const slider = document.getElementById("slider");
+    const testHolder = document.getElementById("test-holder");
 
     let targetPlayer;
     let attempts = 0;
@@ -21,6 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
     var answerId;
     var targetsBirthDate;
     var colorCodes = [];
+
+    var darkmode = false;
 
     // Reading JSON
     // Command to run a temp HTTP Server
@@ -54,7 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
             playerNames.push(names);
         });
 
-        console.log(`Names: ${playerNames[0]}`);
         targetPlayer = getRandomPlayer();
         targetsBirthDate = targetPlayer['birthDate'].split("-");
     }
@@ -99,51 +102,72 @@ document.addEventListener('DOMContentLoaded', () => {
         data.teams.forEach(n => {
             teamSVG.push(n);
         });
-        updateRandomTeam(); // "TOR"
+        updateRandomTeam("TOR", false); // "TOR"
     }
 
-    function initRandomTeam() {
-        var randomTeam = colorCodes[Math.floor(Math.random() * colorCodes.length)];
+    slider.addEventListener("change", function() {
+        var css = Array.from(stylesheet.cssRules);
 
+        darkmode = !darkmode;
 
+        if(darkmode) {
+            css.find(n => n.selectorText === "body").style.backgroundColor = "#111111";
+        } else {
+            css.find(n => n.selectorText === "body").style.backgroundColor = "#f4f4f4";
+        }
+    });
 
-    }
+    function updateRandomTeam(teamAbbrev, normal = true) { // team
+        var logo = document.getElementById('logo');
+        if(logo)
+            logo.remove();
+        var smallLogo = document.getElementById('small-logo');
+        if(smallLogo)
+            smallLogo.remove();
 
-    function updateRandomTeam() { // team
-        document.getElementById('logo');
+        var css = Array.from(stylesheet.cssRules);
 
-        var list = Array.from(stylesheet.cssRules);
-        var num = Math.floor(Math.random() * (colorCodes.length - 1));
-        console.log(`Num ${num}`);
+        var random = Array.from(colorCodes).find(n => n.teamAbbrev === teamAbbrev);
 
-        var random = colorCodes[num];
-        list.find(n => n.selectorText === ".mainSVG").style.fill = random.colors[0];
-        list.find(n => n.selectorText === ".secondarySVG").style.fill = random.colors[1];
+        css.find(n => n.selectorText === ".mainSVG").style.fill = random.colors[0];
+        css.find(n => n.selectorText === ".secondarySVG").style.fill = random.colors[1];
 
         switch(random.colors.length) {
             case 3:
-                // console.log
-                list.find(n => n.selectorText === ".mainSVG").style.stroke = random.colors[2];
+                
+                css.find(n => n.selectorText === ".mainSVG").style.stroke = random.colors[2];
                 // list.find(n => n.selectorText === ".mainSVG").style = 5;
                 break;
             case 4:
-                list.find(n => n.selectorText === ".mainSVG").style.stroke = random.colors[2];
-                list.find(n => n.selectorText === ".secondarySVG").style.stroke = random.colors[3];
+                css.find(n => n.selectorText === ".mainSVG").style.stroke = random.colors[2];
+                css.find(n => n.selectorText === ".secondarySVG").style.stroke = random.colors[3];
                 break;
             default:
                 break;
         }
         // div = document.createElement('div');
         img = document.createElement('img');
-
+        smallimg = document.createElement('img');
 
         img.id = 'logo';
-        console.log(teamSVG)
         img.src = Array.from(teamSVG).find(n => n.teamAbbrev === random.teamAbbrev).teamLogo;
-
-
+        smallimg.src = Array.from(teamSVG).find(n => n.teamAbbrev === random.teamAbbrev).teamLogo;
+        smallimg.id = 'small-logo';
+        smallimg.addEventListener("click", function(e) {
+            updateLook(logoSpace);
+        });
         // div.appendChild(img);
         body.insertBefore(img, body.children[0]);
+        logoSpace.appendChild(smallimg)
+
+        if(normal){
+            body.classList.add('animate', 'slowblur');
+            setTimeout(function() {
+                body.classList.remove('animate', 'slowblur');
+            }, 2000);
+        }
+
+
     }
 
     function getRandomPlayer() {
@@ -294,6 +318,56 @@ document.addEventListener('DOMContentLoaded', () => {
 
     guessButton.addEventListener('click', checkGuess);
 
+    function updateLook(inp) {
+        var teamchoice = document.getElementById('team-choice');
+        if(teamchoice)
+            return;
+        var a, b, i, val = this.value;
+
+        a = document.createElement("DIV");
+        a.setAttribute("class", "team-choice");
+        a.id = 'team-choice';
+        testHolder.appendChild(a);
+        for (i = 0; i < teamSVG.length; i++) {
+
+            console.log(`${teamSVG[i].teamAbbrev}`);
+            b = document.createElement("DIV");
+
+            b.classList.add('logoHolder')
+            b.innerHTML += "<input type='hidden' value='" + teamSVG[i].teamAbbrev + "'>";
+            b.innerHTML += `<img id="clickable-logo" src=${teamSVG[i].teamLogo}>`;
+            b.addEventListener("click", function(e) {
+                
+                // console.log(this.getElementsByTagName("input")[0].value);
+                updateRandomTeam(this.getElementsByTagName("input")[0].value)
+
+                closeAllLists();
+            });
+
+            a.appendChild(b);
+        }
+
+        function closeAllLists(elmnt) {
+            var x = document.getElementsByClassName("team-choice");
+            for (var i = 0; i < x.length; i++) {
+                if (elmnt != x[i] && elmnt != inp) {
+                    x[i].parentNode.removeChild(x[i]);
+                }
+            }
+        }
+        document.addEventListener("click", function (e) {
+            switch(e.target.id) {
+                case "small-logo":
+
+
+
+                case "clickable-logo":
+                    return;
+                default:
+                    closeAllLists(e.target);
+            }
+        });
+    }
 
 // Auto Complete Section
     function autocomplete(inp, arr) {

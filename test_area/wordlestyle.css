@@ -38,13 +38,69 @@ svg {
     width: 65vw;
 }
 
+#top-left {
+    position: absolute;
+    display: grid;
+    grid: "dark-mode dark-mode"
+          "sidebar test-holder";
+    top: 0;
+    right: 0;
+    transform: translate(-15px, 15px);
+}
+
+#dark-mode {
+    display: grid;
+    grid-area: dark-mode;
+    grid: 'slider small-logo';
+    grid-auto-columns: 100px;
+    grid-auto-rows: 100px;
+
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    justify-content: center;
+    justify-items: center;
+}
+
+#small-logo {
+
+    max-width: 75%;
+    object-fit: contain;
+}
+
+#clickable-logo {
+    max-width: 75%;
+}
+
+#test-holder {
+    grid-area: test-holder;
+
+    width:100px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    justify-items: center;
+    /* pointer-events: none; */
+}
+#logoSpace {
+    grid-area: small-logo;
+    width: 100%;
+    height: 100%;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.team-choice {
+    margin: 5px 0 0 5px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+}
 
 /* TODO
         Add opacity rule for just the container.
 */
 .container {
-    background-color: #fff;
-    opacity: 0.5;
+    background-color: rgb(255,255,255,0.5);
+    /* opacity: 0.5; */
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 30px;
@@ -200,7 +256,9 @@ footer {
     vertical-align: bottom;
 }
 
-/* ----------------------------------------------------------------------- */
+/* ======================================================================= */
+/* =====                   Autocomplete                              ===== */
+/* ======================================================================= */
 /*the container must be positioned relative:*/
 .autocomplete {
     position: relative;
@@ -254,7 +312,74 @@ footer {
     background-color: DodgerBlue !important; 
     color: #ffffff; 
   }
+/* ======================================================================= */
+/* =====                     Switch                                  ===== */
+/* ======================================================================= */
 
+/* The switch - the box around the slider */
+    .switch {
+        margin-top: 10px;
+        position: relative;
+        display: inline-block;
+        grid-area: slider;
+        width: 60px;
+        height: 34px;
+    }
+  
+  /* Hide default HTML checkbox */
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+  
+  /* The slider */
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+  
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+  
+    input:checked + .slider {
+        background-color: #000000;
+    }
+    
+    input:focus + .slider {
+        box-shadow: 0 0 1px #000000;
+    }
+    
+    input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+  
+    /* Rounded sliders */
+    .slider.round {
+        border-radius: 34px;
+    }
+    
+    .slider.round:before {
+        border-radius: 50%;
+    }
 /* ======================================================================= */
 /* =====                     Responsiveness                          ===== */
 /* ======================================================================= */
@@ -314,6 +439,7 @@ footer {
     .animate.pop {
         animation-name: animate-pop;
     }
+
     @keyframes animate-pop {
         0% {
         opacity: 0;
@@ -330,10 +456,29 @@ footer {
         animation-name: animate-blur;
         animation-timing-function: ease;
     }
+
     @keyframes animate-blur {
         0% {
         opacity: 0;
         filter: blur(15px);
+        }
+        100% {
+        opacity: 1;
+        filter: blur(0px);
+        }
+    }
+
+    /* Slower Blur In */
+    .animate.slowblur {
+        animation-duration: 2s;
+        animation-name: animate-slowblur;
+        animation-timing-function: ease;
+    }
+
+    @keyframes animate-slowblur {
+        0% {
+        opacity: 0;
+        filter: blur(5px);
         }
         100% {
         opacity: 1;
