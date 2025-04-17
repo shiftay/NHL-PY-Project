@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
         data.teams.forEach(n => {
             teamSVG.push(n);
         });
-        // updateRandomTeam();
+        updateRandomTeam(); // "TOR"
     }
 
     function initRandomTeam() {
@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-    function updateRandomTeam() {
+    function updateRandomTeam() { // team
         document.getElementById('logo');
 
         var list = Array.from(stylesheet.cssRules);
