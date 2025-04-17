@@ -42,7 +42,7 @@ svg {
     position: absolute;
     display: grid;
     grid: "dark-mode dark-mode"
-          "sidebar test-holder";
+          "sidebar team-holder";
     top: 0;
     right: 0;
     transform: translate(-15px, 15px);
@@ -55,7 +55,7 @@ svg {
     grid-auto-columns: 100px;
     grid-auto-rows: 100px;
 
-    background-color: #f4f4f4;
+    background-color: rgb(244,244,244,0.75);
     border-radius: 8px;
     justify-content: center;
     justify-items: center;
@@ -71,8 +71,8 @@ svg {
     max-width: 75%;
 }
 
-#test-holder {
-    grid-area: test-holder;
+#team-holder {
+    grid-area: team-holder;
 
     width:100px;
     background-color: #f4f4f4;
@@ -349,12 +349,13 @@ footer {
 
 /* The switch - the box around the slider */
     .switch {
-        margin-top: 10px;
+        margin-top: 12.5px;
         position: relative;
         display: inline-block;
         grid-area: slider;
         width: 60px;
         height: 34px;
+        
     }
   
   /* Hide default HTML checkbox */
@@ -375,6 +376,7 @@ footer {
         background-color: #ccc;
         -webkit-transition: .4s;
         transition: .4s;
+        border-radius: 5px;
     }
   
     .slider:before {
@@ -387,6 +389,7 @@ footer {
         background-color: white;
         -webkit-transition: .4s;
         transition: .4s;
+        border-radius: 5px;
     }
   
     input:checked + .slider {
