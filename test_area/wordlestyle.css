@@ -75,7 +75,7 @@ svg {
     grid-area: team-holder;
 
     width:100px;
-    background-color: #f4f4f4;
+    background-color: rgb(244,244,244,0.75);
     border-radius: 8px;
     justify-items: center;
     /* pointer-events: none; */

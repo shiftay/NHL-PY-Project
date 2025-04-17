@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const stylesheet = document.styleSheets[0];
     const logoSpace = document.getElementById("logoSpace");
     const slider = document.getElementById("slider");
-    const testHolder = document.getElementById("test-holder");
+    const teamholder = document.getElementById("team-holder");
 
     let targetPlayer;
     let attempts = 0;
@@ -327,7 +327,7 @@ document.addEventListener('DOMContentLoaded', () => {
         a = document.createElement("DIV");
         a.setAttribute("class", "team-choice");
         a.id = 'team-choice';
-        testHolder.appendChild(a);
+        teamholder.appendChild(a);
         for (i = 0; i < teamSVG.length; i++) {
 
             console.log(`${teamSVG[i].teamAbbrev}`);
