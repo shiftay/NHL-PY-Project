@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     var answerId;
     var targetsBirthDate;
     var colorCodes = [];
+    var bgelements = [];
 
     var darkmode = false;
 
@@ -119,8 +120,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateRandomTeam(teamAbbrev, normal = true) { // team
         var logo = document.getElementById('logo');
-        if(logo)
-            logo.remove();
+        if(!logo) {
+            logo = document.createElement('img');
+            body.insertBefore(logo, body.children[0]);
+        }
+
         var smallLogo = document.getElementById('small-logo');
         if(smallLogo)
             smallLogo.remove();
@@ -146,28 +150,49 @@ document.addEventListener('DOMContentLoaded', () => {
                 break;
         }
         // div = document.createElement('div');
-        img = document.createElement('img');
+        // img = document.createElement('img');
         smallimg = document.createElement('img');
 
-        img.id = 'logo';
-        img.src = Array.from(teamSVG).find(n => n.teamAbbrev === random.teamAbbrev).teamLogo;
+        logo.id = 'logo';
+        logo.src = Array.from(teamSVG).find(n => n.teamAbbrev === random.teamAbbrev).teamLogo;
         smallimg.src = Array.from(teamSVG).find(n => n.teamAbbrev === random.teamAbbrev).teamLogo;
         smallimg.id = 'small-logo';
         smallimg.addEventListener("click", function(e) {
             updateLook(logoSpace);
         });
         // div.appendChild(img);
-        body.insertBefore(img, body.children[0]);
+        
         logoSpace.appendChild(smallimg)
 
         if(normal){
-            body.classList.add('animate', 'slowblur');
+            resetClassList("slowblur");
+            // closeAllLists();
+            setBlur(false);
+
+            // TODO: Clean up taking to long to parse
+            //       Track down other setTimeouts
+            //       clear additional timeouts.
             setTimeout(function() {
-                body.classList.remove('animate', 'slowblur');
+                resetClassList("slowbluroff");
             }, 2000);
         }
 
 
+    }
+
+    function resetClassList(blureffect) {
+        logo.classList.remove('animate', `${blureffect}`);
+        Array.from(document.getElementsByClassName("bgpieces")).forEach(n => n.classList.remove('animate', `${blureffect}`));
+    }
+
+    function setBlur(blur) {
+        if(blur) {
+            logo.classList.add('animate', 'slowblur');
+            Array.from(document.getElementsByClassName("bgpieces")).forEach(n => n.classList.add('animate', 'slowblur'));
+        } else {
+            logo.classList.add('animate', 'slowbluroff');
+            Array.from(document.getElementsByClassName("bgpieces")).forEach(n => n.classList.add('animate', 'slowbluroff'));
+        }
     }
 
     function getRandomPlayer() {
@@ -328,9 +353,8 @@ document.addEventListener('DOMContentLoaded', () => {
         a.setAttribute("class", "team-choice");
         a.id = 'team-choice';
         teamholder.appendChild(a);
+        setBlur(true);
         for (i = 0; i < teamSVG.length; i++) {
-
-            console.log(`${teamSVG[i].teamAbbrev}`);
             b = document.createElement("DIV");
 
             b.classList.add('logoHolder')
@@ -354,13 +378,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     x[i].parentNode.removeChild(x[i]);
                 }
             }
+            if(elmnt) resetClassList("slowblur");
         }
         document.addEventListener("click", function (e) {
             switch(e.target.id) {
                 case "small-logo":
-
-
-
                 case "clickable-logo":
                     return;
                 default:

@@ -62,7 +62,6 @@ svg {
 }
 
 #small-logo {
-
     max-width: 75%;
     object-fit: contain;
 }
@@ -532,10 +531,30 @@ footer {
         animation-name: animate-slowblur;
         animation-timing-function: ease;
     }
+    .slowblur{
+        filter: blur(5px);
+    }
 
     @keyframes animate-slowblur {
         0% {
-        opacity: 0;
+        opacity: 1;
+        filter: blur(0px);
+        }
+        100% {
+        opacity: 1;
+        filter: blur(5px);
+        }
+    }
+
+    .animate.slowbluroff {
+        animation-duration: 2s;
+        animation-name: animate-slowbluroff;
+        animation-timing-function: ease;
+    }
+
+    @keyframes animate-slowbluroff {
+        0% {
+        opacity: 1;
         filter: blur(5px);
         }
         100% {

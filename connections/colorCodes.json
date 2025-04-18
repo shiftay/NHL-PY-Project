@@ -1,0 +1,265 @@
+{
+	"teams": [
+		{
+			"teamAbbrev": "ANA",
+			"colors": [
+					"#F47A38",
+					"#B9975B",
+					"#C1C6C8",
+					"#000000"
+			]
+		},
+		{
+			"teamAbbrev": "UTA",
+			"colors": [
+					"#010101",
+					"#69B3E7",
+					"#FFFFFF"
+			]
+		},
+		{
+			"teamAbbrev": "BOS",
+			"colors": [
+					"#FFB81C",
+					"#000000"
+			]
+		},
+		{
+			"teamAbbrev": "BUF",
+			"colors": [
+					"#003087",
+					"#FFB81C",
+					"#FFFFFF"
+			]
+		},
+		{
+			"teamAbbrev": "CGY",
+			"colors": [
+					"#D2001C",
+					"#FAAF19",
+					"#FFFFFF"
+			]
+		},
+		{
+			"teamAbbrev": "CAR",
+			"colors": [
+					"#CE1126",
+					"#FFFFFF",
+					"#A4A9AD",
+					"#000000"
+			]
+		},
+		{
+			"teamAbbrev": "CHI",
+			"colors": [
+					"#CF0A2C",
+					"#000000",
+					"#FFFFFF"
+			]
+		},
+		{
+			"teamAbbrev": "COL",
+			"colors": [
+					"#6F263D",
+					"#236192",
+					"#A2AAAD",
+					"#000000"
+			]
+		},
+		{
+			"teamAbbrev": "CBJ",
+			"colors": [
+					"#002654",
+					"#ce1126",
+					"#A4A9AD"
+			]
+		},
+		{
+			"teamAbbrev": "DAL",
+			"colors": [
+					"#006847",
+					"#8F8F8C",
+					"#111111"
+			]
+		},
+		{
+			"teamAbbrev": "DET",
+			"colors": [
+					"#ce1126",
+					"#FFFFFF"
+			]
+		},
+		{
+			"teamAbbrev": "EDM",
+			"colors": [
+					"#041E42",
+					"#FF4C00"
+			]
+		},
+		{
+			"teamAbbrev": "FLA",
+			"colors": [
+					"#041E42",
+					"#c8102E",
+					"#B9975B"
+			]
+		},
+		{
+			"teamAbbrev": "LAK",
+			"colors": [
+					"#111111",
+					"#A2AAAD",
+					"#FFFFFF"
+			]
+		},
+		{
+			"teamAbbrev": "MIN",
+			"colors": [
+					"#A6192E",
+					"#154734",
+					"#EAAA00",
+					"#DDCBA4"
+			]
+		},
+		{
+			"teamAbbrev": "MTL",
+			"colors": [
+					"#AF1E2D",
+					"#192168",
+					"#FFFFFF"
+			]
+		},
+		{
+			"teamAbbrev": "NSH",
+			"colors": [
+					"#FFB81C",
+					"#041E42",
+					"#FFFFFF"
+			]
+		},
+		{
+			"teamAbbrev": "NJD",
+			"colors": [
+					"#CE1126",
+					"#000000",
+					"#FFFFFF"
+			]
+		},
+		{
+			"teamAbbrev": "NYI",
+			"colors": [
+					"#00539b",
+					"#f47d30",
+					"#FFFFFF"
+			]
+		},
+		{
+			"teamAbbrev": "NYR",
+			"colors": [
+					"#0038A8",
+					"#CE1126",
+					"#FFFFFF"
+			]
+		},
+		{
+			"teamAbbrev": "OTT",
+			"colors": [
+					"#000000",
+					"#DA1A32",
+					"#B79257"
+			]
+		},
+		{
+			"teamAbbrev": "PHI",
+			"colors": [
+					"#F74902",
+					"#000000",
+					"#FFFFFF"
+			]
+		},
+		{
+			"teamAbbrev": "PIT",
+			"colors": [
+					"#000000",
+					"#CFC493",
+					"#FCB514",
+					"FFFFFF"
+			]
+		},
+		{
+			"teamAbbrev": "STL",
+			"colors": [
+					"#002F87",
+					"#FCB514",
+					"#041E42",
+					"FFFFFF"
+			]
+		},
+		{
+			"teamAbbrev": "SJS",
+			"colors": [
+					"#006D75",
+					"#EA7200",
+					"#000000",
+					"FFFFFF"
+			]
+		},
+		{
+			"teamAbbrev": "SEA",
+			"colors": [
+					"#001628",
+					"#99d9d9",
+					"#355464",
+					"FFFFFF"
+			]
+		},
+		{
+			"teamAbbrev": "TBL",
+			"colors": [
+					"#002868",
+					"#FFFFFF"
+			]
+		},
+		{
+			"teamAbbrev": "TOR",
+			"colors": [
+					"#00205b",
+					"#FFFFFF"
+			]
+		},
+		{
+			"teamAbbrev": "VAN",
+			"colors": [
+					"#00205B",
+					"#00843d",
+					"#FFFFFF"
+			]
+		},
+		{
+			"teamAbbrev": "VGK",
+			"colors": [
+					"#B4975A",
+					"#333f42",
+					"#000000",
+					"#FFFFFF"
+			]
+		},
+		{
+			"teamAbbrev": "WSH",
+			"colors": [
+					"#041E42",
+					"#C8102E",
+					"#FFFFFF"
+			]
+		},
+		{
+			"teamAbbrev": "WPG",
+			"colors": [
+					"#041E42",
+					"#AC162C",
+					"#8E9090",
+					"#FFFFFF"
+			]
+		}
+	]
+}
