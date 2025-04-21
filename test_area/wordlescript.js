@@ -11,18 +11,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const slider = document.getElementById("slider");
     const teamholder = document.getElementById("team-holder");
 
-
+    // DARK MODE SETTINGS
     var whiteAlpha = 'rgba(255, 255, 255, 0.5)';
     var blackAlpha = 'rgba(53, 53, 53, 0.5)';
 
     var white = 'rgb(244, 244, 244)';
     var black = 'rgb(17, 17, 17)';
 
-    // DARK MODE SETTINGS
     var darkmodeAlpha = [  '.container', '#dark-mode', '#team-holder' ]; 
     var darkmodeReg = [ '.autocomplete-items div', '.autocomplete-items', 'input', 'body'];
-    var fonts = [ 'input', '.autocomplete-items div', '#attempts']
-    var borders = [ '.guess-row', '.guess-row.header-row', '#attempts']
+    var fonts = [ 'input', '.autocomplete-items div', '#attempts'];
+    var borders = [ '.guess-row', '.guess-row.header-row', '#attempts'];
 
 
     let targetPlayer;

@@ -3,13 +3,13 @@
         background-color: #f0f0f0;
         color: #333;
         margin: 0;
-        /* padding: 20px; */
         display: flex;
         justify-content: center;
         align-items: center;
         min-height: 100vh;
         overflow: hidden;
     }
+
 /* TOP LEFT STUFF */
     svg {
         position: absolute;
@@ -134,8 +134,13 @@
         max-width: 600px;
         display: flex;
         flex-direction: column;
-        gap: 20px;
     }
+
+    /* .container {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+    } */
 
     header {
         text-align: center;
@@ -147,9 +152,10 @@
     }
 
     main {
-        /* display: flex;
-        flex-direction: column; */
-        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin: 0 auto;
     }
 
     .popup {
@@ -188,20 +194,24 @@
         font-size: 0.75em;
     }
 
-    .container {
-        max-width: 1200px;
-        width: 100%;
-        margin: 0 auto;
-    }
 
     .toast {
         pointer-events: all;
     }
 
+    /* 
+        Fixes needed to deal with the sizing of the squares
+        textContent is currently driving sizes bigger than needed
+
+        Container is smaller, so now the conntent really drives the issues.
+    
+    */
+
     .word-grid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 10px;
+        grid-template-columns: repeat(4, 25%);
+        /* grid-template-rows: 25%; */
+        /* gap: 10px; */
         margin-bottom: 20px;
     }
 
@@ -222,6 +232,7 @@
     .word {
         background-color: #e0f2f7;
         color: #003b7a;
+        aspect-ratio: 1 / 0;
         border: 1px solid #b3e5fc;
         border-radius: 6px;
         padding: 15px;
@@ -230,6 +241,8 @@
         cursor: pointer;
         user-select: none;
         box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        white-space: nowrap; /* Prevent text from wrapping */
+        overflow: hidden;    /* Hide any overflowing content */
     }
 
     .word.selected {
@@ -249,6 +262,7 @@
         user-select: none;
         box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
     }
+
     .word-completed.one{
         background-color: #f07eff;
         border: 1px solid #e231fa;
@@ -440,11 +454,17 @@
         .word {
             font-size: 0.75em;
         }
+        svg {
+            width: 300vw;
+        }
     }
     /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
     @media (min-width:481px)  {
         .word {
             font-size: 0.75em;
+        }
+        svg {
+            width: 200vw;
         }
     }
     /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
@@ -452,11 +472,17 @@
         .word {
             font-size: 0.75em;
         }
+        svg {
+            width: 200vw;
+        }
     }
     /* tablet, landscape iPad, lo-res laptops ands desktops */
     @media (min-width:961px)  {
         .word {
             font-size: 1em;
+        }
+        svg {
+            width: 105vw;
         }
     }
     /* big landscape tablets, laptops, and desktops */ 
@@ -464,11 +490,17 @@
         .word {
             font-size: 1em;
         }
+        svg {
+            width: 105vw;
+        }
     }
     /* hi-res laptops and desktops */
     @media (min-width:1281px) {
         .word {
             font-size: 1em;
+        }
+        svg {
+            width: 105vw;
         }
     }
 
@@ -761,6 +793,44 @@
     @keyframes animate-fill {
         from {  background-color: #bbb; }
         to {    background-color: #313131;   }
+    }
+
+    /* Slower Blur In */
+    .animate.slowblur {
+        animation-duration: 2s;
+        animation-name: animate-slowblur;
+        animation-timing-function: ease;
+    }
+    .slowblur{
+        filter: blur(5px);
+    }
+
+    @keyframes animate-slowblur {
+        0% {
+        opacity: 1;
+        filter: blur(0px);
+        }
+        100% {
+        opacity: 1;
+        filter: blur(5px);
+        }
+    }
+
+    .animate.slowbluroff {
+        animation-duration: 2s;
+        animation-name: animate-slowbluroff;
+        animation-timing-function: ease;
+    }
+
+    @keyframes animate-slowbluroff {
+        0% {
+        opacity: 1;
+        filter: blur(5px);
+        }
+        100% {
+        opacity: 1;
+        filter: blur(0px);
+        }
     }
     
 /* ======================================================================= */

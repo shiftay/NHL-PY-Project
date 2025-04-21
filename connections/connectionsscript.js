@@ -22,6 +22,18 @@ document.addEventListener('DOMContentLoaded', () => {
     var teamSVG = [];
     var darkmode = false;
 
+    // DARK MODE SETTINGS
+    var whiteAlpha = 'rgba(255, 255, 255, 0.5)';
+    var blackAlpha = 'rgba(53, 53, 53, 0.5)';
+
+    var white = 'rgb(244, 244, 244)';
+    var black = 'rgb(17, 17, 17)';
+
+    var darkmodeAlpha = [ '.container', '#dark-mode', '#team-holder' ]; 
+    var darkmodeReg = [ 'body' ];
+    var fonts = [ ];
+    var borders = [ ];
+
 
     // Command to run a temp HTTP Server
     // py -m http.server 8000
@@ -362,7 +374,7 @@ document.addEventListener('DOMContentLoaded', () => {
         data.teams.forEach(n => {
             teamSVG.push(n);
         });
-        updateRandomTeam("TOR", false); // "TOR"
+        updateRandomTeam("WPG", false); // "TOR"
     }
 
     slider.addEventListener("change", function() {
@@ -371,9 +383,48 @@ document.addEventListener('DOMContentLoaded', () => {
         darkmode = !darkmode;
 
         if(darkmode) {
-            css.find(n => n.selectorText === "body").style.backgroundColor = "#111111";
+            darkmodeAlpha.forEach(n => {
+                css.find(x => x.selectorText === n).style.backgroundColor = blackAlpha;
+            });
+            darkmodeReg.forEach(n => css.find(x => x.selectorText === n).style.backgroundColor = black);
+            // borders.forEach(n => {
+            //     if(n === '.guess-row.header-row') {
+            //         css.find(x => x.selectorText === n).style.backgroundColor = black;
+            //     } else {
+                    
+            //         css.find(x => x.selectorText === n).style.backgroundColor = `rgb(${lightenRgbPercentage(black, 20)})`;
+            //         console.log(`${n} | ${css.find(x => x.selectorText === n).style.backgroundColor}`);
+            //     }    
+            // });
+
+
+            // Opposite for fonts, selections, and borders
+            // fonts.forEach(n => css.find(x => x.selectorText === n).style.color = white);
+            // borders.forEach(n => css.find(x => x.selectorText === n).style.color = white)
+            // borders.forEach(n => css.find(x => x.selectorText === n).style.borderColor = white);
+            // // Lighten selections.
+            // css.find(n => n.selectorText === '.autocomplete-items div:hover').style.backgroundColor = `rgb(${lightenRgbPercentage(black, 10)})`;
+            // console.log(`${ css.find(n => n.selectorText === '.autocomplete-items div:hover').style.backgroundColor}`);
         } else {
-            css.find(n => n.selectorText === "body").style.backgroundColor = "#f4f4f4";
+
+            darkmodeAlpha.forEach(n => css.find(x => x.selectorText === n).style.backgroundColor = whiteAlpha);
+            darkmodeReg.forEach(n => css.find(x => x.selectorText === n).style.backgroundColor = white);
+            // borders.forEach(n => {
+            //     if(n === '.guess-row.header-row') {
+            //         css.find(x => x.selectorText === n).style.backgroundColor = white;
+            //     } else {
+                    
+            //         css.find(x => x.selectorText === n).style.backgroundColor = `rgb(${lightenRgbPercentage(white, -150)})`;
+            //         console.log(`${n} | ${css.find(x => x.selectorText === n).style.backgroundColor}`);
+            //     }    
+            // });
+
+            // // Opposite for fonts & selections
+            // fonts.forEach(n => css.find(x => x.selectorText === n).style.color = black);
+            // borders.forEach(n => css.find(x => x.selectorText === n).style.color = black);
+            // borders.forEach(n => css.find(x => x.selectorText === n).style.borderColor = black);
+            // css.find(n => n.selectorText === '.autocomplete-items div:hover').style.backgroundColor = `rgb(${lightenRgbPercentage(white, -90)})`;
+            // console.log(`${ css.find(n => n.selectorText === '.autocomplete-items div:hover').style.backgroundColor}`);
         }
     });
 
@@ -381,7 +432,6 @@ document.addEventListener('DOMContentLoaded', () => {
         var logo = document.getElementById('logo');
         if(!logo) {
             logo = document.createElement('img');
-            console.log(`${body}`);
             body.insertBefore(logo, body.children[0]);
         }
 
