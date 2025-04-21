@@ -55,7 +55,7 @@ svg {
     grid-auto-columns: 100px;
     grid-auto-rows: 100px;
 
-    background-color: rgb(244,244,244,0.75);
+    background-color: rgb(244,244,244,0.5);
     border-radius: 8px;
     justify-content: center;
     justify-items: center;
@@ -74,7 +74,7 @@ svg {
     grid-area: team-holder;
 
     width:100px;
-    background-color: rgb(244,244,244,0.75);
+    background-color: rgb(244,244,244,0.5);
     border-radius: 8px;
     justify-items: center;
     /* pointer-events: none; */
@@ -136,7 +136,7 @@ main {
 #guess-input {
     flex-grow: 1;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     border-radius: 5px;
     font-size: 1em;
 }
@@ -170,7 +170,7 @@ main {
     border-left: 2px solid #000000;
     border-right: 2px solid #000000;
     border-bottom: 2px solid #000000;
-    background-color: #c7c7c7; 
+    background-color: rgb(228, 228, 228); 
 
     grid-auto-columns: 12.5%;
     /* gap: 5px; */
@@ -231,7 +231,7 @@ main {
 }
 
 #attempts {
-    background-color: #f4f4f4;
+    background-color: rgb(228, 228, 228);
     border-radius: 5px;
     padding: 10px;
     font-size: 0.9em;
@@ -296,12 +296,13 @@ footer {
   input {
     border: 1px solid transparent;
     background-color: #f1f1f1;
+    color: #111;
     padding: 10px;
     font-size: 16px;
   }
   /* TODO: DARKMODE??? */
   input[type=text] {
-    background-color: #f1f1f1;
+
     width: 100%;
   }
   
@@ -330,6 +331,7 @@ footer {
     cursor: pointer;
     background-color: #fff; 
     border-bottom: 1px solid #d4d4d4; 
+    color: #333;
   }
   
   /*when hovering an item:*/
@@ -385,7 +387,7 @@ footer {
         width: 26px;
         left: 4px;
         bottom: 4px;
-        background-color: white;
+        background-color: #ffffffb0;
         -webkit-transition: .4s;
         transition: .4s;
         border-radius: 5px;

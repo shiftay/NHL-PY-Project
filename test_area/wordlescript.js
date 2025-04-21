@@ -11,6 +11,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const slider = document.getElementById("slider");
     const teamholder = document.getElementById("team-holder");
 
+
+    var whiteAlpha = 'rgba(255, 255, 255, 0.5)';
+    var blackAlpha = 'rgba(53, 53, 53, 0.5)';
+
+    var white = 'rgb(244, 244, 244)';
+    var black = 'rgb(17, 17, 17)';
+
+    // DARK MODE SETTINGS
+    var darkmodeAlpha = [  '.container', '#dark-mode', '#team-holder' ]; 
+    var darkmodeReg = [ '.autocomplete-items div', '.autocomplete-items', 'input', 'body'];
+    var fonts = [ 'input', '.autocomplete-items div', '#attempts']
+    var borders = [ '.guess-row', '.guess-row.header-row', '#attempts']
+
+
     let targetPlayer;
     let attempts = 0;
     let up = '\u2191';
@@ -103,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
         data.teams.forEach(n => {
             teamSVG.push(n);
         });
-        updateRandomTeam("TOR", false); // "TOR"
+        updateRandomTeam("COL", false); // "TOR"
     }
 
     slider.addEventListener("change", function() {
@@ -112,11 +126,62 @@ document.addEventListener('DOMContentLoaded', () => {
         darkmode = !darkmode;
 
         if(darkmode) {
-            css.find(n => n.selectorText === "body").style.backgroundColor = "#111111";
+            darkmodeAlpha.forEach(n => {
+                css.find(x => x.selectorText === n).style.backgroundColor = blackAlpha;
+            });
+            darkmodeReg.forEach(n => css.find(x => x.selectorText === n).style.backgroundColor = black);
+            borders.forEach(n => {
+                if(n === '.guess-row.header-row') {
+                    css.find(x => x.selectorText === n).style.backgroundColor = black;
+                } else {
+                    
+                    css.find(x => x.selectorText === n).style.backgroundColor = `rgb(${lightenRgbPercentage(black, 20)})`;
+                    console.log(`${n} | ${css.find(x => x.selectorText === n).style.backgroundColor}`);
+                }    
+            });
+
+
+            // Opposite for fonts, selections, and borders
+            fonts.forEach(n => css.find(x => x.selectorText === n).style.color = white);
+            borders.forEach(n => css.find(x => x.selectorText === n).style.color = white)
+            borders.forEach(n => css.find(x => x.selectorText === n).style.borderColor = white);
+            // Lighten selections.
+            css.find(n => n.selectorText === '.autocomplete-items div:hover').style.backgroundColor = `rgb(${lightenRgbPercentage(black, 10)})`;
+            // console.log(`${ css.find(n => n.selectorText === '.autocomplete-items div:hover').style.backgroundColor}`);
         } else {
-            css.find(n => n.selectorText === "body").style.backgroundColor = "#f4f4f4";
+
+            darkmodeAlpha.forEach(n => css.find(x => x.selectorText === n).style.backgroundColor = whiteAlpha);
+            darkmodeReg.forEach(n => css.find(x => x.selectorText === n).style.backgroundColor = white);
+            borders.forEach(n => {
+                if(n === '.guess-row.header-row') {
+                    css.find(x => x.selectorText === n).style.backgroundColor = white;
+                } else {
+                    
+                    css.find(x => x.selectorText === n).style.backgroundColor = `rgb(${lightenRgbPercentage(white, -150)})`;
+                    console.log(`${n} | ${css.find(x => x.selectorText === n).style.backgroundColor}`);
+                }    
+            });
+
+            // Opposite for fonts & selections
+            fonts.forEach(n => css.find(x => x.selectorText === n).style.color = black);
+            borders.forEach(n => css.find(x => x.selectorText === n).style.color = black);
+            borders.forEach(n => css.find(x => x.selectorText === n).style.borderColor = black);
+            css.find(n => n.selectorText === '.autocomplete-items div:hover').style.backgroundColor = `rgb(${lightenRgbPercentage(white, -90)})`;
+            // console.log(`${ css.find(n => n.selectorText === '.autocomplete-items div:hover').style.backgroundColor}`);
         }
     });
+
+
+    function lightenRgbPercentage(rgb, percentage) {
+        const [r, g, b] = rgb;
+        const values = rgb.substring(4, rgb.length - 1).split(',');
+        const newR = Math.min(255, Math.round(parseInt(values[0]) + (255 - parseInt(values[0])) * (percentage / 100)));
+        const newG = Math.min(255, Math.round(parseInt(values[1]) + (255 - parseInt(values[1])) * (percentage / 100)));
+        const newB = Math.min(255, Math.round(parseInt(values[2]) + (255 - parseInt(values[2])) * (percentage / 100)));
+        return [newR, newG, newB];
+    }
+    
+
 
     function updateRandomTeam(teamAbbrev, normal = true) { // team
         var logo = document.getElementById('logo');
@@ -174,7 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
             //       clear additional timeouts.
             setTimeout(function() {
                 resetClassList("slowbluroff");
-            }, 2000);
+            }, 1000);
         }
 
 
@@ -233,7 +298,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, time);
     }
 
-    function checkGuess() {
+    function  checkGuess() {
         const guess = guessInput.value.trim();
         if (!guess) return;
 
