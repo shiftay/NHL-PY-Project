@@ -29,10 +29,17 @@ document.addEventListener('DOMContentLoaded', () => {
     var white = 'rgb(244, 244, 244)';
     var black = 'rgb(17, 17, 17)';
 
+    var cnctn_dark = 'rgb(0, 123, 255)';
+    var cnctn_dark_brdr ='rgb(0, 86, 179)';
+    var cnctn_dark_font = 'rgb(255,255,255)';
+    var cnctn_light = 'rgb(224, 242, 247)';
+    var cnctn_light_brdr = 'rgb(179, 229, 252)';
+    var cnctn_light_font = 'rgb(0, 59, 122)';
+
     var darkmodeAlpha = [ '.container', '#dark-mode', '#team-holder' ]; 
-    var darkmodeReg = [ 'body' ];
-    var fonts = [ ];
-    var borders = [ ];
+    var darkmodeReg = [ 'body', '.hint' ];
+    var fonts = [ '.hint' ];
+    var borders = [  '.dot' ];
 
 
     // Command to run a temp HTTP Server
@@ -71,6 +78,30 @@ document.addEventListener('DOMContentLoaded', () => {
         if(data.hasOwnProperty('hint'))
             hint.textContent = `Today's hint: ${data.hint}`;
 
+        var main = getCookie('main');
+        if(main) {
+            // console.log
+            console.log(`before - ${wordsData}`);
+            for(var i = 0; i < main.length; i++) {
+                wordsData = wordsData.filter(word => !correctConnections[main[i]].includes(word));
+                ShowGroup(main[i], false);
+            }
+                
+            // ShowGroup()
+            // wordsData.find(x =>)
+            console.log(`after - ${wordsData}`);
+            
+        }
+            console.log(`Main Cookie: ${main}`);
+
+        var attempt = getCookie('attempts');
+        if(attempt)
+        {
+            var high = findHighestNumber(attempt);
+            for(var i = 0; i < high; i++) strikeGiven(i, true);
+            strikes = attempt;
+        }
+           
         // Render the initial word grid
         wordsData.sort(() => Math.random() - 0.5); // Shuffle words
         wordsData.forEach(word => {
@@ -91,8 +122,6 @@ document.addEventListener('DOMContentLoaded', () => {
         wordElement.addEventListener('click', () => handleWordClick(wordElement, wordText));
         return wordElement;
     }
-
-
 
     function handleWordClick(wordElement, wordText) {
         if (wordElement.classList.contains('selected')) {
@@ -124,7 +153,6 @@ document.addEventListener('DOMContentLoaded', () => {
         var frag = document.createDocumentFragment();
         selectedWords.forEach(word => {
             const wordElement = Array.from(wordGridHolder.children).find(el => el.textContent === word);
-            console.log(`${wordElement}`);
             frag.appendChild(wordElement);
         });
         ShowGroup(groupId);
@@ -140,11 +168,12 @@ document.addEventListener('DOMContentLoaded', () => {
         ShowGroup(groupId);
     }
 
-    function ShowGroup(groupId) {
+    function ShowGroup(groupId, midgame = true) {
         document.getElementById("word-grid-holder").style.marginBottom = "0px";
 
+        console.log(`${groupId}`);
+
         var value;
-        console.log(groupId);
         switch(groupId.toString()) {
             case "0":
                 value = "one";
@@ -162,10 +191,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log("It broked");
         }
 
-        console.log(value);
-
         const wordElement = document.createElement('div');
-        wordElement.classList.add('word-completed', 'animate', 'blur', `${value}`);
+        wordElement.classList.add('word-completed', `${value}`);
+        if(midgame)
+            wordElement.classList.add('animate', 'blur');
 
         const header = document.createElement('h3');
         header.classList.add('answerkey');
@@ -253,40 +282,27 @@ document.addEventListener('DOMContentLoaded', () => {
                     }, 1000);
 
                     submitButton.disabled = true;
+                    setCookie('main', groupId);
                     break;
                 }
+
+                
             }
 
             if (!foundMatch) {
                 strikes++;
                 // Wait for the Box animation on the words to finish.
-                if(strikes < 3) {
-                    const collection = document.getElementsByClassName("dot");
-                    setTimeout(function() {
-                        popup.textContent = (highestAmount == 3) ? `One away...` : `Incorrect!`;
-                        popup.classList.toggle('show');
-                        collection[strikes - 1].classList.add('animate', 'fill');
-                        // Let the pop up sit for a bit.
-                        setTimeout(function() {
-                            popup.classList.toggle('show');
-                            collection[strikes - 1].classList.add('filled');
-                            // Clean up the Selected elements.
-                            setTimeout(function() {
-                                const selectedElements = document.querySelectorAll('.word.selected');
-                                selectedElements.forEach(el => {
-                                    el.classList.remove('selected', 'animate', 'test');
-                                });
-                                selectedWords = []; 
-                            }, 250);
-                        }, 1000);
-                    }, 1000);
+                if(strikes < 4) {
+                    strikeGiven(strikes);
                 }
+
+                setCookie('attempts', strikes);
             }
 
             // Reset selected words visually
             submitButton.disabled = true;
 
-            if (strikes >= 3 && correctGroupsFound < 4) {
+            if (strikes >= 4 && correctGroupsFound < 4) {
                 console.log('We lost???');
                 // Optionally reveal the correct answers
                 // ShowPopover(1000);
@@ -322,6 +338,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 ShowPopover(500);
 
                 submitButton.disabled = true;
+                
             }
 
             if (correctGroupsFound === 4) {
@@ -330,7 +347,33 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    function strikeGiven(strike, start = false, highestAmount = 0) {
+        const collection = document.getElementsByClassName("dot");
 
+        if(start) {
+            collection[strike].classList.add('filled');
+        } else {
+            setTimeout(function() {
+                popup.textContent = (highestAmount == 3) ? `One away...` : `Incorrect!`;
+                popup.classList.toggle('show');
+                collection[strike - 1].classList.add('animate', 'fill');
+                // Let the pop up sit for a bit.
+                setTimeout(function() {
+                    popup.classList.toggle('show');
+                    collection[strike - 1].classList.add('filled');
+                    // Clean up the Selected elements.
+                    setTimeout(function() {
+                        const selectedElements = document.querySelectorAll('.word.selected');
+                        selectedElements.forEach(el => {
+                            el.classList.remove('selected', 'animate', 'test');
+                        });
+                        selectedWords = []; 
+                    }, 250);
+                }, 1000);
+            }, 1000);
+        }   
+
+    }
 
 
     // === SLIDER + TEAM SWAP ====
@@ -387,6 +430,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 css.find(x => x.selectorText === n).style.backgroundColor = blackAlpha;
             });
             darkmodeReg.forEach(n => css.find(x => x.selectorText === n).style.backgroundColor = black);
+
+
+            css.find(n=> n.selectorText === ".word").style.backgroundColor = cnctn_dark;
+            css.find(n=> n.selectorText === ".word").style.color = cnctn_dark_font;
+            css.find(n=> n.selectorText === ".word").style.borderColor = cnctn_dark_brdr;
+
+
+            
+            css.find(n=> n.selectorText === ".word.selected").style.backgroundColor = cnctn_light;
+            css.find(n=> n.selectorText === ".word.selected").style.color = cnctn_light_font;
+            css.find(n=> n.selectorText === ".word.selected").style.borderColor = cnctn_light_brdr;
             // borders.forEach(n => {
             //     if(n === '.guess-row.header-row') {
             //         css.find(x => x.selectorText === n).style.backgroundColor = black;
@@ -399,9 +453,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
             // Opposite for fonts, selections, and borders
-            // fonts.forEach(n => css.find(x => x.selectorText === n).style.color = white);
+            fonts.forEach(n => css.find(x => x.selectorText === n).style.color = white);
             // borders.forEach(n => css.find(x => x.selectorText === n).style.color = white)
-            // borders.forEach(n => css.find(x => x.selectorText === n).style.borderColor = white);
+            borders.forEach(n => css.find(x => x.selectorText === n).style.borderColor = white);
             // // Lighten selections.
             // css.find(n => n.selectorText === '.autocomplete-items div:hover').style.backgroundColor = `rgb(${lightenRgbPercentage(black, 10)})`;
             // console.log(`${ css.find(n => n.selectorText === '.autocomplete-items div:hover').style.backgroundColor}`);
@@ -409,6 +463,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
             darkmodeAlpha.forEach(n => css.find(x => x.selectorText === n).style.backgroundColor = whiteAlpha);
             darkmodeReg.forEach(n => css.find(x => x.selectorText === n).style.backgroundColor = white);
+
+
+
+
+            css.find(n=> n.selectorText === ".word").style.backgroundColor = cnctn_light;
+            css.find(n=> n.selectorText === ".word").style.color = cnctn_light_font;
+            css.find(n=> n.selectorText === ".word").style.borderColor = cnctn_light_brdr;
+
+            css.find(n=> n.selectorText === ".word.selected").style.backgroundColor = cnctn_dark;
+            css.find(n=> n.selectorText === ".word.selected").style.color = cnctn_dark_font;
+            css.find(n=> n.selectorText === ".word.selected").style.borderColor = cnctn_dark_brdr;
             // borders.forEach(n => {
             //     if(n === '.guess-row.header-row') {
             //         css.find(x => x.selectorText === n).style.backgroundColor = white;
@@ -419,10 +484,10 @@ document.addEventListener('DOMContentLoaded', () => {
             //     }    
             // });
 
-            // // Opposite for fonts & selections
-            // fonts.forEach(n => css.find(x => x.selectorText === n).style.color = black);
+            // Opposite for fonts & selections
+            fonts.forEach(n => css.find(x => x.selectorText === n).style.color = black);
             // borders.forEach(n => css.find(x => x.selectorText === n).style.color = black);
-            // borders.forEach(n => css.find(x => x.selectorText === n).style.borderColor = black);
+            borders.forEach(n => css.find(x => x.selectorText === n).style.borderColor = black);
             // css.find(n => n.selectorText === '.autocomplete-items div:hover').style.backgroundColor = `rgb(${lightenRgbPercentage(white, -90)})`;
             // console.log(`${ css.find(n => n.selectorText === '.autocomplete-items div:hover').style.backgroundColor}`);
         }
@@ -553,4 +618,57 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+
+/* ======================================================================= */
+/* =====                            COOKIES                          ===== */
+/* ======================================================================= */
+    function getCookie(name) {
+        const nameEQ = name + "=";
+        const ca = document.cookie.split(';');
+
+        console.log(`attempt to get cookie "${name}" - ${ca}`);
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+
+    function setCookie(name, value, days) {
+        let expires = "";
+
+        let val = [];
+        val.push(value);
+
+        var exists = getCookie(name);
+        if(exists)
+            val.push(exists);
+
+        console.log(`attempt to set cookie "${name}"`);
+        if (days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + val + expires + "; path=/";
+
+        console.log(`cookie - ${document.cookie}`);
+    }
+
+
+
+    // HELPER FUNCTION
+    function findHighestNumber(arr) {
+        if (!arr || arr.length === 0) {
+          return undefined; // Handle empty or invalid array
+        }
+        let highest = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+          if (arr[i] > highest) {
+            highest = arr[i];
+          }
+        }
+        return highest;
+    }
 });
