@@ -70,6 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
             teamSVG.push(n);
         });
         updateRandomTeam("WPG", false); // "TOR"
+        const ca = document.cookie.split(';');
+        console.log(`${ca}`);
     }
 
     slider.addEventListener("change", function() {
