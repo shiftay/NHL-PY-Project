@@ -11,6 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const slider = document.getElementById("slider");
     const teamholder = document.getElementById("team-holder");
 
+
+
+    const stats_cookie = 'scouting-report-stats';
+    const game_cookie = 'scouting-report-current';
+
+    const cookie_vals = [ 'attempts', 'guesses' ]
+
     // DARK MODE SETTINGS
     var whiteAlpha = 'rgba(255, 255, 255, 0.5)';
     var blackAlpha = 'rgba(53, 53, 53, 0.5)';
@@ -116,15 +123,84 @@ document.addEventListener('DOMContentLoaded', () => {
         data.teams.forEach(n => {
             teamSVG.push(n);
         });
-        updateRandomTeam("COL", false); // "TOR"
+        main();
     }
 
+    function main() {
+        var cookies = readcookies();
+        if(!cookies[1])
+            updateTeam("WPG", false);
+
+        if(getCookie(game_cookie)) {
+            var main = getCookie(cookie_vals[0]);
+            if(main) {
+                for(var i = 0; i < main.length; i++) {
+                    wordsData = wordsData.filter(word => !correctConnections[main[i]].includes(word));
+                    ShowGroup(main[i], false);
+                }
+            }
+    
+            var attempt = getCookie(cookie_vals[1]);
+            if(attempt)
+            {
+                var high = findHighestNumber(attempt);
+                for(var i = 0; i < high; i++) strikeGiven(i, true);
+                strikes = attempt;
+            }
+        }
+  
+        // Render the initial word grid
+        wordsData.sort(() => Math.random() - 0.5); // Shuffle words
+        wordsData.forEach(word => {
+            wordGrid.appendChild(createWord(word));
+        });
+    }
+
+    
+
+    function readcookies() {
+        var returnVals = [false, false];
+        // customization_cookie
+        var currentCookie = getCookie('dark-mode');
+        if(currentCookie) {
+            console.log(`cookie: ${currentCookie}`);
+
+            var isTrueSet = (currentCookie === 'true');
+            document.getElementById('checkbox').checked = darkmode = isTrueSet;
+            updateDarkMode(isTrueSet);
+            returnVals[0] = true;
+        }
+        
+        currentCookie = getCookie('team');
+        if(currentCookie) {
+            updateTeam(currentCookie, false);
+            returnVals[1] = true;
+        }   
+        
+        // stats_cookie
+        currentCookie = getCookie(stats_cookie);
+        if(currentCookie) {
+            stats = currentCookie;
+        }
+
+        return returnVals;
+    }
+
+
+
+
     slider.addEventListener("change", function() {
-        var css = Array.from(stylesheet.cssRules);
-
+    
         darkmode = !darkmode;
+        updateDarkMode(darkmode);
+        setCustomizationCookie('dark-mode', darkmode);
+ 
+    });
 
-        if(darkmode) {
+
+    function updateDarkMode(darkmodeToggle) {
+        var css = Array.from(stylesheet.cssRules);
+        if(darkmodeToggle) {
             darkmodeAlpha.forEach(n => {
                 css.find(x => x.selectorText === n).style.backgroundColor = blackAlpha;
             });
@@ -168,8 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
             css.find(n => n.selectorText === '.autocomplete-items div:hover').style.backgroundColor = `rgb(${lightenRgbPercentage(white, -90)})`;
             // console.log(`${ css.find(n => n.selectorText === '.autocomplete-items div:hover').style.backgroundColor}`);
         }
-    });
-
+    }
 
     function lightenRgbPercentage(rgb, percentage) {
         const [r, g, b] = rgb;
@@ -180,9 +255,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return [newR, newG, newB];
     }
     
-
-
-    function updateRandomTeam(teamAbbrev, normal = true) { // team
+    function updateTeam(teamAbbrev, normal = true) { // team
         var logo = document.getElementById('logo');
         if(!logo) {
             logo = document.createElement('img');
@@ -427,7 +500,7 @@ document.addEventListener('DOMContentLoaded', () => {
             b.addEventListener("click", function(e) {
                 
                 // console.log(this.getElementsByTagName("input")[0].value);
-                updateRandomTeam(this.getElementsByTagName("input")[0].value)
+                updateTeam(this.getElementsByTagName("input")[0].value)
 
                 closeAllLists();
             });
@@ -454,6 +527,66 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+/* ======================================================================= */
+/* =====                            COOKIES                          ===== */
+/* ======================================================================= */
+    function getCookie(name) {
+        const nameEQ = name + "=";
+        const ca = document.cookie.split(';');
+
+        console.log(`attempt to get cookie "${name}" - ${ca}`);
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+
+    function setCookie(name, value, days) {
+        let expires = "";
+
+        let val = [];
+        val.push(value);
+
+        var exists = getCookie(name);
+        if(exists)
+            val.push(exists);
+
+        console.log(`attempt to set cookie "${name}"`);
+        if (days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + val + expires + "; path=/";
+
+        console.log(`cookie - ${document.cookie}`);
+    }
+
+    function setCustomizationCookie(name, val, days, temp) {
+        let expires = "";
+
+        console.log(`attempt to set cookie "${name}"`);
+        if (days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + val + expires + "; path=/***/***";
+
+        console.log(`cookie - ${document.cookie}`);
+    }
+
+    function deleteCookie(name) {
+        document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    }
+
+
+
+
+
 
 // Auto Complete Section
     function autocomplete(inp, arr) {

@@ -353,13 +353,13 @@
     </svg>
 
     <div id="top-left">
-
+        <div id="back"><div id="top-left-home"></div></div>
     </div>
 
     <div id="top-right">
         <div id="dark-mode">
             <label class="switch" id="slider">
-                <input type="checkbox">
+                <input id="checkbox" type="checkbox">
                 <span class="slider"></span>
             </label>
             <div id="logoSpace"></div>
@@ -372,19 +372,14 @@
         <main>
             <div popover id="popover">
                 <div class="popover-top"> <!-- Button Area -->
-                    <button class="button" id="close">Close</button>
+                    <div id="close"><img src="assets/close.png"></div>
                 </div>
                 <div id="popover-content">
-                    <h2>Congratulations! or Close One...</h2>
-                    1W - 0L
-                    <br>
-                    Streak: 1
-                    <br>
                 </div>
                 <div class="popover-bottom"> <!-- Area for other links -->
-                    <button class="popovergrid" id="home">Home</button>
-                    <button class="popovergrid" id="scouting-report">Scouting Report</button>
-                    <button class="popovergrid" id="scouting-report-inf">Scouting Report Infinite</button>
+                    <button class="popovergrid" id="home"><img src="assets/home.png"></button>
+                    <button class="popovergrid" id="scouting-report"><img src="assets/scoutingReport.png"></button>
+                    <button class="popovergrid" id="scouting-report-inf"><img src="assets/coutingReport_inf.png"></button>
                     <button class="popovergrid" id="faceoff">Face Off</button>
                 </div>
             </div>
@@ -399,7 +394,7 @@
                 </div>
 
             <div class="selection-area">
-                <div class="button-area">
+                <div id= "button-area" class="button-area">
                     <button class="button" id="shuffle">Shuffle</button>
                     <button class="button" id="submit-group" disabled>Submit</button>
                 </div>
@@ -411,7 +406,9 @@
                 </div>
             </div>
         </main>
+        
     </div>
+    <div id="test">TESTTESTTEST</div>
     <script src="connectionsscript.js"></script>
 </body>
 </html>

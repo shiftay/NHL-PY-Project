@@ -6,9 +6,7 @@
         overscroll-behavior: contain; 
     }
     body {
-        position: fixed;
-        top: 0;
-        left: 0;
+
         font-family: sans-serif;
         background-color: #f0f0f0;
         color: #333;
@@ -53,19 +51,33 @@
 
     #top-left {
         position: absolute;
-        display: grid;
+        /* display: grid;
         grid:   "home connections"
-                "wordle grudge";
+                "wordle grudge"; */
         top: 0;
         left: 0;
-        transform: translate(-15px, 15px);
+        transform: translate(-25px, -25px);
+        scale: 0.5;
+    }
+
+    #back {
+        background-color: rgb(255,255,255,0.5);
+        border-radius: 8px;
+        filter: invert(0%);
+    }
+
+    #top-left-home {
+        background: url('assets/back.png') no-repeat;
+        min-width: 100px;
+        min-height: 100px;
+
     }
 
     #top-right {
         position: absolute;
         display: grid;
         grid:   "dark-mode dark-mode"
-                "sidebar team-holder";
+                "team-holder team-holder";
         top: 0;
         right: 0;
         transform: translate(-15px, 15px);
@@ -95,8 +107,8 @@
 
     #team-holder {
         grid-area: team-holder;
-
-        width:100px;
+        grid-column: 1 / 2;
+        width:200px;
         background-color: rgb(255,255,255,0.5);
         border-radius: 8px;
         justify-items: center;
@@ -119,42 +131,40 @@
 
 /* MAIN */
     #popover {
-        /* position: absolute; */
         text-align:center;
         padding:40px;
-        width: 50%;
-        height: 50%;
         background-color:rgb(244, 244, 244);
         border: 2px solid #000;
         border-radius: 8px;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        align-content: center;
+        justify-items: center;
     }
 
     .popover-top {
         position: absolute;
         top: 0;
         right: 0;
+        transform: translate(-5px,5px);
     }
 
     .popover-bottom {
         /* height: 25%; */
         /* vertical-align: bottom; */
-        /* position: absolute; */
-        /* bottom: 0; */
         /* left: 50%; */
-        margin: 5px;
         display: grid;
         grid:   "home faceoff"
                 "scouting-report scouting-report-inf";
         grid-template-columns: repeat(2, 1fr);
+
         /* width: 50%; */
         /* align-content: end; */
     }
 
     #popover-content{
         padding: 25px;
+        width: 75%;
+        margin-bottom: 100px;
     }
 
     [popover]:-internal-popover-in-top-layer::backdrop {
@@ -167,6 +177,11 @@
 
     #home {
         grid-area: home;
+        /* scale: 0.25; */
+        /* background: url("home.png") no-repeat; */
+    }
+    #home>img {
+        
     }
 
     #faceoff {
@@ -460,7 +475,6 @@
 /* ======================================================================= */
 /* =====                     Switch                                  ===== */
 /* ======================================================================= */
-
 /* The switch - the box around the slider */
     .switch {
         margin-top: 12.5px;
@@ -490,7 +504,7 @@
         background-color: #ccc;
         -webkit-transition: .4s;
         transition: .4s;
-        border-radius: 5px;
+        border-radius: 34px;
     }
   
     .slider:before {
@@ -500,10 +514,14 @@
         width: 26px;
         left: 4px;
         bottom: 4px;
-        background-color: #ffffffb0;
+        background: url("assets/puck.png") no-repeat;
+        background-size: 25px;
+        background-position: 50%;
+        filter: invert(0%);
+        /* background-color: #ffffffb0; */
         -webkit-transition: .4s;
         transition: .4s;
-        border-radius: 5px;
+        /* border-radius: 5px; */
     }
   
     input:checked + .slider {
@@ -529,7 +547,9 @@
         border-radius: 50%;
     }
 
-
+/* ======================================================================= */
+/* =====                        Responsive                           ===== */
+/* ======================================================================= */
     /* smartphones, iPhone, portrait 480x320 phones */
     @media (min-width:320px)  { 
         .word {
@@ -547,11 +567,20 @@
             scale: 0.65;
             transform-origin: top right;
         }
+
+        body {
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
     }
     /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
     @media (min-width:481px)  {
         .word {
             font-size: 0.75em;
+        }
+        #logo{
+            width: 130vw;
         }
         svg {
             width: 200vw;
@@ -566,7 +595,12 @@
             width: 200vw;
         }
         #logo {
-            width: 65vw;
+            width: 120vw;
+        }
+        body {
+            position: relative;
+            top: auto;
+            left: auto;
         }
     }
     /* tablet, landscape iPad, lo-res laptops ands desktops */
@@ -575,7 +609,7 @@
             font-size: 1em;
         }
         svg {
-            width: 105vw;
+            width: 200vw;
         }
         #logo {
             width: 65vw;
@@ -585,6 +619,11 @@
             scale: 1;
             transform: translate(-15px, 15px);
             transform-origin: top right;
+        }
+        body {
+            position: relative;
+            top: auto;
+            left: auto;
         }
     }
     /* big landscape tablets, laptops, and desktops */ 
@@ -991,3 +1030,11 @@
     }
   
   
+#test {
+    position: absolute;
+    bottom: 0;
+    border-radius: 3px;
+    padding: 5px;
+    background-color: #000;
+    color: #fff;
+}
