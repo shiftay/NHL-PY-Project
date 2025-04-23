@@ -69,85 +69,64 @@ document.addEventListener('DOMContentLoaded', () => {
         data.teams.forEach(n => {
             teamSVG.push(n);
         });
-        updateRandomTeam("WPG", false); // "TOR"
+        main();
+        // "TOR"
         const ca = document.cookie.split(';');
         console.log(`${ca}`);
     }
 
     slider.addEventListener("change", function() {
-        var css = Array.from(stylesheet.cssRules);
+        
 
         darkmode = !darkmode;
+        updateDarkMode(darkmode);
+        setCustomizationCookie('dark-mode', darkmode);
+    });
 
-        if(darkmode) {
+    function updateDarkMode(toggle) {
+        var css = Array.from(stylesheet.cssRules);
+        if(toggle) {
             darkmodeAlpha.forEach(n => {
                 css.find(x => x.selectorText === n).style.backgroundColor = blackAlpha;
             });
             darkmodeReg.forEach(n => css.find(x => x.selectorText === n).style.backgroundColor = black);
-
-
-            // css.find(n=> n.selectorText === ".word").style.backgroundColor = cnctn_dark;
-            // css.find(n=> n.selectorText === ".word").style.color = cnctn_dark_font;
-            // css.find(n=> n.selectorText === ".word").style.borderColor = cnctn_dark_brdr;
-
-
-            
-            // css.find(n=> n.selectorText === ".word.selected").style.backgroundColor = cnctn_light;
-            // css.find(n=> n.selectorText === ".word.selected").style.color = cnctn_light_font;
-            // css.find(n=> n.selectorText === ".word.selected").style.borderColor = cnctn_light_brdr;
-            // borders.forEach(n => {
-            //     if(n === '.guess-row.header-row') {
-            //         css.find(x => x.selectorText === n).style.backgroundColor = black;
-            //     } else {
-                    
-            //         css.find(x => x.selectorText === n).style.backgroundColor = `rgb(${lightenRgbPercentage(black, 20)})`;
-            //         console.log(`${n} | ${css.find(x => x.selectorText === n).style.backgroundColor}`);
-            //     }    
-            // });
-
-
-            // Opposite for fonts, selections, and borders
-            // fonts.forEach(n => css.find(x => x.selectorText === n).style.color = white);
-            // borders.forEach(n => css.find(x => x.selectorText === n).style.color = white)
-            // borders.forEach(n => css.find(x => x.selectorText === n).style.borderColor = white);
-            // // Lighten selections.
-            // css.find(n => n.selectorText === '.autocomplete-items div:hover').style.backgroundColor = `rgb(${lightenRgbPercentage(black, 10)})`;
-            // console.log(`${ css.find(n => n.selectorText === '.autocomplete-items div:hover').style.backgroundColor}`);
         } else {
-
             darkmodeAlpha.forEach(n => css.find(x => x.selectorText === n).style.backgroundColor = whiteAlpha);
             darkmodeReg.forEach(n => css.find(x => x.selectorText === n).style.backgroundColor = white);
-
-
-
-
-            // css.find(n=> n.selectorText === ".word").style.backgroundColor = cnctn_light;
-            // css.find(n=> n.selectorText === ".word").style.color = cnctn_light_font;
-            // css.find(n=> n.selectorText === ".word").style.borderColor = cnctn_light_brdr;
-
-            // css.find(n=> n.selectorText === ".word.selected").style.backgroundColor = cnctn_dark;
-            // css.find(n=> n.selectorText === ".word.selected").style.color = cnctn_dark_font;
-            // css.find(n=> n.selectorText === ".word.selected").style.borderColor = cnctn_dark_brdr;
-            // borders.forEach(n => {
-            //     if(n === '.guess-row.header-row') {
-            //         css.find(x => x.selectorText === n).style.backgroundColor = white;
-            //     } else {
-                    
-            //         css.find(x => x.selectorText === n).style.backgroundColor = `rgb(${lightenRgbPercentage(white, -150)})`;
-            //         console.log(`${n} | ${css.find(x => x.selectorText === n).style.backgroundColor}`);
-            //     }    
-            // });
-
-            // Opposite for fonts & selections
-            // fonts.forEach(n => css.find(x => x.selectorText === n).style.color = black);
-            // borders.forEach(n => css.find(x => x.selectorText === n).style.color = black);
-            // borders.forEach(n => css.find(x => x.selectorText === n).style.borderColor = black);
-            // css.find(n => n.selectorText === '.autocomplete-items div:hover').style.backgroundColor = `rgb(${lightenRgbPercentage(white, -90)})`;
-            // console.log(`${ css.find(n => n.selectorText === '.autocomplete-items div:hover').style.backgroundColor}`);
         }
-    });
+    }
 
-    function updateRandomTeam(teamAbbrev, normal = true) { // team
+    function main() {
+        var cookies = readCustomization();
+        if(!cookies[1])
+            updateTeam("WPG", false);
+
+    }
+    
+    function readCustomization() {
+        var returnVals = [false, false];
+        // customization_cookie
+        var currentCookie = getCookie('dark-mode');
+        if(currentCookie) {
+            console.log(`cookie: ${currentCookie}`);
+
+            var isTrueSet = (currentCookie === 'true');
+            document.getElementById('checkbox').checked = darkmode = isTrueSet;
+            updateDarkMode(isTrueSet);
+            returnVals[0] = true;
+        }
+        
+        currentCookie = getCookie('team');
+        if(currentCookie) {
+            updateTeam(currentCookie, false);
+            returnVals[1] = true;
+        }   
+        
+        return returnVals;
+    }
+
+
+    function updateTeam(teamAbbrev, normal = true) { // team
        
         var logo = document.getElementById('logo');
         if(!logo) {
@@ -246,8 +225,8 @@ document.addEventListener('DOMContentLoaded', () => {
             b.addEventListener("click", function(e) {
                 
                 // console.log(this.getElementsByTagName("input")[0].value);
-                updateRandomTeam(this.getElementsByTagName("input")[0].value)
-
+                updateTeam(this.getElementsByTagName("input")[0].value)
+                setCustomizationCookie('team', this.getElementsByTagName("input")[0].value);
                 closeAllLists();
             });
 
@@ -272,6 +251,20 @@ document.addEventListener('DOMContentLoaded', () => {
                     closeAllLists(e.target);
             }
         });
+    }
+
+    function setCustomizationCookie(name, val, days) {
+        let expires = "";
+
+        console.log(`attempt to set cookie "${name}"`);
+        if (days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + val + expires + "; path=/";
+
+        console.log(`cookie - ${document.cookie}`);
     }
 
     function getCookie(name) {
