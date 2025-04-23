@@ -38,7 +38,7 @@ svg {
     width: 65vw;
 }
 
-#top-left {
+#top-right {
     position: absolute;
     display: grid;
     grid: "dark-mode dark-mode"
@@ -46,6 +46,29 @@ svg {
     top: 0;
     right: 0;
     transform: translate(-15px, 15px);
+}
+
+#top-left {
+    position: absolute;
+    /* display: grid;
+    grid:   "home connections"
+            "wordle grudge"; */
+    top: 0;
+    left: 0;
+    transform: translate(-25px, -25px);
+    scale: 0.5;
+}
+
+#back {
+    background-color: rgb(255,255,255,0.5);
+    border-radius: 8px;
+    filter: invert(0%);
+}
+
+#top-left-home {
+    background: url('../connections/assets/back.png') no-repeat;
+    min-width: 100px;
+    min-height: 100px;
 }
 
 #dark-mode {
@@ -373,7 +396,7 @@ footer {
         background-color: #ccc;
         -webkit-transition: .4s;
         transition: .4s;
-        border-radius: 5px;
+        border-radius: 34px;
     }
   
     .slider:before {
@@ -383,10 +406,14 @@ footer {
         width: 26px;
         left: 4px;
         bottom: 4px;
-        background-color: #ffffffb0;
+        background: url("../connections/assets/puck.png") no-repeat;
+        background-size: 25px;
+        background-position: 50%;
+        filter: invert(0%);
+        /* background-color: #ffffffb0; */
         -webkit-transition: .4s;
         transition: .4s;
-        border-radius: 5px;
+        /* border-radius: 5px; */
     }
   
     input:checked + .slider {

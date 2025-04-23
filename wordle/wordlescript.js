@@ -19,17 +19,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const cookie_vals = [ 'attempts', 'guesses' ]
 
     // DARK MODE SETTINGS
-    var whiteAlpha = 'rgba(255, 255, 255, 0.5)';
-    var blackAlpha = 'rgba(53, 53, 53, 0.5)';
+    const whiteAlpha = 'rgba(255, 255, 255, 0.5)';
+    const blackAlpha = 'rgba(53, 53, 53, 0.5)';
 
-    var white = 'rgb(244, 244, 244)';
-    var black = 'rgb(17, 17, 17)';
+    const white = 'rgb(244, 244, 244)';
+    const black = 'rgb(17, 17, 17)';
 
-    var darkmodeAlpha = [  '.container', '#dark-mode', '#team-holder' ]; 
-    var darkmodeReg = [ '.autocomplete-items div', '.autocomplete-items', 'input', 'body'];
-    var fonts = [ 'input', '.autocomplete-items div', '#attempts'];
-    var borders = [ '.guess-row', '.guess-row.header-row', '#attempts'];
-
+    const darkmodeAlpha = [  '.container', '#dark-mode', '#team-holder' ]; 
+    const darkmodeReg = [ '.autocomplete-items div', '.autocomplete-items', 'input', 'body'];
+    const fonts = [ 'input', '.autocomplete-items div', '#attempts'];
+    const borders = [ '.guess-row', '.guess-row.header-row', '#attempts'];
+    const invertElements = [ '.slider::before', '#back' ];
 
     let targetPlayer;
     let attempts = 0;
@@ -132,28 +132,24 @@ document.addEventListener('DOMContentLoaded', () => {
             updateTeam("WPG", false);
 
         if(getCookie(game_cookie)) {
-            var main = getCookie(cookie_vals[0]);
-            if(main) {
-                for(var i = 0; i < main.length; i++) {
-                    wordsData = wordsData.filter(word => !correctConnections[main[i]].includes(word));
-                    ShowGroup(main[i], false);
-                }
-            }
+            // var main = getCookie(cookie_vals[0]);
+            // if(main) {
+            //     for(var i = 0; i < main.length; i++) {
+            //         wordsData = wordsData.filter(word => !correctConnections[main[i]].includes(word));
+            //         ShowGroup(main[i], false);
+            //     }
+            // }
     
-            var attempt = getCookie(cookie_vals[1]);
-            if(attempt)
-            {
-                var high = findHighestNumber(attempt);
-                for(var i = 0; i < high; i++) strikeGiven(i, true);
-                strikes = attempt;
-            }
+            // var attempt = getCookie(cookie_vals[1]);
+            // if(attempt)
+            // {
+            //     var high = findHighestNumber(attempt);
+            //     for(var i = 0; i < high; i++) strikeGiven(i, true);
+            //     strikes = attempt;
+            // }
         }
   
-        // Render the initial word grid
-        wordsData.sort(() => Math.random() - 0.5); // Shuffle words
-        wordsData.forEach(word => {
-            wordGrid.appendChild(createWord(word));
-        });
+
     }
 
     
@@ -190,11 +186,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     slider.addEventListener("change", function() {
-    
         darkmode = !darkmode;
         updateDarkMode(darkmode);
         setCustomizationCookie('dark-mode', darkmode);
- 
     });
 
 
@@ -215,7 +209,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 }    
             });
 
-
+            invertElements.forEach(n => {
+                css.find(x => x.selectorText === n).style.filter = 'invert(100%)';
+            })
             // Opposite for fonts, selections, and borders
             fonts.forEach(n => css.find(x => x.selectorText === n).style.color = white);
             borders.forEach(n => css.find(x => x.selectorText === n).style.color = white)
@@ -236,7 +232,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     console.log(`${n} | ${css.find(x => x.selectorText === n).style.backgroundColor}`);
                 }    
             });
-
+            invertElements.forEach(n => {
+                css.find(x => x.selectorText === n).style.filter = 'invert(0%)';
+            })
             // Opposite for fonts & selections
             fonts.forEach(n => css.find(x => x.selectorText === n).style.color = black);
             borders.forEach(n => css.find(x => x.selectorText === n).style.color = black);
@@ -560,7 +558,7 @@ document.addEventListener('DOMContentLoaded', () => {
             date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
             expires = "; expires=" + date.toUTCString();
         }
-        document.cookie = name + "=" + val + expires + "; path=/";
+        document.cookie = name + "=" + val + expires + "; path=/***/***";
 
         console.log(`cookie - ${document.cookie}`);
     }
@@ -574,7 +572,7 @@ document.addEventListener('DOMContentLoaded', () => {
             date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
             expires = "; expires=" + date.toUTCString();
         }
-        document.cookie = name + "=" + val + expires + "; path=/***/***";
+        document.cookie = name + "=" + val + expires + "; path=/";
 
         console.log(`cookie - ${document.cookie}`);
     }
@@ -584,7 +582,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
+    const back = document.getElementById("back");
 
+    back.addEventListener('click', () => {
+        window.location.href = "../";
+    });
 
 
 
