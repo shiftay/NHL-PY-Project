@@ -1029,12 +1029,3 @@
     animation-delay: 2s;
     }
   
-  
-#test {
-    position: absolute;
-    bottom: 0;
-    border-radius: 3px;
-    padding: 5px;
-    background-color: #000;
-    color: #fff;
-}

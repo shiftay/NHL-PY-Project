@@ -664,6 +664,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+
+    const back = document.getElementById("back");
+
+    back.addEventListener('click', () => {
+        window.location.href = "../";
+    });
+
+
     const winningToasts = ['Do you believe in miracles!?', 'CAN YOU! BELIEVE! WHAT WE! JUST SAW?!', 'Off the floor, On the board!']
 
     function Win() {
@@ -791,13 +799,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return highest;
     }
 
-    const test = document.getElementById('test');
-
-    test.addEventListener('click', () => {
-
-        console.log(`${document.cookie}`);
-
-    });
 
 
 });
