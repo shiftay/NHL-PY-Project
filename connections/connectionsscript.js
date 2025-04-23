@@ -36,10 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
     var cnctn_light_brdr = 'rgb(179, 229, 252)';
     var cnctn_light_font = 'rgb(0, 59, 122)';
 
-    var darkmodeAlpha = [ '.container', '#dark-mode', '#team-holder' ]; 
-    var darkmodeReg = [ 'body', '.hint' ];
-    var fonts = [ '.hint' ];
-    var borders = [  '.dot' ];
+    var darkmodeAlpha = [ '.container', '#dark-mode', '#team-holder',  ]; 
+    var darkmodeReg = [ 'body', '.hint', '#popover' ];
+    var fonts = [ '.hint', '#popover' ];
+    var borders = [  '.dot', '#popover' ];
 
 
     // Command to run a temp HTTP Server
@@ -136,16 +136,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     shuffleButton.addEventListener('click', () => {
-        var children = wordGrid.children;
-        // Create a fragment to hold the children.
-        var frag = document.createDocumentFragment();
 
-        // Grab a random child and add to the fragment
-        while(children.length) {
-            frag.appendChild(children[Math.floor(Math.random() * children.length)]);
-        }
+        popover.showPopover();
+        // var children = wordGrid.children;
+        // // Create a fragment to hold the children.
+        // var frag = document.createDocumentFragment();
 
-        wordGrid.appendChild(frag);
+        // // Grab a random child and add to the fragment
+        // while(children.length) {
+        //     frag.appendChild(children[Math.floor(Math.random() * children.length)]);
+        // }
+
+        // wordGrid.appendChild(frag);
     });
 
 

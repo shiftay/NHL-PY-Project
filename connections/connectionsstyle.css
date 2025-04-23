@@ -1,4 +1,14 @@
+    
+    html, body {
+        overflow-x: hidden; /* Prevents horizontal scrolling */
+        overflow-y: hidden; /* Prevents vertical scrolling */
+        height: 100%;     /* Ensure the body takes up the full viewport height */
+        overscroll-behavior: contain; 
+    }
     body {
+        position: fixed;
+        top: 0;
+        left: 0;
         font-family: sans-serif;
         background-color: #f0f0f0;
         color: #333;
@@ -7,7 +17,7 @@
         justify-content: center;
         align-items: center;
         min-height: 100vh;
-        overflow: hidden;
+
     }
 
 /* TOP LEFT STUFF */
@@ -16,6 +26,8 @@
         pointer-events: none;
         width: 100%;
         z-index: -2;
+        overflow-x: hidden; /* Prevents horizontal scrolling */
+        overflow-y: hidden; /* Prevents vertical scrolling */
     }
 
     .mainSVG {
@@ -107,28 +119,68 @@
 
 /* MAIN */
     #popover {
+        /* position: absolute; */
         text-align:center;
         padding:40px;
         width: 50%;
         height: 50%;
-        background-color:lightblue;
+        background-color:rgb(244, 244, 244);
+        border: 2px solid #000;
         border-radius: 8px;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        align-content: center;
     }
 
     .popover-top {
-        height: 25%;
+        position: absolute;
+        top: 0;
+        right: 0;
     }
 
     .popover-bottom {
-        height: 25%;
-        vertical-align: bottom;
+        /* height: 25%; */
+        /* vertical-align: bottom; */
+        /* position: absolute; */
+        /* bottom: 0; */
+        /* left: 50%; */
+        margin: 5px;
+        display: grid;
+        grid:   "home faceoff"
+                "scouting-report scouting-report-inf";
+        grid-template-columns: repeat(2, 1fr);
+        /* width: 50%; */
+        /* align-content: end; */
     }
 
-    #close {
-        bottom: 0;
+    #popover-content{
+        padding: 25px;
     }
+
+    [popover]:-internal-popover-in-top-layer::backdrop {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .popovergrid {
+        /* width: 50%; */
+    }
+
+    #home {
+        grid-area: home;
+    }
+
+    #faceoff {
+        grid-area: faceoff;
+    }
+
+    #scouting-report {
+        grid-area: scouting-report;
+    }
+
+    #scouting-report-inf {
+        grid-area: scouting-report-inf;
+    }
+
 
     h3 {
         margin: 0px;
@@ -493,7 +545,6 @@
 
         #top-right {
             scale: 0.65;
-            transform: translate(40px, 5px);
             transform-origin: top right;
         }
     }
