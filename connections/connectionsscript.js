@@ -56,8 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const borders = [  '.dot', '#popover' ];
     const invertElements = [ '.slider::before', '#back' ];
 
-    var sliderStyle = '.slider::before';
-
 
     var stats = [];
 
@@ -65,40 +63,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Command to run a temp HTTP Server
     // py -m http.server 8000
-    fetch('answerKey.json') // ../data/
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json(); // Parse the JSON response
-    })
-    .then(jsonData => {
-        // Now you can work with the jsonData object
-        processJson(jsonData);
-    })
-    .catch(error => {
-        console.error('Error fetching or parsing JSON:', error);
-    });
 
-    function processJson(data) {
-        var tempInfo;
-        if(data.hasOwnProperty('answers')) 
-            tempInfo = data.answers;
-
-        tempInfo.forEach(n => {
-            correctConnections.push(n["value"]);
-            connectionNames.push(n["key"]);
-        });
-
-        correctConnections.forEach(n => {
-            n.forEach(x => {
-                wordsData.push(x);
-            });
-        });
-
-        if(data.hasOwnProperty('hint'))
-            hint.textContent = `Today's hint: ${data.hint}`;
-    }
+    
 
     let selectedWords = [];
     let strikes = 0;
@@ -127,18 +93,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     shuffleButton.addEventListener('click', () => {
+        // // DEBUG FOR POPOVER TESTING
+        // popover.showPopover();
+        var children = wordGrid.children;
+        // Create a fragment to hold the children.
+        var frag = document.createDocumentFragment();
 
-        popover.showPopover();
-        // var children = wordGrid.children;
-        // // Create a fragment to hold the children.
-        // var frag = document.createDocumentFragment();
+        // Grab a random child and add to the fragment
+        while(children.length) {
+            frag.appendChild(children[Math.floor(Math.random() * children.length)]);
+        }
 
-        // // Grab a random child and add to the fragment
-        // while(children.length) {
-        //     frag.appendChild(children[Math.floor(Math.random() * children.length)]);
-        // }
-
-        // wordGrid.appendChild(frag);
+        wordGrid.appendChild(frag);
     });
 
     close.addEventListener('click', () => {
@@ -314,7 +280,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             if (correctGroupsFound === 4) {
-                Win();
+                WinToast();
             }
         }
     });
@@ -347,20 +313,72 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // === SLIDER + TEAM SWAP ====
-    fetch('assets/colorCodes.json') 
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+    async function getCachedJSON(url, cacheKey, expiryInSeconds = 3600) {
+        const cachedData = localStorage.getItem(cacheKey);
+        const cachedTime = localStorage.getItem(`${cacheKey}_timestamp`);
+
+        if (cachedData && cachedTime && (Date.now() - parseInt(cachedTime)) < (expiryInSeconds * 1000)) {
+            return JSON.parse(cachedData);
         }
-        return response.json(); // Parse the JSON response
-    })
-    .then(jsonData => {
-        // Now you can work with the jsonData object
-        extractColor(jsonData);
-    })
-    .catch(error => {
-        console.error('Error fetching or parsing JSON:', error);
+
+        try {
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const jsonData = await response.json();
+            localStorage.setItem(cacheKey, JSON.stringify(jsonData));
+            localStorage.setItem(`${cacheKey}_timestamp`, Date.now());
+            return jsonData;
+        } catch (error) {
+            console.error('Error fetching and caching JSON:', error);
+            return null;
+        }
+    }
+        
+    getCachedJSON('../assets/colorCodes.json', 'colorCache')
+    .then(data => {
+        if (data) {
+            extractColor(data);
+        }
     });
+
+    getCachedJSON('../assets/20242025_teamlist.json', 'teamCache')
+    .then(data => {
+        if (data) {
+            extractTeams(data);
+            
+        }
+    });
+
+    getCachedJSON('answerKey.json', 'answerCache')
+    .then(data => {
+        if (data) {
+            extractAnswerKey(data);
+            main();
+        }
+    });
+
+
+    function extractAnswerKey(data) {
+        var tempInfo;
+        if(data.hasOwnProperty('answers')) 
+            tempInfo = data.answers;
+
+        tempInfo.forEach(n => {
+            correctConnections.push(n["value"]);
+            connectionNames.push(n["key"]);
+        });
+
+        correctConnections.forEach(n => {
+            n.forEach(x => {
+                wordsData.push(x);
+            });
+        });
+
+        if(data.hasOwnProperty('hint'))
+            hint.textContent = `Today's hint: ${data.hint}`;
+    }
 
     function extractColor(data) {
         console.log("extractColor");
@@ -368,22 +386,6 @@ document.addEventListener('DOMContentLoaded', () => {
             colorCodes.push(n);
         });
     }
-
-    fetch('assets/20242025_teamlist.json') 
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json(); // Parse the JSON response
-    })
-    .then(jsonData => {
-        // Now you can work with the jsonData object
-        extractTeams(jsonData);
-        main();
-    })
-    .catch(error => {
-        console.error('Error fetching or parsing JSON:', error);
-    });
 
     // Read in all data for Team SVGs
     function extractTeams(data) {
@@ -467,11 +469,8 @@ document.addEventListener('DOMContentLoaded', () => {
             stats = currentCookie;
         }
 
-
         return returnVals;
     }
-
-    
 
     slider.addEventListener("change", function() {
         darkmode = !darkmode;
@@ -517,9 +516,6 @@ document.addEventListener('DOMContentLoaded', () => {
             darkmodeAlpha.forEach(n => css.find(x => x.selectorText === n).style.backgroundColor = whiteAlpha);
             darkmodeReg.forEach(n => css.find(x => x.selectorText === n).style.backgroundColor = white);
 
-
-
-
             css.find(n=> n.selectorText === ".word").style.backgroundColor = cnctn_light;
             css.find(n=> n.selectorText === ".word").style.color = cnctn_light_font;
             css.find(n=> n.selectorText === ".word").style.borderColor = cnctn_light_brdr;
@@ -530,7 +526,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             invertElements.forEach(n => {
                 css.find(x => x.selectorText === n).style.filter = 'invert(0%)';
-            })
+            });
             css.find(n => n.selectorText === sliderStyle).style.filter = 'invert(0%)';
 
             // Opposite for fonts & selections
@@ -671,13 +667,9 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = "../";
     });
 
-
     const winningToasts = ['Do you believe in miracles!?', 'CAN YOU! BELIEVE! WHAT WE! JUST SAW?!', 'Off the floor, On the board!']
 
-    function Win() {
-        console.log("WINNNN");
-
-
+    function WinToast() {
         if(stats.length === 3) {
             stats[0]++;
             if(stats[2] > 0)
@@ -685,8 +677,6 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             stats = [1, 0, 1]; // Initialize Stats
         }
-        
-        console.log(stats);
 
         h2 = document.createElement('h2');
         h2.textContent = winningToasts[Math.floor(Math.random() * winningToasts.length)];

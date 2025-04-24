@@ -11,8 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const slider = document.getElementById("slider");
     const teamholder = document.getElementById("team-holder");
 
-
-
     const stats_cookie = 'scouting-report-stats';
     const game_cookie = 'scouting-report-current';
 
@@ -50,21 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Reading JSON
     // Command to run a temp HTTP Server
     // py -m http.server 8000
-    fetch('20242025_players.json') 
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json(); // Parse the JSON response
-    })
-    .then(jsonData => {
-        // Now you can work with the jsonData object
-        processJson(jsonData);
-    })
-    .catch(error => {
-        console.error('Error fetching or parsing JSON:', error);
-    });
-
     function processJson(data) {
         var tempInfo;
         if(data.hasOwnProperty('players')) 
@@ -81,22 +64,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         targetPlayer = getRandomPlayer();
         targetsBirthDate = targetPlayer['birthDate'].split("-");
+
+        main();
     }
 
-    fetch('colorCodes.json') 
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json(); // Parse the JSON response
-    })
-    .then(jsonData => {
-        // Now you can work with the jsonData object
-        extractColor(jsonData);
-    })
-    .catch(error => {
-        console.error('Error fetching or parsing JSON:', error);
-    });
 
     function extractColor(data) {
         data.teams.forEach(n => {
@@ -104,27 +75,59 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    fetch('20242025_teamlist.json') 
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json(); // Parse the JSON response
-    })
-    .then(jsonData => {
-        // Now you can work with the jsonData object
-        extractTeams(jsonData);
-    })
-    .catch(error => {
-        console.error('Error fetching or parsing JSON:', error);
-    });
     // Read in all data for Team SVGs
     function extractTeams(data) {
         data.teams.forEach(n => {
             teamSVG.push(n);
         });
-        main();
+     
     }
+
+    async function getCachedJSON(url, cacheKey, expiryInSeconds = 3600) {
+        const cachedData = localStorage.getItem(cacheKey);
+        const cachedTime = localStorage.getItem(`${cacheKey}_timestamp`);
+
+        if (cachedData && cachedTime && (Date.now() - parseInt(cachedTime)) < (expiryInSeconds * 1000)) {
+            
+            return JSON.parse(cachedData);
+        }
+
+        try {
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const jsonData = await response.json();
+            localStorage.setItem(cacheKey, JSON.stringify(jsonData));
+            localStorage.setItem(`${cacheKey}_timestamp`, Date.now());
+            return jsonData;
+        } catch (error) {
+            console.error('Error fetching and caching JSON:', error);
+            return null;
+        }
+    }
+    
+    getCachedJSON('../assets/colorCodes.json', 'colorCache')
+    .then(data => {
+        if (data) {
+            extractColor(data);
+        }
+    });
+
+    getCachedJSON('../assets/20242025_teamlist.json', 'teamCache')
+    .then(data => {
+        if (data) {
+            extractTeams(data);
+            // main();
+        }
+    });
+
+    getCachedJSON('20242025_players.json', 'playerCache')
+    .then(data => {
+        if (data) {
+            processJson(data);
+        }
+    });
 
     function main() {
         var cookies = readcookies();
@@ -132,27 +135,9 @@ document.addEventListener('DOMContentLoaded', () => {
             updateTeam("WPG", false);
 
         if(getCookie(game_cookie)) {
-            // var main = getCookie(cookie_vals[0]);
-            // if(main) {
-            //     for(var i = 0; i < main.length; i++) {
-            //         wordsData = wordsData.filter(word => !correctConnections[main[i]].includes(word));
-            //         ShowGroup(main[i], false);
-            //     }
-            // }
-    
-            // var attempt = getCookie(cookie_vals[1]);
-            // if(attempt)
-            // {
-            //     var high = findHighestNumber(attempt);
-            //     for(var i = 0; i < high; i++) strikeGiven(i, true);
-            //     strikes = attempt;
-            // }
+ 
         }
-  
-
     }
-
-    
 
     function readcookies() {
         var returnVals = [false, false];

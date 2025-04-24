@@ -1,3 +1,9 @@
+    html, body {
+        overflow-x: hidden; /* Prevents horizontal scrolling */
+        overflow-y: hidden; /* Prevents vertical scrolling */
+        height: 100%;     /* Ensure the body takes up the full viewport height */
+        overscroll-behavior: contain; 
+    }
     body {
         font-family: sans-serif;
         background-color: #f0f0f0;
@@ -10,22 +16,23 @@
         overflow: hidden;
     }
 
-
     svg {
         position: absolute;
         pointer-events: none;
         width: 100%;
         z-index: -2;
+        overflow-x: hidden; /* Prevents horizontal scrolling */
+        overflow-y: hidden; /* Prevents vertical scrolling */
     }
 
     .mainSVG {
-        fill: #1e7e34;
+        fill: #fff;
         stroke: none;
         stroke-width: 5;
     }
 
     .secondarySVG{
-        fill: #66bb6a;
+        fill: #fff;
         stroke: none;
         stroke-width: 5;
     }
@@ -217,7 +224,7 @@
         background-color: #ccc;
         -webkit-transition: .4s;
         transition: .4s;
-        border-radius: 5px;
+        border-radius: 25px;
     }
 
     .slider:before {
@@ -227,7 +234,10 @@
         width: 26px;
         left: 4px;
         bottom: 4px;
-        background-color: #ffffffb0;
+        background: url("../assets/puck.png") no-repeat;
+        background-size: 25px;
+        background-position: 50%;
+        filter: invert(0%);
         -webkit-transition: .4s;
         transition: .4s;
         border-radius: 5px;
@@ -283,7 +293,7 @@
     position: absolute;
     display: grid;
     grid:   "dark-mode dark-mode"
-            "sidebar team-holder";
+            "team-holder team-holder";
     top: 0;
     right: 0;
     transform: translate(-15px, 15px);
@@ -313,8 +323,8 @@
 
 #team-holder {
     grid-area: team-holder;
-
-    width:100px;
+    grid-column: 1 / 2;
+    width:200px;
     background-color: rgb(255,255,255,0.5);
     border-radius: 8px;
     justify-items: center;
@@ -342,6 +352,7 @@
     @media (min-width:320px)  { 
         .word {
             font-size: 0.75em;
+            white-space: normal;
         }
         svg {
             width: 300vw;
@@ -352,8 +363,13 @@
 
         #top-right {
             scale: 0.65;
-            /* transform: translate(40px, 5px); */
             transform-origin: top right;
+        }
+
+        body {
+            position: fixed;
+            top: 0;
+            left: 0;
         }
     }
     /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
@@ -377,7 +393,12 @@
             width: 200vw;
         }
         #logo {
-            width: 65vw;
+            width: 120vw;
+        }
+        body {
+            position: relative;
+            top: auto;
+            left: auto;
         }
     }
     /* tablet, landscape iPad, lo-res laptops ands desktops */
@@ -386,7 +407,21 @@
             font-size: 1em;
         }
         svg {
-            width: 105vw;
+            width: 200vw;
+        }
+        #logo {
+            width: 65vw;
+        }
+
+        #top-right {
+            scale: 1;
+            transform: translate(-15px, 15px);
+            transform-origin: top right;
+        }
+        body {
+            position: relative;
+            top: auto;
+            left: auto;
         }
     }
     /* big landscape tablets, laptops, and desktops */ 
@@ -397,11 +432,14 @@
         svg {
             width: 105vw;
         }
-        #top-right {
+        #logo {
+            width: 65vw;
+        }
+        /* #top-right {
             scale: 1;
             transform: translate(-15px, 15px);
             transform-origin: top right;
-        }
+        } */
     }
     /* hi-res laptops and desktops */
     @media (min-width:1281px) {
@@ -411,5 +449,58 @@
         svg {
             width: 105vw;
         }
+
+        #logo {
+            width: 65vw;
+        }
     }
 
+/* ======================================================================= */
+/* =====                        Animations                           ===== */
+/* ======================================================================= */
+.animate {
+    animation-duration: 0.75s;
+    /* animation-duration: 1s; running slower to show effect */
+    /* animation-delay: 0.5s; */
+    animation-name: animate-fade;
+    animation-timing-function: cubic-bezier(.26,.53,.74,1.48);
+    animation-fill-mode: backwards;
+}
+
+/* Slower Blur In */
+.animate.slowblur {
+    animation-duration: 2s;
+    animation-name: animate-slowblur;
+    animation-timing-function: ease;
+}
+.slowblur{
+    filter: blur(5px);
+}
+
+@keyframes animate-slowblur {
+    0% {
+    opacity: 1;
+    filter: blur(0px);
+    }
+    100% {
+    opacity: 1;
+    filter: blur(5px);
+    }
+}
+
+.animate.slowbluroff {
+    animation-duration: 2s;
+    animation-name: animate-slowbluroff;
+    animation-timing-function: ease;
+}
+
+@keyframes animate-slowbluroff {
+    0% {
+    opacity: 1;
+    filter: blur(5px);
+    }
+    100% {
+    opacity: 1;
+    filter: blur(0px);
+    }
+}

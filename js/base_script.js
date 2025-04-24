@@ -10,38 +10,61 @@ document.addEventListener('DOMContentLoaded', () => {
     var darkmode = false;
 
     // DARK MODE SETTINGS
-    var whiteAlpha = 'rgba(255, 255, 255, 0.5)';
-    var blackAlpha = 'rgba(53, 53, 53, 0.5)';
+    const whiteAlpha = 'rgba(255, 255, 255, 0.5)';
+    const blackAlpha = 'rgba(53, 53, 53, 0.5)';
 
-    var white = 'rgb(244, 244, 244)';
-    var black = 'rgb(17, 17, 17)';
+    const white = 'rgb(244, 244, 244)';
+    const black = 'rgb(17, 17, 17)';
 
-    var cnctn_dark = 'rgb(0, 123, 255)';
-    var cnctn_dark_brdr ='rgb(0, 86, 179)';
-    var cnctn_dark_font = 'rgb(255,255,255)';
-    var cnctn_light = 'rgb(224, 242, 247)';
-    var cnctn_light_brdr = 'rgb(179, 229, 252)';
-    var cnctn_light_font = 'rgb(0, 59, 122)';
+    const cnctn_dark = 'rgb(0, 123, 255)';
+    const cnctn_dark_brdr ='rgb(0, 86, 179)';
+    const cnctn_dark_font = 'rgb(255,255,255)';
+    const cnctn_light = 'rgb(224, 242, 247)';
+    const cnctn_light_brdr = 'rgb(179, 229, 252)';
+    const cnctn_light_font = 'rgb(0, 59, 122)';
 
-    var darkmodeAlpha = [ '.container', '#dark-mode', '#team-holder' ]; 
-    var darkmodeReg = [ 'body' ];
-    var fonts = [ '.hint' ];
-    var borders = [  '.dot' ];
+    const darkmodeAlpha = [ '.container', '#dark-mode', '#team-holder' ]; 
+    const darkmodeReg = [ 'body' ];
+    const invertElements = [ '.slider::before', '#back' ];
 
     // === SLIDER + TEAM SWAP ====
-    fetch('assets/colorCodes.json') 
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+    async function getCachedJSON(url, cacheKey, expiryInSeconds = 3600) {
+        const cachedData = localStorage.getItem(cacheKey);
+        const cachedTime = localStorage.getItem(`${cacheKey}_timestamp`);
+
+        if (cachedData && cachedTime && (Date.now() - parseInt(cachedTime)) < (expiryInSeconds * 1000)) {
+            
+            return JSON.parse(cachedData);
         }
-        return response.json(); // Parse the JSON response
-    })
-    .then(jsonData => {
-        // Now you can work with the jsonData object
-        extractColor(jsonData);
-    })
-    .catch(error => {
-        console.error('Error fetching or parsing JSON:', error);
+
+        try {
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const jsonData = await response.json();
+            localStorage.setItem(cacheKey, JSON.stringify(jsonData));
+            localStorage.setItem(`${cacheKey}_timestamp`, Date.now());
+            return jsonData;
+        } catch (error) {
+            console.error('Error fetching and caching JSON:', error);
+            return null;
+        }
+    }
+
+    getCachedJSON('assets/colorCodes.json', 'colorCache')
+    .then(data => {
+        if (data) {
+            extractColor(data);
+        }
+    });
+
+    getCachedJSON('assets/20242025_teamlist.json', 'teamCache')
+    .then(data => {
+        if (data) {
+            extractTeams(data);
+            // main();
+        }
     });
 
     function extractColor(data) {
@@ -50,34 +73,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    fetch('assets/20242025_teamlist.json') 
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json(); // Parse the JSON response
-    })
-    .then(jsonData => {
-        // Now you can work with the jsonData object
-        extractTeams(jsonData);
-    })
-    .catch(error => {
-        console.error('Error fetching or parsing JSON:', error);
-    });
+    
     // Read in all data for Team SVGs
     function extractTeams(data) {
         data.teams.forEach(n => {
             teamSVG.push(n);
         });
         main();
-        // "TOR"
-        const ca = document.cookie.split(';');
-        console.log(`${ca}`);
     }
 
     slider.addEventListener("change", function() {
-        
-
         darkmode = !darkmode;
         updateDarkMode(darkmode);
         setCustomizationCookie('dark-mode', darkmode);
@@ -90,9 +95,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 css.find(x => x.selectorText === n).style.backgroundColor = blackAlpha;
             });
             darkmodeReg.forEach(n => css.find(x => x.selectorText === n).style.backgroundColor = black);
+            invertElements.forEach(n => {
+                css.find(x => x.selectorText === n).style.filter = 'invert(100%)';
+            });
         } else {
             darkmodeAlpha.forEach(n => css.find(x => x.selectorText === n).style.backgroundColor = whiteAlpha);
             darkmodeReg.forEach(n => css.find(x => x.selectorText === n).style.backgroundColor = white);
+            invertElements.forEach(n => {
+                css.find(x => x.selectorText === n).style.filter = 'invert(0%)';
+            });
         }
     }
 
