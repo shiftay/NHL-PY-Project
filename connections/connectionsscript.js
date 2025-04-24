@@ -58,20 +58,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     var stats = [];
-
-
-
     // Command to run a temp HTTP Server
     // py -m http.server 8000
-
-    
-
     let selectedWords = [];
     let strikes = 0;
     let correctGroupsFound = 0;
     let currentGroupId = 0;
 
     // Function to create word elements
+//#region GAMEPLAY
     function createWord(wordText) {
         const wordElement = document.createElement('div');
         wordElement.classList.add('word');
@@ -311,8 +306,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 1000);
         }   
     }
+//#endregion BOARD BUILDING
 
-    // === SLIDER + TEAM SWAP ====
+//#region JSON READING
     async function getCachedJSON(url, cacheKey, expiryInSeconds = 3600) {
         const cachedData = localStorage.getItem(cacheKey);
         const cachedTime = localStorage.getItem(`${cacheKey}_timestamp`);
@@ -394,6 +390,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+//#endregion JSON READING   
+
+//#region INITIALIZATION
     function main() {
         var cookies = readCustomization();
         if(!cookies[1])
@@ -471,7 +470,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         return returnVals;
     }
+//#endregion INITIALIZATION
 
+//#region CUSTOMIZATION
     slider.addEventListener("change", function() {
         darkmode = !darkmode;
         updateDarkMode(darkmode);
@@ -505,8 +506,7 @@ document.addEventListener('DOMContentLoaded', () => {
             invertElements.forEach(n => {
                 css.find(x => x.selectorText === n).style.filter = 'invert(100%)';
             })
-                // css.find(n => n.selectorText === sliderStyle).style.filter = 'invert(100%)';
-            
+              
             // Opposite for fonts, selections, and borders
             fonts.forEach(n => css.find(x => x.selectorText === n).style.color = white);
             borders.forEach(n => css.find(x => x.selectorText === n).style.borderColor = white);
@@ -527,7 +527,7 @@ document.addEventListener('DOMContentLoaded', () => {
             invertElements.forEach(n => {
                 css.find(x => x.selectorText === n).style.filter = 'invert(0%)';
             });
-            css.find(n => n.selectorText === sliderStyle).style.filter = 'invert(0%)';
+            
 
             // Opposite for fonts & selections
             fonts.forEach(n => css.find(x => x.selectorText === n).style.color = black);
@@ -659,14 +659,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+//#endregion CUSTOMIZATION
 
-
-    const back = document.getElementById("back");
-
-    back.addEventListener('click', () => {
-        window.location.href = "../";
-    });
-
+//#region CONCLUSION    
     const winningToasts = ['Do you believe in miracles!?', 'CAN YOU! BELIEVE! WHAT WE! JUST SAW?!', 'Off the floor, On the board!']
 
     function WinToast() {
@@ -701,12 +696,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function Lose() {
 
     }
+//#endregion CONCLUSION
 
-
-
-/* ======================================================================= */
-/* =====                            COOKIES                          ===== */
-/* ======================================================================= */
+//#region COOKIES
     function getCookie(name) {
         const nameEQ = name + "=";
         const ca = document.cookie.split(';');
@@ -772,8 +764,14 @@ document.addEventListener('DOMContentLoaded', () => {
     function deleteCookie(name) {
         document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
     }
+//#endregion
 
 
+    const back = document.getElementById("back");
+
+    back.addEventListener('click', () => {
+        window.location.href = "../";
+    });
 
     // HELPER FUNCTION
     function findHighestNumber(arr) {

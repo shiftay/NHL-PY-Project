@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     var darkmode = false;
 
-    // Reading JSON
+//#region READING JSON
     // Command to run a temp HTTP Server
     // py -m http.server 8000
     function processJson(data) {
@@ -64,10 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         targetPlayer = getRandomPlayer();
         targetsBirthDate = targetPlayer['birthDate'].split("-");
-
-        main();
     }
-
 
     function extractColor(data) {
         data.teams.forEach(n => {
@@ -106,7 +103,29 @@ document.addEventListener('DOMContentLoaded', () => {
             return null;
         }
     }
-    
+
+    async function getSessionCachedJSON(url, cacheKey) {
+        const cachedData = sessionStorage.getItem(cacheKey);
+        const cachedTime = sessionStorage.getItem(`${cacheKey}_timestamp`);
+
+        if (cachedData && cachedTime) {
+            return JSON.parse(cachedData);
+        }
+
+        try {
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const jsonData = await response.json();
+            sessionStorage.setItem(cacheKey, JSON.stringify(jsonData));
+            sessionStorage.setItem(`${cacheKey}_timestamp`, Date.now());
+            return jsonData;
+        } catch (error) {
+            console.error('Error fetching and caching JSON:', error);
+            return null;
+        }
+    }
     getCachedJSON('../assets/colorCodes.json', 'colorCache')
     .then(data => {
         if (data) {
@@ -118,17 +137,19 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(data => {
         if (data) {
             extractTeams(data);
-            // main();
         }
     });
 
-    getCachedJSON('20242025_players.json', 'playerCache')
+    getSessionCachedJSON('20242025_players.json', 'playerCache')
     .then(data => {
         if (data) {
             processJson(data);
+            main();
         }
     });
+//#endregion READING JSON
 
+//#region INITIALIZATION
     function main() {
         var cookies = readcookies();
         if(!cookies[1])
@@ -166,10 +187,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         return returnVals;
     }
+//#endregion
 
-
-
-
+//#region CUSTOMIZATION
     slider.addEventListener("change", function() {
         darkmode = !darkmode;
         updateDarkMode(darkmode);
@@ -305,6 +325,54 @@ document.addEventListener('DOMContentLoaded', () => {
         Array.from(document.getElementsByClassName("bgpieces")).forEach(n => n.classList.remove('animate', `${blureffect}`));
     }
 
+    function updateLook(inp) {
+        var teamchoice = document.getElementById('team-choice');
+        if(teamchoice)
+            return;
+        var a, b, i, val = this.value;
+
+        a = document.createElement("DIV");
+        a.setAttribute("class", "team-choice");
+        a.id = 'team-choice';
+        teamholder.appendChild(a);
+        setBlur(true);
+        for (i = 0; i < teamSVG.length; i++) {
+            b = document.createElement("DIV");
+
+            b.classList.add('logoHolder')
+            b.innerHTML += "<input type='hidden' value='" + teamSVG[i].teamAbbrev + "'>";
+            b.innerHTML += `<img id="clickable-logo" src=${teamSVG[i].teamLogo}>`;
+            b.addEventListener("click", function(e) {
+                var team = this.getElementsByTagName("input")[0].value;
+                // console.log(this.getElementsByTagName("input")[0].value);
+                updateTeam(team);
+                setCustomizationCookie('team', team);
+                closeAllLists();
+            });
+
+            a.appendChild(b);
+        }
+
+        function closeAllLists(elmnt) {
+            var x = document.getElementsByClassName("team-choice");
+            for (var i = 0; i < x.length; i++) {
+                if (elmnt != x[i] && elmnt != inp) {
+                    x[i].parentNode.removeChild(x[i]);
+                }
+            }
+            if(elmnt) resetClassList("slowblur");
+        }
+        document.addEventListener("click", function (e) {
+            switch(e.target.id) {
+                case "small-logo":
+                case "clickable-logo":
+                    return;
+                default:
+                    closeAllLists(e.target);
+            }
+        });
+    }
+
     function setBlur(blur) {
         if(blur) {
             logo.classList.add('animate', 'slowblur');
@@ -314,21 +382,9 @@ document.addEventListener('DOMContentLoaded', () => {
             Array.from(document.getElementsByClassName("bgpieces")).forEach(n => n.classList.add('animate', 'slowbluroff'));
         }
     }
+//#endregion CUSTOMIZATION
 
-    function getRandomPlayer() {
-        return playerInfo[Math.floor(Math.random() * playerInfo.length)];
-    }
-
-    function playerExists(guess) {
-        const guessedPlayer = playerInfo.find(player => player['name'].toLowerCase() === guess.toLowerCase());
-        if(!guessedPlayer) {
-            gameStatus.textContent = "Invalid guess. Player not found.";
-            return false;
-        }
-
-        return true;
-    }
-
+//#region GAMEPLAY
     function ShowPopover(time) {
         // create popover content
         const holder = document.createElement('div');
@@ -351,6 +407,20 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(function() {
             popover.showPopover();
         }, time);
+    }
+
+    function getRandomPlayer() {
+        return playerInfo[Math.floor(Math.random() * playerInfo.length)];
+    }
+
+    function playerExists(guess) {
+        const guessedPlayer = playerInfo.find(player => player['name'].toLowerCase() === guess.toLowerCase());
+        if(!guessedPlayer) {
+            gameStatus.textContent = "Invalid guess. Player not found.";
+            return false;
+        }
+
+        return true;
     }
 
     function  checkGuess() {
@@ -397,9 +467,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     cell.textContent = guessedPlayer[attr];
             }
             
-            // &darr;
-            // &uarr; 
-
             if(attr !== "name") {
                 try {
                     if(attr === "birthDate") {
@@ -462,58 +529,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     guessButton.addEventListener('click', checkGuess);
+//#endregion
 
-    function updateLook(inp) {
-        var teamchoice = document.getElementById('team-choice');
-        if(teamchoice)
-            return;
-        var a, b, i, val = this.value;
-
-        a = document.createElement("DIV");
-        a.setAttribute("class", "team-choice");
-        a.id = 'team-choice';
-        teamholder.appendChild(a);
-        setBlur(true);
-        for (i = 0; i < teamSVG.length; i++) {
-            b = document.createElement("DIV");
-
-            b.classList.add('logoHolder')
-            b.innerHTML += "<input type='hidden' value='" + teamSVG[i].teamAbbrev + "'>";
-            b.innerHTML += `<img id="clickable-logo" src=${teamSVG[i].teamLogo}>`;
-            b.addEventListener("click", function(e) {
-                
-                // console.log(this.getElementsByTagName("input")[0].value);
-                updateTeam(this.getElementsByTagName("input")[0].value)
-
-                closeAllLists();
-            });
-
-            a.appendChild(b);
-        }
-
-        function closeAllLists(elmnt) {
-            var x = document.getElementsByClassName("team-choice");
-            for (var i = 0; i < x.length; i++) {
-                if (elmnt != x[i] && elmnt != inp) {
-                    x[i].parentNode.removeChild(x[i]);
-                }
-            }
-            if(elmnt) resetClassList("slowblur");
-        }
-        document.addEventListener("click", function (e) {
-            switch(e.target.id) {
-                case "small-logo":
-                case "clickable-logo":
-                    return;
-                default:
-                    closeAllLists(e.target);
-            }
-        });
-    }
-
-/* ======================================================================= */
-/* =====                            COOKIES                          ===== */
-/* ======================================================================= */
+//#region COOKIES
     function getCookie(name) {
         const nameEQ = name + "=";
         const ca = document.cookie.split(';');
@@ -572,10 +590,9 @@ document.addEventListener('DOMContentLoaded', () => {
     back.addEventListener('click', () => {
         window.location.href = "../";
     });
+//#endregion COOKIES
 
-
-
-// Auto Complete Section
+//#region AUTO COMPLETE
     function autocomplete(inp, arr) {
         /*the autocomplete function takes two arguments,
         the text field element and an array of possible autocompleted values:*/
@@ -719,4 +736,5 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       autocomplete(document.getElementById("guess-input"), playerNames);
+//#endregion Auto Complete Section
 });

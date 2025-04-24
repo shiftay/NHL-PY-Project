@@ -4,7 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const slider = document.getElementById("slider");
     const teamholder = document.getElementById("team-holder");
     const body = document.getElementById('body');
+    const popup = document.getElementById('popup');
 
+
+    
+
+    var css = Array.from(stylesheet.cssRules);
     var colorCodes = [];
     var teamSVG = [];
     var darkmode = false;
@@ -24,10 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const cnctn_light_font = 'rgb(0, 59, 122)';
 
     const darkmodeAlpha = [ '.container', '#dark-mode', '#team-holder' ]; 
-    const darkmodeReg = [ 'body' ];
-    const invertElements = [ '.slider::before' ];
+    const darkmodeReg = [ 'body', '.selector' ];
+    const invertElements = [ '.slider::before', '#icon', '.top-right-button' ];
+    const fontElements = [ '.flip-card' ];
+    const borderElements = [ '.selector' ];
 
-    // === SLIDER + TEAM SWAP ====
+//#region JSON
     async function getCachedJSON(url, cacheKey, expiryInSeconds = 3600) {
         const cachedData = localStorage.getItem(cacheKey);
         const cachedTime = localStorage.getItem(`${cacheKey}_timestamp`);
@@ -81,43 +88,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         main();
     }
+//#endregion JSON
 
-    slider.addEventListener("change", function() {
-        darkmode = !darkmode;
-        updateDarkMode(darkmode);
-        setCustomizationCookie('dark-mode', darkmode);
-    });
-
-    function updateDarkMode(toggle) {
-        var css = Array.from(stylesheet.cssRules);
-        if(toggle) {
-            darkmodeAlpha.forEach(n => {
-                css.find(x => x.selectorText === n).style.backgroundColor = blackAlpha;
-            });
-            darkmodeReg.forEach(n => css.find(x => x.selectorText === n).style.backgroundColor = black);
-            invertElements.forEach(n => {
-                css.find(x => x.selectorText === n).style.filter = 'invert(100%)';
-            });
-        } else {
-            darkmodeAlpha.forEach(n => css.find(x => x.selectorText === n).style.backgroundColor = whiteAlpha);
-            darkmodeReg.forEach(n => css.find(x => x.selectorText === n).style.backgroundColor = white);
-            invertElements.forEach(n => {
-                css.find(x => x.selectorText === n).style.filter = 'invert(0%)';
-            });
-        }
-    }
-
+//#region INITIALIZATION
     function main() {
         var cookies = readCustomization();
         if(!cookies[1])
             updateTeam("WPG", false);
 
     }
-    
+//#endregion INITIALIZATION
+
+//#region CUSTOMIZATION
     function readCustomization() {
-        var returnVals = [false, false];
+        let returnVals = [false, false];
         // customization_cookie
-        var currentCookie = getCookie('dark-mode');
+        let currentCookie = getCookie('dark-mode');
         if(currentCookie) {
             console.log(`cookie: ${currentCookie}`);
 
@@ -136,23 +122,64 @@ document.addEventListener('DOMContentLoaded', () => {
         return returnVals;
     }
 
+    slider.addEventListener("change", function() {
+        darkmode = !darkmode;
+        updateDarkMode(darkmode);
+        setCustomizationCookie('dark-mode', darkmode);
+    });
+
+    function updateDarkMode(toggle) {
+        let css = Array.from(stylesheet.cssRules);
+        if(toggle) {
+            darkmodeAlpha.forEach(n => {
+                css.find(x => x.selectorText === n).style.backgroundColor = blackAlpha;
+            });
+            darkmodeReg.forEach(n => css.find(x => x.selectorText === n).style.backgroundColor = black);
+            invertElements.forEach(n => {
+                css.find(x => x.selectorText === n).style.filter = 'invert(100%)';
+            });
+            // Opposite
+            fontElements.forEach(n => {
+                css.find(x => x.selectorText === n).style.color = white;
+            })
+
+            borderElements.forEach(n => {
+                css.find(x => x.selectorText === n).style.borderColor = white;
+            })
+
+        } else {
+            darkmodeAlpha.forEach(n => css.find(x => x.selectorText === n).style.backgroundColor = whiteAlpha);
+            darkmodeReg.forEach(n => css.find(x => x.selectorText === n).style.backgroundColor = white);
+            invertElements.forEach(n => {
+                css.find(x => x.selectorText === n).style.filter = 'invert(0%)';
+            });
+
+            fontElements.forEach(n => {
+                css.find(x => x.selectorText === n).style.color = black;
+            })
+
+            borderElements.forEach(n => {
+                css.find(x => x.selectorText === n).style.borderColor = black;
+            })
+        }
+    }
 
     function updateTeam(teamAbbrev, normal = true) { // team
        
-        var logo = document.getElementById('logo');
+        let logo = document.getElementById('logo');
         if(!logo) {
             logo = document.createElement('img');
             console.log(`${body}`);
             body.insertBefore(logo, body.children[0]);
         }
 
-        var smallLogo = document.getElementById('small-logo');
+        let smallLogo = document.getElementById('small-logo');
         if(smallLogo)
             smallLogo.remove();
 
-        var css = Array.from(stylesheet.cssRules);
+        let css = Array.from(stylesheet.cssRules);
 
-        var random = Array.from(colorCodes).find(n => n.teamAbbrev === teamAbbrev);
+        let random = Array.from(colorCodes).find(n => n.teamAbbrev === teamAbbrev);
 
         css.find(n => n.selectorText === ".mainSVG").style.fill = random.colors[0];
         css.find(n => n.selectorText === ".secondarySVG").style.fill = random.colors[1];
@@ -217,10 +244,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     function updateLook(inp) {
-        var teamchoice = document.getElementById('team-choice');
+        let teamchoice = document.getElementById('team-choice');
         if(teamchoice)
             return;
-        var a, b, i, val = this.value;
+        let a, b, i, val = this.value;
 
         a = document.createElement("DIV");
         a.setAttribute("class", "team-choice");
@@ -263,7 +290,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+//#endregion CUSTOMIZATION
 
+//#region COOKIES
     function setCustomizationCookie(name, val, days) {
         let expires = "";
 
@@ -290,6 +319,33 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         return null;
     }
+//#endregion COOKIES
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
 
 
+
+    const puckdleInfo = document.getElementById('puckdle-info');
+    const puckdleInfoClose = document.getElementById('puckdle-close-info');
+
+    puckdleInfo.addEventListener('click', function(event) {
+        css.find(n => n.selectorText === '.flip-card-puckdle').style.transform = "rotateY(180deg)";
+        console.log(`${puckdleInfoClose}`);
+    });
+
+    puckdleInfoClose.addEventListener('click', function(event) {
+        console.log("HELLO?");
+        css.find(n => n.selectorText === '.flip-card-puckdle').style.transform = "none";
+    });
+    
+    const scoutingInfo = document.getElementById('scouting-info');
+    const scoutingInfoClose = document.getElementById('scouting-close-info');
+
+    scoutingInfo.addEventListener('click', function(event) {
+        css.find(n => n.selectorText === '.flip-card-scouting').style.transform = "rotateY(180deg)";
+    });
+
+    scoutingInfoClose.addEventListener('click', function(event) {
+        css.find(n => n.selectorText === '.flip-card-scouting').style.transform = "none";
+    });
 });

@@ -1,13 +1,20 @@
+html, body {
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    overflow-y: hidden; /* Prevents vertical scrolling */
+    height: 100%;     /* Ensure the body takes up the full viewport height */
+    overscroll-behavior: contain; 
+}
+
 body {
     font-family: sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f0f0f0;
     color: #333;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    margin: 0;
-    overflow: hidden;
+    width: 100%;
 }
 
 svg {
@@ -447,7 +454,9 @@ footer {
         svg {
             width: 300vw;
         }
-
+        #logo {
+            width: 150vw;
+        }
         .guess-row {
             font-size: x-small;
         }
@@ -458,17 +467,37 @@ footer {
         .attribute {
             padding: 6px;
         }
+        body {
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        #top-right {
+            scale: 0.65;
+            transform-origin: top right;
+        }
     }
     /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
     @media (min-width:481px)  {
         svg {
             width: 200vw;
         }
+        #logo{
+            width: 150vw;
+        }
     }
     /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
     @media (min-width:641px)  {
         svg {
             width: 200vw;
+        }
+        #logo {
+            width: 120vw;
+        }
+        body {
+            position: relative;
+            top: auto;
+            left: auto;
         }
     }
     /* tablet, landscape iPad, lo-res laptops ands desktops */
