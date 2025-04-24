@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const darkmodeAlpha = [ '.container', '#dark-mode', '#team-holder' ]; 
     const darkmodeReg = [ 'body' ];
-    const invertElements = [ '.slider::before', '#back' ];
+    const invertElements = [ '.slider::before' ];
 
     // === SLIDER + TEAM SWAP ====
     async function getCachedJSON(url, cacheKey, expiryInSeconds = 3600) {
