@@ -50,18 +50,48 @@
 
     #top-left {
         position: absolute;
-        /* display: grid;
-        grid:   "home connections"
-                "wordle grudge"; */
+        display: grid;
+        grid:   "home faceoff"
+                "puckdle puckdle-inf";
+        grid-template-columns: repeat(2, 1fr);
         top: 0;
         left: 0;
-        transform: translate(-25px, -25px);
+
+        transform: translate(25px, 25px);
         scale: 0.5;
+        transform-origin: top left;
+
+        /* justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        align-self: center; */
+    }
+
+    .top-left-grid-content {
+        background-color: rgb(255,255,255,0.5);
+        border-radius: 8px;
+        width: 100px;
+        overflow: hidden;
+        
+        /* justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        align-self: center; */
+    }
+
+    .top-left-grid-content>img {
+        filter: invert(0%);
     }
 
     #back {
         background-color: rgb(255,255,255,0.5);
         border-radius: 8px;
+        filter: invert(0%);
+    }
+
+    #close {
         filter: invert(0%);
     }
 
@@ -153,9 +183,9 @@
         /* left: 50%; */
         display: grid;
         grid:   "home faceoff"
-                "scouting-report scouting-report-inf";
+                "puckdle puckdle-inf";
         grid-template-columns: repeat(2, 1fr);
-
+        gap: 5px;
         /* width: 50%; */
         /* align-content: end; */
     }
@@ -171,7 +201,7 @@
     }
 
     .popovergrid {
-        /* width: 50%; */
+        border-radius: 5px;
     }
 
     #home {
@@ -179,20 +209,18 @@
         /* scale: 0.25; */
         /* background: url("home.png") no-repeat; */
     }
-    #home>img {
-        
-    }
 
     #faceoff {
         grid-area: faceoff;
+        
     }
 
-    #scouting-report {
-        grid-area: scouting-report;
+    #puckdle {
+        grid-area: puckdle;
     }
 
-    #scouting-report-inf {
-        grid-area: scouting-report-inf;
+    #puckdle-inf {
+        grid-area: puckdle-inf;
     }
 
 
@@ -556,7 +584,7 @@
             white-space: normal;
         }
         svg {
-            width: 300vw;
+            width: 400vw;
         }
         #logo {
             width: 150vw;
@@ -582,7 +610,7 @@
             width: 150vw;
         }
         svg {
-            width: 200vw;
+            width: 300vw;
         }
     }
     /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
@@ -591,7 +619,7 @@
             font-size: 0.75em;
         }
         svg {
-            width: 200vw;
+            width: 300vw;
         }
         #logo {
             width: 120vw;

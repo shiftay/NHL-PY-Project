@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Roadshow</title>
     <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
-    <link rel="stylesheet" href="connectionsstyle.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body id="body">
     <svg version="1.1" class="bgpieces"  id="baseLayer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -33,7 +33,12 @@
     </svg>
 
     <div id="top-left">
-        <div id="back"><div id="top-left-home"></div></div>
+        <div class="top-left-grid-content home" id="home"><img draggable="false" src="../assets/home.png"></div>
+        <div class="top-left-grid-content puckdle" id="puckdle"><img draggable="false" src="../assets/puckdle_icon.png"></div>
+        <div class="top-left-grid-content puckdle-inf" id="puckdle-inf"><img draggable="false" src="../assets/puckdle_icon_inf_2.png"></div>
+        <div class="top-left-grid-content" id="faceoff"><img draggable="false" src="../assets/faceoff_icon.png"></div>
+        <!-- <div id="back"><div id="top-left-home"></div></div> -->
+        <!--  -->
     </div>
 
     <div id="top-right">
@@ -57,10 +62,10 @@
                 <div id="popover-content">
                 </div>
                 <div class="popover-bottom"> <!-- Area for other links -->
-                    <button class="popovergrid" id="home"><img src="assets/home.png"></button>
-                    <button class="popovergrid" id="scouting-report"><img src="assets/scoutingReport.png"></button>
-                    <button class="popovergrid" id="scouting-report-inf"><img src="assets/scoutingReport_inf.png"></button>
-                    <button class="popovergrid" id="faceoff">Face Off</button>
+                    <button class="popovergrid home" id="home"><img draggable="false" src="../assets/home.png"></button>
+                    <button class="popovergrid puckdle" id="puckdle"><img draggable="false" src="../assets/puckdle_icon.png"></button>
+                    <button class="popovergrid puckdle-inf" id="puckdle-inf"><img draggable="false" src="../assets/puckdle_icon_inf_2.png"></button>
+                    <button class="popovergrid" id="faceoff"><img draggable="false" src="../assets/faceoff_icon.png"></button>
                 </div>
             </div>
             <div class="completed-grid">
@@ -88,6 +93,6 @@
         </main>
         
     </div>
-    <script src="connectionsscript.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

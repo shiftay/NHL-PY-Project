@@ -266,11 +266,12 @@
     }
 
     strong {
-        font-size: larger;
+        font-size: 1.5em;
     }
 
     i {
-        font-size: x-small;
+        font-size: 0.5em;
+        text-align: center;
     }
 
 
@@ -454,6 +455,9 @@ hr {
     padding: 10px;
     min-height: 100%;
     align-content: center;
+    text-align: left;
+
+    font-size: 1em;
 }
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
@@ -582,7 +586,7 @@ hr {
         }
 
         #description {
-            font-size: 0.75em;
+            font-size: 0.5em;
         }
         #icon {
             scale: 0.75;
@@ -688,6 +692,14 @@ hr {
             font-size: 1em;
             padding: 5px 10px;
         }
+
+        strong {
+            font-size: 1.5em;
+        }
+    
+        i {
+            font-size: 0.5em;
+        }
     }
     /* hi-res laptops and desktops */
     @media (min-width:1281px) {
@@ -708,4 +720,18 @@ hr {
             font-size: 1em;
             padding: 5px 10px;
         }
+
+        strong {
+            font-size: 1.5em;
+        }
+    
+        i {
+            font-size: 0.75em;
+        }
+        #description {
+            font-size: 1em;
+
+            text-align: left;
+        }
+
     }

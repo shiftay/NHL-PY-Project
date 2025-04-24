@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const submitButton = document.getElementById('submit-group');
     const shuffleButton = document.getElementById('shuffle');
     const completedGrid = document.querySelector('.completed-grid')
-    const popup = document.getElementById('popuptext');
+    const popup = document.getElementById('popup');
     const popover = document.getElementById('popover');
     const popoverContent = document.getElementById('popover-content');
     const hint = document.querySelector('.hint');
@@ -15,11 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const customization_cookie = [ 'dark-mode', 'team' ]
-    const stats_cookie = 'connection-stats'; // Win Loss Streak
+    const stats_cookie = 'scouting-report-stats'; // Win Loss Streak
 
 
     // Gameplay constants for cookie, need to be read on 
-    const game_cookie = 'connection-current';
+    const game_cookie = 'scouting-report-current';
     const cookie_vals = [ 'attempts', 'completed-groups' ]
 
     const stylesheet = document.styleSheets[0];
@@ -50,11 +50,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const cnctn_light_brdr = 'rgb(179, 229, 252)';
     const cnctn_light_font = 'rgb(0, 59, 122)';
 
-    const darkmodeAlpha = [ '.container', '#dark-mode', '#team-holder',  ]; 
+    const darkmodeAlpha = [ '.container', '#dark-mode', '#team-holder', '.top-left-grid-content'  ]; 
     const darkmodeReg = [ 'body', '.hint', '#popover' ];
     const fonts = [ '.hint', '#popover' ];
     const borders = [  '.dot', '#popover' ];
-    const invertElements = [ '.slider::before', '#back' ];
+    const invertElements = [ '.slider::before', '#back', '#close', '.top-left-grid-content > img' ];
 
 
     var stats = [];
@@ -88,18 +88,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     shuffleButton.addEventListener('click', () => {
-        // // DEBUG FOR POPOVER TESTING
-        // popover.showPopover();
-        var children = wordGrid.children;
-        // Create a fragment to hold the children.
-        var frag = document.createDocumentFragment();
+        // DEBUG FOR POPOVER TESTING
+        popover.showPopover();
+        // var children = wordGrid.children;
+        // // Create a fragment to hold the children.
+        // var frag = document.createDocumentFragment();
 
-        // Grab a random child and add to the fragment
-        while(children.length) {
-            frag.appendChild(children[Math.floor(Math.random() * children.length)]);
-        }
+        // // Grab a random child and add to the fragment
+        // while(children.length) {
+        //     frag.appendChild(children[Math.floor(Math.random() * children.length)]);
+        // }
 
-        wordGrid.appendChild(frag);
+        // wordGrid.appendChild(frag);
     });
 
     close.addEventListener('click', () => {
@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 value = "four";
                 break;
             default:
-                console.log("It broked");
+                console.error("It broked");
         }
 
         const wordElement = document.createElement('div');
@@ -214,16 +214,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     submitButton.disabled = true;
 
-                    setCookie(game_cookie, 0, true);
+                    setCookie(game_cookie, 0);
                     setArrayCookie('completed-groups', groupId);
-
-                    var cookieTest = getCookie('completed-groups');
-                    console.log(`${cookieTest} + + ${cookieTest.length}`);
-
                     break;
-                }
-
-                
+                }  
             }
 
             if (!foundMatch) {
@@ -255,19 +249,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 selectedWords = [];
 
-                for(var i = 0; i < connectionNames.length; i++) {
-                    if(completed.includes(connectionNames[i]))
-                        continue;
 
-                    for(var j = 0; j < correctConnections[i].length; j++) {
-                        selectedWords.push(correctConnections[i][j]);
-                    }
-
-                    ShowBoard(i);
-                    selectedWords = [];
-                }
-
-                Lose();
+                Lose(completed);
                 // ShowPopover(500);
 
                 submitButton.disabled = true;
@@ -377,7 +360,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function extractColor(data) {
-        console.log("extractColor");
         data.teams.forEach(n => {
             colorCodes.push(n);
         });
@@ -422,7 +404,28 @@ document.addEventListener('DOMContentLoaded', () => {
             {
                 var high = findHighestNumber(attempt);
                 for(var i = 0; i < high; i++) strikeGiven(i, true);
-                strikes = attempt;
+                strikes = parseInt(high);
+
+
+
+                if(strikes == 4) {
+                    if(completed_groups) {
+                        var arr = completed_groups.split(",");
+                        for(var i = 0; i < 4; i++) {
+                            if(arr.includes(i.toString())){
+                                continue;
+                            }
+                            ShowGroup(i, false);
+                        }
+                    } else {
+                        for(var i = 0; i < 4; i++) {
+                            ShowGroup(i, false);
+                        }
+                    }
+
+                    init = false;
+                }
+
             }
         }
         
@@ -448,7 +451,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // customization_cookie
         var currentCookie = getCookie('dark-mode');
         if(currentCookie) {
-            console.log(`cookie: ${currentCookie}`);
 
             var isTrueSet = (currentCookie === 'true');
             document.getElementById('checkbox').checked = darkmode = isTrueSet;
@@ -482,11 +484,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateDarkMode(darkmodetoggle) {
         var css = Array.from(stylesheet.cssRules);
 
-        console.log(`toggle: ${darkmodetoggle}`);
-
         if(darkmodetoggle) {
-
-            console.log(`inside if`);
             darkmodeAlpha.forEach(n => {
                 css.find(x => x.selectorText === n).style.backgroundColor = blackAlpha;
             });
@@ -664,6 +662,9 @@ document.addEventListener('DOMContentLoaded', () => {
 //#region CONCLUSION    
     const winningToasts = ['Do you believe in miracles!?', 'CAN YOU! BELIEVE! WHAT WE! JUST SAW?!', 'Off the floor, On the board!']
 
+    const losingToasts = [ 'Oh so close!', 'The heartbreak!' ];
+
+
     function WinToast() {
         if(stats.length === 3) {
             stats[0]++;
@@ -693,8 +694,43 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 2500);
     }
 
-    function Lose() {
+    function Lose(completed) {
+        if(stats.length === 3) {
+            stats[1]++;
+            if(stats[2] > 0)
+                stats[2] = 0;
+        } else {
+            stats = [0, 1, 0]; // Initialize Stats
+        }
 
+        h2 = document.createElement('h2');
+        h2.textContent = losingToasts[Math.floor(Math.random() * losingToasts.length)];
+
+        p = document.createElement('p');
+        p.innerHTML = `<strong>W</strong> ${stats[0]} | <strong>L</strong> ${stats[1]}
+                        <hr>
+                        <strong>Streak: ${stats[2]}`;
+        popoverContent.appendChild(h2);
+        popoverContent.append(p);
+
+        setArrayCookie(stats_cookie, stats);
+        hideBottomSection();
+
+        setTimeout(function() {
+            popover.showPopover();
+
+            for(var i = 0; i < connectionNames.length; i++) {
+                if(completed.includes(connectionNames[i]))
+                    continue;
+
+                for(var j = 0; j < correctConnections[i].length; j++) {
+                    selectedWords.push(correctConnections[i][j]);
+                }
+
+                ShowBoard(i);
+                selectedWords = [];
+            }
+        }, 500);
     }
 //#endregion CONCLUSION
 
@@ -703,7 +739,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const nameEQ = name + "=";
         const ca = document.cookie.split(';');
 
-        console.log(`attempt to get cookie "${name}" - ${ca}`);
         for (let i = 0; i < ca.length; i++) {
             let c = ca[i];
             while (c.charAt(0) === ' ') c = c.substring(1, c.length);
@@ -722,43 +757,34 @@ document.addEventListener('DOMContentLoaded', () => {
         if(exists)
             val.push(exists);
 
-        // console.log(`attempt to set cookie "${name}"`);
         if (days) {
             const date = new Date();
             date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
             expires = "; expires=" + date.toUTCString();
         }
-        document.cookie = name + "=" + val + expires + "; path=/***/***";
-
-        // console.log(`cookie - ${document.cookie}`);
+        document.cookie = name + "=" + val + expires + "; path=***/***";
     }
 
     function setCookie(name, value, days) {
         let expires = "";
 
-        console.log(`attempt to set cookie "${name}"`);
         if (days) {
             const date = new Date();
             date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
             expires = "; expires=" + date.toUTCString();
         }
-        document.cookie = name + "=" + value + expires + "; path=/***/***";
-
-        console.log(`cookie - ${document.cookie}`);
+        document.cookie = name + "=" + value + expires + "; path=***/***";
     }
 
     function setCustomizationCookie(name, val, days, temp) {
         let expires = "";
 
-        console.log(`attempt to set cookie "${name}"`);
         if (days) {
             const date = new Date();
             date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
             expires = "; expires=" + date.toUTCString();
         }
         document.cookie = name + "=" + val + expires + "; path=/";
-
-        console.log(`cookie - ${document.cookie}`);
     }
 
     function deleteCookie(name) {
@@ -767,11 +793,36 @@ document.addEventListener('DOMContentLoaded', () => {
 //#endregion
 
 
-    const back = document.getElementById("back");
+//#region BUTTONS
 
-    back.addEventListener('click', () => {
-        window.location.href = "../";
+    let homeButton = Array.from(document.getElementsByClassName('home'));
+    let puckdleButton = Array.from(document.getElementsByClassName("puckdle"));
+    let puckdleInfButton = Array.from(document.getElementById("puckdle-inf"));
+    // let faceoffButton = document.getElementById("faceoff");
+
+    homeButton.forEach(n => {
+        n.addEventListener('click', () => {
+            window.location.href = "/";
+        });
     });
+
+    puckdleButton.forEach(n => {
+        n.addEventListener('click', () => {
+            //TODO: Replace with correct link.
+            window.location.href = "/puckdle";
+        });
+    });
+
+    puckdleInfButton.forEach(n => {
+        n.addEventListener('click', () => {
+            //TODO: Replace with correct link.
+            window.location.href = "/puckdle";
+        });
+    });
+
+
+//#endregion
+
 
     // HELPER FUNCTION
     function findHighestNumber(arr) {
