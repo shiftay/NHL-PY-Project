@@ -802,21 +802,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     homeButton.forEach(n => {
         n.addEventListener('click', () => {
-            window.location.href = "/";
+            window.location.href = "../";
         });
     });
 
     puckdleButton.forEach(n => {
         n.addEventListener('click', () => {
             //TODO: Replace with correct link.
-            window.location.href = "/puckdle";
+            window.location.href = "../puckdle";
         });
     });
 
     puckdleInfButton.forEach(n => {
         n.addEventListener('click', () => {
             //TODO: Replace with correct link.
-            window.location.href = "/puckdle";
+            window.location.href = "../puckdle";
         });
     });
 
