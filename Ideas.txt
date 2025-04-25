@@ -1,0 +1,74 @@
+// GraphQL 
+// Types -- structure of game
+
+// Queries -- fetching data
+
+// Mutations -- changing data
+
+// Subscriptions -- subscribe to realtime events
+
+
+
+
+
+type Player {
+    id: ID!
+    name: String!
+}
+
+type Action {
+    playerID: ID!
+    nhlPlayerID: ID!
+    timestamp: AWSDateTime!
+}
+
+type Game {
+    id: ID!
+    players: [Player!]!
+    currentPlayerID: ID!
+    gameStatus: String! // # e.g., "IN_PROGRESS", "FINISHED"
+    activeNHLPlayer: ID!
+    moves: [Action!]!
+}
+
+
+type Query {
+    getGame(id: ID!): Game
+    listActiveGames: [Game!]!
+}
+
+type Mutation {
+    startGame(playerIDs: [ID!]!): Game
+    joinGame(gameID: ID!, playerID: ID!): Game
+    makeMove(action: Action!): Game
+}
+
+type Subscription {
+    onGameStateUpdated(gameID: ID!): Game
+        @aws_subscribe(mutations: ["makeMove", "startGame", "joinGame"])
+    onPlayerJoined(gameID: ID!): Game
+        @aws_subscribe(mutations: ["joinGame"])
+}
+
+
+/*
+    Resolvers.  
+        Needs more explanation.
+        Can they do the game logic?
+        Can they send back failed moves?
+
+
+    DynamoDB Tables 
+        Can I have them expire? Or set an expiration on them when gameStatus == "FINISHED"
+*/
+
+
+/* 
+    Things needed for site:
+
+    Google Ads set up.  
+
+    Face Off.
+
+
+*/
