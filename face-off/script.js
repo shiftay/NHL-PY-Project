@@ -110,6 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
 
                     console.log(`${playerInfo.length} | ${playerNames.length}`);
+                    main();
                 }
             });
         }

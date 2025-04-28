@@ -72,3 +72,106 @@ type Subscription {
 
 
 */
+
+
+type Action {
+	playerID: ID!
+	guessID: ID!
+	timestamp: AWSDateTime!
+}
+
+type Game {
+	id: ID!
+	players: [Player!]!
+	currentPlayerID: ID!
+	gameStatus: String!
+	actions: [Action!]!
+}
+
+type Queue {
+    players: [Player!]!
+}
+
+type Player {
+	id: ID!
+	name: String!
+}
+
+type Mutation {
+    lookForGame(player: Player!): Boolean
+	startGame(playerIDs: [ID!]!): Game
+	joinGame(gameID: ID!, playerID: ID!): Game
+	takeAction(gameID: ID!, playerID: ID!, guessID: ID!): Game
+}
+
+type Query {
+	getGame(id: ID!): Game
+	listActiveGames: [Game!]!
+	playersLookingForGame: [Player!]!
+}
+
+type Subscription {
+	onGameStateUpdated(gameID: ID!): Game
+		@aws_subscribe(mutations: ["takeAction","startGame","joinGame"])
+	onPlayerJoined(gameID: ID!): Game
+		@aws_subscribe(mutations: ["joinGame"])
+}
+
+
+
+
+Player will Queue
+> lookForGame
+    > Add player into Queue
+    > Lambda Function to Check for players in queue [If 2 unqueued players, pair]
+        > StarGame
+        > DeQueue playerIDS
+
+
+
+
+
+
+
+        /**
+ * Query Resolver for getGame
+ * Fetches a specific game by its ID.
+ */
+export function request(ctx) {
+  return {
+    operation: 'GetItem',
+    key: {
+      id: ctx.args.id,
+    },
+  };
+}
+
+export function response(ctx) {
+  return ctx.result.item;
+}
+
+
+
+
+
+
+/**
+ * Query Resolver for listActiveGames
+ * Fetches a list of games with a status indicating they are active.
+ * (Assumes a 'gameStatus' attribute in your Game data source)
+ */
+export function request(ctx) {
+  return {
+    operation: 'Scan', // Or Query if you have an appropriate index
+    filter: {
+      expression: 'gameStatus = :active',
+      expressionValues: {
+        ':active': 'ACTIVE', // Adjust based on your status values
+      },
+    },
+  };
+}
+
+export function response(ctx) {
+  return ctx.result.items;
+}
