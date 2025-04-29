@@ -64,13 +64,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (data) {
             extractColor(data);
         }
-    });
 
-    getCachedJSON('assets/20242025_teamlist.json', 'teamCache')
-    .then(data => {
+        return getCachedJSON('assets/20242025_teamlist.json', 'teamCache');
+    }).then(data => {
+
         if (data) {
             extractTeams(data);
-            // main();
         }
     });
 
