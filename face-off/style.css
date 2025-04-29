@@ -25,13 +25,13 @@ svg {
 }
 
 .mainSVG {
-    fill: #1e7e34;
+    fill: #ffffff;
     stroke: none;
     stroke-width: 5;
 }
 
 .secondarySVG{
-    fill: #66bb6a;
+    fill: #ffffff;
     stroke: none;
     stroke-width: 5;
 }

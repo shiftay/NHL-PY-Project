@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const cookie_vals = [ 'attempts', 'guesses' ]
 
+    const PLAYER_AMOUNT = 6813;
+
     // DARK MODE SETTINGS
     const whiteAlpha = 'rgba(255, 255, 255, 0.5)';
     const blackAlpha = 'rgba(53, 53, 53, 0.5)';
@@ -96,14 +98,10 @@ document.addEventListener('DOMContentLoaded', () => {
             fetchJsonFromS3(years[i])
             .then(data => {
                 processJson(data);
-                
-
-
-
             })
             .then(() => {
                 // console.log(`${playerInfo.length}`)
-                if(playerInfo.length === 6813) {
+                if(playerInfo.length === PLAYER_AMOUNT) {
                     playerInfo.forEach(n => {
                         var names = n.name.split(" ");
                         playerNames.push(names);
@@ -153,6 +151,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (data) {
             extractColor(data);
         }
+        
+        getCachedJSON('../assets/20242025_teamlist.json', 'teamCache')
+        .then(data => {
+            if (data) {
+                extractTeams(data);
+            }
+            loadGameData();
+        });
     });
 
 
@@ -209,10 +215,10 @@ document.addEventListener('DOMContentLoaded', () => {
       ];
 
     
-    loadGameData()
-    .then(data => {
-        console.log(`${playerNames.length} + ${playerInfo.length}`);
-    });
+    // loadGameData()
+    // .then(data => {
+    //     console.log(`${playerNames.length} + ${playerInfo.length}`);
+    // });
     
 
 /*
@@ -224,12 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 */
 
-    getCachedJSON('../assets/20242025_teamlist.json', 'teamCache')
-    .then(data => {
-        if (data) {
-            extractTeams(data);
-        }
-    });
+
 
     // getCachedJSON('fullListOfplayers.json', 'playerCache')
     // .then(data => {

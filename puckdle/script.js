@@ -131,22 +131,24 @@ document.addEventListener('DOMContentLoaded', () => {
         if (data) {
             extractColor(data);
         }
+        getCachedJSON('../assets/20242025_teamlist.json', 'teamCache')
+        .then(data => {
+            if (data) {
+                extractTeams(data);
+            }
+            getSessionCachedJSON('20242025_players.json', 'playerCache')
+            .then(data => {
+                if (data) {
+                    processJson(data);
+                    main();
+                }
+            });
+        });
     });
 
-    getCachedJSON('../assets/20242025_teamlist.json', 'teamCache')
-    .then(data => {
-        if (data) {
-            extractTeams(data);
-        }
-    });
 
-    getSessionCachedJSON('20242025_players.json', 'playerCache')
-    .then(data => {
-        if (data) {
-            processJson(data);
-            main();
-        }
-    });
+
+
 //#endregion READING JSON
 
 //#region INITIALIZATION
