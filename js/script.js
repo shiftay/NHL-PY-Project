@@ -1,4 +1,8 @@
+import { subscribeToGameStarted } from './subscription.js';
+
 document.addEventListener('DOMContentLoaded', () => {
+
+    
     const stylesheet = document.styleSheets[0];
     const logoSpace = document.getElementById("logoSpace");
     const slider = document.getElementById("slider");
@@ -95,6 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if(!cookies[1])
             updateTeam("WPG", false);
 
+        subscribeToGameStarted();
     }
 //#endregion INITIALIZATION
 
