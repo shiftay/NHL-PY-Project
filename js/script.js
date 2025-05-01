@@ -203,18 +203,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         // div = document.createElement('div');
         // img = document.createElement('img');
-        smallimg = document.createElement('img');
+        smallLogo = document.createElement('img');
 
         logo.id = 'logo';
         logo.src = Array.from(teamSVG).find(n => n.teamAbbrev === random.teamAbbrev).teamLogo;
-        smallimg.src = Array.from(teamSVG).find(n => n.teamAbbrev === random.teamAbbrev).teamLogo;
-        smallimg.id = 'small-logo';
-        smallimg.addEventListener("click", function(e) {
+        smallLogo.src = Array.from(teamSVG).find(n => n.teamAbbrev === random.teamAbbrev).teamLogo;
+        smallLogo.id = 'small-logo';
+        smallLogo.addEventListener("click", function(e) {
             updateLook(logoSpace);
         });
         // div.appendChild(img);
         
-        logoSpace.appendChild(smallimg)
+        logoSpace.appendChild(smallLogo)
 
         if(normal){
             resetClassList("slowblur");
@@ -251,7 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let teamchoice = document.getElementById('team-choice');
         if(teamchoice)
             return;
-        let a, b, i, val = this.value;
+        let a, b, i;
 
         a = document.createElement("DIV");
         a.setAttribute("class", "team-choice");
