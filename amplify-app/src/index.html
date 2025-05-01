@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheldle</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="body">
+    <svg version="1.1" class="bgpieces"  id="baseLayer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="100%" viewBox="0 0 1024 768" enable-background="new 0 0 1024 768" xml:space="preserve">
+        <path class="secondarySVG" fill="#FFFFFF" opacity="1.000000" stroke="none" 
+            d="
+        M1025.000000,193.000000 
+            C1025.000000,320.689301 1025.000000,448.378571 1024.538818,576.533936 
+            C683.051697,577.000000 342.025848,577.000000 1.000000,577.000000 
+            C1.000000,449.310699 1.000000,321.621368 1.461255,193.466034 
+            C342.948334,193.000000 683.974182,193.000000 1025.000000,193.000000 
+        z"/>
+    </svg>
+
+    <svg version="1.1" class="bgpieces" id="secondLayer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="100%" viewBox="0 0 1024 768" enable-background="new 0 0 1024 768" xml:space="preserve">
+        <path class="mainSVG" fill="#FFFFFF" opacity="1.000000" stroke="none" 
+            d="
+        M1.000000,257.462646 
+            C342.024902,257.000000 683.049805,257.000000 1024.537354,257.000000 
+            C1025.000000,342.024902 1025.000000,427.049805 1024.540283,512.537354 
+            C683.053711,513.000000 342.026855,513.000000 1.000000,513.000000 
+            C1.000000,427.975098 1.000000,342.950195 1.000000,257.462646 
+        z"/>
+    </svg>
+
+
+    <div id="top-right">
+        <div id="dark-mode">
+            <label class="switch" id="slider">
+                <input id="checkbox" type="checkbox">
+                <span class="slider"></span>
+            </label>
+            <div id="logoSpace"></div>
+        </div>   
+        <div id="team-holder"></div>
+    </div>
+
+    <div class="container">
+        <main>
+            <div class="completed-grid">
+                <div class="word-grid-holder" id="word-grid-holder">
+                    <!-- <button class="selector"><img src="assets/scoutingReport.png"></button> onclick="location.href='puckdle/';" -->
+
+
+                    
+                    <button class="selector" id="puckdle">
+                        <div class="flip-card" id="flip-card">
+                            <div class="flip-card-puckdle">
+                                <div class="flip-card-front">
+                                    <img id="icon" src="assets/puckdle_icon.png">
+                                    <div class="top-right-button" id="puckdle-info"><img src="assets/info.png"></div>
+                                    <div class="button-container">
+                                        <div class="button">Daily</div>
+                                        <div class="button" onclick="location.href='puckdle/';">Unlimited</div>
+                                    </div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="top-right-button" id="puckdle-close-info"><img src="assets/close.png"></div>
+                                    <div id="description">
+                                        <strong> Puckdle </strong> 
+                                        <hr> 
+                                        A Wordle Inspired Hockey game, where you attempt to guess the player! Try our Daily Puzzle, or have a go at the Unlimited Version!
+                                        <hr> 
+                                        <i>Always a player from the most current season(2024-2025)</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </button> <!-- onclick="location.href='puckdle/';" -->
+                    <button class="selector">                    
+                        <div class="flip-card" id="flip-card">
+                            <div class="flip-card-scouting">
+                                <div class="flip-card-front">
+                                    <img id="icon" src="assets/scoutingReport.png">
+                                    <div class="top-right-button" id="scouting-info"><img src="assets/info.png"></div>
+                                    <div class="button-container">
+                                        <div class="button" onclick="location.href='scouting-report/';">Daily</div>
+                                    </div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="top-right-button" id="scouting-close-info"><img src="assets/close.png"></div>
+                                    <div id="description">
+                                        <strong> Scouting Report </strong> 
+                                        <hr> 
+                                        Can you figure out the connections from the different subjects?
+                                        <br>
+                                        A connections-style game using NHL subjects.
+                                        <hr> 
+                                        <i>Updates daily.</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </button> <!--onclick="location.href='/';"-->
+                    <button class="selector">                    
+                        <div class="flip-card" id="flip-card">
+                            <div class="flip-card-scouting">
+                                <div class="flip-card-front">
+                                    <img id="icon" src="assets/faceoff_icon.png">
+                                    <div class="top-right-button" id="scouting-info"><img src="assets/info.png"></div>
+                                    <div class="button-container">
+                                        <div class="button" onclick="location.href='face-off/';">Head there</div>
+                                    </div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="top-right-button" id="scouting-close-info"><img src="assets/close.png"></div>
+                                    <div id="description">
+                                        <strong> Face Off </strong> 
+                                        <hr> 
+                                        Can you handle the pressure at centerice?
+                                        <br>
+                                        A competetive game of connecting players.
+                                        <!-- <hr> 
+                                        <i>Updates daily.</i> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                    <!-- onclick="location.href='/';"  -->
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script type="module" src="js/script.js"></script>
+</body>
+</html>

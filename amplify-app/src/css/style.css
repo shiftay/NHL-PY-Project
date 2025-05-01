@@ -1,0 +1,737 @@
+    html, body {
+        overflow-x: hidden; /* Prevents horizontal scrolling */
+        overflow-y: hidden; /* Prevents vertical scrolling */
+        height: 100%;     /* Ensure the body takes up the full viewport height */
+        overscroll-behavior: contain; 
+    }
+    body {
+        font-family: sans-serif;
+        background-color: #f0f0f0;
+        color: #333;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        overflow: hidden;
+    }
+
+    svg {
+        position: absolute;
+        pointer-events: none;
+        width: 100%;
+        z-index: -2;
+        overflow-x: hidden; /* Prevents horizontal scrolling */
+        overflow-y: hidden; /* Prevents vertical scrolling */
+    }
+
+    .mainSVG {
+        fill: #fff;
+        stroke: none;
+        stroke-width: 5;
+    }
+
+    .secondarySVG{
+        fill: #fff;
+        stroke: none;
+        stroke-width: 5;
+    }
+
+    .container {
+        background-color: rgb(255,255,255,0.5);
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        width: 80%;
+        /* height: 40vh; */
+        max-width: 600px;
+        /* display: grid; */
+        /* flex-direction: column; */
+        /* gap: 20px; */
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    header h1 {
+        color: #2c3e50;
+    }
+
+    main {
+        /* display: grid; */
+    }
+
+    .toast {
+        pointer-events: all;
+    }
+
+    .word-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .word-grid-holder {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 10px;
+        /* margin-bottom: 10px; */
+        height: 80%;
+    }
+
+    .completed-grid {
+        align-content: center;
+    }
+
+
+    .word.selected {
+        background-color: #007bff;
+        color: #fff;
+        border-color: #0056b3;
+    }
+
+    /*#submit-group {
+        background-color: #28a745;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 1em;
+    }*/
+
+    #submit-group:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+    }
+
+    #submit-group:not(:disabled):hover {
+        background-color: #1e7e34;
+    }
+
+    #attempts {
+        font-size: 0.9em;
+        color: #777;
+    }
+
+    #game-status {
+        font-weight: bold;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .group-names {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        text-align: center;
+        color: #555;
+        font-size: 0.9em;
+    }
+
+    .group-name {
+        min-height: 30px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 8px;
+    }
+
+    footer {
+        text-align: center;
+        margin-top: 30px;
+        color: #777;
+        font-size: 0.8em;
+    }
+
+    .dot {
+        height: 15px;
+        width: 15px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+    }
+
+    .dot.filled {
+        background-color: #313131;
+    }
+/* ======================================================================= */
+/* =====                     Switch                                  ===== */
+/* ======================================================================= */
+
+    /* The switch - the box around the slider */
+    .switch {
+        margin-top: 12.5px;
+        position: relative;
+        display: inline-block;
+        grid-area: slider;
+        width: 60px;
+        height: 34px;
+        
+    }
+
+    /* Hide default HTML checkbox */
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    /* The slider */
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+        border-radius: 25px;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background: url("../assets/puck.png") no-repeat;
+        background-size: 25px;
+        background-position: 50%;
+        filter: invert(0%);
+        -webkit-transition: .4s;
+        transition: .4s;
+        border-radius: 5px;
+    }
+
+    input:checked + .slider {
+        background-color: #000000;
+    }
+
+    input:focus + .slider {
+        box-shadow: 0 0 1px #000000;
+    }
+
+    input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+        border-radius: 34px;
+    }
+
+    .slider.round:before {
+        border-radius: 50%;
+    }
+
+
+
+
+/* ======================================================================= */
+/* =====                          POP UP                             ===== */
+/* ======================================================================= */
+    
+    .popup {
+        /* display: none; */
+        position: absolute;
+        visibility: hidden;
+        /* bottom: 55%;
+        left: 47.5%; */
+        align-content: center;
+        align-self: center;
+    }
+
+    .popup .popuptext {
+        background-color: rgba(53, 53, 53, 0.75);
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 10px;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .popup .show {
+        visibility: visible;
+        animation: fadeIn 1s
+    }
+
+    strong {
+        font-size: 1.5em;
+    }
+
+    i {
+        font-size: 0.5em;
+        text-align: center;
+    }
+
+
+
+
+/* ======================================================================= */
+/* =====                            LOGO                             ===== */
+/* ======================================================================= */
+
+#logo {
+    margin: 0;
+    position: fixed;
+    z-index: -1;
+    stroke-width: 5;
+    stroke: #ffffff;
+    width: 65vw;
+}
+
+#top-left {
+    position: absolute;
+    display: grid;
+    grid:   "home connections"
+            "wordle grudge";
+    top: 0;
+    left: 0;
+    transform: translate(-15px, 15px);
+}
+
+#top-right {
+    position: absolute;
+    display: grid;
+    grid:   "dark-mode dark-mode"
+            "team-holder team-holder";
+    top: 0;
+    right: 0;
+    transform: translate(-15px, 15px);
+}
+
+#dark-mode {
+    display: grid;
+    grid-area: dark-mode;
+    grid: 'slider small-logo';
+    grid-auto-columns: 100px;
+    grid-auto-rows: 100px;
+
+    background-color: rgb(255,255,255,0.5);
+    border-radius: 8px;
+    justify-content: center;
+    justify-items: center;
+}
+
+#small-logo {
+    max-width: 75%;
+    object-fit: contain;
+}
+
+#clickable-logo {
+    max-width: 75%;
+}
+
+#team-holder {
+    grid-area: team-holder;
+    grid-column: 1 / 2;
+    width:200px;
+    background-color: rgb(255,255,255,0.5);
+    border-radius: 8px;
+    justify-items: center;
+    /* pointer-events: none; */
+}
+#logoSpace {
+    grid-area: small-logo;
+    width: 100%;
+    height: 100%;
+    margin-top: 5px;
+    margin-left: 25%;
+}
+
+.team-choice {
+    margin: 5px 0 0 5px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+}
+
+
+
+/* ======================================================================= */
+/* =====                        Animations                           ===== */
+/* ======================================================================= */
+.animate {
+    animation-duration: 0.75s;
+    /* animation-duration: 1s; running slower to show effect */
+    /* animation-delay: 0.5s; */
+    animation-name: animate-fade;
+    animation-timing-function: cubic-bezier(.26,.53,.74,1.48);
+    animation-fill-mode: backwards;
+}
+
+/* Slower Blur In */
+.animate.slowblur {
+    animation-duration: 2s;
+    animation-name: animate-slowblur;
+    animation-timing-function: ease;
+}
+.slowblur{
+    filter: blur(5px);
+}
+
+@keyframes animate-slowblur {
+    0% {
+    opacity: 1;
+    filter: blur(0px);
+    }
+    100% {
+    opacity: 1;
+    filter: blur(5px);
+    }
+}
+
+.animate.slowbluroff {
+    animation-duration: 2s;
+    animation-name: animate-slowbluroff;
+    animation-timing-function: ease;
+}
+
+@keyframes animate-slowbluroff {
+    0% {
+    opacity: 1;
+    filter: blur(5px);
+    }
+    100% {
+    opacity: 1;
+    filter: blur(0px);
+    }
+}
+
+
+
+
+
+
+.top-right-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    scale: 0.25;
+    transform-origin: top right;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-bottom: 5px;
+    text-align: center;
+    width: 50%;
+}
+
+.button:not(:disabled):hover {
+    background-color: #1e7e34;
+}
+
+hr {
+    width: 75%;
+}
+
+#description {
+    padding: 10px;
+    min-height: 100%;
+    align-content: center;
+    text-align: left;
+
+    font-size: 1em;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+
+.selector {
+    position: relative;
+    background-color: #e0f2f7;
+    color: #003b7a;
+    border: 1px solid #b3e5fc;
+    border-radius: 6px;
+    padding: 15px;
+    text-align: center;
+    font-size: 1em;
+
+    /* user-select: none; */
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+.flip-card {
+    position: relative;
+    /* background-color: #e0f2f7; */
+    color: #003b7a;
+    /* border: 1px solid #b3e5fc; */
+    border-radius: 6px;
+    padding: 15px;
+    text-align: center;
+    font-size: 1em;
+
+    /* user-select: none; */
+    /* box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); */
+    /* height: 100%; */
+    /* background-color: transparent; */
+    /* width: 300px; */
+    height: 20vh;
+    /* border: 1px solid #f1f1f1; */
+    /* perspective: 1000px; Remove this if you don't want the 3D effect */
+  }
+  
+  .flip-card-puckdle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card-scouting {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  /* .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  } */
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    /* background-color: #bbb; */
+    /* color: black; */
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    /* background-color: dodgerblue; */
+    /* color: white; */
+    transform: rotateY(180deg);
+  }
+
+  #icon {
+    filter: invert(0%);
+  }
+
+
+/* ======================================================================= */
+/* =====                       RESPONSIVENESS                        ===== */
+/* ======================================================================= */
+    /* smartphones, iPhone, portrait 480x320 phones */
+    @media (min-width:320px)  { 
+        .word {
+            font-size: 0.75em;
+            white-space: normal;
+        }
+        svg {
+            width: 300vw;
+        }
+        #logo {
+            width: 180vw;
+        }
+
+        #top-right {
+            scale: 0.65;
+            transform-origin: top right;
+        }
+
+        body {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width:100%
+        }
+
+        #description {
+            font-size: 0.5em;
+        }
+        #icon {
+            scale: 0.75;
+        }
+
+        .top-right-button {
+            scale: 0.15;
+        }
+
+        .button {
+            padding: 5px 10px;
+            font-size: 0.75em;
+        }
+    }
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+    @media (min-width:481px)  {
+        .word {
+            font-size: 0.75em;
+        }
+        svg {
+            width: 200vw;
+        }
+        #logo {
+            width: 140vw;
+        }
+
+        #icon {
+            scale: 0.75;
+        }
+
+        .button {
+            font-size: 0.75em;
+            padding: 5px 10px;
+        }
+    }
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+    @media (min-width:641px)  {
+        .word {
+            font-size: 0.75em;
+        }
+        svg {
+            width: 200vw;
+        }
+        #logo {
+            width: 140vw;
+        }
+        body {
+            position: relative;
+            top: auto;
+            left: auto;
+        }
+
+        .button {
+            font-size: 1em;
+            padding: 5px 10px;
+        }
+    }
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    @media (min-width:961px)  {
+        .word {
+            font-size: 1em;
+        }
+        svg {
+            width: 200vw;
+        }
+        #logo {
+            width: 140vw;
+        }
+
+        #top-right {
+            scale: 1;
+            transform: translate(-15px, 15px);
+            transform-origin: top right;
+        }
+        body {
+            position: relative;
+            top: auto;
+            left: auto;
+        }
+        .top-right-button {
+            scale: 0.25;
+        }
+        .button {
+            font-size: 1em;
+            padding: 5px 10px;
+        }
+    }
+    /* big landscape tablets, laptops, and desktops */ 
+    @media (min-width:1025px) {
+        .word {
+            font-size: 1em;
+        }
+        svg {
+            width: 105vw;
+        }
+        #logo {
+            width: 100vw;
+        }
+        .top-right-button {
+            scale: 0.25;
+        }
+        .button {
+            font-size: 1em;
+            padding: 5px 10px;
+        }
+
+        strong {
+            font-size: 1.5em;
+        }
+    
+        i {
+            font-size: 0.5em;
+        }
+    }
+    /* hi-res laptops and desktops */
+    @media (min-width:1281px) {
+        .word {
+            font-size: 1em;
+        }
+        svg {
+            width: 105vw;
+        }
+
+        #logo {
+            width: 65vw;
+        }
+        .top-right-button {
+            scale: 0.25;
+        }
+        .button {
+            font-size: 1em;
+            padding: 5px 10px;
+        }
+
+        strong {
+            font-size: 1.5em;
+        }
+    
+        i {
+            font-size: 0.75em;
+        }
+        #description {
+            font-size: 1em;
+
+            text-align: left;
+        }
+
+    }
