@@ -1,4 +1,4 @@
-import { subscribeToGameStarted } from './subscription.js';
+// import { subscribeToGameStarted } from './subscription.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if(!cookies[1])
             updateTeam("WPG", false);
 
-        subscribeToGameStarted();
+        // subscribeToGameStarted();
     }
 //#endregion INITIALIZATION
 
