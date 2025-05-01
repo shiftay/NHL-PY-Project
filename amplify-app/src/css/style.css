@@ -201,7 +201,7 @@
         width: 26px;
         left: 4px;
         bottom: 4px;
-        background: url("../assets/puck.png") no-repeat;
+        background: url("./assets/puck.png") no-repeat;
         background-size: 25px;
         background-position: 50%;
         filter: invert(0%);
