@@ -2,22 +2,69 @@
 var subscription = (
   /* GraphQL Subscription Query */
   `
-  subscription OnGameStarted {
-    onGameStarted {
-      gameId
-      startTime
-      # other fields
+subscription OnGameStarted {
+  onGameStarted {
+    id
+    players {
+      id
+      name
+      rank
+    }
+    currentPlayerID
+    gameStatus
+    actions {
+      playerID
+      guessID
+      timestamp
     }
   }
+}
 `
 );
 function subscribeOnGameStarted(client) {
   client.graphql({
     query: subscription
   }).subscribe({
-    next: ({ data }) => console.log(data),
+    next: ({ data }) => {
+      console.log(`Subscription: ${data}`);
+    },
     error: (error) => console.warn(error)
   });
+}
+
+// src/mutation.js
+var lookforGame = `
+mutation LookForGameMutation($player: ID!, $playerName: String!, $rank: Int!) {
+  lookForGame(player: $player, playerName: $playerName, rank: $rank) {
+    statusCode
+    body
+  }
+}
+`;
+async function joinQueue(client, playerId, name2, playerRank) {
+  try {
+    console.log(`${playerId} | ${name2} | ${playerRank}`);
+    console.log("TRYING TO RUN A MUTATION");
+    const response = await client.graphql({
+      query: lookforGame,
+      variables: {
+        player: playerId,
+        playerName: name2,
+        rank: playerRank
+      }
+    });
+    if (response.errors) {
+      console.error("Mutation error:", response.errors);
+      return;
+    }
+    console.dir(response);
+    const updatedGame = response.data?.lookforGame;
+    if (updatedGame) {
+      console.log("Successfully took action:", updatedGame);
+    }
+  } catch (error) {
+    console.error("Failed to take action:", error);
+  }
 }
 
 // node_modules/graphql/jsutils/isObjectLike.mjs
@@ -12940,9 +12987,17 @@ function initializeAWS() {
 function gameStartedSub(client) {
   subscribeOnGameStarted(client);
 }
+function queueforGame(client, playerId, playerName, rank) {
+  joinQueue(client, playerId, playerName, rank);
+}
+function uuid() {
+  return v4_default();
+}
 export {
   gameStartedSub,
-  initializeAWS
+  initializeAWS,
+  queueforGame,
+  uuid
 };
 /*! Bundled license information:
 

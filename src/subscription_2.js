@@ -1,11 +1,21 @@
 const subscription = /* GraphQL Subscription Query */ `
-  subscription OnGameStarted {
-    onGameStarted {
-      gameId
-      startTime
-      # other fields
+subscription OnGameStarted {
+  onGameStarted {
+    id
+    players {
+      id
+      name
+      rank
+    }
+    currentPlayerID
+    gameStatus
+    actions {
+      playerID
+      guessID
+      timestamp
     }
   }
+}
 `;
 
 
@@ -15,7 +25,9 @@ export function subscribeOnGameStarted(client) {
         query: subscription
     })
     .subscribe({
-        next: ({ data }) => console.log(data),
+        next: ({ data }) => {
+            console.log(`Subscription: ${data}`);
+        },
         error: (error) => console.warn(error)
     });
 

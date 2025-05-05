@@ -42,5 +42,49 @@ export async function performAction(client, _gameID, _playerID, _guessID) {
   }
 }
 
+const lookforGame = `
+mutation LookForGameMutation($player: ID!, $playerName: String!, $rank: Int!) {
+  lookForGame(player: $player, playerName: $playerName, rank: $rank) {
+    statusCode
+    body
+  }
+}
+`;
+
+export async function joinQueue(client, playerId, name, playerRank) {
+    try {
+
+        console.log(`${playerId} | ${name} | ${playerRank}`);
+
+
+        console.log("TRYING TO RUN A MUTATION");
+        const response = await client.graphql({
+            query: lookforGame,
+            variables: {
+                player: playerId,
+                playerName: name,
+                rank: playerRank
+            }
+        });
+
+        if (response.errors) {
+            console.error('Mutation error:', response.errors);
+            return; // Stop processing if there's an error
+        }
+
+        console.dir(response);
+
+        const updatedGame = response.data?.lookforGame;
+        if (updatedGame) {
+        console.log('Successfully took action:', updatedGame);
+        // Handle the updated game data (e.g., update UI)
+        }
+
+
+    } catch (error) {
+        console.error('Failed to take action:', error);
+    }
+}
+
 // 4. Call the function to execute the mutation
 // performAction();

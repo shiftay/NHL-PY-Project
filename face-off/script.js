@@ -1,4 +1,4 @@
-import { initializeAWS, gameStartedSub, weird } from '../dist/bundle.js';
+import { initializeAWS, gameStartedSub, queueforGame, uuid } from '../dist/bundle.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const guessInput = document.getElementById('guess-input');
@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const logoSpace = document.getElementById("logoSpace");
     const slider = document.getElementById("slider");
     const teamholder = document.getElementById("team-holder");
+    const queueButton = document.getElementById('queue');
 
     const stats_cookie = 'scouting-report-stats';
     const game_cookie = 'scouting-report-current';
@@ -48,8 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
     var bgelements = [];
 
     var darkmode = false;
-
+// AWS
     let client;
+    let playerID;
+    let playerName = "DEFAULT_PLAYER";
 
 //#region READING JSON
     // Command to run a temp HTTP Server
@@ -247,9 +250,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //#region INITIALIZATION
     function main() {
+        initplayer();
+        queueButton.addEventListener('click', function() {
+            queue();
+        });
         // weird();
-        client = initializeAWS();
-        gameStartedSub(client);
+
         var cookies = readcookies();
         if(!cookies[1])
             updateTeam("WPG", false);
@@ -257,6 +263,21 @@ document.addEventListener('DOMContentLoaded', () => {
         if(getCookie(game_cookie)) {
  
         }
+    }
+
+    function initplayer() {
+        client = initializeAWS();
+        gameStartedSub(client);
+
+        playerID = uuid();
+        console.log(`playerID ? ${playerID}`);
+
+        
+
+    }
+
+    function queue() {
+        queueforGame(client, playerID, playerName, 1000);
     }
 
     function readcookies() {
