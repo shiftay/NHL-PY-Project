@@ -1,5 +1,5 @@
 import { Amplify, API, graphqlOperation } from 'aws-amplify';
-import  { config } from'../aws-exports';
+import  { config } from './aws-exports';
 
 // Configure Amplify (if you haven't already)
 Amplify.configure({ config
@@ -17,7 +17,6 @@ const subscriptionQuery = `
     onGameStarted {
       id
       gameStatus
-      # Add other fields you want to receive in the subscription
       currentPlayerID
       players {
         id
@@ -40,9 +39,6 @@ async function subscribeToGameStarted() {
         // displayNewGame(newGame); // Call a function to handle the new game data
         // TODO: SUBSCRIBE TO GAMEUPDATED AND SETUP GAME.
         displayNewGame(gameData);
-
-
-
       },
       error: (error) => {
         console.error('Error subscribing to onGameStarted:', error);
@@ -84,42 +80,42 @@ function displayNewGame(gameData) {
 
 //  Make sure you have this
 async function invokeLambdaFunction(data) {
-    const apiEndpoint = 'YOUR_API_GATEWAY_ENDPOINT'; // Replace with your API Gateway endpoint
-    const requestBody = JSON.stringify(data);
-  
-    try {
-      const response = await fetch(apiEndpoint, {
-        method: 'POST', // Or 'GET', 'PUT', etc., depending on your API Gateway configuration
-        headers: {
-          'Content-Type': 'application/json',
-          //  Add any other necessary headers, such as authorization headers
-        },
-        body: requestBody, //  Include a body for POST, PUT, etc.
-      });
-  
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-  
-      const responseData = await response.json();
-      console.log('Lambda function response:', responseData);
-      return responseData; //  Return the data from the Lambda function
-    } catch (error) {
-      console.error('Failed to invoke Lambda function:', error);
-      throw error; //  Re-throw the error to be handled by the caller
-    }
-  }
-  // Example of calling the Lambda function to start the matchmaking process
-  const dataToSend = {
-    playerId: 'player123', //  Replace with the actual player ID
-  };
-  
-  invokeLambdaFunction(dataToSend)
-    .then((response) => {
-      console.log('Lambda response:', response);
-      //  The Lambda function will return the gameId.  The subscription will
-      //  handle the actual game start notification.
-    })
-    .catch((error) => {
-      console.error('Error calling Lambda:', error);
+  const apiEndpoint = 'YOUR_API_GATEWAY_ENDPOINT'; // Replace with your API Gateway endpoint
+  const requestBody = JSON.stringify(data);
+
+  try {
+    const response = await fetch(apiEndpoint, {
+      method: 'POST', // Or 'GET', 'PUT', etc., depending on your API Gateway configuration
+      headers: {
+        'Content-Type': 'application/json',
+        //  Add any other necessary headers, such as authorization headers
+      },
+      body: requestBody, //  Include a body for POST, PUT, etc.
     });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const responseData = await response.json();
+    console.log('Lambda function response:', responseData);
+    return responseData; //  Return the data from the Lambda function
+  } catch (error) {
+    console.error('Failed to invoke Lambda function:', error);
+    throw error; //  Re-throw the error to be handled by the caller
+  }
+}
+// Example of calling the Lambda function to start the matchmaking process
+const dataToSend = {
+  playerId: 'player123', //  Replace with the actual player ID
+};
+  
+invokeLambdaFunction(dataToSend)
+.then((response) => {
+  console.log('Lambda response:', response);
+  //  The Lambda function will return the gameId.  The subscription will
+  //  handle the actual game start notification.
+})
+.catch((error) => {
+  console.error('Error calling Lambda:', error);
+});

@@ -1,7 +1,7 @@
 import { Amplify } from 'aws-amplify';
 import { signIn, signOut, fetchAuthSession } from 'aws-amplify/auth';
 import awsExports from './aws-exports'; // Import your aws-exports.js file
-
+import { generateClient } from 'aws-amplify/api';
 //  VERY IMPORTANT:  Configure Amplify *before* using it.
 Amplify.configure(awsExports); // Use the configuration from awsExports
 

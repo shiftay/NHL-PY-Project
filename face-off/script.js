@@ -1,3 +1,5 @@
+import { initializeAWS, gameStartedSub, weird } from '../dist/bundle.js';
+
 document.addEventListener('DOMContentLoaded', () => {
     const guessInput = document.getElementById('guess-input');
     const guessButton = document.getElementById('guess-button');
@@ -46,6 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
     var bgelements = [];
 
     var darkmode = false;
+
+    let client;
 
 //#region READING JSON
     // Command to run a temp HTTP Server
@@ -243,6 +247,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //#region INITIALIZATION
     function main() {
+        // weird();
+        client = initializeAWS();
+        gameStartedSub(client);
         var cookies = readcookies();
         if(!cookies[1])
             updateTeam("WPG", false);
@@ -383,18 +390,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         // div = document.createElement('div');
         // img = document.createElement('img');
-        smallimg = document.createElement('img');
+        smallLogo = document.createElement('img');
 
         logo.id = 'logo';
         logo.src = Array.from(teamSVG).find(n => n.teamAbbrev === random.teamAbbrev).teamLogo;
-        smallimg.src = Array.from(teamSVG).find(n => n.teamAbbrev === random.teamAbbrev).teamLogo;
-        smallimg.id = 'small-logo';
-        smallimg.addEventListener("click", function(e) {
+        smallLogo.src = Array.from(teamSVG).find(n => n.teamAbbrev === random.teamAbbrev).teamLogo;
+        smallLogo.id = 'small-logo';
+        smallLogo.addEventListener("click", function(e) {
             updateLook(logoSpace);
         });
         // div.appendChild(img);
         
-        logoSpace.appendChild(smallimg)
+        logoSpace.appendChild(smallLogo)
 
         if(normal){
             resetClassList("slowblur");
