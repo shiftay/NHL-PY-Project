@@ -1,5 +1,5 @@
 // src/subscription_2.js
-var subscription = (
+var subQL = (
   /* GraphQL Subscription Query */
   `
 subscription OnGameStarted {
@@ -22,14 +22,21 @@ subscription OnGameStarted {
 `
 );
 function subscribeOnGameStarted(client) {
-  client.graphql({
-    query: subscription
+  const subscription = client.graphql({
+    query: subQL
   }).subscribe({
-    next: ({ data }) => {
-      console.log(`Subscription: ${data}`);
+    next: (data) => {
+      const gameData = data.value.data.onGameStarted;
+      console.log("New game started:", gameData);
     },
-    error: (error) => console.warn(error)
+    error: (error) => {
+      console.warn("Error in subscription:", error);
+    },
+    complete: () => {
+      console.log("Subscription completed");
+    }
   });
+  return subscription;
 }
 
 // src/mutation.js
@@ -11040,7 +11047,7 @@ function _indexQuery(client, modelIntrospection, model, indexMeta, getInternals2
 // node_modules/@aws-amplify/data-schema/dist/esm/runtime/internals/operations/subscription.mjs
 function subscriptionFactory(client, modelIntrospection, model, operation, getInternals2) {
   const { name: name2 } = model;
-  const subscription2 = (args) => {
+  const subscription = (args) => {
     const query = generateGraphQLDocument(modelIntrospection, model, operation, args);
     const variables = buildGraphQLVariables(model, operation, args, modelIntrospection);
     const auth = authModeParams(client, getInternals2, args);
@@ -11064,7 +11071,7 @@ function subscriptionFactory(client, modelIntrospection, model, operation, getIn
       }
     }));
   };
-  return subscription2;
+  return subscription;
 }
 
 // node_modules/@aws-amplify/data-schema/dist/esm/runtime/utils/resolvePKFields.mjs

@@ -1,4 +1,4 @@
-const subscription = /* GraphQL Subscription Query */ `
+const subQL = /* GraphQL Subscription Query */ `
 subscription OnGameStarted {
   onGameStarted {
     id
@@ -20,35 +20,32 @@ subscription OnGameStarted {
 
 
 export function subscribeOnGameStarted(client) {
-    client
-    .graphql({
-        query: subscription
-    })
-    .subscribe({
-        next: ({ data }) => {
-            console.log(`Subscription: ${data}`);
+  const subscription = client.graphql({
+      query: subQL
+    }).subscribe({
+        next: (data) => {
+            // This function will be called every time a new game is started
+            // and the data will contain the game information.
+            const gameData = data.value.data.onGameStarted;
+            console.log('New game started:', gameData);
+            //  Update your UI or game state here, based on the new game data.
         },
-        error: (error) => console.warn(error)
+        error: (error) => {
+            console.warn('Error in subscription:', error);
+            // Handle any errors that occur during the subscription.  You might want to
+            // display an error message to the user or attempt to reconnect.
+        },
+        complete: () => {
+            console.log('Subscription completed');
+            //  This is called if the subscription is terminated by the server.
+            //  AppSync subscriptions typically do not complete.
+        },
     });
 
-
-    // const subscriptionObservable = GraphQLSubscriptions.subscribe(client, { query: subscription });
-
-    // const subscriptionInstance = subscriptionObservable.subscribe({
-    //     next: (response) => {
-    //         const gameStartedData = response.data.onGameStarted;
-    //         console.log('Received data:', gameStartedData);
-    //         // Handle the data (e.g., update the UI)
-    //     },
-    //     error: (error) => {
-    //         console.error('Subscription error:', error);
-    //     },
-    //     complete: () => {
-    //         console.log('Subscription completed');
-    //     },
-    // });
-
-    // return subscriptionInstance;
+    // The subscribe() method returns a subscription object.  You can use this
+    // object to unsubscribe later if needed.  For example, if the user leaves the
+    // game lobby or the component is unmounted in a React application.
+    return subscription;
 }
 
 

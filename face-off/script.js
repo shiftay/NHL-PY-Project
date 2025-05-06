@@ -249,6 +249,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //#endregion READING JSON
 
 //#region INITIALIZATION
+    let subscription;
     function main() {
         initplayer();
         queueButton.addEventListener('click', function() {
@@ -267,7 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function initplayer() {
         client = initializeAWS();
-        gameStartedSub(client);
+        subscription = gameStartedSub(client);
 
         playerID = uuid();
         console.log(`playerID ? ${playerID}`);
