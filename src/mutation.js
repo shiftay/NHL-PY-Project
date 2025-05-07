@@ -43,15 +43,15 @@ export async function performAction(client, _gameID, _playerID, _guessID) {
 }
 
 const lookforGame = `
-mutation LookForGameMutation($player: ID!, $playerName: String!, $rank: Int!) {
-  lookForGame(player: $player, playerName: $playerName, rank: $rank) {
+mutation LookForExistingGame($player: PlayerInput!) {
+  lookForGame(player: $player) {
     statusCode
     body
   }
 }
 `;
 
-export async function joinQueue(client, playerId, name, playerRank) {
+export async function joinQueue(client, playerId, name, playerRank, logo) {
     try {
 
         console.log(`${playerId} | ${name} | ${playerRank}`);
@@ -61,9 +61,12 @@ export async function joinQueue(client, playerId, name, playerRank) {
         const response = await client.graphql({
             query: lookforGame,
             variables: {
-                player: playerId,
-                playerName: name,
-                rank: playerRank
+                player: {
+                  id: playerId,
+                  name: name,
+                  rank: playerRank,
+                  logo: logo
+                }
             }
         });
 

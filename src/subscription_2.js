@@ -20,14 +20,16 @@ subscription OnGameStarted {
 
 
 export function subscribeOnGameStarted(client) {
+  console.log("we're subscribing");
   const subscription = client.graphql({
       query: subQL
     }).subscribe({
         next: (data) => {
             // This function will be called every time a new game is started
             // and the data will contain the game information.
-            const gameData = data.value.data.onGameStarted;
-            console.log('New game started:', gameData);
+            console.dir(data);
+            // const gameData = data.value.data.onGameStarted;
+            // console.log('New game started:', gameData);
             //  Update your UI or game state here, based on the new game data.
         },
         error: (error) => {

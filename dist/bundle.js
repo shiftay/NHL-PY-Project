@@ -22,12 +22,12 @@ subscription OnGameStarted {
 `
 );
 function subscribeOnGameStarted(client) {
+  console.log("we're subscribing");
   const subscription = client.graphql({
     query: subQL
   }).subscribe({
     next: (data) => {
-      const gameData = data.value.data.onGameStarted;
-      console.log("New game started:", gameData);
+      console.dir(data);
     },
     error: (error) => {
       console.warn("Error in subscription:", error);
@@ -41,23 +41,26 @@ function subscribeOnGameStarted(client) {
 
 // src/mutation.js
 var lookforGame = `
-mutation LookForGameMutation($player: ID!, $playerName: String!, $rank: Int!) {
-  lookForGame(player: $player, playerName: $playerName, rank: $rank) {
+mutation LookForExistingGame($player: PlayerInput!) {
+  lookForGame(player: $player) {
     statusCode
     body
   }
 }
 `;
-async function joinQueue(client, playerId, name2, playerRank) {
+async function joinQueue(client, playerId, name2, playerRank, logo) {
   try {
     console.log(`${playerId} | ${name2} | ${playerRank}`);
     console.log("TRYING TO RUN A MUTATION");
     const response = await client.graphql({
       query: lookforGame,
       variables: {
-        player: playerId,
-        playerName: name2,
-        rank: playerRank
+        player: {
+          id: playerId,
+          name: name2,
+          rank: playerRank,
+          logo
+        }
       }
     });
     if (response.errors) {
@@ -12994,8 +12997,8 @@ function initializeAWS() {
 function gameStartedSub(client) {
   subscribeOnGameStarted(client);
 }
-function queueforGame(client, playerId, playerName, rank) {
-  joinQueue(client, playerId, playerName, rank);
+function queueforGame(client, playerId, playerName, rank, logo) {
+  joinQueue(client, playerId, playerName, rank, logo);
 }
 function uuid() {
   return v4_default();

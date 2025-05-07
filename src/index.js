@@ -16,8 +16,8 @@ export function gameStartedSub(client) {
     subscribeOnGameStarted(client);
 }
 
-export function queueforGame(client, playerId, playerName, rank) {
-    joinQueue(client, playerId, playerName, rank);
+export function queueforGame(client, playerId, playerName, rank, logo) {
+    joinQueue(client, playerId, playerName, rank, logo);
 }
 
 export function uuid() {

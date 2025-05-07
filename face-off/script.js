@@ -252,9 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let subscription;
     function main() {
         initplayer();
-        queueButton.addEventListener('click', function() {
-            queue();
-        });
+
         // weird();
 
         var cookies = readcookies();
@@ -264,6 +262,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if(getCookie(game_cookie)) {
  
         }
+
+        queueButton.addEventListener('click', function() {
+            queue();
+        });
     }
 
     function initplayer() {
@@ -278,8 +280,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function queue() {
-        queueforGame(client, playerID, playerName, 1000);
+        queueforGame(client, playerID, playerName, 1000, current_team ? current_team : "WPG");
     }
+
+    var current_team;
 
     function readcookies() {
         var returnVals = [false, false];
@@ -296,6 +300,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         currentCookie = getCookie('team');
         if(currentCookie) {
+            current_team = currentCookie;
             updateTeam(currentCookie, false);
             returnVals[1] = true;
         }   
