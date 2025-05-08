@@ -156,6 +156,108 @@ main {
     opacity: 1;
 }
 
+/* Connections */
+#connection-area {
+    background-color: rgb(255,255,255,0.5);
+}
+
+#connection {
+    display: grid;
+    grid: 'connection-value connection-strikes';
+    background-color:rgb(255,255,255,0.95);
+    padding: 2px;
+    border-radius: 5px;
+    width: 150px;
+    font-size: small;
+}
+
+#connection-strikes {
+    grid-area: connection-strikes;
+    color: red;
+    text-align: right;
+}
+
+#connection-value {
+    grid-area: connection-value;
+}
+
+#line {
+    width: 5px;
+    height: 15px;
+    background-color: #000;
+}
+
+#small-line {
+    width: 5px;
+    height: 7px;
+    background-color: #000;
+}
+
+#card {
+    display: inline-block;
+    position: relative; /* Make the card a positioning context */
+
+    margin: auto; /* Center the card itself */
+    background-color: #000;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 0 10px #fff;
+}
+
+#headshot {
+    width: 275px;
+    height: auto;
+    display: block;
+}
+
+#card-content {
+    /* position: absolute; Overlay the text */
+    /* bottom: 0; 
+    left: 0;
+    width: 100%;  */
+    font-family: "Faculty Glyphic", sans-serif;
+    color: 	#202020; /* Optional: Set text color */
+    text-shadow: 0.5px 0.5px rgba(255, 255, 255, 1);
+    /* text-align: center;
+    padding: 5px 0; */
+}
+
+
+#card-content .name {
+    position:absolute;
+    bottom: 15px;
+    left: 15px;
+
+}
+
+#card-content .number {
+    position:absolute;
+    top: 15px;
+    right: 15px;
+}
+
+
+#card-hidden-content {
+    text-align: center;
+}
+
+
+.connection-area {
+    /* width: 300px; Adjust as needed */
+    max-height: 60vh; /* Adjust as needed */
+    /* border: 1px solid #ccc; Optional: For visual boundary */
+    overflow: auto; /* This is the key property for scrolling */
+}
+
+#connection-content {
+    /* /* padding: 15px;  */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+
 .guess-input-area {
     position: relative;
     display: flex;
@@ -185,40 +287,7 @@ main {
     background-color: #0056b3;
 }
 
-/* .guess-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 5px;
-    margin-bottom: 15px;
-} */
 
-.guess-row {
-    display: grid;
-    grid: "name name position sweaternumber birthcountry heightininches birthdate currentteam";
-    font-size: 0.75em;
-   
-    border-left: 2px solid #000000;
-    border-right: 2px solid #000000;
-    border-bottom: 2px solid #000000;
-    background-color: rgb(228, 228, 228); 
-
-    grid-auto-columns: 12.5%;
-    /* gap: 5px; */
-}
-
-.guess-row.header-row {
-    font-weight: bold;
-    font-variant-caps: small-caps;
-    font-size: 1em;
-    color: #555;
-    fill: #2c3e50;
-    border: 2px solid #000000;
-    background-color: #ffffff;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    /* padding-bottom: 8px;
-    margin-bottom: 8px; */
-}
 
 .attribute {
     padding: 10px;

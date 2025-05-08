@@ -19,48 +19,7 @@ subscription OnGameStarted {
 `;
 
 
-/* TODO
- 
-when joining queue, have each player assign a 'starting lineup' player with them
 
-when game starts
-	> whoever is player one plays off of their randomly assigned starting lineup
-	> Players are subscribed to the GameStatusUpdated subscription
-
-	> Based on turn, disable / enable the search bar
-		> Hide submit button
-
-Gameplay stuff:
-	When a person plays a player
-		> Logic decides if it is a correct player
-		> sends the action to the takeAction mutator
-		> IF:
-			> INCORRECT  flash the no connection found (pop up)
-			> CORRECT    play the connection, and swap to other player
-
-	// Might redefine take Action, to send Connections, for easier grabbing of information for player.
-	takeAction(Action, bool)
-		> Action : PlayerID, Player, GuessID
-		> bool : was it correct
-			> IF:
-				CORRECT : Change currentplayer
-				INCORRECT : no update
-
-	Basic look of HTML:
-
-	<div id=hockey-card></div>
-	<div id=seperator></div>
-	<div id=connector></div> [ Connector will show: TEAM / Country / Award ] [ Can have multiple Connectors ] [ Include Strikes amount ]
-	<div id=seperator></div>
-	<div id=hockey-card></div>
-
-
-	On correct action:
-		Add to List of [ Connectors ]
-
-  Make sure to unsubscribe after losing / leaving site.
-
-*/
 
 
 export function subscribeOnGameStarted(client) {

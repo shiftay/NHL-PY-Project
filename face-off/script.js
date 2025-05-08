@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const slider = document.getElementById("slider");
     const teamholder = document.getElementById("team-holder");
     const queueButton = document.getElementById('queue');
+    const connectionContent = document.getElementById('connection-content');
 
     const stats_cookie = 'scouting-report-stats';
     const game_cookie = 'scouting-report-current';
@@ -256,8 +257,8 @@ document.addEventListener('DOMContentLoaded', () => {
         initplayer();
 
         currentPlayer = playerInfo.find(n=> n['playerId'] == 8480069)
-
-        console.log(currentPlayer);
+        createCard(currentPlayer);
+        console.log(currentPlayer['playerId']);
 
         var cookies = readcookies();
         if(!cookies[1])
@@ -583,6 +584,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //#region GAME LOGIC
     var currentPlayer;
+    var usedConnections = {};
+
     /**
      * Make sure clear the search bar
      * 
@@ -590,21 +593,235 @@ document.addEventListener('DOMContentLoaded', () => {
      * 
      */
 
+    /* TODO
+ 
+    when joining queue, have each player assign a 'starting lineup' player with them
+
+    when game starts
+        > whoever is player one plays off of their randomly assigned starting lineup
+        > Players are subscribed to the GameStatusUpdated subscription
+
+        > Based on turn, disable / enable the search bar
+            > Hide submit button
+
+    Gameplay stuff:
+        When a person plays a player
+            > Logic decides if it is a correct player
+            > sends the action to the takeAction mutator
+            > IF:
+                > INCORRECT  flash the no connection found (pop up)
+                > CORRECT    play the connection, and swap to other player
+
+        // Might redefine take Action, to send Connections, for easier grabbing of information for player.
+        takeAction(Action, bool)
+            > Action : PlayerID, Player, GuessID
+            > bool : was it correct
+                > IF:
+                    CORRECT : Change currentplayer
+                    INCORRECT : no update
+
+        Basic look of HTML:
+
+        <div id=hockey-card></div>
+        <div id=seperator></div>
+        <div id=connector></div> [ Connector will show: TEAM / Country / Award ] [ Can have multiple Connectors ] [ Include Strikes amount ]
+        <div id=seperator></div>
+        <div id=hockey-card></div>
+
+
+        On correct action:
+            Add to List of [ Connectors ]
+
+    Make sure to unsubscribe after losing / leaving site.
+
+    */
+
+    /**
+     * Starting Game
+     * Requires clearing and initializing all stats.
+     */
+    function startGame() {
+        usedConnections = {};
+
+
+
+    }
+
+
+    function createCard(player) {
+        var card = document.createElement('div');
+        card.setAttribute('id', 'card');
+
+        var image = document.createElement('img');
+        image.src = `https://assets.nhle.com/mugs/actionshots/1296x729/${player['playerId']}.jpg`; //player['headshot'];
+        image.setAttribute('id', 'headshot');
+
+        /**
+         * Create intial text content
+         */
+        var baseInfo = document.createElement('div');
+        baseInfo.setAttribute('id', 'card-content');
+
+        var name = document.createElement('span');
+        name.setAttribute('id', 'card-content');
+        name.classList.add('name')
+        name.textContent = player['name'];
+
+        // var position = document.createElement('span');
+        // position.setAttribute('id', 'content-position');
+        // position.textContent = player['position'];
+
+        var number = document.createElement('span');
+        number.setAttribute('id', 'card-content');
+        number.classList.add('number')
+        number.textContent = `#${player['sweaterNumber']}`;
+
+        baseInfo.append(name, number); //  position,
+
+
+        /**
+         * Create back of card content.
+         */
+        var hiddenContent = document.createElement('div');
+        hiddenContent.setAttribute('id', 'card-hidden-content');
+
+        hiddenContent.textContent = ` Draft Year: ${player['draftDetails']['year']} \n
+                                Country: ${player['birthCountry']}`;
+        hiddenContent.hidden = true;
+
+
+
+        card.append(image, baseInfo, hiddenContent);
+        connectionContent.insertBefore(card, connectionContent.children[0]);
+        currentPlayer = player;
+    }
+
+    function createConnection(value) {
+        var connection = document.createElement("div");
+        connection.setAttribute("id", "connection");
+        var connectionVal = document.createElement('div');
+        var connectionStrikes = document.createElement('div');
+
+        connectionVal.setAttribute("id", "connection-value");
+        connectionStrikes.setAttribute("id", "connection-strikes");
+
+        connectionVal.textContent = value;
+        for(var i = 0; i < usedConnections[value]; i++) {
+            connectionStrikes.textContent += 'X '; 
+        }
+        
+        connection.appendChild(connectionVal);
+        connection.appendChild(connectionStrikes);
+
+
+        connectionContent.insertBefore(connection, connectionContent.children[0]);
+        // a.setAttribute("class", "autocomplete-items");
+    }
+
+
+    function createLine(id) {
+        var line = document.createElement("div");
+        line.setAttribute("id", id);
+        // body.insertBefore(logo, body.children[0]);
+        connectionContent.insertBefore(line, connectionContent.children[0]);
+    }
+
+    /**
+     * Logic for showing Connecton or Pop Up
+     */
+    function ConnectionValidation(connections, guessPlayer) {
+        var validConnect = false;
+        var amount = 0;
+        console.log(`Lenght ${connections.length}`);
+        for(var i = 0; i < connections.length; i++) {
+            var value = connections[i].slice(2);
+
+            if(usedConnections[value]) {
+                console.log("INSIDE IF");
+                if(usedConnections[value] < 5)  {
+                    amount += 1;
+                }   
+            } else {
+                console.log("INSIDE ELSE");
+                amount += 1;
+            }
+        }
+
+        
+        /**
+         * This needs testing to make sure this works.
+         * Idea is that all connections need to be valid for it to be allowed to be a connection
+         * Even a single failed connection is a fail.
+         */
+        validConnect = (connections.length == 0 ?  false : connections.length == amount);
+
+        console.log(`${validConnect} | ${amount} | ${connections.length}`);
+
+        if(validConnect) {
+            createLine('line');
+
+            var multiConnect = connections.length > 1;
+
+            for(var i = 0; i < connections.length; i++) {
+
+                // var type = connections[i].slice(0,2);
+                var value = connections[i].slice(2);
+                if(usedConnections[value]) {
+                    usedConnections[value] += 1;
+                } else {
+                    usedConnections[value] = 1;
+                }
+                
+                createConnection(value);
+
+                if(i != connections.length-1) {
+                    createLine('small-line');
+                }
+                // For when we want to add more of a delimiter or show off something specific for each one
+                // ie. Flag for Country, Calendar for Draft Year, Little trophy for Award, etc...
+                // switch(type) {
+                //     case "t-":
+                //         console.log(`Team ${value}`);
+                        
+                //         break;
+                //     case "a-":
+                //         console.log(`Award ${value}`);
+                //         break;
+                //     case "d-":
+                //         console.log(`Draft Year ${value}`);
+                //         break;
+                //     case "b-":
+                //         console.log(`Country ${value}`);
+                //         break;
+                // }
+            }
+
+            createLine('line');
+            createCard(guessPlayer);
+
+        } else {
+            // NO connection
+            console.log('no connections');
+        }
+
+        console.dir(usedConnections);
+    }
+
+
+
     function checkGuess() {
         const guess = guessInput.value.trim();
         guessInput.value = "";
         const guessedPlayer = playerInfo.find(player => player['name'].toLowerCase() === guess.toLowerCase());
 
         var connections = findConnection(guessedPlayer, currentPlayer);
-
-        if(connections.length > 0) {
-            //
-            console.log(connections);
-
-        } else {
-            // NO connection
-            console.log('no connections');
+        
+        if(guessedPlayer == currentPlayer) {
+            connections.length = 0;
         }
+
+
+        ConnectionValidation(connections, guessedPlayer);
 
     }
 
