@@ -54,6 +54,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let playerID;
     let playerName = "DEFAULT_PLAYER";
 
+    
+
 //#region READING JSON
     // Command to run a temp HTTP Server
     // py -m http.server 8000
@@ -253,7 +255,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function main() {
         initplayer();
 
-        // weird();
+        currentPlayer = playerInfo.find(n=> n['playerId'] == 8480069)
+
+        console.log(currentPlayer);
 
         var cookies = readcookies();
         if(!cookies[1])
@@ -571,12 +575,85 @@ document.addEventListener('DOMContentLoaded', () => {
         guessInput.value = "";
     }
 
+
+
+
+
+//#endregion
+
+//#region GAME LOGIC
+    var currentPlayer;
+    /**
+     * Make sure clear the search bar
+     * 
+     * 
+     * 
+     */
+
     function checkGuess() {
-        
+        const guess = guessInput.value.trim();
+        guessInput.value = "";
+        const guessedPlayer = playerInfo.find(player => player['name'].toLowerCase() === guess.toLowerCase());
+
+        var connections = findConnection(guessedPlayer, currentPlayer);
+
+        if(connections.length > 0) {
+            //
+            console.log(connections);
+
+        } else {
+            // NO connection
+            console.log('no connections');
+        }
+
+    }
+
+
+    function findConnection(guess, current) {
+        let connections = [];
+
+        // Connections: Draft Year, Team, Country, Awards (not stanley cup)
+        for(var i = 0; i < current['seasonsPlayed'].length; i++) { // team
+            for(var x = 0; x < guess['seasonsPlayed'].length; x++) {
+                if(current['seasonsPlayed'][i]['teamName'] == guess['seasonsPlayed'][x]['teamName']) {
+                    if(connections.includes(`t-${guess['seasonsPlayed'][x]['teamName']}`)) {
+                        continue;
+                    }
+                    connections.push(`t-${guess['seasonsPlayed'][x]['teamName']}`);
+                }
+            }
+        }
+
+        if(guess['draftDetails']['year'] == current['draftDetails']['year']) {// draft year
+            connections.push(`d-${guess['draftDetails']['year']}`);
+        }
+                 
+
+        if(current['awards'].length > 0 && guess['awards'].length > 0) {// compare awards
+            for(var i = 0; i < current['awards'].length; i++) { // team
+                if(current['awards'][i]['trophyName'] == 'Stanley Cup') continue;
+                for(var x = 0; x < guess['awards'].length; x++) {
+                    if(guess['awards'][x]['trophyName'] == 'Stanley Cup') continue;
+
+                    if(guess['awards'][x]['trophyName'] == current['awards'][i]['trophyName']) {
+                        connections.push(`a-${guess['awards'][x]['trophyName']}`);
+                    }
+                }
+            }
+        } 
+
+
+        if(guess['birthCountry'] == current['birthCountry']){// country
+            connections.push(`b-${guess['birthCountry']}`);
+        } 
+
+        return connections;
     }
 
     guessButton.addEventListener('click', checkGuess);
+
 //#endregion
+
 
 //#region COOKIES
     function getCookie(name) {
@@ -745,7 +822,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (x) x[currentFocus].click();
 
               } else if(playerExists(guess)) {
-                CreateActionElement();
+                checkGuess();
               } 
               currentFocus = -1;
             }
