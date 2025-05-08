@@ -32,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const darkmodeAlpha = [  '.container', '#dark-mode', '#team-holder' ]; 
     const darkmodeReg = [ '.autocomplete-items div', '.autocomplete-items', 'input', 'body'];
     const fonts = [ 'input', '.autocomplete-items div', '#attempts'];
-    const borders = [ '.guess-row', '.guess-row.header-row', '#attempts'];
     const invertElements = [ '.slider::before', '#back' ];
 
     let targetPlayer;
@@ -110,14 +109,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 processJson(data);
             })
             .then(() => {
-                // console.log(`${playerInfo.length}`)
                 if(playerInfo.length === PLAYER_AMOUNT) {
                     playerInfo.forEach(n => {
                         var names = n.name.split(" ");
                         playerNames.push(names);
                     });
 
-                    console.log(`${playerInfo.length} | ${playerNames.length}`);
                     main();
                 }
             });
@@ -256,9 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function main() {
         initplayer();
 
-        currentPlayer = playerInfo.find(n=> n['playerId'] == 8480069)
-        createCard(currentPlayer);
-        console.log(currentPlayer['playerId']);
+
 
         var cookies = readcookies();
         if(!cookies[1])
@@ -271,6 +266,8 @@ document.addEventListener('DOMContentLoaded', () => {
         queueButton.addEventListener('click', function() {
             queue();
         });
+
+        startGame();
     }
 
     function initplayer() {
@@ -295,8 +292,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // customization_cookie
         var currentCookie = getCookie('dark-mode');
         if(currentCookie) {
-            console.log(`cookie: ${currentCookie}`);
-
             var isTrueSet = (currentCookie === 'true');
             document.getElementById('checkbox').checked = darkmode = isTrueSet;
             updateDarkMode(isTrueSet);
@@ -335,23 +330,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 css.find(x => x.selectorText === n).style.backgroundColor = blackAlpha;
             });
             darkmodeReg.forEach(n => css.find(x => x.selectorText === n).style.backgroundColor = black);
-            borders.forEach(n => {
-                if(n === '.guess-row.header-row') {
-                    css.find(x => x.selectorText === n).style.backgroundColor = black;
-                } else {
-                    
-                    css.find(x => x.selectorText === n).style.backgroundColor = `rgb(${lightenRgbPercentage(black, 20)})`;
-                    console.log(`${n} | ${css.find(x => x.selectorText === n).style.backgroundColor}`);
-                }    
-            });
+
 
             invertElements.forEach(n => {
                 css.find(x => x.selectorText === n).style.filter = 'invert(100%)';
             })
             // Opposite for fonts, selections, and borders
             fonts.forEach(n => css.find(x => x.selectorText === n).style.color = white);
-            borders.forEach(n => css.find(x => x.selectorText === n).style.color = white)
-            borders.forEach(n => css.find(x => x.selectorText === n).style.borderColor = white);
+
             // Lighten selections.
             css.find(n => n.selectorText === '.autocomplete-items div:hover').style.backgroundColor = `rgb(${lightenRgbPercentage(black, 10)})`;
             // console.log(`${ css.find(n => n.selectorText === '.autocomplete-items div:hover').style.backgroundColor}`);
@@ -359,22 +345,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             darkmodeAlpha.forEach(n => css.find(x => x.selectorText === n).style.backgroundColor = whiteAlpha);
             darkmodeReg.forEach(n => css.find(x => x.selectorText === n).style.backgroundColor = white);
-            borders.forEach(n => {
-                if(n === '.guess-row.header-row') {
-                    css.find(x => x.selectorText === n).style.backgroundColor = white;
-                } else {
-                    
-                    css.find(x => x.selectorText === n).style.backgroundColor = `rgb(${lightenRgbPercentage(white, -150)})`;
-                    console.log(`${n} | ${css.find(x => x.selectorText === n).style.backgroundColor}`);
-                }    
-            });
+
             invertElements.forEach(n => {
                 css.find(x => x.selectorText === n).style.filter = 'invert(0%)';
             })
             // Opposite for fonts & selections
             fonts.forEach(n => css.find(x => x.selectorText === n).style.color = black);
-            borders.forEach(n => css.find(x => x.selectorText === n).style.color = black);
-            borders.forEach(n => css.find(x => x.selectorText === n).style.borderColor = black);
+
             css.find(n => n.selectorText === '.autocomplete-items div:hover').style.backgroundColor = `rgb(${lightenRgbPercentage(white, -90)})`;
             // console.log(`${ css.find(n => n.selectorText === '.autocomplete-items div:hover').style.backgroundColor}`);
         }
@@ -642,9 +619,12 @@ document.addEventListener('DOMContentLoaded', () => {
      */
     function startGame() {
         usedConnections = {};
+        
+        currentPlayer = playerInfo.find(n=> n['playerId'] == 8480069)
+        createCard(currentPlayer);
+        console.log(currentPlayer['playerId']);
 
-
-
+        startTimer();
     }
 
 
@@ -732,17 +712,14 @@ document.addEventListener('DOMContentLoaded', () => {
     function ConnectionValidation(connections, guessPlayer) {
         var validConnect = false;
         var amount = 0;
-        console.log(`Lenght ${connections.length}`);
         for(var i = 0; i < connections.length; i++) {
             var value = connections[i].slice(2);
 
             if(usedConnections[value]) {
-                console.log("INSIDE IF");
                 if(usedConnections[value] < 5)  {
                     amount += 1;
                 }   
             } else {
-                console.log("INSIDE ELSE");
                 amount += 1;
             }
         }
@@ -798,15 +775,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
             createLine('line');
             createCard(guessPlayer);
-
+            
         } else {
             // NO connection
-            console.log('no connections');
-        }
+            let reasons = giveReason(connections);
+            if(reasons.length < 1) {
+                gameStatus.textContent = "No Valid Connections Found";
+            } else {
+                var text = "";
+                for(var i = 0; i < reasons.length; i++) {
+                    text += `${reasons[i]} connections are used up.`
 
-        console.dir(usedConnections);
+                    if(i < reasons.length-1) {
+                        text += `\n`;
+                    }
+                }
+                gameStatus.textContent = text;
+            }
+            
+            setTimeout(function() {
+                gameStatus.textContent = "";
+            }, 2000);
+        }
+        ResetTimer();
     }
 
+    function giveReason(connections) {
+        var reasons = [];
+
+        for(var i = 0; i < connections.length; i++) {
+            var value = connections[i].slice(2);
+
+            if(usedConnections[value]) {
+                if(usedConnections[value] >= 5)  {
+                    reasons.push(value);
+                }   
+            }
+        }
+
+        return reasons;
+    }
 
 
     function checkGuess() {
@@ -877,7 +885,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const nameEQ = name + "=";
         const ca = document.cookie.split(';');
 
-        console.log(`attempt to get cookie "${name}" - ${ca}`);
         for (let i = 0; i < ca.length; i++) {
             let c = ca[i];
             while (c.charAt(0) === ' ') c = c.substring(1, c.length);
@@ -896,7 +903,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if(exists)
             val.push(exists);
 
-        console.log(`attempt to set cookie "${name}"`);
         if (days) {
             const date = new Date();
             date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
@@ -904,13 +910,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         document.cookie = name + "=" + val + expires + "; path=***/***";
 
-        console.log(`cookie - ${document.cookie}`);
+ 
     }
 
     function setCustomizationCookie(name, val, days, temp) {
         let expires = "";
 
-        console.log(`attempt to set cookie "${name}"`);
+   
         if (days) {
             const date = new Date();
             date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
@@ -918,7 +924,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         document.cookie = name + "=" + val + expires + "; path=/";
 
-        console.log(`cookie - ${document.cookie}`);
     }
 
     function deleteCookie(name) {
@@ -958,12 +963,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 // First Name
                 if (arr[i][0].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
                     /*create a DIV element for each matching element:*/
+ 
                     b = document.createElement("DIV");
                     /*make the matching letters bold:*/
                     b.innerHTML = "<strong>" + arr[i][0].substr(0, val.length) + "</strong>";
                     b.innerHTML += arr[i][0].substr(val.length) + " " + arr[i][1];
                     /*insert a input field that will hold the current array item's value:*/
-                    b.innerHTML += "<input type='hidden' value='" + combinedName + "'>";
+                    b.innerHTML += `<input type='hidden' value="${combinedName}">`;
                     /*execute a function when someone clicks on the item value (DIV element):*/
                         b.addEventListener("click", function(e) {
                         /*insert the value for the autocomplete text field:*/
@@ -975,13 +981,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     a.appendChild(b);
                 } else if (arr[i][1].substr(0, val.length).toUpperCase() == val.toUpperCase()) { // Last Name
                     /*create a DIV element for each matching element:*/
+      
                     b = document.createElement("DIV");
                     /*make the matching letters bold:*/
                     b.innerHTML = arr[i][0];
                     b.innerHTML += " <strong>" + arr[i][1].substr(0, val.length) + "</strong>";
                     b.innerHTML += arr[i][1].substr(val.length);
                     /*insert a input field that will hold the current array item's value:*/
-                    b.innerHTML += "<input type='hidden' value='" + combinedName + "'>";
+                    b.innerHTML += `<input type='hidden' value="${combinedName}">`;
                     /*execute a function when someone clicks on the item value (DIV element):*/
                         b.addEventListener("click", function(e) {
                         /*insert the value for the autocomplete text field:*/
@@ -998,7 +1005,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     b.innerHTML += " <strong>" + combinedName.substr(0, val.length) + "</strong>";
                     b.innerHTML += combinedName.substr(val.length);
                     /*insert a input field that will hold the current array item's value:*/
-                    b.innerHTML += "<input type='hidden' value='" + combinedName + "'>";
+                    b.innerHTML += `<input type='hidden' value="${combinedName}">`;
                     /*execute a function when someone clicks on the item value (DIV element):*/
                         b.addEventListener("click", function(e) {
                         /*insert the value for the autocomplete text field:*/
@@ -1033,10 +1040,10 @@ document.addEventListener('DOMContentLoaded', () => {
               
               e.preventDefault();
               const guess = guessInput.value.trim();
-              
               if (currentFocus > -1) {
                 /*and simulate a click on the "active" item:*/
                 if (x) x[currentFocus].click();
+
 
               } else if(playerExists(guess)) {
                 checkGuess();
@@ -1078,4 +1085,140 @@ document.addEventListener('DOMContentLoaded', () => {
 
       autocomplete(document.getElementById("guess-input"), playerNames);
 //#endregion Auto Complete Section
+
+//#region TIMER
+    const FULL_DASH_ARRAY = 283;
+    const WARNING_THRESHOLD = 10;
+    const ALERT_THRESHOLD = 5;
+
+    const COLOR_CODES = {
+    info: {
+        color: "green"
+    },
+    warning: {
+        color: "orange",
+        threshold: WARNING_THRESHOLD
+    },
+    alert: {
+        color: "red",
+        threshold: ALERT_THRESHOLD
+    }
+    };
+
+    const TIME_LIMIT = 20;
+    let timePassed = 0;
+    let timeLeft = TIME_LIMIT;
+    let timerInterval = null;
+    let remainingPathColor = COLOR_CODES.info.color;
+
+    document.getElementById("timer-circle").innerHTML = `
+        <div class="base-timer">
+        <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="base-timer__circle">
+            <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+            <path
+                id="base-timer-path-remaining"
+                stroke-dasharray="283"
+                class="base-timer__path-remaining ${remainingPathColor}"
+                d="
+                M 50, 50
+                m -45, 0
+                a 45,45 0 1,0 90,0
+                a 45,45 0 1,0 -90,0
+                "
+            ></path>
+            </g>
+        </svg>
+        <span id="base-timer-label" class="base-timer__label">${formatTime(
+            timeLeft
+        )}</span>
+        </div>
+    `;
+
+    
+
+    function onTimesUp() {
+        clearInterval(timerInterval);
+
+    }
+
+    function ResetTimer() {
+        onTimesUp();
+        resetColor();
+        timePassed = 0;
+        timeLeft = TIME_LIMIT;
+        startTimer();
+    }
+
+    function startTimer() {
+        timerInterval = setInterval(() => {
+            timePassed = timePassed += 1;
+            timeLeft = TIME_LIMIT - timePassed;
+            document.getElementById("base-timer-label").innerHTML = formatTime(
+            timeLeft
+            );
+            setCircleDasharray();
+            setRemainingPathColor(timeLeft);
+
+            if (timeLeft === 0) {
+                onTimesUp();
+            }
+        }, 1000);
+    }
+
+    function formatTime(time) {
+        // const minutes = Math.floor(time / 60);
+        let seconds = time % 60;
+
+        // if (seconds < 10) {
+        //     seconds = `0${seconds}`;
+        // }
+
+        return `${seconds}`; //${minutes}:
+    }
+
+    function resetColor() {
+        const { alert, warning, info } = COLOR_CODES;
+        document
+        .getElementById("base-timer-path-remaining")
+        .classList.remove(warning.color);
+        document
+        .getElementById("base-timer-path-remaining")
+        .classList.add(info.color);
+    }
+
+    function setRemainingPathColor(timeLeft) {
+        const { alert, warning, info } = COLOR_CODES;
+        if (timeLeft <= alert.threshold) {
+            document
+            .getElementById("base-timer-path-remaining")
+            .classList.remove(warning.color);
+            document
+            .getElementById("base-timer-path-remaining")
+            .classList.add(alert.color);
+        } else if (timeLeft <= warning.threshold) {
+            document
+            .getElementById("base-timer-path-remaining")
+            .classList.remove(info.color);
+            document
+            .getElementById("base-timer-path-remaining")
+            .classList.add(warning.color);
+        }
+    }
+
+    function calculateTimeFraction() {
+        const rawTimeFraction = timeLeft / TIME_LIMIT;
+        return rawTimeFraction - (1 / TIME_LIMIT) * (1 - rawTimeFraction);
+    }
+
+    function setCircleDasharray() {
+        const circleDasharray = `${(
+            calculateTimeFraction() * FULL_DASH_ARRAY
+        ).toFixed(0)} 283`;
+        document
+            .getElementById("base-timer-path-remaining")
+            .setAttribute("stroke-dasharray", circleDasharray);
+    }
+//#endregion
+
 });
