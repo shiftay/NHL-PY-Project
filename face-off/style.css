@@ -269,43 +269,50 @@ main {
     margin: auto; /* Center the card itself */
     background-color: #000;
     border-radius: 5px;
-    padding: 10px;
+    /* padding: 10px; */
     box-sizing: border-box;
     box-shadow: inset 0 0 0 10px #fff;
 }
 
 #headshot {
-    width: 275px;
+    width: 274px;
     height: auto;
     display: block;
 }
 
+
+
 #card-content {
-    /* position: absolute; Overlay the text */
-    /* bottom: 0; 
-    left: 0;
-    width: 100%;  */
     font-family: "Faculty Glyphic", sans-serif;
     color: 	#202020; /* Optional: Set text color */
     text-shadow: 0.5px 0.5px rgba(255, 255, 255, 1);
-    /* text-align: center;
-    padding: 5px 0; */
+    font-variant: small-caps;
 }
 
 
 #card-content .name {
-    position:absolute;
-    bottom: 15px;
-    left: 15px;
-
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    /* writing-mode: vertical-lr; */
 }
-
 #card-content .number {
-    position:absolute;
-    top: 15px;
-    right: 15px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+#card-content .border {
+    position: absolute;
+    width: 275px;
+    top: 0;
+    left: 0;
 }
 
+#card-content .position {
+        position: absolute;
+    bottom: 5px;
+    left: 5px;
+}
 
 #card-hidden-content {
     text-align: center;

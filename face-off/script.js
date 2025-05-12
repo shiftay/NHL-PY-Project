@@ -632,9 +632,12 @@ document.addEventListener('DOMContentLoaded', () => {
         var card = document.createElement('div');
         card.setAttribute('id', 'card');
 
+
+
         var image = document.createElement('img');
         image.src = `https://assets.nhle.com/mugs/actionshots/1296x729/${player['playerId']}.jpg`; //player['headshot'];
         image.setAttribute('id', 'headshot');
+
 
         /**
          * Create intial text content
@@ -645,18 +648,18 @@ document.addEventListener('DOMContentLoaded', () => {
         var name = document.createElement('span');
         name.setAttribute('id', 'card-content');
         name.classList.add('name')
-        name.textContent = player['name'];
+        name.textContent = `${player['position']} | ${player['name']}`;
 
-        // var position = document.createElement('span');
-        // position.setAttribute('id', 'content-position');
-        // position.textContent = player['position'];
 
-        var number = document.createElement('span');
-        number.setAttribute('id', 'card-content');
-        number.classList.add('number')
-        number.textContent = `#${player['sweaterNumber']}`;
 
-        baseInfo.append(name, number); //  position,
+        // var number = document.createElement('span');
+        // number.setAttribute('id', 'card-content');
+        // number.classList.add('number')
+        // number.textContent = `#${player['sweaterNumber']}`;
+        returnStyle(player).forEach( n => {
+            baseInfo.append(n);
+        });
+        // baseInfo.append(); //  position,
 
 
         /**
@@ -674,6 +677,107 @@ document.addEventListener('DOMContentLoaded', () => {
         card.append(image, baseInfo, hiddenContent);
         connectionContent.insertBefore(card, connectionContent.children[0]);
         currentPlayer = player;
+    }
+
+
+  
+
+
+    function returnStyle(player) {
+        /**
+         *  Pick a style at random.
+         *  
+         * 
+         */
+        const styleNumber = getRandomInt(2);
+
+        console.log(`Style: ${styleNumber}`);
+
+        var border = document.createElement('img');
+        border.src = `../assets/border_${styleNumber}.png`;
+        border.setAttribute('id', 'card-content');
+        border.classList.add('border')
+        
+        
+        // name.setAttribute('id', 'card-content');
+        // name.classList.add('name')
+        var name = setName(styleNumber, player);
+        var position = setPosition(styleNumber, player);
+
+        console.dir(position);
+
+
+        if(position) {
+            return [ border, name, position ];
+        } else {
+            return [ border, name ];
+        }
+    }
+
+    function setName(styleNumber, player) {
+        var name = document.createElement('span');
+        
+
+        switch(styleNumber) {
+            case 0:
+                name.style.bottom = '0px';
+                name.style.width = '100%';
+                 name.style.textAlign = 'center';
+                name.style.position = 'absolute';
+                name.style.fontSize = 'medium';
+                name.textContent = player['name'];
+                // bottom 25, left 95, absolute  font-small
+                break;
+            case 1:
+                name.style.bottom = '12px';
+                name.style.left = '15px';
+                name.style.position = 'absolute';
+                name.style.fontSize = 'medium';
+                name.textContent = `${player['position']} | ${player['name']}`;
+                break;
+        }
+
+        return name;
+    }
+
+    function setPosition(styleNumber, player) {
+        var positionElement = document.createElement('span');
+
+        switch(player['position']) {
+            case "D":
+                positionElement.textContent = `Defenseman | ${player['sweaterNumber']}`;
+                break;
+            case "L":
+                positionElement.textContent = `Left Wing | ${player['sweaterNumber']}`;
+                break;
+            case "R":
+                positionElement.textContent = `Right Wing | ${player['sweaterNumber']}`;
+                break;
+            case "C":
+                positionElement.textContent = `Center | ${player['sweaterNumber']}`;
+                break;
+            case "G":
+                positionElement.textContent = `Goalie | ${player['sweaterNumber']}`;
+                break;
+        }
+
+        switch(styleNumber) {
+            case 0:
+                positionElement.style.bottom = '20px';
+                positionElement.style.width = '100%';
+                positionElement.style.textAlign = 'center';
+                positionElement.style.position = 'absolute';
+                positionElement.style.fontSize = '0.6em';
+                break;
+            case 1:
+                return null;
+        }
+
+        return positionElement;
+    }
+
+    function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
     }
 
     function createConnection(value) {
