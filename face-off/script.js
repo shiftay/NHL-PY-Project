@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const guessGrid = document.querySelector('.guess-grid');
     const attemptsDisplay = document.getElementById('attempts');
     const gameStatus = document.getElementById('game-status');
-    const popover = document.getElementById('popover');
     const body = document.getElementById('body');
     const stylesheet = document.styleSheets[0];
     const logoSpace = document.getElementById("logoSpace");
@@ -221,39 +220,12 @@ document.addEventListener('DOMContentLoaded', () => {
         'https://puckdle-site-info.s3.us-west-2.amazonaws.com/20242025_players.json'
       ];
 
-    
-    // loadGameData()
-    // .then(data => {
-    //     console.log(`${playerNames.length} + ${playerInfo.length}`);
-    // });
-    
-
-/*
-    https://puckdle-site-info.s3.us-west-2.amazonaws.com/19751976_players.json
-    https://puckdle-site-info.s3.us-west-2.amazonaws.com/19761977_players.json
-    https://puckdle-site-info.s3.us-west-2.amazonaws.com/19771978_players.json
-    https://puckdle-site-info.s3.us-west-2.amazonaws.com/19781979_players.json
-    
-
-*/
-
-
-
-    // getCachedJSON('fullListOfplayers.json', 'playerCache')
-    // .then(data => {
-        // if (data) {
-            // processJson(data);
-            // main();
-        // }
-    // });
 //#endregion READING JSON
 
 //#region INITIALIZATION
     let subscription;
     function main() {
         initplayer();
-
-
 
         var cookies = readcookies();
         if(!cookies[1])
@@ -270,17 +242,20 @@ document.addEventListener('DOMContentLoaded', () => {
         startGame();
     }
 
+    /**
+     * Initializae the client, and subscribe to onGameStarted
+     */
     function initplayer() {
         client = initializeAWS();
         subscription = gameStartedSub(client);
 
         playerID = uuid();
         console.log(`playerID ? ${playerID}`);
-
-        
-
     }
 
+    /**
+     * Queue for a game.
+     */
     function queue() {
         queueforGame(client, playerID, playerName, 1000, current_team ? current_team : "WPG");
     }
@@ -316,63 +291,8 @@ document.addEventListener('DOMContentLoaded', () => {
 //#endregion
 
 //#region CUSTOMIZATION
-    slider.addEventListener("change", function() {
-        darkmode = !darkmode;
-        updateDarkMode(darkmode);
-        setCustomizationCookie('dark-mode', darkmode);
-    });
 
-
-    function updateDarkMode(darkmodeToggle) {
-        var css = Array.from(stylesheet.cssRules);
-        if(darkmodeToggle) {
-            darkmodeAlpha.forEach(n => {
-                css.find(x => x.selectorText === n).style.backgroundColor = blackAlpha;
-            });
-            darkmodeReg.forEach(n => css.find(x => x.selectorText === n).style.backgroundColor = black);
-
-
-            invertElements.forEach(n => {
-                css.find(x => x.selectorText === n).style.filter = 'invert(100%)';
-            })
-            // Opposite for fonts, selections, and borders
-            fonts.forEach(n => css.find(x => x.selectorText === n).style.color = white);
-
-            // Lighten selections.
-            css.find(n => n.selectorText === '.autocomplete-items div:hover').style.backgroundColor = `rgb(${lightenRgbPercentage(black, 10)})`;
-            // console.log(`${ css.find(n => n.selectorText === '.autocomplete-items div:hover').style.backgroundColor}`);
-        } else {
-
-            darkmodeAlpha.forEach(n => css.find(x => x.selectorText === n).style.backgroundColor = whiteAlpha);
-            darkmodeReg.forEach(n => css.find(x => x.selectorText === n).style.backgroundColor = white);
-
-            invertElements.forEach(n => {
-                css.find(x => x.selectorText === n).style.filter = 'invert(0%)';
-            })
-            // Opposite for fonts & selections
-            fonts.forEach(n => css.find(x => x.selectorText === n).style.color = black);
-
-            css.find(n => n.selectorText === '.autocomplete-items div:hover').style.backgroundColor = `rgb(${lightenRgbPercentage(white, -90)})`;
-            // console.log(`${ css.find(n => n.selectorText === '.autocomplete-items div:hover').style.backgroundColor}`);
-        }
-    }
-
-    function lightenRgbPercentage(rgb, percentage) {
-        const [r, g, b] = rgb;
-        const values = rgb.substring(4, rgb.length - 1).split(',');
-        const newR = Math.min(255, Math.round(parseInt(values[0]) + (255 - parseInt(values[0])) * (percentage / 100)));
-        const newG = Math.min(255, Math.round(parseInt(values[1]) + (255 - parseInt(values[1])) * (percentage / 100)));
-        const newB = Math.min(255, Math.round(parseInt(values[2]) + (255 - parseInt(values[2])) * (percentage / 100)));
-        return [newR, newG, newB];
-    }
-    
     function updateTeam(teamAbbrev, normal = true) { // team
-        var logo = document.getElementById('logo');
-        if(!logo) {
-            logo = document.createElement('img');
-            body.insertBefore(logo, body.children[0]);
-        }
-
         var smallLogo = document.getElementById('small-logo');
         if(smallLogo)
             smallLogo.remove();
@@ -381,28 +301,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         var random = Array.from(colorCodes).find(n => n.teamAbbrev === teamAbbrev);
 
-        css.find(n => n.selectorText === ".mainSVG").style.fill = random.colors[0];
-        css.find(n => n.selectorText === ".secondarySVG").style.fill = random.colors[1];
-
-        switch(random.colors.length) {
-            case 3:
-                
-                css.find(n => n.selectorText === ".mainSVG").style.stroke = random.colors[2];
-                // list.find(n => n.selectorText === ".mainSVG").style = 5;
-                break;
-            case 4:
-                css.find(n => n.selectorText === ".mainSVG").style.stroke = random.colors[2];
-                css.find(n => n.selectorText === ".secondarySVG").style.stroke = random.colors[3];
-                break;
-            default:
-                break;
-        }
         // div = document.createElement('div');
         // img = document.createElement('img');
         smallLogo = document.createElement('img');
 
-        logo.id = 'logo';
-        logo.src = Array.from(teamSVG).find(n => n.teamAbbrev === random.teamAbbrev).teamLogo;
         smallLogo.src = Array.from(teamSVG).find(n => n.teamAbbrev === random.teamAbbrev).teamLogo;
         smallLogo.id = 'small-logo';
         smallLogo.addEventListener("click", function(e) {
@@ -411,39 +313,19 @@ document.addEventListener('DOMContentLoaded', () => {
         // div.appendChild(img);
         
         logoSpace.appendChild(smallLogo)
-
-        if(normal){
-            resetClassList("slowblur");
-            // closeAllLists();
-            setBlur(false);
-
-            // TODO: Clean up taking to long to parse
-            //       Track down other setTimeouts
-            //       clear additional timeouts.
-            setTimeout(function() {
-                resetClassList("slowbluroff");
-            }, 1000);
-        }
-
-
-    }
-
-    function resetClassList(blureffect) {
-        logo.classList.remove('animate', `${blureffect}`);
-        Array.from(document.getElementsByClassName("bgpieces")).forEach(n => n.classList.remove('animate', `${blureffect}`));
     }
 
     function updateLook(inp) {
         var teamchoice = document.getElementById('team-choice');
         if(teamchoice)
             return;
-        var a, b, i, val = this.value;
+
+        var a, b, i;
 
         a = document.createElement("DIV");
         a.setAttribute("class", "team-choice");
         a.id = 'team-choice';
         teamholder.appendChild(a);
-        setBlur(true);
         for (i = 0; i < teamSVG.length; i++) {
             b = document.createElement("DIV");
 
@@ -468,7 +350,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     x[i].parentNode.removeChild(x[i]);
                 }
             }
-            if(elmnt) resetClassList("slowblur");
         }
         document.addEventListener("click", function (e) {
             switch(e.target.id) {
@@ -480,42 +361,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-
-    function setBlur(blur) {
-        if(blur) {
-            logo.classList.add('animate', 'slowblur');
-            Array.from(document.getElementsByClassName("bgpieces")).forEach(n => n.classList.add('animate', 'slowblur'));
-        } else {
-            logo.classList.add('animate', 'slowbluroff');
-            Array.from(document.getElementsByClassName("bgpieces")).forEach(n => n.classList.add('animate', 'slowbluroff'));
-        }
-    }
 //#endregion CUSTOMIZATION
 
 //#region GAMEPLAY
-    function ShowPopover(time) {
-        // create popover content
-        const holder = document.createElement('div');
 
-        const header = document.createElement('h2');
-        header.textContent = `Congratulations!`;
-
-        const hr = document.createElement('hr');
-
-        const div = document.createElement('div');
-        div.textContent = `Test Text / GIF LINK AREA`;
-
-        holder.appendChild(header);
-        holder.appendChild(hr);
-        holder.appendChild(div);
-
-        popover.insertBefore(holder, popover.children[1]);
-
-        // Open popover on delay
-        setTimeout(function() {
-            popover.showPopover();
-        }, time);
-    }
 
     function getRandomPlayer() {
         return playerInfo[Math.floor(Math.random() * playerInfo.length)];

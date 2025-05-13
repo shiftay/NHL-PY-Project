@@ -7,7 +7,7 @@ html, body {
 
 body {
     font-family: sans-serif;
-    background-color: #f0f0f0;
+    background-color: #222;
     color: #333;
     margin: 0;
     display: flex;
@@ -17,32 +17,24 @@ body {
     width: 100%;
 }
 
-#baseLayer, #secondLayer {
+#top {
     position: absolute;
-    pointer-events: none;
-    width: 100%;
-    z-index: -2;
+    top: 0;
+    width: 85%;
+    height: 85px;
+    background-color: #c0c0c0;
+    transform: translate(0, 1vw);
+    border-radius: 5px;
 }
 
-.mainSVG {
-    fill: #ffffff;
-    stroke: none;
-    stroke-width: 5;
-}
-
-.secondarySVG{
-    fill: #ffffff;
-    stroke: none;
-    stroke-width: 5;
-}
-
-#logo {
-    margin: 0;
-    position: fixed;
+#test-container {
+    position: absolute;
+    width:  85%;
+    height: 80%;
+    border-radius: 5px;
+    background-color: #333;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     z-index: -1;
-    stroke-width: 5;
-    stroke: #ffffff;
-    width: 65vw;
 }
 
 #top-right {
@@ -62,8 +54,8 @@ body {
             "wordle grudge"; */
     top: 0;
     left: 0;
-    transform: translate(-25px, -25px);
-    scale: 0.5;
+    transform: translate(25px, -25px);
+    max-height: 58px;
 }
 
 #back {
@@ -73,9 +65,9 @@ body {
 }
 
 #top-left-home {
-    background: url('../scouting-report/') no-repeat;
-    min-width: 100px;
-    min-height: 100px;
+    background: url('../assets/home.png') no-repeat;
+    min-width: auto;
+    min-height: auto;
 }
 
 #dark-mode {
@@ -321,7 +313,7 @@ main {
 
 .connection-area {
     width: 100%;
-    max-height: 60vh; /* Adjust as needed */
+    max-height: 500px; /* Adjust as needed */
     /* border: 1px solid #ccc; Optional: For visual boundary */
     overflow: auto; /* This is the key property for scrolling */
 }
@@ -597,12 +589,6 @@ footer {
 
       /* smartphones, iPhone, portrait 480x320 phones */
     @media (min-width:320px)  { 
-        #baseLayer, #secondLayer {
-            width: 300vw;
-        }
-        #logo {
-            width: 150vw;
-        }
         .guess-row {
             font-size: x-small;
         }
@@ -625,21 +611,10 @@ footer {
     }
     /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
     @media (min-width:481px)  {
-        #baseLayer, #secondLayer {
-            width: 200vw;
-        }
-        #logo{
-            width: 150vw;
-        }
+
     }
     /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
     @media (min-width:641px)  {
-        #baseLayer, #secondLayer {
-            width: 200vw;
-        }
-        #logo {
-            width: 120vw;
-        }
         body {
             position: relative;
             top: auto;
@@ -651,13 +626,6 @@ footer {
         .word {
             font-size: 1em;
         }
-        #baseLayer, #secondLayer {
-            width: 200vw;
-        }
-        #logo {
-            width: 65vw;
-        }
-
         #top-right {
             scale: 1;
             transform: translate(-15px, 15px);
@@ -674,12 +642,6 @@ footer {
         .word {
             font-size: 1em;
         }
-        #baseLayer, #secondLayer {
-            width: 105vw;
-        }
-        #logo {
-            width: 65vw;
-        }
         .guess-row {
             font-size: 0.75em;
         }
@@ -694,12 +656,6 @@ footer {
     @media (min-width:1281px) {
         .word {
             font-size: 1em;
-        }
-        #baseLayer, #secondLayer {
-            width: 105vw;
-        }
-        #logo {
-            width: 65vw;
         }
     }
 
