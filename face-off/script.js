@@ -14,6 +14,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const queueButton = document.getElementById('queue');
     const connectionContent = document.getElementById('connection-content');
 
+    const pregameplay = document.getElementById('pre-gameplay');
+    const queueArea = document.getElementById('queue-area');
+    const gameplay = document.getElementById('gameplay');
+
+    /**
+     * DEBUG BUTTONS
+     */
+    const debugQueue = document.getElementById('debug-queue');
+    const debugGame = document.getElementById('debug-game-start');
+    const debugShow = document.getElementById('debug-game-show');
+
+
     const stats_cookie = 'scouting-report-stats';
     const game_cookie = 'scouting-report-current';
 
@@ -22,17 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const PLAYER_AMOUNT = 6813;
 
     // DARK MODE SETTINGS
-    const whiteAlpha = 'rgba(255, 255, 255, 0.5)';
-    const blackAlpha = 'rgba(53, 53, 53, 0.5)';
-
-    const white = 'rgb(244, 244, 244)';
-    const black = 'rgb(17, 17, 17)';
-
-    const darkmodeAlpha = [  '.container', '#dark-mode', '#team-holder' ]; 
-    const darkmodeReg = [ '.autocomplete-items div', '.autocomplete-items', 'input', 'body'];
-    const fonts = [ 'input', '.autocomplete-items div', '#attempts'];
-    const invertElements = [ '.slider::before', '#back' ];
-
     let targetPlayer;
     let attempts = 0;
     let up = '\u2191';
@@ -98,7 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
           return null; // Or throw the error again, depending on your error handling strategy
         }
     }
-
 
     // https://puckdle-site-info.s3.us-west-2.amazonaws.com/fullListOfplayers.json
     async function loadGameData() {
@@ -247,11 +247,49 @@ document.addEventListener('DOMContentLoaded', () => {
      */
     function initplayer() {
         client = initializeAWS();
-        subscription = gameStartedSub(client);
-
         playerID = uuid();
+        subscription = gameStartedSub(client, playerID);
+
+        
         console.log(`playerID ? ${playerID}`);
     }
+
+    debugQueue.addEventListener('click', function() {
+        pregameplay.classList.add('animate', 'fadeout');
+
+        setTimeout(() => {
+            Fade(queueArea, pregameplay, '#queue-area', '#pre-gameplay');
+        }, 1000);
+    });
+
+    debugGame.addEventListener('click', function() {
+    
+        queueArea.classList.add('animate', 'fadeout');
+
+        setTimeout(() => {
+            Fade(gameplay, queueArea, '#gameplay', '#queue-area');
+        }, 1000);
+    
+    });
+
+    function Fade(fadeIn, fadeOut, fadeInName, fadeOutName) {
+        fadeIn.classList.add('animate', 'fadein');
+        // console.log(Array.from(stylesheet.cssRules));
+        Array.from(stylesheet.cssRules).find(n => n.selectorText === fadeOutName).style.display = 'none';
+        Array.from(stylesheet.cssRules).find(n => n.selectorText === fadeInName).style.display = 'flex';
+        fadeOut.classList.remove('animate', 'fadeout');
+
+        setTimeout(() => {
+            fadeIn.classList.remove('animate', 'fadein')
+        }, 1000);
+    }
+
+    debugShow.addEventListener('click', function() {
+        Array.from(stylesheet.cssRules).find(n => n.selectorText === '#queue-area').style.display = 'none';
+        Array.from(stylesheet.cssRules).find(n => n.selectorText === '#pre-gameplay').style.display = 'none';
+        Array.from(stylesheet.cssRules).find(n => n.selectorText === '#gameplay').style.display = 'flex';
+    });
+
 
     /**
      * Queue for a game.
@@ -469,7 +507,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function startGame() {
         usedConnections = {};
         
-        currentPlayer = playerInfo.find(n=> n['playerId'] == 8480069)
+        currentPlayer = playerInfo.find(n=> n['playerId'] == 8462044)
         createCard(currentPlayer);
         console.log(currentPlayer['playerId']);
 
@@ -538,7 +576,7 @@ document.addEventListener('DOMContentLoaded', () => {
          *  
          * 
          */
-        const styleNumber = getRandomInt(2);
+        const styleNumber = getRandomInt(3); //getRandomInt(3);
 
         console.log(`Style: ${styleNumber}`);
 
@@ -571,7 +609,7 @@ document.addEventListener('DOMContentLoaded', () => {
             case 0:
                 name.style.bottom = '0px';
                 name.style.width = '100%';
-                 name.style.textAlign = 'center';
+                name.style.textAlign = 'center';
                 name.style.position = 'absolute';
                 name.style.fontSize = 'medium';
                 name.textContent = player['name'];
@@ -583,6 +621,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 name.style.position = 'absolute';
                 name.style.fontSize = 'medium';
                 name.textContent = `${player['position']} | ${player['name']}`;
+                break;
+            case 2:
+                name.style.bottom = '30px';
+                name.style.left = '-75px';
+                name.style.width = '100%';
+                name.style.textAlign = 'center';
+                name.style.position = 'absolute';
+                name.style.fontSize = '0.75em';
+
+                name.style.transform = `rotate(${30}deg)`;
+                name.textContent = player['name'];
                 break;
         }
 
@@ -620,6 +669,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 break;
             case 1:
                 return null;
+            case 2:
+                positionElement.style.bottom = '8px';
+                positionElement.style.left = '7px';
+                positionElement.style.position = 'absolute';
+                positionElement.style.fontSize = '0.95em';
+                positionElement.style.transform = `rotate(${30}deg)`;
+                positionElement.textContent= `${player['position']} | ${player['sweaterNumber']}`;
+                break;
         }
 
         return positionElement;

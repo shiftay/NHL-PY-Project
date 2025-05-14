@@ -2,8 +2,8 @@
 var subQL = (
   /* GraphQL Subscription Query */
   `
-subscription OnGameStarted {
-  onGameStarted {
+subscription OnGameStarted($playerID: ID!) {
+  onGameStarted(playerID: $playerID) {
     id
     players {
       id
@@ -12,19 +12,21 @@ subscription OnGameStarted {
     }
     currentPlayerID
     gameStatus
-    actions {
+    guesses {
       playerID
       guessID
-      timestamp
     }
   }
 }
 `
 );
-function subscribeOnGameStarted(client) {
+function subscribeOnGameStarted(client, _playerID) {
   console.log("we're subscribing");
   const subscription = client.graphql({
-    query: subQL
+    query: subQL,
+    variables: {
+      playerID: _playerID
+    }
   }).subscribe({
     next: (data) => {
       console.dir(data);
@@ -12994,8 +12996,8 @@ function initializeAWS() {
   DefaultAmplify.configure(aws_exports_default);
   return generateClient2();
 }
-function gameStartedSub(client) {
-  subscribeOnGameStarted(client);
+function gameStartedSub(client, playerId) {
+  return subscribeOnGameStarted(client, playerId);
 }
 function queueforGame(client, playerId, playerName, rank, logo) {
   joinQueue(client, playerId, playerName, rank, logo);

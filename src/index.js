@@ -12,8 +12,8 @@ export function initializeAWS() {
     return generateClient();
 }
 
-export function gameStartedSub(client) {
-    subscribeOnGameStarted(client);
+export function gameStartedSub(client, playerId) {
+    return subscribeOnGameStarted(client, playerId);
 }
 
 export function queueforGame(client, playerId, playerName, rank, logo) {

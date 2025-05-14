@@ -17,46 +17,7 @@ body {
     width: 100%;
 }
 
-#top {
-    position: absolute;
-    top: 0;
-    width: 85%;
-    height: 85px;
-    background-color: #c0c0c0;
-    transform: translate(0, 1vw);
-    border-radius: 5px;
-}
 
-#test-container {
-    position: absolute;
-    width:  85%;
-    height: 80%;
-    border-radius: 5px;
-    background-color: #333;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    z-index: -1;
-}
-
-#top-right {
-    position: absolute;
-    display: grid;
-    grid: "dark-mode dark-mode"
-          "sidebar team-holder";
-    top: 0;
-    right: 0;
-    transform: translate(-15px, 15px);
-}
-
-#top-left {
-    position: absolute;
-    /* display: grid;
-    grid:   "home connections"
-            "wordle grudge"; */
-    top: 0;
-    left: 0;
-    transform: translate(25px, -25px);
-    max-height: 58px;
-}
 
 #back {
     background-color: rgb(255,255,255,0.5);
@@ -119,16 +80,15 @@ body {
 /* TODO
         Add opacity rule for just the container.
 */
-.container {
+#gameplay {
+    display: none; /* Change programmatically. */
+    flex-direction: column;
     background-color: rgb(255,255,255,0.5);
-    /* opacity: 0.5; */
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 30px;
     width: 80%;
     max-width: 600px;
-    display: flex;
-    flex-direction: column;
     gap: 20px;
 }
 
@@ -144,11 +104,148 @@ header h1 {
 main {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    /* gap: 20px; */
+    width: 100vw;
+    height: 100vh;
     opacity: 1;
     align-items: center;
 }
 
+#top {
+    position: relative;
+    top: 0;
+    width: 85%;
+    height: 70px;
+    background-color: #c0c0c0;
+}
+
+#content {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+#top-right {
+    position: absolute;
+    display: grid;
+    grid: "dark-mode dark-mode"
+          "sidebar team-holder";
+    width: fit-content;
+    right: 5px;
+    top: 5px;
+    /* transform: translate(-15px, 15px); */
+}
+
+#top-left {
+    position: absolute;
+    /* display: grid;
+    grid:   "home connections"
+            "wordle grudge"; */
+    top: 0;
+    left: 0;
+    transform: translate(25px, -25px);
+    max-height: 58px;
+}
+
+#settings {
+    position: relative;
+    padding-top: 10px;
+    top: 0;
+    width: 85%;
+    height: 50px;
+}
+
+#pre-gameplay {
+    display: grid;
+    grid: "pregame-area pregame-area starting-lineup";
+
+
+    width: 75%;
+    height: 50%;
+    align-self: center;
+
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    margin: auto;
+    gap: 20px;
+}
+
+#team {
+    position: relative;
+    z-index: -1;
+    border-color: red;
+}
+
+#starting-lineup {
+    grid-area: starting-lineup;
+    background-color: rgba(255, 255, 255, 0.699);
+    border-radius: 5px;
+    padding: 20px;
+    max-width: 250px;
+}
+
+#pregame-area {
+    grid-area: pregame-area;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.699);
+    border-radius: 5px;
+    padding: 20px;
+}
+#pregame-content-main {
+    margin: 15px;
+    align-items: center;
+    flex-grow: 1;
+    display: grid;
+    grid: "ranked regular";
+}
+
+#queue {
+    grid-area: regular;
+}
+
+#queue-ranked {
+    grid-area: ranked;
+}
+
+#pregame-content-main > button {
+    width: 150px;
+    height: 150px;
+    color:rgba(0, 0, 0, 0.75);
+    border-color: red;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+}
+
+#pregame-content-main > button:hover {
+    background-color:rgba(0, 0, 0, 1);
+    color: #fff;
+}
+
+
+#pregame-content{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#queue-area {
+    display: none;
+    width: 75%;
+    height: 50%;
+    align-self: center;
+
+    background-color: rgba(255, 255, 255, 0.699);
+    border-radius: 5px;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    margin: auto;
+    gap: 20px;
+}
 
 #timer-circle {
     width: 100px;
@@ -236,6 +333,7 @@ main {
     grid-area: connection-strikes;
     color: red;
     text-align: right;
+    font-size: x-small;
 }
 
 #connection-value {
@@ -267,7 +365,7 @@ main {
 }
 
 #headshot {
-    width: 274px;
+    width: 273px;
     height: auto;
     display: block;
 }
@@ -313,7 +411,7 @@ main {
 
 .connection-area {
     width: 100%;
-    max-height: 500px; /* Adjust as needed */
+    max-height: 450px; /* Adjust as needed */
     /* border: 1px solid #ccc; Optional: For visual boundary */
     overflow: auto; /* This is the key property for scrolling */
 }
@@ -628,7 +726,7 @@ footer {
         }
         #top-right {
             scale: 1;
-            transform: translate(-15px, 15px);
+            /* transform: translate(-15px, 15px); */
             transform-origin: top right;
         }
         body {
@@ -665,8 +763,8 @@ footer {
 /* ======================================================================= */
 
     .animate {
-        animation-duration: 0.75s;
-        /* animation-duration: 1s; running slower to show effect */
+        /* animation-duration: 0.75s; */
+        animation-duration: 1s; 
         /* animation-delay: 0.5s; */
         animation-name: animate-fade;
         animation-timing-function: cubic-bezier(.26,.53,.74,1.48);
@@ -741,5 +839,32 @@ footer {
         100% {
         opacity: 1;
         filter: blur(0px);
+        }
+    }
+
+    /* Fade In */
+    .animate.fade {
+        animation-name: animate-fade;
+        animation-timing-function: ease;
+    }
+    @keyframes animate-fade {
+        0% {
+        opacity: 0;
+        }
+        100% {
+        opacity: 1;
+        }
+    }
+    /* Fade Out */
+    .animate.fadeout {
+        animation-name: animate-fadeout;
+        animation-timing-function: ease;
+    }
+    @keyframes animate-fadeout {
+        0% {
+        opacity: 1;
+        }
+        100% {
+        opacity: 0;
         }
     }

@@ -13,57 +13,98 @@
     <link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap" rel="stylesheet">
 </head>
 <body id="body">
-    <div id="top">
-        <!-- Include some extra stuff -->
-        <div id="top-left">
-            <div id="back"><div id="top-left-home"></div></div>
-        </div>
-    
-        <div id="top-right">
-            <div id="dark-mode">
-                <!-- <label class="switch" id="slider">
-                    <input id="checkbox" type="checkbox">
-                    <span class="slider"></span>
-                </label> -->
-                <div id="logoSpace"></div>
-            </div>   
-            <div id="team-holder"></div>
-        </div>
-    
-    </div>
-
-
-
-
-
-    <div id="test-container"></div>
-
-    <div class="container" id="container-dark-mode">
-        <main>
-            <div id="queue-area" hidden> 
-                <button class="button" id="queue">Queue</button>
+    <main>
+        <div id="top">
+            <!-- Include some extra stuff -->
+            <div id="top-left">
+                <div id="back"><div id="top-left-home"></div></div>
             </div>
-
-
-            <div id="timer-circle"></div>
-
-            <div class="guess-input-area">
-                <input type="text" id="guess-input" placeholder="Guess Player">
-                <button id="guess-button">Guess</button>
+        
+            <div id="top-right">
+                <div id="dark-mode">
+                    <!-- <label class="switch" id="slider">
+                        <input id="checkbox" type="checkbox">
+                        <span class="slider"></span>
+                    </label> -->
+                    <div id="logoSpace"></div>
+                </div>   
+                <div id="team-holder"></div>
             </div>
+        
+        </div>
 
-            <div class="connection-area">
-                <div id="connection-content">
+        <div id="settings">
+            <span><button id="debug-queue">Queue</button></span>
+            <span><button id="debug-game-start">Game Start</button></span>
+            <span><button id="debug-game-show">Show Gameplay</button></span>
+            <span><button>Hello</button></span>
+            <hr id="team">
+        </div>
+
+
+
+
+
+        <div id="content">
+            <div id="pre-gameplay">
+                <div id="pregame-area"> 
+                    <div id="pregame-header"> <h1>Season 0</h1> </div>
+                    <div id="pregame-content">
+                        <div id="pregame-content-header"> 
+                            <span id="team-2">Welcome, </span><span id="user-id">USER_ID_TEMPLATE</span>
+                        </div>
+                        <div id="pregame-content-main">
+                            <button class="button" id="queue-ranked">Queue? </button>
+
+                            <button class="button" id="queue">Queue</button>
+                        </div>  
+                    </div>
+                    <div id="pregame-footer">INSERT_HELP_BUTTONS | INSERT_REPORT_BUTTONS</div>
+
+
+                    <!-- <button class="button" id="queue">Queue</button> -->
+                </div>
+                <div id="starting-lineup">
+                    <div id="starting-lineup-header"> <h2> Starting Lineup </h2> </div>
+                    <div id="starting-lineup-content">STARTING_LINEUP_CONTENT</div>
                 </div>
             </div>
 
-            <div class="controls">
-                <!-- <button id="new-puzzle">New Puzzle</button> -->
-                <div id="attempts" hidden>Attempts: 0 / 6</div>
-                <div id="game-status"></div>
+            <div id="queue-area" >
+                Queuing?...?...
             </div>
-        </main>
-    </div>
+
+
+            <div id="gameplay">
+
+
+
+
+
+                    <div id="timer-circle"></div>
+
+                    <div class="guess-input-area">
+                        <input type="text" id="guess-input" placeholder="Guess Player">
+                        <button id="guess-button">Guess</button>
+                    </div>
+
+                    <div class="connection-area">
+                        <div id="connection-content">
+                        </div>
+                    </div>
+
+                    <div class="controls">
+                        <!-- <button id="new-puzzle">New Puzzle</button> -->
+                        <div id="attempts" hidden>Attempts: 0 / 6</div>
+                        <div id="game-status"></div>
+                    </div>
+
+                
+            </div>
+        </div>
+
+
+    </main>
     <script type="module" src="script.js"></script> <!-- ../js/ -->
     <script type="module" src="../dist/bundle.js"></script>
 </body>

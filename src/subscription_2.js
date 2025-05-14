@@ -1,6 +1,6 @@
 const subQL = /* GraphQL Subscription Query */ `
-subscription OnGameStarted {
-  onGameStarted {
+subscription OnGameStarted($playerID: ID!) {
+  onGameStarted(playerID: $playerID) {
     id
     players {
       id
@@ -9,10 +9,9 @@ subscription OnGameStarted {
     }
     currentPlayerID
     gameStatus
-    actions {
+    guesses {
       playerID
       guessID
-      timestamp
     }
   }
 }
@@ -21,11 +20,13 @@ subscription OnGameStarted {
 
 
 
-
-export function subscribeOnGameStarted(client) {
+export function subscribeOnGameStarted(client, _playerID) {
   console.log("we're subscribing");
   const subscription = client.graphql({
-      query: subQL
+      query: subQL,
+      variables: {
+        playerID: _playerID,
+      },
     }).subscribe({
         next: (data) => {
             // This function will be called every time a new game is started
