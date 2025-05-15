@@ -59,7 +59,7 @@
                             <button class="button" id="queue">Queue</button>
                         </div>  
                     </div>
-                    <div id="pregame-footer">INSERT_HELP_BUTTONS | INSERT_REPORT_BUTTONS</div>
+                    <div id="pregame-footer">HELP_BUTTONS | REPORT_BUTTONS</div>
 
 
                     <!-- <button class="button" id="queue">Queue</button> -->
@@ -71,7 +71,9 @@
             </div>
 
             <div id="queue-area" >
-                Queuing?...?...
+                <div style="text-align: center;">
+                    Queuing?...?...
+                </div>
             </div>
 
 
@@ -80,14 +82,42 @@
 
 
 
-
-                    <div id="timer-circle"></div>
+                    <div id="gameplay-top">
+                        <div id="player-one">
+                            <div id="player-one-info">
+                                <span id="player-one-name">PLAYER_ONE_NAME</span>
+                                <span id="player-one-icon">PLAYER_ONE_IMG</span>
+                                <span id="player-one-rank">PLAYER_ONE_RANK</span>
+                            </div>
+                            <div id="player-one-lifelines">
+                                <span id="player-one-line-change"></span>
+                                <span id="player-one-scouting-report"></span>
+                                <span id="player-one-interference"></span>
+                            </div>
+                        </div>
+                        <div id="timer-circle"></div>
+                        <div id="player-two">
+                            <div id="player-two-info">
+                                <span id="player-two-name">PLAYER_ONE_NAME</span>
+                                <span id="player-two-icon">PLAYER_ONE_IMG</span>
+                                <span id="player-two-rank">PLAYER_ONE_RANK</span>
+                            </div>
+                            <div id="player-two-lifelines">
+                                <span id="player-two-line-change"></span>
+                                <span id="player-two-scouting-report"></span>
+                                <span id="player-two-interference"></span>
+                            </div>
+                        </div>
+                    </div>
+                    
 
                     <div class="guess-input-area">
                         <input type="text" id="guess-input" placeholder="Guess Player">
                         <button id="guess-button">Guess</button>
                     </div>
-
+                    <div class="popup"> 
+                        <div class="popuptext" id="popup"></div>
+                    </div> 
                     <div class="connection-area">
                         <div id="connection-content">
                         </div>

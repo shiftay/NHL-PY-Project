@@ -1,4 +1,4 @@
-import { initializeAWS, gameStartedSub, queueforGame, uuid } from '../dist/bundle.js';
+import { initializeAWS, gameStartedSub, queueforGame, uuid, gameStartedSubject } from '../dist/bundle.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const guessInput = document.getElementById('guess-input');
@@ -53,7 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let client;
     let playerID;
     let playerName = "DEFAULT_PLAYER";
-
+    let onGameStarted_sub;
+    let gameID;
     
 
 //#region READING JSON
@@ -168,6 +169,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
+
+
     const years = [
         './playerInfo/19751976_players.json',
         './playerInfo/19761977_players.json',
@@ -223,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //#endregion READING JSON
 
 //#region INITIALIZATION
-    let subscription;
+
     function main() {
         initplayer();
 
@@ -236,7 +239,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         queueButton.addEventListener('click', function() {
+            onGameStarted_sub = gameStartedSub(client, playerID);
             queue();
+            queueForGame();
         });
 
         startGame();
@@ -248,29 +253,33 @@ document.addEventListener('DOMContentLoaded', () => {
     function initplayer() {
         client = initializeAWS();
         playerID = uuid();
-        subscription = gameStartedSub(client, playerID);
 
-        
-        console.log(`playerID ? ${playerID}`);
+        console.log(`id - ${playerID}`);
     }
 
     debugQueue.addEventListener('click', function() {
+        queueForGame();
+    });
+
+    function queueForGame() {
         pregameplay.classList.add('animate', 'fadeout');
 
         setTimeout(() => {
             Fade(queueArea, pregameplay, '#queue-area', '#pre-gameplay');
         }, 1000);
-    });
+    }
 
     debugGame.addEventListener('click', function() {
-    
+        initGame();
+    });
+
+    function initGame() {
         queueArea.classList.add('animate', 'fadeout');
 
         setTimeout(() => {
             Fade(gameplay, queueArea, '#gameplay', '#queue-area');
         }, 1000);
-    
-    });
+    }
 
     function Fade(fadeIn, fadeOut, fadeInName, fadeOutName) {
         fadeIn.classList.add('animate', 'fadein');
@@ -411,7 +420,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function playerExists(guess) {
         const guessedPlayer = playerInfo.find(player => player['name'].toLowerCase() === guess.toLowerCase());
         if(!guessedPlayer) {
-            gameStatus.textContent = "Invalid guess. Player not found.";
+            // gameStatus.textContent = "Invalid guess. Player not found.";
             return false;
         }
 
@@ -524,7 +533,7 @@ document.addEventListener('DOMContentLoaded', () => {
         var image = document.createElement('img');
         image.src = `https://assets.nhle.com/mugs/actionshots/1296x729/${player['playerId']}.jpg`; //player['headshot'];
         image.setAttribute('id', 'headshot');
-
+        image.draggable = false;
 
         /**
          * Create intial text content
@@ -566,17 +575,11 @@ document.addEventListener('DOMContentLoaded', () => {
         currentPlayer = player;
     }
 
-
-  
-
-
     function returnStyle(player) {
         /**
-         *  Pick a style at random.
-         *  
-         * 
+         *  Pick a style at random. 
          */
-        const styleNumber = getRandomInt(3); //getRandomInt(3);
+        const styleNumber = 3; //getRandomInt(4);
 
         console.log(`Style: ${styleNumber}`);
 
@@ -584,15 +587,13 @@ document.addEventListener('DOMContentLoaded', () => {
         border.src = `../assets/border_${styleNumber}.png`;
         border.setAttribute('id', 'card-content');
         border.classList.add('border')
+        border.draggable = false;
         
         
         // name.setAttribute('id', 'card-content');
         // name.classList.add('name')
         var name = setName(styleNumber, player);
         var position = setPosition(styleNumber, player);
-
-        console.dir(position);
-
 
         if(position) {
             return [ border, name, position ];
@@ -604,7 +605,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function setName(styleNumber, player) {
         var name = document.createElement('span');
         
-
         switch(styleNumber) {
             case 0:
                 name.style.bottom = '0px';
@@ -617,21 +617,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 break;
             case 1:
                 name.style.bottom = '12px';
-                name.style.left = '15px';
+                name.style.left = '10px';
                 name.style.position = 'absolute';
-                name.style.fontSize = 'medium';
+                name.style.fontSize = '0.75em';
                 name.textContent = `${player['position']} | ${player['name']}`;
                 break;
-            case 2:
+            case 2: // Left Diagonal
                 name.style.bottom = '30px';
                 name.style.left = '-75px';
                 name.style.width = '100%';
                 name.style.textAlign = 'center';
                 name.style.position = 'absolute';
                 name.style.fontSize = '0.75em';
-
                 name.style.transform = `rotate(${30}deg)`;
                 name.textContent = player['name'];
+                break;
+            case 3:
+                name.style.top = '80%';
+                name.style.left = '50%';
+                name.style.position = 'absolute';
+                name.style.fontSize = '0.75em';
+                name.style.transform = 'translate(-50%, -50%)';
+                name.style.width = 'fit-content';
+                name.textContent = `${player['name']}`;
                 break;
         }
 
@@ -676,6 +684,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 positionElement.style.fontSize = '0.95em';
                 positionElement.style.transform = `rotate(${30}deg)`;
                 positionElement.textContent= `${player['position']} | ${player['sweaterNumber']}`;
+                break;
+            case 3:
+                positionElement.style.top = '90%';
+                positionElement.style.left = '50%';
+                positionElement.style.position = 'absolute';
+                positionElement.style.fontSize = '0.5em';
+                positionElement.style.transform = 'translate(-50%, -50%)';
+                positionElement.style.width = 'fit-content';
                 break;
         }
 
@@ -1230,5 +1246,59 @@ document.addEventListener('DOMContentLoaded', () => {
             .setAttribute("stroke-dasharray", circleDasharray);
     }
 //#endregion
+
+
+//#region AWS
+    gameStartedSubject.subscribe((gameData) => {
+        // This is your "other script" (in a different file)
+        console.log('Received game data in game_logic.js:', gameData);
+        const actualGameData = gameData.data.onGameStarted;
+
+        if(!containsID(actualGameData.players)) {
+            return;
+        }
+        // Assume our id is in the game, unsubscribe to the subscription, and move on to other subscriptions.
+        gameID = actualGameData.id;
+
+        // Unsubscribe to onGameStarted.
+        onGameStarted_sub.unsubscribe();
+
+        /**
+         * Subscribe to other AWS Subscriptions
+         */
+        
+        /**
+         * Layout of the information pulled in:
+         *      actualGameData
+         *          > currentPlayerID
+         *          > gameStatus
+         *          > guesses []
+         *          > id (GAME ID)
+         *          > players []
+         */
+
+        
+
+        initGame();
+
+        if(actualGameData.currentPlayer !== playerID) {
+            guessInput.disabled = true;
+            guessButton.disabled = true;
+        }
+
+    });
+
+    function containsID(players) {
+        for(var i = 0; i < players.length; i++) {
+            if(players[i].id == playerID) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+//#endregion
+
 
 });
