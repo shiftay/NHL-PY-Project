@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // https://puckdle-site-info.s3.us-west-2.amazonaws.com/fullListOfplayers.json
+    // ./playerInfo/fullListOfplayers.json
     async function loadGameData() {
         for(var i = 0; i < years.length; i++) {
             fetchJsonFromS3(years[i])
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // const gameConfig = await fetchJsonFromS3('https://puckdle-site-info.s3.us-west-2.amazonaws.com/fullListOfplayers.json');
+        // const gameConfig = await fetchJsonFromS3('./playerInfo/fullListOfplayers.json');
     }
       
     // loadGameData()
@@ -169,55 +169,55 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const years = [
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/19751976_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/19761977_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/19771978_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/19781979_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/19791980_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/19801981_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/19811982_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/19821983_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/19831984_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/19841985_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/19851986_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/19861987_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/19871988_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/19881989_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/19891990_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/19901991_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/19911992_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/19921993_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/19931994_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/19941995_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/19951996_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/19961997_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/19971998_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/19981999_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/19992000_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/20002001_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/20012002_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/20022003_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/20032004_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/20052006_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/20062007_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/20072008_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/20082009_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/20092010_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/20102011_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/20112012_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/20122013_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/20132014_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/20142015_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/20152016_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/20162017_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/20172018_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/20182019_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/20192020_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/20202021_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/20212022_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/20222023_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/20232024_players.json',
-        'https://puckdle-site-info.s3.us-west-2.amazonaws.com/20242025_players.json'
+        './playerInfo/19751976_players.json',
+        './playerInfo/19761977_players.json',
+        './playerInfo/19771978_players.json',
+        './playerInfo/19781979_players.json',
+        './playerInfo/19791980_players.json',
+        './playerInfo/19801981_players.json',
+        './playerInfo/19811982_players.json',
+        './playerInfo/19821983_players.json',
+        './playerInfo/19831984_players.json',
+        './playerInfo/19841985_players.json',
+        './playerInfo/19851986_players.json',
+        './playerInfo/19861987_players.json',
+        './playerInfo/19871988_players.json',
+        './playerInfo/19881989_players.json',
+        './playerInfo/19891990_players.json',
+        './playerInfo/19901991_players.json',
+        './playerInfo/19911992_players.json',
+        './playerInfo/19921993_players.json',
+        './playerInfo/19931994_players.json',
+        './playerInfo/19941995_players.json',
+        './playerInfo/19951996_players.json',
+        './playerInfo/19961997_players.json',
+        './playerInfo/19971998_players.json',
+        './playerInfo/19981999_players.json',
+        './playerInfo/19992000_players.json',
+        './playerInfo/20002001_players.json',
+        './playerInfo/20012002_players.json',
+        './playerInfo/20022003_players.json',
+        './playerInfo/20032004_players.json',
+        './playerInfo/20052006_players.json',
+        './playerInfo/20062007_players.json',
+        './playerInfo/20072008_players.json',
+        './playerInfo/20082009_players.json',
+        './playerInfo/20092010_players.json',
+        './playerInfo/20102011_players.json',
+        './playerInfo/20112012_players.json',
+        './playerInfo/20122013_players.json',
+        './playerInfo/20132014_players.json',
+        './playerInfo/20142015_players.json',
+        './playerInfo/20152016_players.json',
+        './playerInfo/20162017_players.json',
+        './playerInfo/20172018_players.json',
+        './playerInfo/20182019_players.json',
+        './playerInfo/20192020_players.json',
+        './playerInfo/20202021_players.json',
+        './playerInfo/20212022_players.json',
+        './playerInfo/20222023_players.json',
+        './playerInfo/20232024_players.json',
+        './playerInfo/20242025_players.json'
       ];
 
 //#endregion READING JSON
