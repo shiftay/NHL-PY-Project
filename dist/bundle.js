@@ -74,12 +74,20 @@ function subscribeToActions(client, _gameID, actionSubject2) {
 var gameStatUpdateQL = (
   /* GraphQL Subscription Query */
   `
-subscription onGameStateUpdated {
-  onActionTaken {
-    gameID
-    playerID
-    actionID
-    guessID
+subscription OnGameStateUpdatedSubscription($id: ID!) {
+  onGameStateUpdated(id: $id){
+    id
+    players {
+      id
+      name
+      rank
+    }
+    currentPlayerID
+    gameStatus
+    guesses {
+      playerID
+      guessID
+    }
   }
 }
 `
@@ -88,12 +96,12 @@ function subscribeToUpdates(client, _gameID, updateSubject2) {
   const subscription = client.graphql({
     query: gameStatUpdateQL,
     variables: {
-      gameID: _gameID
+      id: _gameID
     }
   }).subscribe({
     next: (data) => {
-      console.dir(data);
-      gameStartedSubject.next(data);
+      console.dir(`updates: ${data}`);
+      updateSubject2.next(data);
     },
     error: (error) => {
       console.warn("Error in subscription:", error);
@@ -106,6 +114,50 @@ function subscribeToUpdates(client, _gameID, updateSubject2) {
 }
 
 // src/mutation.js
+var takeAction = (
+  /* GraphQL */
+  `
+  mutation TakeAction($gameID: ID!, $playerID: ID!, $guessID: ID!) {
+    correctGuess(gameID: $gameID, playerID: $playerID, guessID: $guessID) {
+      id
+      players {
+        id
+        name
+        rank
+      }
+      currentPlayerID
+      gameStatus
+      guesses {
+        playerID
+        guessID
+      }
+    }
+} 
+`
+);
+async function sendGuess(client, _gameID, _playerID, _guessID) {
+  try {
+    console.log(`${_gameID} | ${_playerID} | ${_guessID}`);
+    const response = await client.graphql({
+      query: takeAction,
+      variables: {
+        gameID: _gameID,
+        playerID: _playerID,
+        guessID: _guessID
+      }
+    });
+    if (response.errors) {
+      console.error("Mutation error:", response.errors);
+      return;
+    }
+    const updatedGame = response.data?.takeAction;
+    if (updatedGame) {
+      console.log("Successfully took action:", updatedGame);
+    }
+  } catch (error) {
+    console.error("Failed to take action:", error);
+  }
+}
 var lookforGame = `
 mutation LookForExistingGame($player: PlayerInput!) {
   lookForGame(player: $player) {
@@ -13233,11 +13285,14 @@ function gameStartedSub(client, playerId) {
 function queueforGame(client, playerId, playerName, rank, logo) {
   joinQueue(client, playerId, playerName, rank, logo);
 }
-function actionSub(client, gameId) {
-  return subscribeToActions(client, gameId, actionSubject);
+function updateGuess(client, gameId, playerId, guessId) {
+  sendGuess(client, gameId, playerId, guessId);
 }
 function updatesSub(client, gameId) {
   return subscribeToUpdates(client, gameId, updateSubject);
+}
+function actionSub(client, gameId) {
+  return subscribeToActions(client, gameId, actionSubject);
 }
 function uuid() {
   return v4_default();
@@ -13249,6 +13304,7 @@ export {
   gameStartedSubject2 as gameStartedSubject,
   initializeAWS,
   queueforGame,
+  updateGuess,
   updateSubject,
   updatesSub,
   uuid

@@ -1,23 +1,27 @@
 // 1. Define your GraphQL mutation
 const takeAction = /* GraphQL */ `
   mutation TakeAction($gameID: ID!, $playerID: ID!, $guessID: ID!) {
-    takeAction(gameID: $gameID, playerID: $playerID, guessID: $guessID) {
+    correctGuess(gameID: $gameID, playerID: $playerID, guessID: $guessID) {
       id
-      // Include other fields from the Game type that you need in the response
-      name
-      status
-      guesses {
+      players {
         id
-        playerId
-        guess
+        name
+        rank
+      }
+      currentPlayerID
+      gameStatus
+      guesses {
+        playerID
+        guessID
       }
     }
-  }
+} 
 `;
 
 // 3. Execute the mutation using Amplify's API client
-export async function performAction(client, _gameID, _playerID, _guessID) {
+export async function sendGuess(client, _gameID, _playerID, _guessID) {
   try {
+    console.log(`${_gameID} | ${_playerID} | ${_guessID}`);
     const response = await client.graphql({
       query: takeAction,
       variables: {

@@ -1,5 +1,5 @@
 import { subscribeOnGameStarted, subscribeToActions, subscribeToUpdates } from './subscription_2.js';
-import { joinQueue } from './mutation.js'
+import { joinQueue, sendGuess } from './mutation.js'
 import { generateClient } from 'aws-amplify/api';
 import config from './aws-exports';
 import { Amplify } from 'aws-amplify';
@@ -24,13 +24,19 @@ export function queueforGame(client, playerId, playerName, rank, logo) {
     joinQueue(client, playerId, playerName, rank, logo);
 }
 
-export function actionSub(client, gameId) {
-    return subscribeToActions(client, gameId, actionSubject);
+export function updateGuess(client, gameId, playerId, guessId) {
+    sendGuess(client, gameId, playerId, guessId);
 }
 
 export function updatesSub(client, gameId) {
     return subscribeToUpdates(client, gameId, updateSubject);
 }
+
+
+export function actionSub(client, gameId) {
+    return subscribeToActions(client, gameId, actionSubject);
+}
+
 
 export function uuid() {
     return v4();

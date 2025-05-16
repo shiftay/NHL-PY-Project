@@ -1,4 +1,4 @@
-import { initializeAWS, gameStartedSub, queueforGame, uuid, gameStartedSubject } from '../dist/bundle.js';
+import { initializeAWS, gameStartedSub, queueforGame, uuid, gameStartedSubject, updateGuess, actionSubject, actionSub, updatesSub, updateSubject } from '../dist/bundle.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const guessInput = document.getElementById('guess-input');
@@ -54,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let playerID;
     let playerName = "DEFAULT_PLAYER";
     let onGameStarted_sub;
+    let updates_sub;
     let gameID;
     
 
@@ -278,7 +279,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         setTimeout(() => {
             Fade(gameplay, queueArea, '#gameplay', '#queue-area');
+            startTimer();
         }, 1000);
+        
     }
 
     function Fade(fadeIn, fadeOut, fadeInName, fadeOutName) {
@@ -520,7 +523,7 @@ document.addEventListener('DOMContentLoaded', () => {
         createCard(currentPlayer);
         console.log(currentPlayer['playerId']);
 
-        startTimer();
+        
     }
 
 
@@ -579,7 +582,7 @@ document.addEventListener('DOMContentLoaded', () => {
         /**
          *  Pick a style at random. 
          */
-        const styleNumber = 3; //getRandomInt(4);
+        const styleNumber = getRandomInt(4); //getRandomInt(4);
 
         console.log(`Style: ${styleNumber}`);
 
@@ -749,7 +752,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 amount += 1;
             }
         }
-
         
         /**
          * This needs testing to make sure this works.
@@ -761,6 +763,9 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(`${validConnect} | ${amount} | ${connections.length}`);
 
         if(validConnect) {
+            
+            
+
             createLine('line');
 
             var multiConnect = connections.length > 1;
@@ -804,24 +809,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
         } else {
             // NO connection
-            let reasons = giveReason(connections);
-            if(reasons.length < 1) {
-                gameStatus.textContent = "No Valid Connections Found";
-            } else {
-                var text = "";
-                for(var i = 0; i < reasons.length; i++) {
-                    text += `${reasons[i]} connections are used up.`
-
-                    if(i < reasons.length-1) {
-                        text += `\n`;
-                    }
-                }
-                gameStatus.textContent = text;
-            }
             
-            setTimeout(function() {
-                gameStatus.textContent = "";
-            }, 2000);
         }
         ResetTimer();
     }
@@ -854,14 +842,40 @@ document.addEventListener('DOMContentLoaded', () => {
             connections.length = 0;
         }
 
+        if(connections.length > 0) {
+            updateGuess(client, gameID, playerID, guessedPlayer['playerId']);
+        } else {
+            let reasons = giveReason(connections);
+            if(reasons.length < 1) {
+                gameStatus.textContent = "No Valid Connections Found";
+            } else {
+                var text = "";
+                for(var i = 0; i < reasons.length; i++) {
+                    text += `${reasons[i]} connections are used up.`
 
-        ConnectionValidation(connections, guessedPlayer);
+                    if(i < reasons.length-1) {
+                        text += `\n`;
+                    }
+                }
+                gameStatus.textContent = text;
+            }
+            
+            setTimeout(function() {
+                gameStatus.textContent = "";
+            }, 2000);
+        }
+
+        
 
     }
 
 
     function findConnection(guess, current) {
         let connections = [];
+
+        console.log("current:", current);
+        console.log("guess:", guess);
+
 
         // Connections: Draft Year, Team, Country, Awards (not stanley cup)
         for(var i = 0; i < current['seasonsPlayed'].length; i++) { // team
@@ -1249,6 +1263,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 //#region AWS
+    let game;
+
     gameStartedSubject.subscribe((gameData) => {
         // This is your "other script" (in a different file)
         console.log('Received game data in game_logic.js:', gameData);
@@ -1262,11 +1278,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Unsubscribe to onGameStarted.
         onGameStarted_sub.unsubscribe();
-
+        game = actualGameData;
         /**
          * Subscribe to other AWS Subscriptions
          */
-        
+        updates_sub = updatesSub(client, gameID); 
         /**
          * Layout of the information pulled in:
          *      actualGameData
@@ -1278,12 +1294,54 @@ document.addEventListener('DOMContentLoaded', () => {
          */
 
         
-
+        console.log(`result: ${actualGameData.currentPlayerID} | player: ${playerID}`);
         initGame();
 
-        if(actualGameData.currentPlayer !== playerID) {
+        if(actualGameData.currentPlayerID !== playerID) {
+            
             guessInput.disabled = true;
             guessButton.disabled = true;
+        }
+
+    });
+
+    updateSubject.subscribe((gameData) => {
+        // This is your "other script" (in a different file)
+        console.log('Received game data in game_logic.js:', gameData);
+        const newGameData = gameData.data.onGameStateUpdated;
+        /**
+         * Layout of the information pulled in:
+         *      actualGameData
+         *          > currentPlayerID
+         *          > gameStatus
+         *          > guesses []
+         *          > id (GAME ID)
+         *          > players []
+         */
+
+        let currentGuess = game.guesses.length;
+
+        console.log(`pId: ${playerInfo[0]['playerId']}`);
+        const guessedPlayer = playerInfo.find(player => player['playerId'] == newGameData.guesses[currentGuess].guessID);
+
+        console.log(`cG: ${currentGuess} | guessP: ${guessedPlayer} | guessID: ${newGameData.guesses[currentGuess].guessID}`)
+
+        var connections = findConnection(guessedPlayer, currentPlayer);
+        ConnectionValidation(connections, guessedPlayer);
+        
+        game = newGameData;
+        console.log("usedConnection", usedConnections);
+        ResetTimer();
+
+        console.log(`result: ${newGameData.currentPlayerID} | player: ${playerID}`);
+        // initGame();
+
+        if(newGameData.currentPlayerID !== playerID) {
+            guessInput.disabled = true;
+            guessButton.disabled = true;
+        } else {
+            guessInput.disabled = false;
+            guessButton.disabled = false;
         }
 
     });
