@@ -14,6 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const queueButton = document.getElementById('queue');
     const connectionContent = document.getElementById('connection-content');
 
+    const playerone_name = document.getElementById('player-one-name');
+    const playerone_logo = document.getElementById('player-one-logo');
+
+    const playertwo_name = document.getElementById('player-two-name');
+    const playertwo_logo = document.getElementById('player-two-logo');
+
+
     const pregameplay = document.getElementById('pre-gameplay');
     const queueArea = document.getElementById('queue-area');
     const gameplay = document.getElementById('gameplay');
@@ -1292,6 +1299,17 @@ document.addEventListener('DOMContentLoaded', () => {
          *          > id (GAME ID)
          *          > players []
          */
+        // let logo = document.createElement('img')
+        // // logo.src =  GET THE TEAM SVG LOGO AND PLACE HERE
+        // playerone_name.textContent = playerID;
+        // playerone_logo.append(logo);
+
+
+
+        // playertwo_name.textContent = 
+
+        
+
 
         
         console.log(`result: ${actualGameData.currentPlayerID} | player: ${playerID}`);
