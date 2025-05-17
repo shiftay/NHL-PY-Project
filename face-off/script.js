@@ -331,7 +331,7 @@ document.addEventListener('DOMContentLoaded', () => {
         //     returnVals[0] = true;
         // }
         
-        currentCookie = getCookie('team');
+        var currentCookie = getCookie('team');
         if(currentCookie) {
             current_team = currentCookie;
             updateTeam(currentCookie, false);
