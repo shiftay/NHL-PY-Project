@@ -323,13 +323,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function readcookies() {
         var returnVals = [false, false];
         // customization_cookie
-        var currentCookie = getCookie('dark-mode');
-        if(currentCookie) {
-            var isTrueSet = (currentCookie === 'true');
-            document.getElementById('checkbox').checked = darkmode = isTrueSet;
-            updateDarkMode(isTrueSet);
-            returnVals[0] = true;
-        }
+        // var currentCookie = getCookie('dark-mode');
+        // if(currentCookie) {
+        //     var isTrueSet = (currentCookie === 'true');
+        //     document.getElementById('checkbox').checked = darkmode = isTrueSet;
+        //     updateDarkMode(isTrueSet);
+        //     returnVals[0] = true;
+        // }
         
         currentCookie = getCookie('team');
         if(currentCookie) {
