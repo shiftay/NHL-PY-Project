@@ -393,12 +393,12 @@ main {
 
 .popup .popuptext {
     visibility: hidden;
-    width: 160px;
-    background-color: #555;
-    color: #fff;
+    width: 250px;
+    background-color: #252525;
+    color: #dad8d8;
     text-align: center;
     border-radius: 6px;
-    padding: 8px 0;
+    padding: 10px 0;
     position: absolute;
     z-index: 1;
     bottom: 125%;
@@ -645,6 +645,31 @@ footer {
     height: 25%;
     vertical-align: bottom;
 }
+
+/* ======================================================================= */
+/* =====                   Back to TOP                               ===== */
+/* ======================================================================= */
+#backToTopBtn {
+    display: none; /* Initially hide the button */
+    position: fixed; /* Keep it in a fixed position relative to the viewport */
+    bottom: 20px; /* Position it 20 pixels from the bottom */
+    right: 30px; /* Position it 30 pixels from the right */
+    z-index: 99; /* Make sure it appears above other elements */
+    border: none;
+    outline: none;
+    background-color: #888888; /* Example background color */
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    opacity: 0.7; /* Add some transparency */
+    transition: opacity 0.3s ease-in-out; /* Smooth fade in/out */
+  }
+  
+  #backToTopBtn:hover {
+    opacity: 1; /* Make it fully visible on hover */
+  }
 
 /* ======================================================================= */
 /* =====                   Autocomplete                              ===== */

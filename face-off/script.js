@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const guessButton = document.getElementById('guess-button');
     const guessGrid = document.querySelector('.guess-grid');
     const attemptsDisplay = document.getElementById('attempts');
-    const gameStatus = document.getElementById('game-status');
+    const gameStatus = document.getElementById('popup');
     const body = document.getElementById('body');
     const stylesheet = document.styleSheets[0];
     const logoSpace = document.getElementById("logoSpace");
@@ -466,73 +466,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //#endregion
 
-//#region GAME LOGIC
-    var currentPlayer;
-    var usedConnections = {};
 
-    /**
-     * Make sure clear the search bar
-     * 
-     * 
-     * 
-     */
-
-    /* TODO
- 
-    when joining queue, have each player assign a 'starting lineup' player with them
-
-    when game starts
-        > whoever is player one plays off of their randomly assigned starting lineup
-        > Players are subscribed to the GameStatusUpdated subscription
-
-        > Based on turn, disable / enable the search bar
-            > Hide submit button
-
-    Gameplay stuff:
-        When a person plays a player
-            > Logic decides if it is a correct player
-            > sends the action to the takeAction mutator
-            > IF:
-                > INCORRECT  flash the no connection found (pop up)
-                > CORRECT    play the connection, and swap to other player
-
-        // Might redefine take Action, to send Connections, for easier grabbing of information for player.
-        takeAction(Action, bool)
-            > Action : PlayerID, Player, GuessID
-            > bool : was it correct
-                > IF:
-                    CORRECT : Change currentplayer
-                    INCORRECT : no update
-
-        Basic look of HTML:
-
-        <div id=hockey-card></div>
-        <div id=seperator></div>
-        <div id=connector></div> [ Connector will show: TEAM / Country / Award ] [ Can have multiple Connectors ] [ Include Strikes amount ]
-        <div id=seperator></div>
-        <div id=hockey-card></div>
-
-
-        On correct action:
-            Add to List of [ Connectors ]
-
-    Make sure to unsubscribe after losing / leaving site.
-
-    */
-
-    /**
-     * Starting Game
-     * Requires clearing and initializing all stats.
-     */
-    function startGame() {
-        usedConnections = {};
-        
-        currentPlayer = playerInfo.find(n=> n['playerId'] == 8462044)
-        createCard(currentPlayer);
-        console.log(currentPlayer['playerId']);
-
-        
-    }
+//#region CARDS
 
 
     function createCard(player) {
@@ -742,25 +677,82 @@ document.addEventListener('DOMContentLoaded', () => {
         // body.insertBefore(logo, body.children[0]);
         connectionContent.insertBefore(line, connectionContent.children[0]);
     }
+//#endregion
 
+//#region GAME LOGIC
+var currentPlayer;
+var usedConnections = {};
+
+/**
+ * Make sure clear the search bar
+ * 
+ * 
+ * 
+ */
+
+/* TODO
+
+when joining queue, have each player assign a 'starting lineup' player with them
+
+when game starts
+    > whoever is player one plays off of their randomly assigned starting lineup
+    > Players are subscribed to the GameStatusUpdated subscription
+
+    > Based on turn, disable / enable the search bar
+        > Hide submit button
+
+Gameplay stuff:
+    When a person plays a player
+        > Logic decides if it is a correct player
+        > sends the action to the takeAction mutator
+        > IF:
+            > INCORRECT  flash the no connection found (pop up)
+            > CORRECT    play the connection, and swap to other player
+
+    // Might redefine take Action, to send Connections, for easier grabbing of information for player.
+    takeAction(Action, bool)
+        > Action : PlayerID, Player, GuessID
+        > bool : was it correct
+            > IF:
+                CORRECT : Change currentplayer
+                INCORRECT : no update
+
+    Basic look of HTML:
+
+    <div id=hockey-card></div>
+    <div id=seperator></div>
+    <div id=connector></div> [ Connector will show: TEAM / Country / Award ] [ Can have multiple Connectors ] [ Include Strikes amount ]
+    <div id=seperator></div>
+    <div id=hockey-card></div>
+
+
+    On correct action:
+        Add to List of [ Connectors ]
+
+Make sure to unsubscribe after losing / leaving site.
+
+*/
+
+/**
+ * Starting Game
+ * Requires clearing and initializing all stats.
+ */
+    function startGame() {
+        usedConnections = {};
+
+        currentPlayer = playerInfo.find(n=> n['playerId'] == 8462044)
+        createCard(currentPlayer);
+        console.log(currentPlayer['playerId']);
+
+
+    }
     /**
      * Logic for showing Connecton or Pop Up
      */
     function ConnectionValidation(connections, guessPlayer) {
         var validConnect = false;
-        var amount = 0;
-        for(var i = 0; i < connections.length; i++) {
-            var value = connections[i].slice(2);
 
-            if(usedConnections[value]) {
-                if(usedConnections[value] < 5)  {
-                    amount += 1;
-                }   
-            } else {
-                amount += 1;
-            }
-        }
-        
+        var amount = countConnections(connections);
         /**
          * This needs testing to make sure this works.
          * Idea is that all connections need to be valid for it to be allowed to be a connection
@@ -775,9 +767,6 @@ document.addEventListener('DOMContentLoaded', () => {
             
 
             createLine('line');
-
-            var multiConnect = connections.length > 1;
-
             for(var i = 0; i < connections.length; i++) {
 
                 // var type = connections[i].slice(0,2);
@@ -838,6 +827,23 @@ document.addEventListener('DOMContentLoaded', () => {
         return reasons;
     }
 
+    function countConnections(connections) {
+        var amount = 0;
+        for(var i = 0; i < connections.length; i++) {
+            var value = connections[i].slice(2);
+
+            if(usedConnections[value]) {
+                if(usedConnections[value] < 5)  {
+                    amount += 1;
+                }   
+            } else {
+                amount += 1;
+            }
+        }
+
+        return amount;
+    }
+
 
     function checkGuess() {
         const guess = guessInput.value.trim();
@@ -846,16 +852,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
         var connections = findConnection(guessedPlayer, currentPlayer);
         
+        var amount = countConnections(connections);
+
         if(guessedPlayer == currentPlayer) {
-            connections.length = 0;
+            amount = -1;
         }
 
-        if(connections.length > 0) {
+        console.log("amount", amount);
+        console.log("connectionslength", connections.length);
+
+        if(amount > 0 && amount == connections.length) {
             updateGuess(client, gameID, playerID, guessedPlayer['playerId']);
         } else {
             let reasons = giveReason(connections);
             if(reasons.length < 1) {
-                gameStatus.textContent = "No Valid Connections Found";
+                popup.textContent = `No Valid Connections Found For ${guessedPlayer['name']}`;
             } else {
                 var text = "";
                 for(var i = 0; i < reasons.length; i++) {
@@ -865,16 +876,13 @@ document.addEventListener('DOMContentLoaded', () => {
                         text += `\n`;
                     }
                 }
-                gameStatus.textContent = text;
+                popup.textContent = text;
             }
-            
+            popup.classList.toggle('show');
             setTimeout(function() {
-                gameStatus.textContent = "";
-            }, 2000);
+                popup.classList.toggle('show');
+            }, 1500);
         }
-
-        
-
     }
 
 
@@ -915,10 +923,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         } 
 
-
-        if(guess['birthCountry'] == current['birthCountry']){// country
-            connections.push(`b-${guess['birthCountry']}`);
-        } 
+        /**
+         * Country currently DISABLED
+         * To easy to fill up on specific countries (ie. CAN)
+         */
+        // if(guess['birthCountry'] == current['birthCountry']){
+        //     connections.push(`b-${guess['birthCountry']}`);
+        // } 
 
         return connections;
     }
@@ -1269,6 +1280,40 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 //#endregion
 
+//#region SCROLL
+    // Get the button
+    let mybutton = document.getElementById("backToTopBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    mybutton.addEventListener("click", backToTop);
+
+    function backToTop() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+//#endregion
+
+//#region UNLOAD
+    window.onbeforeunload = function(event) {
+        console.log("testing-onbeforeunload") // Attempt to run your function
+    
+        // The return value here can trigger a confirmation dialog in some browsers
+        // Returning an empty string or undefined generally avoids the prompt.
+        return;
+    };
+//#endregion
+
 
 //#region AWS
     let game;
@@ -1388,6 +1433,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 //#endregion
+
+
 
 
 });
