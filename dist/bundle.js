@@ -9,6 +9,7 @@ subscription OnGameStarted {
       id
       name
       rank
+      logo
     }
     currentPlayerID
     gameStatus

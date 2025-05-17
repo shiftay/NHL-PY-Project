@@ -93,6 +93,7 @@ body {
     display: grid;
     grid: "player-one timer player-two";
     width: 100%;
+    grid-template-columns: 1fr 0.5fr 1fr;
 }
 
 #player-one {
@@ -104,14 +105,18 @@ body {
     display: grid;
     grid:   "player-one-name player-one-icon"
             "player-one-rank blank";
+    grid-template-columns: 1fr 1fr;
+    justify-items: left;
 }
 
 #player-one-name {
     grid-area: player-one-name;
+    font-weight: bold;
 }
 
 #player-one-icon {
     grid-area: player-one-icon;
+    width: 50%;
 }
 
 #player-one-rank {
@@ -127,15 +132,19 @@ body {
 #player-two-info {
     display: grid;
     grid:   "player-two-icon player-two-name"
-            "player-two-rank blank";
+            "blank player-two-rank";
+    grid-template-columns: 1fr 1fr;
+    justify-items: right;
 }
 
 #player-two-name {
     grid-area: player-two-name;
+    font-weight: bold;
 }
 
 #player-two-icon {
     grid-area: player-two-icon;
+    width:50%;
 }
 
 #player-two-rank {
@@ -541,6 +550,10 @@ main {
     background-color: #0056b3;
 }
 
+#guess-button:disabled {
+    background-color: #333;
+    pointer-events: none;
+}
 
 
 .attribute {

@@ -15,11 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const connectionContent = document.getElementById('connection-content');
 
     const playerone_name = document.getElementById('player-one-name');
-    const playerone_logo = document.getElementById('player-one-logo');
+    const playerone_logo = document.getElementById('player-one-icon');
+    const playerone_rank = document.getElementById('player-one-rank');
 
     const playertwo_name = document.getElementById('player-two-name');
-    const playertwo_logo = document.getElementById('player-two-logo');
-
+    const playertwo_logo = document.getElementById('player-two-icon');
+    const playertwo_rank = document.getElementById('player-two-rank');
 
     const pregameplay = document.getElementById('pre-gameplay');
     const queueArea = document.getElementById('queue-area');
@@ -354,7 +355,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if(smallLogo)
             smallLogo.remove();
 
-        var css = Array.from(stylesheet.cssRules);
+        current_team = teamAbbrev;
 
         var random = Array.from(colorCodes).find(n => n.teamAbbrev === teamAbbrev);
 
@@ -1299,24 +1300,36 @@ document.addEventListener('DOMContentLoaded', () => {
          *          > id (GAME ID)
          *          > players []
          */
-        // let logo = document.createElement('img')
-        // // logo.src =  GET THE TEAM SVG LOGO AND PLACE HERE
-        // playerone_name.textContent = playerID;
-        // playerone_logo.append(logo);
+        let index = -1;
+        for(var i = 0; i < actualGameData.players.length; i++) {
+            if(actualGameData.players[i].id !== playerID) {
+                index = i;
+                break;
+            }
+        }
 
 
 
-        // playertwo_name.textContent = 
+        console.log("current_team", current_team);
+        let logo = document.createElement('img');
+        logo.src =  Array.from(teamSVG).find(n => n.teamAbbrev === current_team).teamLogo;
+        playerone_name.textContent = "Guest-" + playerID.substring(0,4);
+        playerone_logo.append(logo);
+        playerone_rank.textContent = 1000;
 
+
+        let logo_two = document.createElement('img');
+        logo_two.src = Array.from(teamSVG).find(n => n.teamAbbrev === actualGameData.players[index].logo).teamLogo;
+        playertwo_name.textContent = "Guest-" + actualGameData.players[index].id.substring(0,4);
+        playertwo_logo.append(logo_two);
+        playertwo_rank.textContent = actualGameData.players[index].rank;
         
 
 
-        
         console.log(`result: ${actualGameData.currentPlayerID} | player: ${playerID}`);
         initGame();
 
         if(actualGameData.currentPlayerID !== playerID) {
-            
             guessInput.disabled = true;
             guessButton.disabled = true;
         }
