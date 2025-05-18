@@ -682,6 +682,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //#region GAME LOGIC
 var currentPlayer;
 var usedConnections = {};
+var usedPlayers = [];
 
 /**
  * Make sure clear the search bar
@@ -854,7 +855,7 @@ Make sure to unsubscribe after losing / leaving site.
         
         var amount = countConnections(connections);
 
-        if(guessedPlayer == currentPlayer) {
+        if(guessedPlayer == currentPlayer || usedPlayers.includes(guessedPlayer)) {
             amount = -1;
         }
 
@@ -1404,6 +1405,8 @@ Make sure to unsubscribe after losing / leaving site.
 
         var connections = findConnection(guessedPlayer, currentPlayer);
         ConnectionValidation(connections, guessedPlayer);
+
+        usedPlayers.push(guessedPlayer);
         
         game = newGameData;
         console.log("usedConnection", usedConnections);
