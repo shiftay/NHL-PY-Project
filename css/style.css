@@ -489,12 +489,15 @@ hr {
 
     /* user-select: none; */
     /* box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); */
-    /* height: 100%; */
+    width: 100%;
+    height: 100%;
     /* background-color: transparent; */
     /* width: 300px; */
     height: 20vh;
     /* border: 1px solid #f1f1f1; */
-    /* perspective: 1000px; Remove this if you don't want the 3D effect */
+        transition: transform 0.8s;
+    transform-style: preserve-3d;
+    perspective: 1000px;  /* Remove this if you don't want the 3D effect */
   }
   
   .flip-card-puckdle {

@@ -56,8 +56,8 @@ export function subscribeOnGameStarted(client, _playerID, gameStartedSubject) {
 
 
 const actionQL = /* GraphQL Subscription Query */ `
-subscription OnActionTaken {
-  onActionTaken {
+subscription OnActionTaken($gameID: ID) {
+  onActionTaken(gameID: $gameID) {
     gameID
     playerID
     actionID
@@ -67,6 +67,7 @@ subscription OnActionTaken {
 `;
 
 export function subscribeToActions(client, _gameID, actionSubject) {
+  console.log(`sub ${_gameID}`);
   const subscription = client.graphql({
       query: actionQL,
       variables: {
@@ -77,7 +78,7 @@ export function subscribeToActions(client, _gameID, actionSubject) {
             // This function will be called every time a new game is started
             // and the data will contain the game information.
             console.dir(data);
-            gameStartedSubject.next(data);
+            actionSubject.next(data);
             // const gameData = data.value.data.onGameStarted;
             // console.log('New game started:', gameData);
             //  Update your UI or game state here, based on the new game data.

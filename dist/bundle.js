@@ -21,14 +21,14 @@ subscription OnGameStarted {
 }
 `
 );
-function subscribeOnGameStarted(client, _playerID, gameStartedSubject3) {
+function subscribeOnGameStarted(client, _playerID, gameStartedSubject2) {
   console.log(`we're subscribing ${_playerID}`);
   const subscription = client.graphql({
     query: subQL
   }).subscribe({
     next: (data) => {
       console.dir(data);
-      gameStartedSubject3.next(data);
+      gameStartedSubject2.next(data);
     },
     error: (error) => {
       console.warn("Error in subscription:", error);
@@ -42,8 +42,8 @@ function subscribeOnGameStarted(client, _playerID, gameStartedSubject3) {
 var actionQL = (
   /* GraphQL Subscription Query */
   `
-subscription OnActionTaken {
-  onActionTaken {
+subscription OnActionTaken($gameID: ID) {
+  onActionTaken(gameID: $gameID) {
     gameID
     playerID
     actionID
@@ -53,6 +53,7 @@ subscription OnActionTaken {
 `
 );
 function subscribeToActions(client, _gameID, actionSubject2) {
+  console.log(`sub ${_gameID}`);
   const subscription = client.graphql({
     query: actionQL,
     variables: {
@@ -61,7 +62,7 @@ function subscribeToActions(client, _gameID, actionSubject2) {
   }).subscribe({
     next: (data) => {
       console.dir(data);
-      gameStartedSubject.next(data);
+      actionSubject2.next(data);
     },
     error: (error) => {
       console.warn("Error in subscription:", error);
@@ -115,7 +116,7 @@ function subscribeToUpdates(client, _gameID, updateSubject2) {
 }
 
 // src/mutation.js
-var takeAction = (
+var guess = (
   /* GraphQL */
   `
   mutation TakeAction($gameID: ID!, $playerID: ID!, $guessID: ID!) {
@@ -140,7 +141,7 @@ async function sendGuess(client, _gameID, _playerID, _guessID) {
   try {
     console.log(`${_gameID} | ${_playerID} | ${_guessID}`);
     const response = await client.graphql({
-      query: takeAction,
+      query: guess,
       variables: {
         gameID: _gameID,
         playerID: _playerID,
@@ -188,6 +189,43 @@ async function joinQueue(client, playerId, name2, playerRank, logo) {
     }
     console.dir(response);
     const updatedGame = response.data?.lookforGame;
+    if (updatedGame) {
+      console.log("Successfully took action:", updatedGame);
+    }
+  } catch (error) {
+    console.error("Failed to take action:", error);
+  }
+}
+var actionQL2 = (
+  /* GraphQL */
+  `
+  mutation TakeAction($gameID: ID!, $playerID: ID!, $actionID: ID!,$guessID: ID!) {
+    actionTaken(gameID: $gameID, playerID: $playerID, actionID: $actionID, guessID: $guessID) {
+      gameID,
+      playerID,
+      actionID,
+      guessID
+    }
+  } 
+`
+);
+async function takeAction(client, _gameID, _playerID, _actionID, _guessID) {
+  try {
+    console.log(`${_gameID} | ${_playerID} | ${_guessID}`);
+    const response = await client.graphql({
+      query: actionQL2,
+      variables: {
+        gameID: _gameID,
+        playerID: _playerID,
+        actionID: _actionID,
+        guessID: _guessID
+      }
+    });
+    if (response.errors) {
+      console.error("Mutation error:", response.errors);
+      return;
+    }
+    const updatedGame = response.data?.takeAction;
     if (updatedGame) {
       console.log("Successfully took action:", updatedGame);
     }
@@ -13273,7 +13311,7 @@ var DefaultAmplify = {
 };
 
 // src/index.js
-var gameStartedSubject2 = new Subject();
+var gameStartedSubject = new Subject();
 var actionSubject = new Subject();
 var updateSubject = new Subject();
 function initializeAWS() {
@@ -13281,13 +13319,16 @@ function initializeAWS() {
   return generateClient2();
 }
 function gameStartedSub(client, playerId) {
-  return subscribeOnGameStarted(client, playerId, gameStartedSubject2);
+  return subscribeOnGameStarted(client, playerId, gameStartedSubject);
 }
 function queueforGame(client, playerId, playerName, rank, logo) {
   joinQueue(client, playerId, playerName, rank, logo);
 }
 function updateGuess(client, gameId, playerId, guessId) {
   sendGuess(client, gameId, playerId, guessId);
+}
+function sendAction(client, gameId, playerId, actionId, guessId) {
+  takeAction(client, gameId, playerId, actionId, guessId);
 }
 function updatesSub(client, gameId) {
   return subscribeToUpdates(client, gameId, updateSubject);
@@ -13302,9 +13343,10 @@ export {
   actionSub,
   actionSubject,
   gameStartedSub,
-  gameStartedSubject2 as gameStartedSubject,
+  gameStartedSubject,
   initializeAWS,
   queueforGame,
+  sendAction,
   updateGuess,
   updateSubject,
   updatesSub,

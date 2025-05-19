@@ -1,4 +1,4 @@
-import { initializeAWS, gameStartedSub, queueforGame, uuid, gameStartedSubject, updateGuess, actionSubject, actionSub, updatesSub, updateSubject } from '../dist/bundle.js';
+import { initializeAWS, gameStartedSub, queueforGame, uuid, gameStartedSubject, updateGuess, sendAction, actionSubject, actionSub, updatesSub, updateSubject } from '../dist/bundle.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const guessInput = document.getElementById('guess-input');
@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const debugQueue = document.getElementById('debug-queue');
     const debugGame = document.getElementById('debug-game-start');
     const debugShow = document.getElementById('debug-game-show');
+    const debugFlip = document.getElementById('debug-flip-current');
 
 
     const stats_cookie = 'scouting-report-stats';
@@ -63,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let playerName = "DEFAULT_PLAYER";
     let onGameStarted_sub;
     let updates_sub;
+    let actions_sub;
     let gameID;
 
 
@@ -319,7 +321,14 @@ document.addEventListener('DOMContentLoaded', () => {
         Array.from(stylesheet.cssRules).find(n => n.selectorText === '#gameplay').style.display = 'flex';
     });
 
-
+    debugFlip.addEventListener('click', function() {
+        var current = document.getElementsByClassName('current-card');
+        if(current[0]) {
+            current[0].style.transform = "rotateY(180deg)";
+        }
+        
+// css.find(n => n.selectorText === '.flip-card-puckdle').style.transform = "rotateY(180deg)";
+    });
     /**
      * Queue for a game.
      */
@@ -479,6 +488,162 @@ document.addEventListener('DOMContentLoaded', () => {
 //#region CARDS
 
 
+        // <div class="flip-card" id="flip-card">
+        //     <div class="flip-card-scouting">
+        //         <div class="flip-card-front">
+        //             <img id="icon" src="assets/scoutingReport.png">
+        //             <div class="top-right-button" id="scouting-info"><img src="assets/info.png"></div>
+        //             <div class="button-container">
+        //                 <div class="button" onclick="location.href='scouting-report/';">Daily</div>
+        //             </div>
+        //         </div>
+        //         <div class="flip-card-back">
+        //             <div class="top-right-button" id="scouting-close-info"><img src="assets/close.png"></div>
+        //             <div id="description">
+        //                 <strong> Scouting Report </strong> 
+        //                 <hr> 
+        //                 Can you figure out the connections from the different subjects?
+        //                 <br>
+        //                 A connections-style game using NHL subjects.
+        //                 <hr> 
+        //                 <i>Updates daily.</i>
+        //             </div>
+        //         </div>
+        //     </div>
+        // </div>
+
+    function flipCard(player) {
+        var current = document.getElementsByClassName('current-card');
+        if(current[0]) {
+            current[0].classList.remove('current-card');
+        }
+
+        var flipCard = document.createElement('div');
+        flipCard.setAttribute('id', 'flip-card');
+
+
+        var flipInner = document.createElement('div');
+        flipInner.setAttribute('id', 'flip-card-inner');
+
+        var flipFront = document.createElement('div');
+        flipFront.setAttribute('id', 'flip-card-front'); 
+
+        // IMAGE.
+        var image = document.createElement('img');
+        image.src = `https://assets.nhle.com/mugs/actionshots/1296x729/${player['playerId']}.jpg`; //player['headshot'];
+        image.setAttribute('id', 'headshot');
+        image.draggable = false;
+        // NAMe / POS / NUmber
+        var baseInfo = document.createElement('div');
+        baseInfo.setAttribute('id', 'card-content');
+
+        returnStyle(player).forEach( n => {
+            baseInfo.append(n);
+        });
+
+        flipFront.append(image, baseInfo);
+
+        var flipBack = document.createElement('div');
+        flipBack.setAttribute('id', 'flip-card-back');
+
+        // EXTRA INFO
+        var background = document.createElement('img');
+        background.src = '../assets/card_back.png';
+        background.setAttribute('id', 'headshot');
+        background.draggable = false;
+        // COUNTRY, dRAFT YEAR, ETC,....
+        var hiddenContent = document.createElement('div');
+        hiddenContent.setAttribute('id', 'card-hidden-content');
+
+        returnBack(player).forEach(n => {
+            hiddenContent.append(n);
+        });
+
+        flipBack.append(background, hiddenContent);
+
+        flipInner.append(flipFront, flipBack);
+        flipInner.classList.add('current-card');
+        flipCard.append(flipInner);
+
+        connectionContent.insertBefore(flipCard, connectionContent.children[0]);
+        currentPlayer = player;
+    }
+
+    function returnBack(player) {
+        var content = [];
+        var draft = document.createElement('div');
+
+        draft.textContent = `Draft Info: ${isDraftDetailsMissingOrEmpty(player) ? "Undrafted" : `${player['draftDetails']['year']} \n Rd: ${player['draftDetails']['round']} #${player['draftDetails']['pick']}`}`;
+        draft.style.fontSize = 'small';
+        draft.style.position = 'absolute';
+        draft.style.top = '0px';
+        draft.style.right = '0px';
+
+        content.push(draft);
+        
+        
+        //https://www.hhof.com/images_collection/ 
+
+
+        if(NotJustCup(player)) {
+            var awards = document.createElement('div');
+            
+
+            for(var i = 0; i < player['awards'].length; i++) {
+                if(player['awards'][i]['trophyName'] === "Stanley Cup") {
+                    continue;
+                }
+                var holder = document.createElement('div');
+                var award = document.createElement('img');
+                award.src = returnAward(player['awards'][i]['trophyName']);
+                award.setAttribute('id', 'award');
+                award.draggable = false;
+                award.alt = player['awards'][i]['trophyName'];
+                award.textContent = "HELLO??";
+
+                var awardsAmount = document.createElement('div');
+                awardsAmount.textContent += `${player['awards'][i]['seasons'].length > 1 ? player['awards'][i]['seasons'].length : ""} `;
+                holder.append(award, awardsAmount)
+                awards.append(holder);
+                // text += `${player['awards'][i]['seasons']['seasonId'].substr(0,4)} - ${player['awards'][i]['trophyName']}\n`;
+            }
+
+            awards.style.position = 'absolute';
+            awards.style.display = 'flex';
+            awards.style.bottom = '0px';
+            awards.style.width = '100%';
+            awards.style.justifyContent = 'center';
+            content.push(awards);
+        }
+
+        return content;
+    }
+
+    function returnAward(award) {
+        return `../assets/trophies/${award.split(" ").join("-")}.png`
+        console.log(award.split(" ").join("-"));
+    }
+
+
+    function isDraftDetailsMissingOrEmpty(player) {
+        return (
+            !player.draftDetails || // Check if draftDetails is null or undefined
+            typeof player.draftDetails !== "object" ||
+            Object.keys(player.draftDetails).length === 0
+        );
+    }
+
+    function NotJustCup(player) {
+        for(var i = 0; i < player['awards'].length; i++) {
+            if(player['awards'][i]['trophyName'] !== "Stanley Cup") {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+
     function createCard(player) {
         var card = document.createElement('div');
         card.setAttribute('id', 'card');
@@ -496,10 +661,10 @@ document.addEventListener('DOMContentLoaded', () => {
         var baseInfo = document.createElement('div');
         baseInfo.setAttribute('id', 'card-content');
 
-        var name = document.createElement('span');
-        name.setAttribute('id', 'card-content');
-        name.classList.add('name')
-        name.textContent = `${player['position']} | ${player['name']}`;
+        // var name = document.createElement('span');
+        // name.setAttribute('id', 'card-content');
+        // name.classList.add('name')
+        // name.textContent = `${player['position']} | ${player['name']}`;
 
 
 
@@ -563,6 +728,7 @@ document.addEventListener('DOMContentLoaded', () => {
         switch(styleNumber) {
             case 0:
                 name.style.bottom = '0px';
+                name.style.left = '0px';
                 name.style.width = '100%';
                 name.style.textAlign = 'center';
                 name.style.position = 'absolute';
@@ -625,6 +791,7 @@ document.addEventListener('DOMContentLoaded', () => {
         switch(styleNumber) {
             case 0:
                 positionElement.style.bottom = '20px';
+                positionElement.style.left = '0px';
                 positionElement.style.width = '100%';
                 positionElement.style.textAlign = 'center';
                 positionElement.style.position = 'absolute';
@@ -749,9 +916,10 @@ Make sure to unsubscribe after losing / leaving site.
  */
     function startGame() {
         usedConnections = {};
-
-        currentPlayer = playerInfo.find(n=> n['playerId'] == 8462044)
-        createCard(currentPlayer);
+// Bobby Orr 8450070
+// JS Giguere 8462044
+        currentPlayer = playerInfo.find(n=> n['playerId'] == 8450070) 
+        flipCard(currentPlayer);
         console.log(currentPlayer['playerId']);
 
 
@@ -812,7 +980,7 @@ Make sure to unsubscribe after losing / leaving site.
             }
 
             createLine('line');
-            createCard(guessPlayer);
+            flipCard(guessPlayer);
             
         } else {
             // NO connection
@@ -863,36 +1031,20 @@ Make sure to unsubscribe after losing / leaving site.
         
         var amount = countConnections(connections);
 
+        
+
         if(guessedPlayer == currentPlayer || usedPlayers.includes(guessedPlayer)) {
             amount = -1;
         }
 
+        console.log(`amount: ${amount} | guess ${guessedPlayer} | current ${currentPlayer}`);
+
         if(amount > 0 && amount == connections.length) {
             updateGuess(client, gameID, playerID, guessedPlayer['playerId']);
         } else {
-            let reasons = giveReason(connections);
-            var text = "";
-            if(reasons.length < 1) {
-                text = `No Valid Connections Found For ${guessedPlayer['name']}`;
-            } else if(reasons.length > 0) {
-                
-                for(var i = 0; i < reasons.length; i++) {
-                    text += `${reasons[i]} connections are used up.`
 
-                    if(i < reasons.length-1) {
-                        text += `\n`;
-                    }
-                }
-                
-            } else {
-                text = `${guessedPlayer['name']} has already been played.`;
-            }
+            sendAction(client, gameID, playerID, -1, guessedPlayer['playerId']);
 
-            popup.textContent = text;
-            popup.classList.toggle('show');
-            setTimeout(function() {
-                popup.classList.toggle('show');
-            }, 1500);
         }
     }
 
@@ -1372,6 +1524,8 @@ Make sure to unsubscribe after losing / leaving site.
          * Subscribe to other AWS Subscriptions
          */
         updates_sub = updatesSub(client, gameID); 
+        actions_sub = actionSub(client, gameID);
+
         /**
          * Layout of the information pulled in:
          *      actualGameData
@@ -1471,10 +1625,63 @@ Make sure to unsubscribe after losing / leaving site.
     }
     
     actionSubject.subscribe((gameData) => {
+        console.log(`action: ${gameData}`);
+
+        const info = gameData.data.onActionTaken;
+        /**
+         * Switch on Action ID
+         * To send to the different possible functions.
+         */
+        switch(parseInt(info.actionID)) {
+            case -1:
+                showPopUp(info.guessID);
+                break;
+        }
+
+
 
     });
+
+
+
 //#endregion
 
+
+//#region ACTIONS
+
+    function showPopUp(guessId) {
+        const guessedPlayer = playerInfo.find(player => player['playerId'] == guessId);
+        var connections = findConnection(guessedPlayer, currentPlayer);
+
+        let reasons = giveReason(connections);
+        var text = "";
+
+        if(usedPlayers.includes(guessedPlayer)) {
+            text = `${guessedPlayer['name']} has already been played.`;
+        } else if(reasons.length < 1) {
+            text = `No Valid Connections Found For ${guessedPlayer['name']}`;
+        } else if(reasons.length > 0) {
+            
+            for(var i = 0; i < reasons.length; i++) {
+                text += `${reasons[i]} connections are used up.`
+
+                if(i < reasons.length-1) {
+                    text += `\n`;
+                }
+            }
+            
+        } 
+
+        popup.textContent = text;
+        popup.classList.toggle('show');
+        setTimeout(function() {
+            popup.classList.toggle('show');
+        }, 1500);
+    }
+
+
+
+//#endregion
 
 
 
