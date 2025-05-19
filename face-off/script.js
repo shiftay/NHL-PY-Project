@@ -64,6 +64,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let onGameStarted_sub;
     let updates_sub;
     let gameID;
+
+
+    var playerPieces = {};
     
 
 //#region READING JSON
@@ -121,6 +124,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 if(playerInfo.length === PLAYER_AMOUNT) {
                     playerInfo.forEach(n => {
                         var names = n.name.split(" ");
+                        // console.log(`${n.playerId}`);
+                        if(names.length > 2) {
+                            console.log(`3 names: ${names}`);
+                        }
+                        playerPieces[`${n.playerId}`] = names;
+
                         playerNames.push(names);
                     });
 
@@ -847,9 +856,10 @@ Make sure to unsubscribe after losing / leaving site.
 
 
     function checkGuess() {
-        const guess = guessInput.value.trim();
         guessInput.value = "";
-        const guessedPlayer = playerInfo.find(player => player['name'].toLowerCase() === guess.toLowerCase());
+        const guessedPlayer = playerInfo.find(player => player['playerId'] == guessID);
+
+        console.log(`${guessedPlayer}`);
 
         var connections = findConnection(guessedPlayer, currentPlayer);
         
@@ -866,10 +876,11 @@ Make sure to unsubscribe after losing / leaving site.
             updateGuess(client, gameID, playerID, guessedPlayer['playerId']);
         } else {
             let reasons = giveReason(connections);
+            var text = "";
             if(reasons.length < 1) {
-                popup.textContent = `No Valid Connections Found For ${guessedPlayer['name']}`;
-            } else {
-                var text = "";
+                text = `No Valid Connections Found For ${guessedPlayer['name']}`;
+            } else if(reasons.length > 0) {
+                
                 for(var i = 0; i < reasons.length; i++) {
                     text += `${reasons[i]} connections are used up.`
 
@@ -877,8 +888,12 @@ Make sure to unsubscribe after losing / leaving site.
                         text += `\n`;
                     }
                 }
-                popup.textContent = text;
+                
+            } else {
+                text = `${guessedPlayer['name']} has already been played.`;
             }
+
+            popup.textContent = text;
             popup.classList.toggle('show');
             setTimeout(function() {
                 popup.classList.toggle('show');
@@ -889,10 +904,6 @@ Make sure to unsubscribe after losing / leaving site.
 
     function findConnection(guess, current) {
         let connections = [];
-
-        console.log("current:", current);
-        console.log("guess:", guess);
-
 
         // Connections: Draft Year, Team, Country, Awards (not stanley cup)
         for(var i = 0; i < current['seasonsPlayed'].length; i++) { // team
@@ -999,6 +1010,8 @@ Make sure to unsubscribe after losing / leaving site.
 //#endregion COOKIES
 
 //#region AUTO COMPLETE
+    let guessID;
+
     function autocomplete(inp, arr) {
         /*the autocomplete function takes two arguments,
         the text field element and an array of possible autocompleted values:*/
@@ -1018,41 +1031,66 @@ Make sure to unsubscribe after losing / leaving site.
             this.parentNode.appendChild(a);
 
             /*for each item in the array...*/
-            for (i = 0; i < arr.length; i++) {
-                var combinedName = arr[i][0] + " " + arr[i][1];
-                // First Name
-                if (arr[i][0].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+            for(let key in playerPieces) {
+                // console.log(key, playerPieces[key]);
+                var combinedName = "";
+                var firstName = "";
+                var lastName = "";
+                for(var x = 0; x < playerPieces[key].length; x++) {
+                    combinedName += playerPieces[key][x];
+
+                    if(x < playerPieces[key].length - 1) {
+                        combinedName += " ";
+                    }
+   
+                    if(x == 0) {
+                        firstName = playerPieces[key][x];
+                    } else {
+                        lastName += playerPieces[key][x];
+                        if(x + 1 < playerPieces[key].length) {
+                            lastName += " ";
+                        }
+                    }
+                }
+
+                if (firstName.substr(0, val.length).toUpperCase() == val.toUpperCase()) {
                     /*create a DIV element for each matching element:*/
  
                     b = document.createElement("DIV");
                     /*make the matching letters bold:*/
-                    b.innerHTML = "<strong>" + arr[i][0].substr(0, val.length) + "</strong>";
-                    b.innerHTML += arr[i][0].substr(val.length) + " " + arr[i][1];
+                    b.innerHTML = "<strong>" + firstName.substr(0, val.length) + "</strong>";
+                    b.innerHTML += firstName.substr(val.length) + " " + lastName;
                     /*insert a input field that will hold the current array item's value:*/
                     b.innerHTML += `<input type='hidden' value="${combinedName}">`;
+                    b.innerHTML += `<input type='hidden' value="${key}">`;
                     /*execute a function when someone clicks on the item value (DIV element):*/
                         b.addEventListener("click", function(e) {
+                            
                         /*insert the value for the autocomplete text field:*/
                         inp.value = this.getElementsByTagName("input")[0].value;
+                        guessID = this.getElementsByTagName("input")[1].value;
                         /*close the list of autocompleted values,
                         (or any other open lists of autocompleted values:*/
                         closeAllLists();
                     });
                     a.appendChild(b);
-                } else if (arr[i][1].substr(0, val.length).toUpperCase() == val.toUpperCase()) { // Last Name
+                } else if (lastName.substr(0, val.length).toUpperCase() == val.toUpperCase()) { // Last Name
                     /*create a DIV element for each matching element:*/
       
                     b = document.createElement("DIV");
                     /*make the matching letters bold:*/
-                    b.innerHTML = arr[i][0];
-                    b.innerHTML += " <strong>" + arr[i][1].substr(0, val.length) + "</strong>";
-                    b.innerHTML += arr[i][1].substr(val.length);
+                    b.innerHTML = firstName;
+                    b.innerHTML += " <strong>" + lastName.substr(0, val.length) + "</strong>";
+                    b.innerHTML += lastName.substr(val.length);
                     /*insert a input field that will hold the current array item's value:*/
                     b.innerHTML += `<input type='hidden' value="${combinedName}">`;
+                    b.innerHTML += `<input type='hidden' value="${key}">`;
                     /*execute a function when someone clicks on the item value (DIV element):*/
-                        b.addEventListener("click", function(e) {
+                    b.addEventListener("click", function(e) {
+          
                         /*insert the value for the autocomplete text field:*/
                         inp.value = this.getElementsByTagName("input")[0].value;
+                        guessID = this.getElementsByTagName("input")[1].value;
                         /*close the list of autocompleted values,
                         (or any other open lists of autocompleted values:*/
                         closeAllLists();
@@ -1066,18 +1104,20 @@ Make sure to unsubscribe after losing / leaving site.
                     b.innerHTML += combinedName.substr(val.length);
                     /*insert a input field that will hold the current array item's value:*/
                     b.innerHTML += `<input type='hidden' value="${combinedName}">`;
+                    b.innerHTML += `<input type='hidden' value="${key}">`;
                     /*execute a function when someone clicks on the item value (DIV element):*/
                         b.addEventListener("click", function(e) {
+            
                         /*insert the value for the autocomplete text field:*/
                         inp.value = this.getElementsByTagName("input")[0].value;
+                        guessID = this.getElementsByTagName("input")[1].value;
                         /*close the list of autocompleted values,
                         (or any other open lists of autocompleted values:*/
                         closeAllLists();
                     });
                     a.appendChild(b);
                 }
-
-            }
+            } 
         });
         /*execute a function presses a key on the keyboard:*/
         inp.addEventListener("keydown", function(e) {
@@ -1100,10 +1140,10 @@ Make sure to unsubscribe after losing / leaving site.
               
               e.preventDefault();
               const guess = guessInput.value.trim();
+
               if (currentFocus > -1) {
                 /*and simulate a click on the "active" item:*/
                 if (x) x[currentFocus].click();
-
 
               } else if(playerExists(guess)) {
                 checkGuess();
@@ -1143,7 +1183,7 @@ Make sure to unsubscribe after losing / leaving site.
       });
       }
 
-      autocomplete(document.getElementById("guess-input"), playerNames);
+      autocomplete(document.getElementById("guess-input"), playerPieces);
 //#endregion Auto Complete Section
 
 //#region TIMER
@@ -1434,7 +1474,10 @@ Make sure to unsubscribe after losing / leaving site.
 
         return false;
     }
+    
+    actionSubject.subscribe((gameData) => {
 
+    });
 //#endregion
 
 
