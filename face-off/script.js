@@ -859,8 +859,6 @@ Make sure to unsubscribe after losing / leaving site.
         guessInput.value = "";
         const guessedPlayer = playerInfo.find(player => player['playerId'] == guessID);
 
-        console.log(`${guessedPlayer}`);
-
         var connections = findConnection(guessedPlayer, currentPlayer);
         
         var amount = countConnections(connections);
@@ -868,9 +866,6 @@ Make sure to unsubscribe after losing / leaving site.
         if(guessedPlayer == currentPlayer || usedPlayers.includes(guessedPlayer)) {
             amount = -1;
         }
-
-        console.log("amount", amount);
-        console.log("connectionslength", connections.length);
 
         if(amount > 0 && amount == connections.length) {
             updateGuess(client, gameID, playerID, guessedPlayer['playerId']);
