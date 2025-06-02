@@ -17,14 +17,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const playerone_name = document.getElementById('player-one-name');
     const playerone_logo = document.getElementById('player-one-icon');
     const playerone_rank = document.getElementById('player-one-rank');
+    const playerone_lifelines = document.getElementById('player-one-lifelines');
 
     const playertwo_name = document.getElementById('player-two-name');
     const playertwo_logo = document.getElementById('player-two-icon');
     const playertwo_rank = document.getElementById('player-two-rank');
+    const playertwo_lifelines = document.getElementById('player-two-lifelines');
 
     const pregameplay = document.getElementById('pre-gameplay');
     const queueArea = document.getElementById('queue-area');
     const gameplay = document.getElementById('gameplay');
+    const gameResolution = document.getElementById('game-resolution');
 
     /**
      * DEBUG BUTTONS
@@ -33,12 +36,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const debugGame = document.getElementById('debug-game-start');
     const debugShow = document.getElementById('debug-game-show');
     const debugFlip = document.getElementById('debug-flip-current');
+    const debugresolution = document.getElementById('debug-game-resolution');
 
+    const ACTION_CODES = {
+        skip: {
+            id: 101
+        },
+        pause: {
+            id: 423
+        },
+        info: {
+            id: 103
+        }, 
+        speedup: {
+            id: 408
+        },
+        incorrect: {
+            id: 406
+        }
+    };
 
     const stats_cookie = 'scouting-report-stats';
     const game_cookie = 'scouting-report-current';
 
-    const cookie_vals = [ 'attempts', 'guesses' ]
+    const cookie_vals = [ 'attempts', 'guesses' ];
 
     const PLAYER_AMOUNT = 6813;
 
@@ -62,10 +83,18 @@ document.addEventListener('DOMContentLoaded', () => {
     let client;
     let playerID;
     let playerName = "DEFAULT_PLAYER";
-    let onGameStarted_sub;
-    let updates_sub;
-    let actions_sub;
+    let onGameStarted_sub = null;
+    let updates_sub = null;
+    let actions_sub = null;
     let gameID;
+    let game;
+
+    var lifeLines = [];
+
+    const LIFELINE_SKIP = 0;
+    const LIFELINE_INFO = 2;
+    const LIFELINE_PAUSE = 1;
+    const LIFELINE_SPEED = 3;
 
 
     var playerPieces = {};
@@ -127,9 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     playerInfo.forEach(n => {
                         var names = n.name.split(" ");
                         // console.log(`${n.playerId}`);
-                        if(names.length > 2) {
-                            console.log(`3 names: ${names}`);
-                        }
+
                         playerPieces[`${n.playerId}`] = names;
 
                         playerNames.push(names);
@@ -139,16 +166,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }
-
-        // const gameConfig = await fetchJsonFromS3('./playerInfo/fullListOfplayers.json');
     }
       
-    // loadGameData()
-    // .then(data => {
-    //     console.log(`IT attempted something?`);
-    //     if(data) console.log("IF");
-    //     else console.log("ELESE???E");
-    // });
+
     async function getCachedJSON(url, cacheKey, expiryInSeconds = 3600) {
         const cachedData = localStorage.getItem(cacheKey);
         const cachedTime = localStorage.getItem(`${cacheKey}_timestamp`);
@@ -189,7 +209,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-
+    debugresolution.addEventListener('click', function() {
+        Fade( gameResolution, pregameplay, '#game-resolution','#pre-gameplay');
+    });
 
     const years = [
         './playerInfo/19751976_players.json',
@@ -246,7 +268,6 @@ document.addEventListener('DOMContentLoaded', () => {
 //#endregion READING JSON
 
 //#region INITIALIZATION
-
     function main() {
         initplayer();
 
@@ -301,6 +322,8 @@ document.addEventListener('DOMContentLoaded', () => {
             startTimer();
         }, 1000);
         
+
+        
     }
 
     function Fade(fadeIn, fadeOut, fadeInName, fadeOutName) {
@@ -319,16 +342,30 @@ document.addEventListener('DOMContentLoaded', () => {
         Array.from(stylesheet.cssRules).find(n => n.selectorText === '#queue-area').style.display = 'none';
         Array.from(stylesheet.cssRules).find(n => n.selectorText === '#pre-gameplay').style.display = 'none';
         Array.from(stylesheet.cssRules).find(n => n.selectorText === '#gameplay').style.display = 'flex';
+
+
+        let logo = document.createElement('img');
+        logo.src =  Array.from(teamSVG).find(n => n.teamAbbrev === current_team).teamLogo;
+        logo.setAttribute('id', 'icon');
+        playerone_name.textContent = `Guest-${playerID.substring(0,4)}`;
+        playerone_logo.append(logo);
+        playerone_rank.textContent = 1000;
+
+        playerone_lifelines.append(createLifeLines('player-one'));
     });
 
     debugFlip.addEventListener('click', function() {
-        var current = document.getElementsByClassName('current-card');
-        if(current[0]) {
-            current[0].style.transform = "rotateY(180deg)";
+        var current = document.getElementsByClassName('current-card')[0];
+
+        createCardBack(current);
+
+        if(current) {
+            current.style.transform = "rotateY(180deg)";
         }
         
-// css.find(n => n.selectorText === '.flip-card-puckdle').style.transform = "rotateY(180deg)";
+        // css.find(n => n.selectorText === '.flip-card-puckdle').style.transform = "rotateY(180deg)";  
     });
+
     /**
      * Queue for a game.
      */
@@ -441,9 +478,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //#region GAMEPLAY
 
-
     function getRandomPlayer() {
-        return playerInfo[Math.floor(Math.random() * playerInfo.length)];
+        var season = getPlayersBySeason(playerInfo, 20242025);
+        var player = season[Math.floor(Math.random() * playerInfo.length)];
+
+        while(usedPlayers.includes(player)) {
+            player = season[Math.floor(Math.random() * playerInfo.length)];
+        }
+
+        return player;
+    }
+
+    function getPlayersBySeason(players, targetSeason) {
+        if (!Array.isArray(players)) {
+            console.error("Input 'players' must be an array.");
+            return [];
+        }
+
+        const playersInSeason = players.filter(player => {
+            // 1. Check if 'seasonsPlayed' array exists and is an array
+            if (!player.seasonsPlayed || !Array.isArray(player.seasonsPlayed)) {
+            return false; // Player has no valid seasonsPlayed data
+            }
+
+            // 2. Iterate through the player's seasons to find a match
+            return player.seasonsPlayed.some(seasonEntry => {
+            // Ensure 'season' property exists and is a number (or can be compared)
+            // The season ID is a number, so direct comparison is best.
+            return seasonEntry.season === targetSeason;
+            });
+        });
+
+        return playersInSeason;
     }
 
     function playerExists(guess) {
@@ -456,61 +522,11 @@ document.addEventListener('DOMContentLoaded', () => {
         return true;
     }
 
-    function  CreateActionElement() {
-        const guess = guessInput.value.trim();
-        const guessedPlayer = playerInfo.find(player => player['name'].toLowerCase() === guess.toLowerCase());
-
-        gameStatus.textContent = "";
-
-
-        const guessRow = document.createElement('div');
-        guessRow.classList.add('guess-row');
-                        //  str     str         int              Hidden Values
-        const attributes = ["name", "position", "sweaterNumber", "birthCountry", "teams", "draftDetails"];
-        attributes.forEach(attr => {
-            const cell = document.createElement('div');
-            cell.classList.add('attribute' , `${attr}`);
-            cell.textContent = guessedPlayer[attr];
-            guessRow.appendChild(cell);
-        });
-
-        guessGrid.appendChild(guessRow);
-        guessInput.value = "";
-    }
-
-
-
-
 
 //#endregion
 
 
 //#region CARDS
-
-
-        // <div class="flip-card" id="flip-card">
-        //     <div class="flip-card-scouting">
-        //         <div class="flip-card-front">
-        //             <img id="icon" src="assets/scoutingReport.png">
-        //             <div class="top-right-button" id="scouting-info"><img src="assets/info.png"></div>
-        //             <div class="button-container">
-        //                 <div class="button" onclick="location.href='scouting-report/';">Daily</div>
-        //             </div>
-        //         </div>
-        //         <div class="flip-card-back">
-        //             <div class="top-right-button" id="scouting-close-info"><img src="assets/close.png"></div>
-        //             <div id="description">
-        //                 <strong> Scouting Report </strong> 
-        //                 <hr> 
-        //                 Can you figure out the connections from the different subjects?
-        //                 <br>
-        //                 A connections-style game using NHL subjects.
-        //                 <hr> 
-        //                 <i>Updates daily.</i>
-        //             </div>
-        //         </div>
-        //     </div>
-        // </div>
 
     function flipCard(player) {
         var current = document.getElementsByClassName('current-card');
@@ -543,6 +559,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         flipFront.append(image, baseInfo);
 
+        flipInner.append(flipFront);
+        flipInner.classList.add('current-card');
+        flipCard.append(flipInner);
+
+        connectionContent.insertBefore(flipCard, connectionContent.children[0]);
+        currentPlayer = player;
+    }
+
+    function createCardBack(flipInner) {
         var flipBack = document.createElement('div');
         flipBack.setAttribute('id', 'flip-card-back');
 
@@ -555,40 +580,39 @@ document.addEventListener('DOMContentLoaded', () => {
         var hiddenContent = document.createElement('div');
         hiddenContent.setAttribute('id', 'card-hidden-content');
 
-        returnBack(player).forEach(n => {
+        returnBack(currentPlayer).forEach(n => {
             hiddenContent.append(n);
         });
 
         flipBack.append(background, hiddenContent);
-
-        flipInner.append(flipFront, flipBack);
-        flipInner.classList.add('current-card');
-        flipCard.append(flipInner);
-
-        connectionContent.insertBefore(flipCard, connectionContent.children[0]);
-        currentPlayer = player;
+        flipInner.appendChild(flipBack);
     }
 
     function returnBack(player) {
         var content = [];
+        var name = document.createElement('div');
+
+        name.textContent = player['name'];
+        name.style.position = 'absolute';
+        name.style.top = '5px';
+        name.style.left = '5px';
+        name.style.fontSize = 'small';
+
+        content.push(name);
+
         var draft = document.createElement('div');
 
-        draft.textContent = `Draft Info: ${isDraftDetailsMissingOrEmpty(player) ? "Undrafted" : `${player['draftDetails']['year']} \n Rd: ${player['draftDetails']['round']} #${player['draftDetails']['pick']}`}`;
+        draft.textContent = `Draft: ${isDraftDetailsMissingOrEmpty(player) ? "Undrafted" : `${player['draftDetails']['year']} \n Rd: ${player['draftDetails']['round']} #${player['draftDetails']['pick']}`}`;
         draft.style.fontSize = 'small';
         draft.style.position = 'absolute';
-        draft.style.top = '0px';
-        draft.style.right = '0px';
+        draft.style.top = '5px';
+        draft.style.right = '5px';
 
         content.push(draft);
         
-        
-        //https://www.hhof.com/images_collection/ 
-
-
         if(NotJustCup(player)) {
             var awards = document.createElement('div');
             
-
             for(var i = 0; i < player['awards'].length; i++) {
                 if(player['awards'][i]['trophyName'] === "Stanley Cup") {
                     continue;
@@ -599,11 +623,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 award.setAttribute('id', 'award');
                 award.draggable = false;
                 award.alt = player['awards'][i]['trophyName'];
-                award.textContent = "HELLO??";
 
-                var awardsAmount = document.createElement('div');
-                awardsAmount.textContent += `${player['awards'][i]['seasons'].length > 1 ? player['awards'][i]['seasons'].length : ""} `;
-                holder.append(award, awardsAmount)
+                holder.append(award)
                 awards.append(holder);
                 // text += `${player['awards'][i]['seasons']['seasonId'].substr(0,4)} - ${player['awards'][i]['trophyName']}\n`;
             }
@@ -620,10 +641,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function returnAward(award) {
-        return `../assets/trophies/${award.split(" ").join("-")}.png`
-        console.log(award.split(" ").join("-"));
+        return `../assets/trophies/${award.split(" ").join("-")}.png`;
     }
-
 
     function isDraftDetailsMissingOrEmpty(player) {
         return (
@@ -641,58 +660,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         return false;
-    }
-
-
-    function createCard(player) {
-        var card = document.createElement('div');
-        card.setAttribute('id', 'card');
-
-
-
-        var image = document.createElement('img');
-        image.src = `https://assets.nhle.com/mugs/actionshots/1296x729/${player['playerId']}.jpg`; //player['headshot'];
-        image.setAttribute('id', 'headshot');
-        image.draggable = false;
-
-        /**
-         * Create intial text content
-         */
-        var baseInfo = document.createElement('div');
-        baseInfo.setAttribute('id', 'card-content');
-
-        // var name = document.createElement('span');
-        // name.setAttribute('id', 'card-content');
-        // name.classList.add('name')
-        // name.textContent = `${player['position']} | ${player['name']}`;
-
-
-
-        // var number = document.createElement('span');
-        // number.setAttribute('id', 'card-content');
-        // number.classList.add('number')
-        // number.textContent = `#${player['sweaterNumber']}`;
-        returnStyle(player).forEach( n => {
-            baseInfo.append(n);
-        });
-        // baseInfo.append(); //  position,
-
-
-        /**
-         * Create back of card content.
-         */
-        var hiddenContent = document.createElement('div');
-        hiddenContent.setAttribute('id', 'card-hidden-content');
-
-        hiddenContent.textContent = ` Draft Year: ${player['draftDetails']['year']} \n
-                                Country: ${player['birthCountry']}`;
-        hiddenContent.hidden = true;
-
-
-
-        card.append(image, baseInfo, hiddenContent);
-        connectionContent.insertBefore(card, connectionContent.children[0]);
-        currentPlayer = player;
     }
 
     function returnStyle(player) {
@@ -821,7 +788,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
+        return Math.floor(Math.random() * max);
     }
 
     function createConnection(value) {
@@ -843,14 +810,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
         connectionContent.insertBefore(connection, connectionContent.children[0]);
-        // a.setAttribute("class", "autocomplete-items");
+    }
+
+
+    function createSkipConnection() {
+        var connection = document.createElement("div");
+        connection.setAttribute("id", "connection");
+        var connectionVal = document.createElement('div');
+
+        connectionVal.setAttribute("id", "connection-value");
+        connectionVal.textContent = "SKIPPED";
+        connection.appendChild(connectionVal);
+   
+        connectionContent.insertBefore(connection, connectionContent.children[0]);
     }
 
 
     function createLine(id) {
         var line = document.createElement("div");
         line.setAttribute("id", id);
-        // body.insertBefore(logo, body.children[0]);
         connectionContent.insertBefore(line, connectionContent.children[0]);
     }
 //#endregion
@@ -919,6 +897,7 @@ Make sure to unsubscribe after losing / leaving site.
 // Bobby Orr 8450070
 // JS Giguere 8462044
         currentPlayer = playerInfo.find(n=> n['playerId'] == 8450070) 
+        usedPlayers.push(currentPlayer);
         flipCard(currentPlayer);
         console.log(currentPlayer['playerId']);
 
@@ -989,6 +968,14 @@ Make sure to unsubscribe after losing / leaving site.
         ResetTimer();
     }
 
+
+    function SkipConnection(idPlayer) {
+        createLine('line');
+        createSkipConnection();
+        createLine('line');
+        flipCard(idPlayer);
+    }
+
     function giveReason(connections) {
         var reasons = [];
 
@@ -1043,7 +1030,7 @@ Make sure to unsubscribe after losing / leaving site.
             updateGuess(client, gameID, playerID, guessedPlayer['playerId']);
         } else {
 
-            sendAction(client, gameID, playerID, -1, guessedPlayer['playerId']);
+            sendAction(client, gameID, playerID, ACTION_CODES.incorrect.id, guessedPlayer['playerId']);
 
         }
     }
@@ -1353,6 +1340,8 @@ Make sure to unsubscribe after losing / leaving site.
     };
 
     const TIME_LIMIT = 20;
+    const TIME_LIMIT_EXTENDED = 30;
+    let currentLimit = TIME_LIMIT;
     let timePassed = 0;
     let timeLeft = TIME_LIMIT;
     let timerInterval = null;
@@ -1396,11 +1385,13 @@ Make sure to unsubscribe after losing / leaving site.
         timeLeft = TIME_LIMIT;
         startTimer();
     }
+    
+    
 
     function startTimer() {
         timerInterval = setInterval(() => {
             timePassed = timePassed += 1;
-            timeLeft = TIME_LIMIT - timePassed;
+            timeLeft = currentLimit - timePassed;
             document.getElementById("base-timer-label").innerHTML = formatTime(
             timeLeft
             );
@@ -1426,12 +1417,26 @@ Make sure to unsubscribe after losing / leaving site.
 
     function resetColor() {
         const { alert, warning, info } = COLOR_CODES;
+
         document
         .getElementById("base-timer-path-remaining")
-        .classList.remove(warning.color);
+        .classList.remove(checkLevel());
         document
         .getElementById("base-timer-path-remaining")
         .classList.add(info.color);
+    }
+
+
+    function checkLevel() {
+        const { alert, warning, info } = COLOR_CODES;
+
+        if(timeLeft <= alert.threshold) {
+            return alert.color;
+        } else if(timeLeft <= warning.threshold) {
+            return warning.color;
+        } else {
+            return info.color;
+        }
     }
 
     function setRemainingPathColor(timeLeft) {
@@ -1495,6 +1500,31 @@ Make sure to unsubscribe after losing / leaving site.
 //#region UNLOAD
     window.onbeforeunload = function(event) {
         console.log("testing-onbeforeunload") // Attempt to run your function
+
+        /**
+         * Clean up the subscriptions on unload.
+         */
+        if(onGameStarted_sub) {
+            onGameStarted_sub.unsubscribe();
+        }
+
+        if(actions_sub) {
+            // TODO null game after we complete it, so that on unsubscribe if we dont' have a null game, we instead send a game over to the other user.
+            actions_sub.unsubscribe();
+        }
+
+        if(updates_sub) {
+            updates_sub.unsubscribe();
+        }
+
+        /**
+         * if we're in queue, remove ourselves from queue table
+         */
+
+
+        /**
+         * if we're in game, send a you lost to the other player.
+         */
     
         // The return value here can trigger a confirmation dialog in some browsers
         // Returning an empty string or undefined generally avoids the prompt.
@@ -1504,8 +1534,6 @@ Make sure to unsubscribe after losing / leaving site.
 
 
 //#region AWS
-    let game;
-
     gameStartedSubject.subscribe((gameData) => {
         // This is your "other script" (in a different file)
         console.log('Received game data in game_logic.js:', gameData);
@@ -1519,6 +1547,7 @@ Make sure to unsubscribe after losing / leaving site.
 
         // Unsubscribe to onGameStarted.
         onGameStarted_sub.unsubscribe();
+        onGameStarted_sub = null;
         game = actualGameData;
         /**
          * Subscribe to other AWS Subscriptions
@@ -1526,15 +1555,6 @@ Make sure to unsubscribe after losing / leaving site.
         updates_sub = updatesSub(client, gameID); 
         actions_sub = actionSub(client, gameID);
 
-        /**
-         * Layout of the information pulled in:
-         *      actualGameData
-         *          > currentPlayerID
-         *          > gameStatus
-         *          > guesses []
-         *          > id (GAME ID)
-         *          > players []
-         */
         let index = -1;
         for(var i = 0; i < actualGameData.players.length; i++) {
             if(actualGameData.players[i].id !== playerID) {
@@ -1543,37 +1563,101 @@ Make sure to unsubscribe after losing / leaving site.
             }
         }
 
+        console.log(game);
 
-
-        console.log("current_team", current_team);
         let logo = document.createElement('img');
         logo.src =  Array.from(teamSVG).find(n => n.teamAbbrev === current_team).teamLogo;
-        playerone_name.textContent = "Guest-" + playerID.substring(0,4);
+        logo.setAttribute('id', 'icon');
+        playerone_name.textContent = `Guest-${playerID.substring(0,4)}`;
         playerone_logo.append(logo);
         playerone_rank.textContent = 1000;
-
+        playerone_lifelines.append(createLifeLines('player-one'));
 
         let logo_two = document.createElement('img');
+        logo_two.setAttribute('id', 'icon');
         logo_two.src = Array.from(teamSVG).find(n => n.teamAbbrev === actualGameData.players[index].logo).teamLogo;
         playertwo_name.textContent = "Guest-" + actualGameData.players[index].id.substring(0,4);
         playertwo_logo.append(logo_two);
         playertwo_rank.textContent = actualGameData.players[index].rank;
+        playertwo_lifelines.append(createLifeLines('player-two'));
         
-
-
-        console.log(`result: ${actualGameData.currentPlayerID} | player: ${playerID}`);
         initGame();
 
         if(actualGameData.currentPlayerID !== playerID) {
             guessInput.disabled = true;
             guessButton.disabled = true;
         }
-
     });
+
+    
+
+    function createLifeLines(clickable) {
+        var holder = document.createElement('div');
+
+        holder.setAttribute('id', 'lifeline-holder');
+
+        // SKIP | PAUSE | SHOW INFO | SPEED UP 
+        var skip = document.createElement('img');
+        skip.setAttribute('id', `${clickable}-skip`);
+        skip.src = '../assets/lifeline_skip.png';
+        skip.classList.add('player-one-life-lines-available');
+
+        var pause = document.createElement('img');
+        pause.setAttribute('id', `${clickable}-pause`);
+        pause.classList.add('player-one-life-lines-available');
+        pause.src = '../assets/lifeline_pause.png';
+
+
+        var showInfo = document.createElement('img');
+        showInfo.setAttribute('id', `${clickable}-show-info`);
+        showInfo.src = '../assets/lifeline_info.png';
+        showInfo.classList.add('player-one-life-lines-available');
+
+        var speedUp = document.createElement('img');
+        speedUp.setAttribute('id', `${clickable}-speed-up`);
+        speedUp.src = '../assets/lifeline_speed.png';
+        speedUp.classList.add('player-one-life-lines-available');
+
+        if(clickable === 'player-one') {
+            skip.addEventListener('click', skipEvent);
+            speedUp.addEventListener('click', speedUpEvent);
+            pause.addEventListener('click', pauseEvent);
+            showInfo.addEventListener('click', showInfoEvent);
+        }
+        
+        holder.append(skip, pause, showInfo, speedUp);
+
+        return holder;
+    }
+
+    function skipEvent() {
+        if(game.currentPlayerID !== playerID) return;
+
+        sendAction(client, gameID, playerID, ACTION_CODES.skip.id, getRandomPlayer()['playerId']);
+    }
+
+    function showInfoEvent() {
+        if(game.currentPlayerID !== playerID) return;
+
+        sendAction(client, gameID, playerID, ACTION_CODES.info.id, -1);
+    }
+
+    function speedUpEvent() {
+        if(game.currentPlayerID == playerID) return; // Played on other player's turn
+
+        if(timePassed < 10) return;
+
+        sendAction(client, gameID, playerID, ACTION_CODES.speedup.id, -1);
+    }
+
+    function pauseEvent() {
+        if(game.currentPlayerID !== playerID) return;
+
+        sendAction(client, gameID, playerID, ACTION_CODES.pause.id, -1);
+    }
 
     updateSubject.subscribe((gameData) => {
         // This is your "other script" (in a different file)
-        console.log('Received game data in game_logic.js:', gameData);
         const newGameData = gameData.data.onGameStateUpdated;
         /**
          * Layout of the information pulled in:
@@ -1587,10 +1671,7 @@ Make sure to unsubscribe after losing / leaving site.
 
         let currentGuess = game.guesses.length;
 
-        console.log(`pId: ${playerInfo[0]['playerId']}`);
         const guessedPlayer = playerInfo.find(player => player['playerId'] == newGameData.guesses[currentGuess].guessID);
-
-        console.log(`cG: ${currentGuess} | guessP: ${guessedPlayer} | guessID: ${newGameData.guesses[currentGuess].guessID}`)
 
         var connections = findConnection(guessedPlayer, currentPlayer);
         ConnectionValidation(connections, guessedPlayer);
@@ -1600,8 +1681,6 @@ Make sure to unsubscribe after losing / leaving site.
         game = newGameData;
         console.log("usedConnection", usedConnections);
         ResetTimer();
-
-        console.log(`result: ${newGameData.currentPlayerID} | player: ${playerID}`);
         // initGame();
 
         if(newGameData.currentPlayerID !== playerID) {
@@ -1611,7 +1690,6 @@ Make sure to unsubscribe after losing / leaving site.
             guessInput.disabled = false;
             guessButton.disabled = false;
         }
-
     });
 
     function containsID(players) {
@@ -1633,21 +1711,78 @@ Make sure to unsubscribe after losing / leaving site.
          * To send to the different possible functions.
          */
         switch(parseInt(info.actionID)) {
-            case -1:
+            case ACTION_CODES.incorrect.id: // Incorrect Guess
                 showPopUp(info.guessID);
                 break;
+            // LIFELINES
+            case ACTION_CODES.speedup.id: // SPEED UP
+                speedupAction();
+                break;
+            case ACTION_CODES.info.id: // SHOW INFO
+                infoAction(info.playerID);
+                break;
+            case ACTION_CODES.skip.id: // SKIP
+                skipAction(info.guessID, info.playerID);
+                break;
+            case ACTION_CODES.pause.id: // PAUSE
+                pauseAction();
+                break;
         }
-
-
-
     });
-
 
 
 //#endregion
 
 
 //#region ACTIONS
+    function pauseAction() {
+        currentLimit = TIME_LIMIT_EXTENDED;
+    }
+
+    function speedupAction() {
+        timePassed = 10;
+    }
+
+    function infoAction(_playerID) {
+        if(_playerID == playerID){
+
+            var current = document.getElementsByClassName('current-card')[0];
+
+            createCardBack(current);
+
+            if(current) {
+                current.style.transform = "rotateY(180deg)";
+            }
+        } else {
+
+        }
+    }
+
+    function skipAction(guess, _playerID) {
+        
+
+
+        SkipConnection(playerInfo.find(n=> n['playerId'] == guess));
+
+        console.log(`${game.currentPlayerID} | ${_playerID}`);
+
+
+        if(_playerID == playerID) {
+            console.warn("WE TURNED OFF YOUR STUFF");
+            for(var i = 0; i < game.players.Length; i++) {
+                if(game.players[i].id == _playerID) continue;
+
+                game.currentPlayerID = game.players[i].id;
+            }
+            guessInput.disabled = true;
+            guessButton.disabled = true;
+        } else {
+            game.currentPlayerID = playerID;
+            guessInput.disabled = false;
+            guessButton.disabled = false;
+        }
+        ResetTimer();
+    }
 
     function showPopUp(guessId) {
         const guessedPlayer = playerInfo.find(player => player['playerId'] == guessId);
@@ -1669,7 +1804,6 @@ Make sure to unsubscribe after losing / leaving site.
                     text += `\n`;
                 }
             }
-            
         } 
 
         popup.textContent = text;

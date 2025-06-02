@@ -83,7 +83,7 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 30px;
     width: 90%;
-    min-height: 800px;
+    min-height: 715px;
     max-width: 700px;
     align-items: center;
     gap: 20px;
@@ -94,11 +94,12 @@ body {
     grid: "player-one timer player-two";
     width: 100%;
     grid-template-columns: 1fr 0.5fr 1fr;
+    justify-items: center;
 }
 
 #player-one {
     grid-area: player-one;
-
+    width: 100%;
 }
 
 #player-one-info {
@@ -116,6 +117,7 @@ body {
 
 #player-one-icon {
     grid-area: player-one-icon;
+    position: relative;
     width: 50%;
 }
 
@@ -123,10 +125,48 @@ body {
     grid-area: player-one-rank;
 }
 
-
+#icon {
+    position: absolute;
+}
 
 #player-two {
     grid-area: player-two;
+    width: 100%;
+}
+
+#lifeline-holder {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+
+
+.player-one-life-lines-available {
+    filter: invert(0);
+    width: 30px;
+    height: 30px;
+}
+
+.player-one-life-lines-used {
+    filter: invert(0.5);
+    pointer-events: none;
+    width: 30px;
+    height: 30px;
+}
+
+#player-two-life-lines-available {
+    filter: invert(0);
+    width: 30px;
+    height: 30px;
+}
+
+#player-two-life-lines-used {
+    filter: invert(0.5);
+    pointer-events: none;
+    width: 30px;
+    height: 30px;
 }
 
 #player-two-info {
@@ -144,6 +184,7 @@ body {
 
 #player-two-icon {
     grid-area: player-two-icon;
+    position: relative;
     width:50%;
 }
 
@@ -151,6 +192,10 @@ body {
     grid-area: player-two-rank;
 }
 
+#player-two-lifelines {
+    display: flex;
+    justify-content: right;
+}
 
 
 header {
@@ -310,6 +355,20 @@ main {
     /* margin-left: auto; */
     /* margin-right: auto; */
     margin: auto;
+    gap: 20px;
+}
+
+#game-resolution {
+    display: none; /* Change programmatically. */
+    flex-direction: column;
+    background-color: rgb(255,255,255,0.5);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 90%;
+    min-height: 715px;
+    max-width: 700px;
+    align-items: center;
     gap: 20px;
 }
 
