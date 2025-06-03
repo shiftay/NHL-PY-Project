@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const guessGrid = document.querySelector('.guess-grid');
     const attemptsDisplay = document.getElementById('attempts');
     const gameStatus = document.getElementById('popup');
-    const body = document.getElementById('body');
+    const bglayer = document.getElementById('bg-layer');
     const stylesheet = document.styleSheets[0];
     const logoSpace = document.getElementById("logoSpace");
     const slider = document.getElementById("slider");
@@ -124,7 +124,6 @@ document.addEventListener('DOMContentLoaded', () => {
         data.teams.forEach(n => {
             teamSVG.push(n);
         });
-     
     }
 
 
@@ -168,7 +167,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
       
-
     async function getCachedJSON(url, cacheKey, expiryInSeconds = 3600) {
         const cachedData = localStorage.getItem(cacheKey);
         const cachedTime = localStorage.getItem(`${cacheKey}_timestamp`);
@@ -425,8 +423,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         // div.appendChild(img);
         
-        logoSpace.appendChild(smallLogo)
+
+        bglayer.style.backgroundImage = `url("${Array.from(teamSVG).find(n => n.teamAbbrev === random.teamAbbrev).teamLogo}")`;
+        bglayer.style.backgroundRepeat = 'repeat';
+        // logo size - 225 x 150 
+        bglayer.style.backgroundSize = '230px 220px';
+        bglayer.style.filter = 'grayscale(100%)';
+        bglayer.style.backgroundPositionX = `${230 / 2}px`;
+        bglayer.style.backgroundPositionY = `${220 / 2}px`;
+
+
+        logoSpace.appendChild(smallLogo);
     }
+
+
+    // window.addEventListener('resize', () => {
+    /**
+     * On Window Resize
+     */
+    // });
 
     function updateLook(inp) {
         var teamchoice = document.getElementById('team-choice');
@@ -609,7 +624,9 @@ document.addEventListener('DOMContentLoaded', () => {
         draft.style.right = '5px';
 
         content.push(draft);
-        
+
+        content.push(GrabNHLTeams(player));
+
         if(NotJustCup(player)) {
             var awards = document.createElement('div');
             
@@ -638,6 +655,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         return content;
+    }
+
+    function GrabNHLTeams(player) {
+        var holder = document.createElement('div');
+        var usedTeams = [];
+
+        for(var i = 0; i < player['seasonsPlayed'].length; i++) {
+            if(player['seasonsPlayed'][i]['league'] === 'NHL') {
+                if(!usedTeams.includes(player['seasons'][i]['teamName'])) {
+                    usedTeams.push(player['seasons'][i]['teamName']);
+
+                    /**
+                     * Add a image of the team if we can find it's logo in 
+                     *  Array.from(teamSVG).find(n => n.teamAbbrev === current_team).teamLogo;
+                     */
+
+
+                }
+            }
+        }
+
+
+        return holder;
     }
 
     function returnAward(award) {
