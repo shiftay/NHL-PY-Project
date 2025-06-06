@@ -63,23 +63,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const PLAYER_AMOUNT = 6813;
 
-    // DARK MODE SETTINGS
-    let targetPlayer;
-    let attempts = 0;
-    let up = '\u2191';
-    let down = '\u2193';
-    const maxAttempts = 7;
+    // Auto Complete
     var playerNames = [];
     var playerInfo = [];
     var teamSVG = [];
-    var answerKey;
-    var answerId;
-    var targetsBirthDate;
+    var playerPieces = {};
+
     var colorCodes = [];
+
     var bgelements = [];
 
     var darkmode = false;
-// AWS
+    // AWS
     let client;
     let playerID;
     let playerName = "DEFAULT_PLAYER";
@@ -89,15 +84,15 @@ document.addEventListener('DOMContentLoaded', () => {
     let gameID;
     let game;
 
+    // Lifelines
     var lifeLines = [];
 
     const LIFELINE_SKIP = 0;
-    const LIFELINE_INFO = 2;
     const LIFELINE_PAUSE = 1;
+    const LIFELINE_INFO = 2;
     const LIFELINE_SPEED = 3;
 
 
-    var playerPieces = {};
     
 
 //#region READING JSON
@@ -360,8 +355,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if(current) {
             current.style.transform = "rotateY(180deg)";
         }
-        
-        // css.find(n => n.selectorText === '.flip-card-puckdle').style.transform = "rotateY(180deg)";  
     });
 
     /**
@@ -374,16 +367,7 @@ document.addEventListener('DOMContentLoaded', () => {
     var current_team;
 
     function readcookies() {
-        var returnVals = [false, false];
-        // customization_cookie
-        // var currentCookie = getCookie('dark-mode');
-        // if(currentCookie) {
-        //     var isTrueSet = (currentCookie === 'true');
-        //     document.getElementById('checkbox').checked = darkmode = isTrueSet;
-        //     updateDarkMode(isTrueSet);
-        //     returnVals[0] = true;
-        // }
-        
+        var returnVals = [false, false];        
         var currentCookie = getCookie('team');
         if(currentCookie) {
             current_team = currentCookie;
@@ -411,18 +395,13 @@ document.addEventListener('DOMContentLoaded', () => {
         current_team = teamAbbrev;
 
         var random = Array.from(colorCodes).find(n => n.teamAbbrev === teamAbbrev);
-
-        // div = document.createElement('div');
-        // img = document.createElement('img');
         smallLogo = document.createElement('img');
 
         smallLogo.src = Array.from(teamSVG).find(n => n.teamAbbrev === random.teamAbbrev).teamLogo;
         smallLogo.id = 'small-logo';
         smallLogo.addEventListener("click", function(e) {
             updateLook(logoSpace);
-        });
-        // div.appendChild(img);
-        
+        });        
 
         bglayer.style.backgroundImage = `url("${Array.from(teamSVG).find(n => n.teamAbbrev === random.teamAbbrev).teamLogo}")`;
         bglayer.style.backgroundRepeat = 'repeat';
@@ -431,8 +410,6 @@ document.addEventListener('DOMContentLoaded', () => {
         bglayer.style.filter = 'grayscale(100%)';
         bglayer.style.backgroundPositionX = `${230 / 2}px`;
         bglayer.style.backgroundPositionY = `${220 / 2}px`;
-
-
         logoSpace.appendChild(smallLogo);
     }
 
@@ -504,6 +481,10 @@ document.addEventListener('DOMContentLoaded', () => {
         return player;
     }
 
+    /**
+     * Helper function for looking at a specific season 
+     * targetSeason formatting 20242025 YEARYEAR
+     */
     function getPlayersBySeason(players, targetSeason) {
         if (!Array.isArray(players)) {
             console.error("Input 'players' must be an array.");
@@ -530,7 +511,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function playerExists(guess) {
         const guessedPlayer = playerInfo.find(player => player['name'].toLowerCase() === guess.toLowerCase());
         if(!guessedPlayer) {
-            // gameStatus.textContent = "Invalid guess. Player not found.";
             return false;
         }
 
@@ -542,7 +522,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 //#region CARDS
-
+    /**
+     * Flip Card Front
+     */
     function flipCard(player) {
         var current = document.getElementsByClassName('current-card');
         if(current[0]) {
@@ -643,7 +625,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 holder.append(award)
                 awards.append(holder);
-                // text += `${player['awards'][i]['seasons']['seasonId'].substr(0,4)} - ${player['awards'][i]['trophyName']}\n`;
             }
 
             awards.style.position = 'absolute';
@@ -716,9 +697,6 @@ document.addEventListener('DOMContentLoaded', () => {
         border.classList.add('border')
         border.draggable = false;
         
-        
-        // name.setAttribute('id', 'card-content');
-        // name.classList.add('name')
         var name = setName(styleNumber, player);
         var position = setPosition(styleNumber, player);
 
@@ -879,69 +857,17 @@ var usedConnections = {};
 var usedPlayers = [];
 
 /**
- * Make sure clear the search bar
- * 
- * 
- * 
- */
-
-/* TODO
-
-when joining queue, have each player assign a 'starting lineup' player with them
-
-when game starts
-    > whoever is player one plays off of their randomly assigned starting lineup
-    > Players are subscribed to the GameStatusUpdated subscription
-
-    > Based on turn, disable / enable the search bar
-        > Hide submit button
-
-Gameplay stuff:
-    When a person plays a player
-        > Logic decides if it is a correct player
-        > sends the action to the takeAction mutator
-        > IF:
-            > INCORRECT  flash the no connection found (pop up)
-            > CORRECT    play the connection, and swap to other player
-
-    // Might redefine take Action, to send Connections, for easier grabbing of information for player.
-    takeAction(Action, bool)
-        > Action : PlayerID, Player, GuessID
-        > bool : was it correct
-            > IF:
-                CORRECT : Change currentplayer
-                INCORRECT : no update
-
-    Basic look of HTML:
-
-    <div id=hockey-card></div>
-    <div id=seperator></div>
-    <div id=connector></div> [ Connector will show: TEAM / Country / Award ] [ Can have multiple Connectors ] [ Include Strikes amount ]
-    <div id=seperator></div>
-    <div id=hockey-card></div>
-
-
-    On correct action:
-        Add to List of [ Connectors ]
-
-Make sure to unsubscribe after losing / leaving site.
-
-*/
-
-/**
  * Starting Game
  * Requires clearing and initializing all stats.
  */
     function startGame() {
         usedConnections = {};
-// Bobby Orr 8450070
-// JS Giguere 8462044
+        // Bobby Orr 8450070
+        // JS Giguere 8462044
         currentPlayer = playerInfo.find(n=> n['playerId'] == 8450070) 
         usedPlayers.push(currentPlayer);
         flipCard(currentPlayer);
         console.log(currentPlayer['playerId']);
-
-
     }
     /**
      * Logic for showing Connecton or Pop Up
@@ -950,19 +876,13 @@ Make sure to unsubscribe after losing / leaving site.
         var validConnect = false;
 
         var amount = countConnections(connections);
-        /**
-         * This needs testing to make sure this works.
-         * Idea is that all connections need to be valid for it to be allowed to be a connection
-         * Even a single failed connection is a fail.
-         */
+
         validConnect = (connections.length == 0 ?  false : connections.length == amount);
 
         console.log(`${validConnect} | ${amount} | ${connections.length}`);
 
         if(validConnect) {
             
-            
-
             createLine('line');
             for(var i = 0; i < connections.length; i++) {
 
@@ -979,23 +899,6 @@ Make sure to unsubscribe after losing / leaving site.
                 if(i != connections.length-1) {
                     createLine('small-line');
                 }
-                // For when we want to add more of a delimiter or show off something specific for each one
-                // ie. Flag for Country, Calendar for Draft Year, Little trophy for Award, etc...
-                // switch(type) {
-                //     case "t-":
-                //         console.log(`Team ${value}`);
-                        
-                //         break;
-                //     case "a-":
-                //         console.log(`Award ${value}`);
-                //         break;
-                //     case "d-":
-                //         console.log(`Draft Year ${value}`);
-                //         break;
-                //     case "b-":
-                //         console.log(`Country ${value}`);
-                //         break;
-                // }
             }
 
             createLine('line');
@@ -1058,13 +961,9 @@ Make sure to unsubscribe after losing / leaving site.
         
         var amount = countConnections(connections);
 
-        
-
         if(guessedPlayer == currentPlayer || usedPlayers.includes(guessedPlayer)) {
             amount = -1;
         }
-
-        console.log(`amount: ${amount} | guess ${guessedPlayer} | current ${currentPlayer}`);
 
         if(amount > 0 && amount == connections.length) {
             updateGuess(client, gameID, playerID, guessedPlayer['playerId']);
@@ -1154,8 +1053,6 @@ Make sure to unsubscribe after losing / leaving site.
             expires = "; expires=" + date.toUTCString();
         }
         document.cookie = name + "=" + val + expires + "; path=***/***";
-
- 
     }
 
     function setCustomizationCookie(name, val, days, temp) {
@@ -1445,14 +1342,8 @@ Make sure to unsubscribe after losing / leaving site.
     }
 
     function formatTime(time) {
-        // const minutes = Math.floor(time / 60);
         let seconds = time % 60;
-
-        // if (seconds < 10) {
-        //     seconds = `0${seconds}`;
-        // }
-
-        return `${seconds}`; //${minutes}:
+        return `${seconds}`; 
     }
 
     function resetColor() {
@@ -1793,19 +1684,13 @@ Make sure to unsubscribe after losing / leaving site.
             if(current) {
                 current.style.transform = "rotateY(180deg)";
             }
-        } else {
-
         }
     }
 
     function skipAction(guess, _playerID) {
-        
-
-
         SkipConnection(playerInfo.find(n=> n['playerId'] == guess));
 
         console.log(`${game.currentPlayerID} | ${_playerID}`);
-
 
         if(_playerID == playerID) {
             console.warn("WE TURNED OFF YOUR STUFF");
@@ -1852,11 +1737,5 @@ Make sure to unsubscribe after losing / leaving site.
             popup.classList.toggle('show');
         }, 1500);
     }
-
-
-
 //#endregion
-
-
-
 });
